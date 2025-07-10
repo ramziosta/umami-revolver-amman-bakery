@@ -20,7 +20,13 @@ import ciabatta from '@/app/assets/ciabatta.jpeg'
 import muffins from '@/app/assets/muffins.jpg'
 import Image from "next/image";
 
-
+type Category = {
+    id: string;
+    name: string;
+    image: StaticImageData; // if you're using imported images
+    description: string;
+    itemCount: number;
+};
 const categories = [
     {
         id: 'artisan-sourdoughs',
@@ -1123,7 +1129,7 @@ const CategoriesHero = ({title, subtitle, backgroundImage}: CategoriesHeroProps)
     </section>
 );
 
-const CategoryCard = ({category}) => (
+const CategoryCard = ({ category }: { category: Category }) => (
     <Link href={`/category/${category.id}`}>
         <Card
             className="group cursor-pointer elegant-shadow hover:shadow-2xl transition-all duration-500 overflow-hidden border-0 bg-white">
@@ -1155,7 +1161,7 @@ const CategoryCard = ({category}) => (
     </Link>
 );
 
-const CategoriesGrid = ({categories}) => (
+const CategoriesGrid = ({ categories }: { categories: Category[] }) => (
     <section className="py-16">
         <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
