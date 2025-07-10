@@ -19,11 +19,11 @@ import cheesecake from '@/app/assets/cheesecake.jpg'
 import ciabatta from '@/app/assets/ciabatta.jpeg'
 import muffins from '@/app/assets/muffins.jpg'
 import Image from "next/image";
-
+import type { StaticImageData } from 'next/image';
 type Category = {
     id: string;
     name: string;
-    image: StaticImageData; // if you're using imported images
+    image: StaticImageData;
     description: string;
     itemCount: number;
 };
