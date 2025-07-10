@@ -908,7 +908,6 @@ const categories = [
                 "itemDescription": "Free-form tart with seasonal options like cinnamon apples, grilled peaches with burrata, or stone fruits.",
                 itemPrice: { "medium": 20, "large": 30 },
                 itemImages: [brioche],
-                 itemPrice: 3.99
             },
             {
                 "id": "berry-cobbler",
@@ -916,7 +915,6 @@ const categories = [
                 "itemDescription": "Mixed seasonal berries baked with vanilla biscuit topping.",
                 itemPrice: { "medium": 25, "large": 35 },
                 itemImages: [brioche],
-                 itemPrice: 3.99
             },
             {
                 "id": "pecan-pie",
@@ -924,7 +922,6 @@ const categories = [
                 "itemDescription": "Toasted pecans in a rich brown sugar custard with flaky pie crust.",
                 itemPrice: 25,
                 itemImages: [brioche],
-                 itemPrice: 3.99
             },
             {
                 "id": "pumpkin-pie",
@@ -932,7 +929,6 @@ const categories = [
                 "itemDescription": "Pumpkin in a rich butternut custard with flaky pie crust.",
                 itemPrice: 25,
                 itemImages: [brioche],
-                 itemPrice: 3.99
             },
             {
                 "id": "chocolate-cream-pie",
@@ -940,7 +936,6 @@ const categories = [
                 "itemDescription": "Rich chocolate custard in a flaky pie crust with whipped cream and chocolate shavings.",
                 itemPrice: 25,
                 itemImages: [brioche],
-                 itemPrice: 3.99
             },
             {
                 "id": "apple-pie",
@@ -948,7 +943,6 @@ const categories = [
                 "itemDescription": "Classic apple pie with flaky crust and spiced apple filling.",
                 itemPrice: 20,
                 itemImages: [brioche],
-                 itemPrice: 3.99
             },
             {
                 "id": "banoffee-pie",
@@ -956,7 +950,6 @@ const categories = [
                 "itemDescription": "Banana, chocolate, toffee, and whipped cream in a graham cracker crust.",
                 itemPrice: 25,
                 itemImages: [brioche],
-                 itemPrice: 3.99
             },
             {
                 "id": "lemon-meringue-pie",
@@ -964,7 +957,6 @@ const categories = [
                 "itemDescription": "Tart and creamy lemon custard in a flaky pie crust with toasted meringue.",
                 itemPrice: 20,
                 itemImages: [brioche],
-                 itemPrice: 3.99
             },
             {
                 "id": "peach-cobbler",
@@ -972,7 +964,6 @@ const categories = [
                 "itemDescription": "Fresh peaches baked with vanilla biscuit topping.",
                 itemPrice: { "medium": 20, "large": 30 },
                 itemImages: [brioche],
-                 itemPrice: 3.99
             }
         ]
     },
