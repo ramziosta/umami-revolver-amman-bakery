@@ -20,12 +20,19 @@ import ciabatta from '@/app/assets/ciabatta.jpeg'
 import muffins from '@/app/assets/muffins.jpg'
 import Image from "next/image";
 import type { StaticImageData } from 'next/image';
+
 type Category = {
     id: string;
     name: string;
     image: StaticImageData;
     description: string;
-    itemCount: number;
+    itemCount?: number;
+    items: {
+        id: string;
+        itemName: string;
+        itemDescription: string;
+        itemImages: StaticImageData[];
+    }[];
 };
 const categories = [
     {
@@ -519,42 +526,42 @@ const categories = [
                 "id": "baked-cheesecake",
                 "itemName": "Baked Cheesecake",
                 "itemDescription": "Classic rich baked cheesecake with your choice of topping.",
-                "itemPriceJOD": 40,
+                itemPrice: 40,
                 itemImages: [brioche]
             },
             {
                 "id": "no-bake-cheesecake",
                 "itemName": "No-Bake Cheesecake",
                 "itemDescription": "Creamy, smooth no-bake cheesecake served chilled with your favorite topping.",
-                "itemPriceJOD": 35,
+                itemPrice: 35,
                 itemImages: [brioche]
             },
             {
                 "id": "burnt-basque-cheesecake",
                 "itemName": "Burnt Basque Cheesecake",
                 "itemDescription": "Rustic, caramelized Basque-style cheesecake with a creamy center and charred top.",
-                "itemPriceJOD": 45,
+                itemPrice: 45,
                 "itemImages": ["burnt-basque-cheesecake-1.jpg", "burnt-basque-cheesecake-2.jpg"]
             },
             {
                 "id": "ricotta-cheesecake",
                 "itemName": "Ricotta Cheesecake",
                 "itemDescription": "Light, fluffy Italian-style cheesecake made with creamy ricotta and a touch of citrus zest.",
-                "itemPriceJOD": 40,
+                itemPrice: 40,
                 itemImages: [brioche]
             },
             {
                 "id": "japanese-souffle-cheesecake",
                 "itemName": "Japanese Soufflé Cheesecake",
                 "itemDescription": "Incredibly light, airy, and jiggly cheesecake with a delicate sweetness.",
-                "itemPriceJOD": 40,
+                itemPrice: 40,
                 itemImages: [brioche]
             },
             {
                 "id": "swirled-cheesecake",
                 "itemName": "Swirled Cheesecake",
                 "itemDescription": "Classic baked cheesecake swirled with rich chocolate ganache or fruit puree for a beautiful marble effect.",
-                "itemPriceJOD": 40,
+                itemPrice: 40,
                 itemImages: [brioche]
             }
         ]
@@ -822,49 +829,49 @@ const categories = [
                 "id": "original-tiramisu",
                 "itemName": "Original Tiramisu",
                 "itemDescription": "Classic Italian recipe with espresso-soaked sponge, mascarpone cream, and a hint of vanilla.",
-                "itemPriceJOD": 25,
+                itemPrice: 25,
                 itemImages: [brioche]
             },
             {
                 "id": "marsala-zabayone-tiramisu",
                 "itemName": "Marsala Wine Zabayone",
                 "itemDescription": "A refined twist featuring Marsala zabayone folded into silky mascarpone and layered with espresso-dipped ladyfingers.",
-                "itemPriceJOD": 30,
+                itemPrice: 30,
                 itemImages: [brioche]
             },
             {
                 "id": "strawberry-almond-tiramisu",
                 "itemName": "Strawberry Almond",
                 "itemDescription": "Strawberry-soaked ladyfingers layered with almond mascarpone cream and fresh strawberry compote.",
-                "itemPriceJOD": 30,
+                itemPrice: 30,
                 itemImages: [brioche]
             },
             {
                 "id": "pistachio-matcha-tiramisu",
                 "itemName": "Pistachio Matcha",
                 "itemDescription": "Toasted pistachio cream and earthy matcha mascarpone, layered with coffee-kissed sponge.",
-                "itemPriceJOD": 30,
+                itemPrice: 30,
                 itemImages: [brioche]
             },
             {
                 "id": "coconut-mango-tiramisu",
                 "itemName": "Coconut Mango",
                 "itemDescription": "Tropical fusion of coconut mascarpone and golden mango preserves layered with espresso sponge.",
-                "itemPriceJOD": 30,
+                itemPrice: 30,
                 itemImages: [brioche]
             },
             {
                 "id": "milk-tea-tiramisu",
                 "itemName": "Milk Tea",
                 "itemDescription": "Earl Grey–infused mascarpone cream and milk tea glaze layered with coffee-soaked sponge.",
-                "itemPriceJOD": 25,
+                itemPrice: 25,
                 itemImages: [brioche]
             },
             {
                 "id": "lemon-mascarpone-tiramisu",
                 "itemName": "Lemon Mascarpone",
                 "itemDescription": "Lemon-zest mascarpone layered with sponge and topped with glossy lemon curd.",
-                "itemPriceJOD": 30,
+                itemPrice: 30,
                 itemImages: [brioche]
             }
         ]
@@ -899,64 +906,73 @@ const categories = [
                 "id": "rustic-seasonal-galette",
                 "itemName": "Rustic Seasonal Galette",
                 "itemDescription": "Free-form tart with seasonal options like cinnamon apples, grilled peaches with burrata, or stone fruits.",
-                "itemPriceJOD": { "medium": 20, "large": 30 },
-                itemImages: [brioche]
+                itemPrice: { "medium": 20, "large": 30 },
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "berry-cobbler",
                 "itemName": "Berry Cobbler",
                 "itemDescription": "Mixed seasonal berries baked with vanilla biscuit topping.",
-                "itemPriceJOD": { "medium": 25, "large": 35 },
-                itemImages: [brioche]
+                itemPrice: { "medium": 25, "large": 35 },
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "pecan-pie",
                 "itemName": "Pecan Pie",
                 "itemDescription": "Toasted pecans in a rich brown sugar custard with flaky pie crust.",
-                "itemPriceJOD": 25,
-                itemImages: [brioche]
+                itemPrice: 25,
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "pumpkin-pie",
                 "itemName": "Pumpkin Pie",
                 "itemDescription": "Pumpkin in a rich butternut custard with flaky pie crust.",
-                "itemPriceJOD": 25,
-                itemImages: [brioche]
+                itemPrice: 25,
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "chocolate-cream-pie",
                 "itemName": "Chocolate Cream Pie",
                 "itemDescription": "Rich chocolate custard in a flaky pie crust with whipped cream and chocolate shavings.",
-                "itemPriceJOD": 25,
-                itemImages: [brioche]
+                itemPrice: 25,
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "apple-pie",
                 "itemName": "Apple Pie",
                 "itemDescription": "Classic apple pie with flaky crust and spiced apple filling.",
-                "itemPriceJOD": 20,
-                itemImages: [brioche]
+                itemPrice: 20,
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "banoffee-pie",
                 "itemName": "Banoffee Pie",
                 "itemDescription": "Banana, chocolate, toffee, and whipped cream in a graham cracker crust.",
-                "itemPriceJOD": 25,
-                itemImages: [brioche]
+                itemPrice: 25,
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "lemon-meringue-pie",
                 "itemName": "Lemon Meringue Pie",
                 "itemDescription": "Tart and creamy lemon custard in a flaky pie crust with toasted meringue.",
-                "itemPriceJOD": 20,
-                itemImages: [brioche]
+                itemPrice: 20,
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "peach-cobbler",
                 "itemName": "Peach Cobbler",
                 "itemDescription": "Fresh peaches baked with vanilla biscuit topping.",
-                "itemPriceJOD": { "medium": 20, "large": 30 },
-                itemImages: [brioche]
+                itemPrice: { "medium": 20, "large": 30 },
+                itemImages: [brioche],
+                 itemPrice: 3.99
             }
         ]
     },
@@ -993,97 +1009,113 @@ const categories = [
                 "id": "dark-chocolate-peanut-butter-chip",
                 "itemName": "Dark Chocolate Peanut Butter Chip",
                 "itemDescription": "Decadent dark chocolate cookie with peanut butter chips.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "oatmeal-raisin",
                 "itemName": "Oatmeal Raisin",
                 "itemDescription": "Classic chewy cookie with plump black and golden raisins.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "lemon-drop",
                 "itemName": "Lemon Drop",
                 "itemDescription": "Zesty lemon cookie with white chocolate chips.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "samoa-cookie",
                 "itemName": "Samoa Cookie",
                 "itemDescription": "Inspired by the Girl Scout classic: chocolate, gooey caramel, and toasted coconut over shortbread.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "stamped-sugar-cookies",
                 "itemName": "Stamped Sugar Cookies",
                 "itemDescription": "Classic buttery and nutty sugar cookies, hand-stamped for an artisanal touch. Flavors include: Almond Honey, Espresso Chocolate, Lemon Zest, Chai Spice, Orange Cardamom.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "ginger-cookies",
                 "itemName": "Ginger Cookies",
                 "itemDescription": "Classic ginger spice cookies with molasses and a crackly sugar crust.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "red-velvet-macadamia",
                 "itemName": "Red Velvet Macadamia",
                 "itemDescription": "Chewy, crunchy red velvet cookie with macadamia nuts and chocolate chips.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "gf-chocolate-chip",
                 "itemName": "GF Chocolate Chip",
                 "itemDescription": "Gluten-free version of our classic chocolate chip cookie.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "limoncello-cheesecake-bars",
                 "itemName": "Limoncello Cheesecake Bars",
                 "itemDescription": "Citrusy, creamy cheesecake bars with a fresh zest.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "strawberry-crumble-bar",
                 "itemName": "Strawberry Crumble",
                 "itemDescription": "Soft, chewy bar with strawberry filling and crunchy streusel topping.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "millionaire-shortbread",
                 "itemName": "Millionaire Shortbread",
                 "itemDescription": "Classic buttery shortbread with caramel center and chocolate frosting.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "brownie-tahini-swirls",
                 "itemName": "Brownie with Tahini Swirls",
                 "itemDescription": "Rich brownie with tahini swirls and halva bits.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "rich-brownies",
                 "itemName": "Rich as F@#$ Brownies",
                 "itemDescription": "Ultra-rich brownies with all Valrhona chocolate chips and dulce de leche.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "the-decadent-blondie",
                 "itemName": "The Decadent Blondie",
                 "itemDescription": "Buttery blondie bar with toasted walnuts and white chocolate chips.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "matcha-brownies",
                 "itemName": "Matcha Brownies",
                 "itemDescription": "Earthy matcha brownies with pistachios.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             },
             {
                 "id": "red-velvet-cream-cheese-brownies",
                 "itemName": "Red Velvet & Cream Cheese Brownies",
                 "itemDescription": "Light chocolate brownies with a swirl of tangy cream cheese.",
-                itemImages: [brioche]
+                itemImages: [brioche],
+                 itemPrice: 3.99
             }
         ]
     },
@@ -1093,7 +1125,8 @@ const categories = [
         image: seasonal,
         description: 'Limited-time offerings inspired by the freshest seasonal ingredients.',
         itemCount: 4,
-        items: []
+        items: [],
+        itemPrice: 3.99
     },
 ];
 
