@@ -31,9 +31,10 @@ type Category = {
         id: string;
         itemName: string;
         itemDescription: string;
-        itemImages: StaticImageData[];
+        itemImages: (StaticImageData | string)[];
     }[];
 };
+
 const categories = [
     {
         id: 'artisan-sourdoughs',
