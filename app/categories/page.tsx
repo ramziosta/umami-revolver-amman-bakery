@@ -1100,7 +1100,7 @@ const categories = [
 type CategoriesHeroProps = {
     title: string;
     subtitle: string;
-    backgroundImage: string;
+    backgroundImage: StaticImageData;
 };
 
 const CategoriesHero = ({title, subtitle, backgroundImage}: CategoriesHeroProps) => (
