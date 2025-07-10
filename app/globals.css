@@ -1,0 +1,125 @@
+/* ✅ Bring in CDN fonts */
+@import url('https://fonts.cdnfonts.com/css/goglast');
+@import url('https://fonts.cdnfonts.com/css/glory-2');
+@import url('https://fonts.cdnfonts.com/css/brownless');
+
+/* ✅ Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Design System */
+@layer base {
+  :root {
+    /* ---- Umami Colors ---- */
+    --background: 249 239 223; /* cream */
+    --foreground: 62 60 60;     /* charcoal */
+    --card: 255 255 255;
+    --card-foreground: 62 60 60;
+    --popover: 255 255 255;
+    --popover-foreground: 62 60 60;
+    --primary: 57 86 112;
+    --primary-foreground: 255 255 255;
+    --secondary: 182 182 182;
+    --secondary-foreground: 62 60 60;
+    --muted: 249 239 223;
+    --muted-foreground: 62 60 60;
+    --accent: 18 117 179;
+    --accent-foreground: 255 255 255;
+    --destructive: 222 27 135;
+    --destructive-foreground: 255 255 255;
+    --border: 182 182 182;
+    --input: 182 182 182;
+    --ring: 57 86 112;
+    --radius: 0rem;
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 62 60 60;
+    --sidebar-primary: 57 86 112;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 249 239 223;
+    --sidebar-accent-foreground: 62 60 60;
+    --sidebar-border: 182 182 182;
+    --sidebar-ring: 18 117 179;
+
+    /* ✅ If you use next/font variables for Geist: */
+    --font-geist-sans: 'var(--font-geist-sans)';
+    --font-geist-mono: 'var(--font-geist-mono)';
+  }
+
+  .dark {
+    /* dark mode overrides */
+    --background: 62 60 60;
+    --foreground: 249 239 223;
+    --card: 0 0 0;
+    --card-foreground: 249 239 223;
+    --popover: 0 0 0;
+    --popover-foreground: 249 239 223;
+    --primary: 249 239 223;
+    --primary-foreground: 57 86 112;
+    --secondary: 182 182 182;
+    --secondary-foreground: 249 239 223;
+    --muted: 62 60 60;
+    --muted-foreground: 182 182 182;
+    --accent: 18 117 179;
+    --accent-foreground: 249 239 223;
+    --destructive: 222 27 135;
+    --destructive-foreground: 249 239 223;
+    --border: 182 182 182;
+    --input: 182 182 182;
+    --ring: 249 239 223;
+    --sidebar-background: 0 0 0;
+    --sidebar-foreground: 249 239 223;
+    --sidebar-primary: 18 117 179;
+    --sidebar-primary-foreground: 0 0 0;
+    --sidebar-accent: 62 60 60;
+    --sidebar-accent-foreground: 249 239 223;
+    --sidebar-border: 182 182 182;
+    --sidebar-ring: 18 117 179;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-glimp;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-goglast;
+  }
+}
+
+/* ✅ Useful utility classes */
+.goglast-tracking {
+  @apply font-goglast tracking-[0.7rem];
+}
+
+.glimp-tracking {
+  @apply font-glimp tracking-wide;
+}
+
+@layer utilities {
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .hover-invert {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .hover-invert:hover {
+    @apply bg-umami-charcoal text-umami-cream;
+  }
+
+  .elegant-shadow {
+    box-shadow: 0 10px 25px rgba(57, 86, 112, 0.1);
+  }
+}
