@@ -23,7 +23,7 @@ const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => {
 
     return (
         <Sheet open={isOpen} onOpenChange={onClose}>
-            <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-white">
                 <SheetHeader>
                     <SheetTitle className="text-left">
                         <Link
