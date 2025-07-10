@@ -18,6 +18,7 @@ import tieredCake from '@/app/assets/tieredCake.png'
 import cheesecake from '@/app/assets/cheesecake.jpg'
 import ciabatta from '@/app/assets/ciabatta.jpeg'
 import muffins from '@/app/assets/muffins.jpg'
+import quicheImage from '@/app/assets/quiche.jpg'
 import Image from "next/image";
 import type { StaticImageData } from 'next/image';
 
@@ -1120,6 +1121,64 @@ const categories = [
         items: [],
         itemPrice: 3.99
     },
+    {
+        id: "brunch",
+        name: "Brunch & Savory",
+        image: quicheImage,
+        description: "Delicious brunch and savory treats for leisurely mornings.",
+        itemCount: 7,
+        items: [
+            {
+                id: "scones",
+                itemName: "Classic Scones",
+                itemDescription: "Flaky, buttery scones in seasonal flavors. Perfect for brunch or teatime.",
+                itemPrice: { "6": 15, "8": 20, "10": 25, "12": 30 },
+                itemImages: [quicheImage] // ✅ use your actual import
+            },
+            {
+                id: "quiche-lorraine",
+                itemName: "Quiche Lorraine",
+                itemDescription: "Classic deep-dish quiche with smoky bacon and Swiss cheese.",
+                itemPrice: 22,
+                itemImages: [quicheImage]
+            },
+            {
+                id: "quiche-mediterranean",
+                itemName: "Mediterranean Quiche",
+                itemDescription: "Tomato, basil, and creamy feta in a golden pastry crust.",
+                itemPrice: 20,
+                itemImages: [quicheImage]
+            },
+            {
+                id: "quiche-three-cheese",
+                itemName: "Three Cheese Quiche",
+                itemDescription: "Fluffy, cheesy egg custard baked in a crisp shell.",
+                itemPrice: 18,
+                itemImages: [quicheImage]
+            },
+            {
+                id: "quiche-mushroom-goat",
+                itemName: "Mushroom & Goat Cheese Quiche",
+                itemDescription: "Sautéed mushrooms and tangy goat cheese in a rich egg custard.",
+                itemPrice: 20,
+                itemImages: [quicheImage]
+            },
+            {
+                id: "quiche-salmon-asparagus",
+                itemName: "Smoked Salmon & Asparagus Quiche",
+                itemDescription: "Delicate smoked salmon and tender asparagus in a flaky crust.",
+                itemPrice: 25,
+                itemImages: [quicheImage]
+            },
+            {
+                id: "egg-bake",
+                itemName: "Egg Bake Casserole",
+                itemDescription: "Hearty potato strata topped with eggs and your choice of fillings. Options: Mushroom & Sausage, Chorizo & Peppers with Ranchero Sauce, or Salmon & Asparagus.",
+                itemPrice: { "MushroomSausage": 20, "ChorizoPeppers": 25, "SalmonAsparagus": 30 },
+                itemImages: [quicheImage]
+            }
+        ]
+    }
 ];
 
 type CategoriesHeroProps = {
