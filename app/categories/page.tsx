@@ -241,7 +241,7 @@ const categories = [
         "id": "tiered-cakes",
         "name": "Tiered Cakes & Cupcakes",
         image: tieredCake,
-        "description": "From classic favorites to inventive seasonal creations, our tiered cakes and cupcakes are made to delight. Any cake flavor can be made into cupcakes, and we happily take custom orders. New flavors are added seasonally — check back often to see what’s fresh from the oven!\n\nAvailable in: 2-tier, 3-tier, and 4-tier sizes.\nSizes: 6 inch, 8 inch, 10 inch.\n\nSignature flavors include vanilla, chocolate, red velvet, carrot, banana, coffee, and lemon. Fillings and frostings are fully customizable.",
+        "description": "Multi-layered and customizable for any occasion.",
         "itemCount": 7,
         "details": {
             "sizes": ["2-tier", "3-tier", "4-tier"],
@@ -345,7 +345,7 @@ const categories = [
         "id": "specialty-cakes",
         "name": "Specialty Cakes",
         image: specialtyCakes,
-        "description": "Unique flavors from our kitchen you won’t find anywhere else. Signature cakes with special flavor combinations crafted in-house.",
+        "description": "Signature cakes with unique flavor combinations.",
         "itemCount": 3,
         "items": [
             {
@@ -375,7 +375,7 @@ const categories = [
         "id": "mille-crepe-cakes",
         "name": "Mille Crêpe Cakes",
         image: milleCrepeCake,
-        "description": "Delicate mille crêpe cakes made with layers of thin crêpes, filled with luscious creams and elegantly frosted. Available in custom flavors too.",
+        "description": 'Light, layered crêpe cakes filled with luscious creams.',
         "itemCount": 6,
         "details": {
             "availableSizes": [
@@ -487,7 +487,7 @@ const categories = [
         "id": "cheesecake",
         "name": "Cheesecake",
         image: cheesecake,
-        "description": "Rich, creamy cheesecakes available in classic baked, no-bake, burnt Basque, Italian ricotta, airy Japanese, and beautiful swirled styles. Served with your choice of toppings for an indulgent treat.",
+        "description": "Classic, no-bake, burnt Basque, Italian ricotta and airy Japanese",
         "itemCount": 6,
         "details": {
             "availableSize": "9 inch (serves 10–12)",
@@ -557,8 +557,7 @@ const categories = [
         "id": "pound-cakes",
         "name": "Pound, Bundt & Coffee Cakes",
         image: poundCake,
-        "description": "Buttery, moist, and tender cakes — from classic pound cakes to marble, bundt, and coffee cake delights.",
-        "itemCount": 6,
+        "description": 'Buttery, moist and tender, classic and beyond.',
         "details": {
             "availableSizes": [
                 "Medium Bundt Cake (serves 6–8)",
@@ -668,7 +667,7 @@ const categories = [
         "id": "bamboloni",
         "name": "Bamboloni",
         image: bamboloni,
-        "description": "Our Bamboloni are handcrafted Italian doughnuts made from enriched brioche dough for an irresistibly soft, airy texture. Each one is filled with decadent creams, curds, or jams and finished with unique coatings for a perfect bite. We also offer custom flavors and seasonal varieties to keep things deliciously fresh.",
+        "description": 'Italian-style filled doughnuts — soft, fluffy, irresistible.',
         "itemCount": 7,
         "details": {
             "quantityOptions": [
@@ -739,7 +738,7 @@ const categories = [
         "id": "choux-au-craquelin",
         "name": "Choux au Craquelin",
         image: choux,
-        "description": "Crisp craquelin-topped choux filled with luxurious creams and mousses — elegant, airy, and indulgent. Seasonal and custom flavors available.",
+        "description": 'Delicate cream puffs with crisp craquelin tops.',
         "itemCount": 8,
         "details": {
             "quantityOptions": [
@@ -804,7 +803,7 @@ const categories = [
         "id": "tiramisu",
         "name": "Tiramisu",
         image: tiramisu,
-        "description": "From classic Italian to modern twists, our tiramisu selection includes indulgent flavors for every taste. Also available in custom and seasonal variations. Each cake serves 8–10 people.",
+        "description": 'Traditional and reimagined with seasonal fillings and modern flair.',
         "itemCount": 7,
         "details": {
             "serves": "8–10 people",
@@ -868,7 +867,7 @@ const categories = [
         "id": "pies-cobblers-galettes",
         name: "pies Cobblers & Galettes",
         "image": galettes,
-        "description": "Our pies, cobblers, and galettes celebrate the richness of seasonal fruit and timeless comfort. From buttery lattice-topped pies to rustic open-faced galettes and bubbling cobblers with golden biscuit crusts, each treat is made by hand with love and premium ingredients. Ask us about custom fillings and rotating seasonal specials!",
+        "description": 'Rustic, seasonal fruit pies and hand-crafted pastries.',
         "itemCount": 8,
         "details": {
             "sizes": [
@@ -959,7 +958,7 @@ const categories = [
         "id": "cookies-bars-brownies",
         "name": "Cookies, Bars & Brownies",
         image: brownies,
-        "description": "Indulge in our timeless classics and custom creations. We introduce exciting new flavors every month, with seasonal updates to keep things fresh. Be sure to check back often for the latest treats!",
+        "description": 'Classic and creative sweet bites for any occasion.',
         "itemCount": 18,
         "details": {
             "quantityOptions": {
