@@ -1,12 +1,18 @@
+'use client';
+
 import { categories } from "@/app/data/categoryData";
 import Image from "next/image";
+import { use } from "react";
 
-export default function ItemPage({
-                                               params,
-                                           }: {
-    params: { slug: string; itemId: string };
-}) {
-    const { slug, itemId } = params;
+interface Params {
+    params: Promise<{
+        slug: string;
+        itemId: string;
+    }>;
+}
+
+export default function ItemPage({ params }: Params) {
+    const { slug, itemId } = use(params);
     const category = categories.find((cat) => cat.id === slug);
     const item = category?.items.find((i) => i.id === itemId);
 

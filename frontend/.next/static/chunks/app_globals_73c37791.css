@@ -531,6 +531,10 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 
+.col-span-full {
+  grid-column: 1 / -1;
+}
+
 .-mx-1 {
   margin-left: -.25rem;
   margin-right: -.25rem;
@@ -663,6 +667,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
@@ -1700,6 +1708,11 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 2rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .pb-3 {
   padding-bottom: .75rem;
 }
@@ -2485,6 +2498,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .hover\:bg-umami-pink\/5:hover {
   background-color: #de1b870d;
+}
+
+.hover\:bg-opacity-90:hover {
+  --tw-bg-opacity: .9;
 }
 
 .hover\:text-accent-foreground:hover {
