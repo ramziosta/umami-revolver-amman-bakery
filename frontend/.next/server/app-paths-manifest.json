@@ -1,0 +1,9 @@
+{
+  "/(home)/page": "app/(home)/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/categories/[slug]/item/[itemId]/page": "app/categories/[slug]/item/[itemId]/page.js",
+  "/categories/[slug]/page": "app/categories/[slug]/page.js",
+  "/categories/page": "app/categories/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/ramziosta/Code/umami-revolver-amman-bakery/app/categories/layout.tsx"],"sourcesContent":["import React from \"react\";\n\nexport default function ProductDetailsLayout({children,}: Readonly<{children: React.ReactNode;}>) {\n    return (\n        <div>\n            {children}\n        </div>\n    );\n}"],"names":[],"mappings":";;;;;AAEe,SAAS,qBAAqB,EAAC,QAAQ,EAA0C;IAC5F,qBACI,8OAAC;kBACI;;;;;;AAGb"}},
+    {"offset": {"line": 21, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
