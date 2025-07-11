@@ -1,5 +1,5 @@
 import type {StaticImageData} from "next/image";
-import sourdough from "@/app/assets/sourdough.jpg";
+import multiSeedSourdough from "@/app/assets/multiseed-sourdough.jpg";
 import brioche from "@/app/assets/brioche.jpeg";
 import ciabatta from "@/app/assets/ciabatta.jpeg";
 import muffins from "@/app/assets/muffins.jpg";
@@ -15,6 +15,25 @@ import galettes from "@/app/assets/galette.jpg";
 import brownies from "@/app/assets/brownies.jpg";
 import seasonal from "@/app/assets/lemon-basil.png";
 import quicheImage from "@/app/assets/quiche.jpg";
+import whiteSourdough from "@/app/assets/white-sourdough.jpg";
+import wholeWheat from "@/app/assets/wholewheat.jpg";
+import rye from "@/app/assets/rye.jpeg";
+import artisan from "@/app/assets/artisan.jpeg";
+import focaccia from "@/app/assets/focaccia.jpg";
+import cornBread from "@/app/assets/corn-bread.jpg";
+import jalapenoCornbread from "@/app/assets/jalapeno-corn-bread.png";
+import garlicKnots from "@/app/assets/garlic-knots.jpg";
+import parkerHouseRolls from "@/app/assets/parker-house-rolls.jpg";
+import popovers from "@/app/assets/popovers.jpg";
+import biscuits from "@/app/assets/buttermilk-biscuits.jpg";
+import briocheBuns from "@/app/assets/brioche-buns.jpg";
+import cinnamon from "@/app/assets/cinnamon.png";
+import babka from "@/app/assets/babka.jpg";
+import appleRaisinWalnut from "@/app/assets/apple-raisin-walnut.jpeg";
+import cranberryPecan from "@/app/assets/cranberry-pecan.png";
+import monkeyBread from "@/app/assets/monkey-bread.png";
+import milkBread from "@/app/assets/milk-bread.png";
+
 
 type Category = {
     id: string;
@@ -34,44 +53,44 @@ export const categories = [
     {
         id: 'artisan-sourdoughs',
         name: 'Artisan Sourdoughs',
-        image: sourdough,
+        image: multiSeedSourdough,
         description: 'Using the best flours, grains and seeds.',
         itemCount: 8,
         items: [
             {
-                id: 'sourbread',
+                id: 'sourdough',
                 itemName: "White Sourdough",
-                itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
+                itemDescription: "A classic sourdough loaf with a crisp, golden crust and a light, tangy, airy crumb — perfect for sandwiches or as an everyday table bread. ",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [whiteSourdough]
             },
             {
                 id: 'WholeWheat',
                 itemName: "Whole Wheat Sourdough",
-                itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
-                itemPrice: 3.50,
-                itemImages: [brioche]
+                itemDescription: "A hearty whole wheat sourdough made with stone-ground Italian Primativa flour — rustic, nutty, and full of old-world character.",
+                itemImages: [wholeWheat],
+                itemPrice: 3.50
             },
             {
-                id: 'sourbread3',
+                id: 'artisanal',
                 itemName: "Artisanal Loaf Sourdough",
-                itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
+                itemDescription: "A rustic country sourdough crafted from our unique blend of local, French, and Italian wheat, plus hints of barley for extra depth — hearty, aromatic, and naturally leavened.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [artisan]
             },
             {
                 id: 'Rye',
-                itemName: "100% Rye Sourdough",
-                itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
+                itemName: "100% Russian Rye Sourdough",
+                itemDescription: "A dense, earthy rye loaf inspired by traditional Russian recipes — robust flavor with a deep, hearty crumb and a hint of sourness. Perfect for cheese boards, hearty soups, and sweet jams.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [rye]
             },
             {
                 id: 'MultiSeedWholeGrain',
                 itemName: "MultiSeed Whole Grain Sourdough",
-                itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
+                itemDescription: "A hearty sourdough loaf loaded with pumpkin seeds, sunflower seeds, flaxseed, nigella, sesame, and oatmeal multigrain. Crafted with a balanced blend of local, French, and Italian flours for deep flavor and a satisfying crunch.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [multiSeedSourdough]
             }]
     },
     {
@@ -86,71 +105,101 @@ export const categories = [
                 "itemName": "Ciabatta",
                 "itemDescription": "Italian rustic bread with an airy crumb and crisp crust — perfect for sandwiches.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [ciabatta]
             },
             {
                 "id": "focaccia",
                 "itemName": "Focaccia",
-                "itemDescription": "Soft Italian flatbread brushed with olive oil, sea salt, and fresh herbs.",
+                "itemDescription": "A fluffy, olive oil-rich Italian flatbread brushed with olive oil, sea salt, and fresh herbs. From the classic to a wide selection of toppings.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [focaccia],
+                "details": [
+                    {
+                        "id": "classic-focaccia",
+                        "name": "Classic",
+                        "description": "Plain focaccia drizzled with olive oil, sprinkled with sea salt, and topped with fresh herbs.",
+                        "price": 3.50,
+                        "images": [focaccia]
+                    },
+                    {
+                        "id": "tomato-basil-feta",
+                        "name": "Tomato, Basil & Feta",
+                        "description": "Focaccia topped with juicy tomatoes, fragrant basil leaves, and creamy crumbled feta.",
+                        "price": 3.50,
+                        "images": [focaccia]
+                    },
+                    {
+                        "id": "garlic-olive",
+                        "name": "Garlic & Olive",
+                        "description": "Focaccia with slow-roasted garlic confit and a mix of black and green olives.",
+                        "price": 3.50,
+                        "images": [focaccia]
+                    },
+                    {
+                        "id": "sausage-cheddar",
+                        "name": "Sausage & Cheddar",
+                        "description": "Savory focaccia loaded with spiced sausage and melted sharp cheddar cheese.",
+                        "price": 3.50,
+                        "images": [focaccia]
+                    },
+                    {
+                        "id": "mushroom-goat-cheese",
+                        "name": "Mushroom & Goat Cheese",
+                        "description": "Rustic focaccia topped with caramelized onions, sautéed mushrooms, and tangy goat cheese.",
+                        "price": 3.50,
+                        "images": [focaccia]
+                    }
+                ]
             },
             {
                 "id": "brioche-buns",
                 "itemName": "Brioche Buns",
                 "itemDescription": "Buttery, fluffy buns for gourmet burgers or breakfast sandwiches.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [briocheBuns]
             },
             {
                 "id": "buttermilk-biscuits",
                 "itemName": "Buttermilk Biscuits",
                 "itemDescription": "Southern-style biscuits, flaky and rich — a comfort classic.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [biscuits]
             },
             {
                 "id": "popovers",
                 "itemName": "Popovers",
                 "itemDescription": "Light, airy rolls with a crisp shell — best served warm with butter.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [popovers]
             },
             {
                 "id": "parker-house-rolls",
                 "itemName": "Parker House Rolls",
                 "itemDescription": "Soft, folded dinner rolls brushed with butter — a timeless table favorite.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [parkerHouseRolls]
             },
             {
                 "id": "garlic-knots",
                 "itemName": "Garlic Knots",
                 "itemDescription": "Soft, chewy knots brushed with garlic butter and fresh herbs.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [garlicKnots]
             },
             {
                 "id": "classic-cornbread",
                 "itemName": "Classic Cornbread",
                 "itemDescription": "Moist, buttery cornbread with a golden crust — a perfect side for any meal.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [cornBread]
             },
             {
                 "id": "jalapeno-cheddar-cornbread",
                 "itemName": "Jalapeño Cheddar Cornbread",
                 "itemDescription": "Savory cornbread packed with sharp cheddar cheese and a mild jalapeño kick.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [jalapenoCornbread]
             },
-            {
-                "id": "cornbread-muffins",
-                "itemName": "Honey Butter Cornbread Muffins",
-                "itemDescription": "Individual cornbread muffins brushed with sweet honey butter — great for brunch.",
-                itemPrice: 3.50,
-                itemImages: [brioche]
-            }
         ]
     },
     {
@@ -161,46 +210,53 @@ export const categories = [
         itemCount: 5,
         items: [
             {
-                id: 'sweet-bread1',
+                id: 'brioche',
                 itemName: "Classic Brioche",
                 itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
                 itemPrice: 3.50,
                 itemImages: [brioche]
             },
             {
-                id: 'sweet-bread2',
+                id: 'cinnamon',
                 itemName: "Cinnamon Roll Bread",
                 itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [cinnamon]
             },
             {
-                id: 'sweet-bread3',
+                id: 'babka',
                 itemName: "Chocolate Babka",
                 itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [babka]
             },
             {
-                id: 'sweet-bread4',
+                id: 'milk-bread',
+                itemName: "Milk Bread",
+                itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
+                itemPrice: 3.50,
+                itemImages: [milkBread]
+            },
+            {
+                id: 'apple-raisin',
                 itemName: "Apple Raisin Walnut Brioche",
                 itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [appleRaisinWalnut]
             },
             {
-                id: 'sweet-bread5',
+                id: 'cranberry',
                 itemName: "Cranberry Pecan Babka",
                 itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [cranberryPecan]
             },
             {
-                id: 'sweet-bread5',
+                id: 'monkey-bread',
                 itemName: "Pull-apart Monkey Bread",
                 itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
                 itemPrice: 3.50,
-                itemImages: [brioche]
+                itemImages: [monkeyBread]
             }]
     },
     {

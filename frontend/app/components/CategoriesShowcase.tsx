@@ -4,7 +4,7 @@ import { Card, CardContent } from '../ui/card';
 import specialtyCakes from '../assets/specialty-cakes.png';
 import seasonal from '../assets/lemon-basil.png';
 import milleCrepeCake from "../assets/mille-crepe-cake.jpg";
-import sourdough from "../assets/sourdough.jpg"
+import sourdough from "../assets/multiseed-sourdough.jpg"
 import Image from 'next/image';
 
 const categories = [
