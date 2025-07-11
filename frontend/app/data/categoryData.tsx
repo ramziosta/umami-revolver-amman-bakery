@@ -85,70 +85,70 @@ export const categories = [
                 "id": "ciabatta",
                 "itemName": "Ciabatta",
                 "itemDescription": "Italian rustic bread with an airy crumb and crisp crust — perfect for sandwiches.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [brioche]
             },
             {
                 "id": "focaccia",
                 "itemName": "Focaccia",
                 "itemDescription": "Soft Italian flatbread brushed with olive oil, sea salt, and fresh herbs.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [brioche]
             },
             {
                 "id": "brioche-buns",
                 "itemName": "Brioche Buns",
                 "itemDescription": "Buttery, fluffy buns for gourmet burgers or breakfast sandwiches.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [brioche]
             },
             {
                 "id": "buttermilk-biscuits",
                 "itemName": "Buttermilk Biscuits",
                 "itemDescription": "Southern-style biscuits, flaky and rich — a comfort classic.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [brioche]
             },
             {
                 "id": "popovers",
                 "itemName": "Popovers",
                 "itemDescription": "Light, airy rolls with a crisp shell — best served warm with butter.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [brioche]
             },
             {
                 "id": "parker-house-rolls",
                 "itemName": "Parker House Rolls",
                 "itemDescription": "Soft, folded dinner rolls brushed with butter — a timeless table favorite.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [brioche]
             },
             {
                 "id": "garlic-knots",
                 "itemName": "Garlic Knots",
                 "itemDescription": "Soft, chewy knots brushed with garlic butter and fresh herbs.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [brioche]
             },
             {
                 "id": "classic-cornbread",
                 "itemName": "Classic Cornbread",
                 "itemDescription": "Moist, buttery cornbread with a golden crust — a perfect side for any meal.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [brioche]
             },
             {
                 "id": "jalapeno-cheddar-cornbread",
                 "itemName": "Jalapeño Cheddar Cornbread",
                 "itemDescription": "Savory cornbread packed with sharp cheddar cheese and a mild jalapeño kick.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [brioche]
             },
             {
                 "id": "cornbread-muffins",
                 "itemName": "Honey Butter Cornbread Muffins",
                 "itemDescription": "Individual cornbread muffins brushed with sweet honey butter — great for brunch.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [brioche]
             }
         ]
@@ -213,55 +213,55 @@ export const categories = [
                 "id": "kouign-amann",
                 "itemName": "Kouign-amann",
                 "itemDescription": "The classic. Crispy flaky and caramelized layers of buttery pastry.",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [brioche]
             },
             {
                 "id": "chocolate-kouign-amann",
                 "itemName": "Chocolate Ganache filled Kouign-amann",
                 "itemDescription": "With chocolate ganache filling.",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [brioche]
             },    {
                 "id": "kouign-amann",
                 "itemName": "Almond frangipane filled Kouign-amann",
                 "itemDescription": "With almond frangipane filling..",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [brioche]
             },
             {
                 "id": "blueberry-muffin",
                 "itemName": "Blueberry Muffin",
                 "itemDescription": "Fluffy muffin loaded with juicy blueberries.",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [brioche]
             },
             {
                 "id": "banana-nut-muffin",
                 "itemName": "Banana Nut Muffin",
                 "itemDescription": "Moist muffin packed with ripe bananas and crunchy walnuts.",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [brioche]
             },
             {
                 "id": "cranberry-scone",
                 "itemName": "Cranberry Orange Scone",
                 "itemDescription": "Buttery scone with tart cranberries and a hint of orange zest.",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [brioche]
             },
             {
                 "id": "classic-scone",
                 "itemName": "Classic English Scone",
                 "itemDescription": "Tender, buttery scone, perfect with jam and cream.",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [brioche]
             },
             {
                 "id": "coffee-cake",
                 "itemName": "Cinnamon Coffee Cake",
                 "itemDescription": "Soft crumb cake swirled with cinnamon sugar.",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [brioche]
             }
         ]
@@ -336,7 +336,7 @@ export const categories = [
                 "id": "chocolate-cake",
                 "itemName": "Chocolate Cake",
                 "itemDescription": "Rich, moist chocolate cake filled and frosted with decadent chocolate French buttercream.",
-                "itemImages": ["chocolate-cake-1.jpg", "chocolate-cake-2.jpg"]
+                "itemImages": [brioche]
             },
             {
                 "id": "germans-chocolate-cake",
@@ -348,7 +348,7 @@ export const categories = [
                 "id": "coconut-cake",
                 "itemName": "Coconut Cake",
                 "itemDescription": "Soft coconut cake layered with German buttercream and finished with toasted coconut flakes.",
-                "itemImages": ["coconut-cake-1.jpg", "coconut-cake-2.jpg"]
+                "itemImages": [brioche]
             },
             {
                 "id": "black-forest-cake",
@@ -381,21 +381,21 @@ export const categories = [
                 "id": "king-chocolate-cake",
                 "itemName": "King Chocolate Cake",
                 "itemDescription": "Rich chocolate mousse cake layered with cream puffs for a decadent bite.",
-                "itemPrice": 25.00,
+                itemPrice: 25.00,
                 itemImages: [brioche]
             },
             {
                 "id": "mikes-lemonade",
                 "itemName": "Mike's Lemonade",
                 "itemDescription": "Moist olive oil cake with zesty lemon curd, mascarpone frosting, and lemon basil sugar.",
-                "itemPrice": 25.00,
+                itemPrice: 25.00,
                 itemImages: [brioche]
             },
             {
                 "id": "tias-chocolate-lotus",
                 "itemName": "Tia's Chocolate Lotus Cake",
                 "itemDescription": "Indulgent chocolate cake with layers of chocolate French buttercream and Lotus French buttercream.",
-                "itemPrice": 25.00,
+                itemPrice: 25.00,
                 itemImages: [brioche]
             }
         ]
@@ -418,7 +418,7 @@ export const categories = [
                 "id": "tiramisu-crepe",
                 "itemName": "Tiramisu Mille Crêpe",
                 "itemDescription": "Classic tiramisu flavors layered with coffee-soaked crêpes and mascarpone cream.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "20 layers",
                         "priceJOD": 30
@@ -434,7 +434,7 @@ export const categories = [
                 "id": "matcha-crepe",
                 "itemName": "Matcha Mille Crêpe",
                 "itemDescription": "Earthy matcha cream layered between delicate green tea crêpes.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "20 layers",
                         "priceJOD": 30
@@ -450,7 +450,7 @@ export const categories = [
                 "id": "creme-brulee-crepe",
                 "itemName": "Crème Brûlée Mille Crêpe",
                 "itemDescription": "Silky vanilla custard layers with a crisp brûléed top.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "20 layers",
                         "priceJOD": 30
@@ -466,7 +466,7 @@ export const categories = [
                 "id": "milk-tea-crepe",
                 "itemName": "Milk Tea Mille Crêpe",
                 "itemDescription": "Smooth milk tea pastry cream layered with delicate crêpes.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "20 layers",
                         "priceJOD": 30
@@ -482,7 +482,7 @@ export const categories = [
                 "id": "chocolate-mocha-crepe",
                 "itemName": "Chocolate Mocha Mille Crêpe",
                 "itemDescription": "Rich chocolate and mocha cream layers for a decadent bite.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "20 layers",
                         "priceJOD": 35
@@ -498,7 +498,7 @@ export const categories = [
                 "id": "matcha-pistachio-crepe",
                 "itemName": "Matcha Pistachio Mille Crêpe",
                 "itemDescription": "A twist on our matcha cake, layered with nutty pistachio cream.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "20 layers",
                         "priceJOD": 35
@@ -549,21 +549,21 @@ export const categories = [
                 "id": "baked-cheesecake",
                 "itemName": "Baked Cheesecake",
                 "itemDescription": "Classic rich baked cheesecake with your choice of topping.",
-                "itemPrice": 40,
-                "itemImages": ["brioche"]
+                itemPrice: 40,
+                "itemImages": [brioche]
             },
             {
                 "id": "no-bake-cheesecake",
                 "itemName": "No-Bake Cheesecake",
                 "itemDescription": "Creamy, smooth no-bake cheesecake served chilled with your favorite topping.",
-                "itemPrice": 35,
-                "itemImages": ["brioche"]
+                itemPrice: 35,
+                "itemImages": [brioche]
             },
             {
                 "id": "burnt-basque-cheesecake",
                 "itemName": "Burnt Basque Cheesecake",
                 "itemDescription": "Rustic, caramelized Basque-style cheesecake with a creamy center and charred top.",
-                "itemPrice": 45,
+                itemPrice: 45,
                 "itemImages": [
                     "burnt-basque-cheesecake-1.jpg",
                     "burnt-basque-cheesecake-2.jpg"
@@ -573,29 +573,29 @@ export const categories = [
                 "id": "ricotta-cheesecake",
                 "itemName": "Ricotta Cheesecake",
                 "itemDescription": "Light, fluffy Italian-style cheesecake made with creamy ricotta and a touch of citrus zest.",
-                "itemPrice": 40,
-                "itemImages": ["brioche"]
+                itemPrice: 40,
+                "itemImages": [brioche]
             },
             {
                 "id": "japanese-souffle-cheesecake",
                 "itemName": "Japanese Soufflé Cheesecake",
                 "itemDescription": "Incredibly light, airy, and jiggly cheesecake with a delicate sweetness.",
-                "itemPrice": 40,
-                "itemImages": ["brioche"]
+                itemPrice: 40,
+                "itemImages": [brioche]
             },
             {
                 "id": "swirled-cheesecake",
                 "itemName": "Swirled Cheesecake",
                 "itemDescription": "Classic baked cheesecake swirled with rich chocolate ganache or fruit puree for a beautiful marble effect.",
-                "itemPrice": 40,
-                "itemImages": ["brioche"]
+                itemPrice: 40,
+                "itemImages": [brioche]
             },
             {
                 "id": "savory-goat-cheesecake",
                 "itemName": "Savory Goat Cheese Cheesecake",
                 "itemDescription": "A creamy, tangy goat cheese cheesecake with a herbed pastry crust — perfect as an elegant appetizer or unique brunch item.",
-                "itemPrice": 42,
-                "itemImages": ["savory-goat-cheesecake.jpg"]
+                itemPrice: 42,
+                "itemImages": [brioche]
             }
         ]
     },
@@ -615,7 +615,7 @@ export const categories = [
                 "id": "sour-cream-pound",
                 "itemName": "Sour Cream Pound Cake",
                 "itemDescription": "Classic buttery pound cake made extra moist with tangy sour cream.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "Medium",
                         "priceJOD": 18
@@ -631,7 +631,7 @@ export const categories = [
                 "id": "napolitano-marble",
                 "itemName": "Vanilla Chocolate & Raspberry Napolitano Marble Cake",
                 "itemDescription": "Beautifully marbled pound cake with layers of vanilla, chocolate, and raspberry.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "Medium",
                         "priceJOD": 35
@@ -647,7 +647,7 @@ export const categories = [
                 "id": "lemon-pound",
                 "itemName": "Lemon Pound Cake with Lemon Curd",
                 "itemDescription": "Bright, zesty pound cake layered with tangy house-made lemon curd.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "Medium",
                         "priceJOD": 25
@@ -663,7 +663,7 @@ export const categories = [
                 "id": "spiced-coffee-cake",
                 "itemName": "Spiced Coffee Cake with Streusel Topping",
                 "itemDescription": "Tender coffee cake warmly spiced with cinnamon and topped with buttery streusel.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "Medium",
                         "priceJOD": 25
@@ -679,7 +679,7 @@ export const categories = [
                 "id": "red-velvet-pound",
                 "itemName": "Red Velvet & White Chocolate Chip with Cream Cheese Frosting",
                 "itemDescription": "Moist red velvet pound cake studded with white chocolate chips and topped with smooth cream cheese frosting.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "Medium",
                         "priceJOD": 25
@@ -689,13 +689,13 @@ export const categories = [
                         "priceJOD": 35
                     }
                 ],
-                "itemImages": ["red-velvet-pound-1.jpg", "red-velvet-pound-2.jpg"]
+                "itemImages": [brioche]
             },
             {
                 "id": "ultimate-chocolate-bundt",
                 "itemName": "Ultimate Chocolate Triple Layer Bundt Cake",
                 "itemDescription": "Decadent chocolate bundt cake with rich layers and glossy chocolate glaze.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "Medium",
                         "priceJOD": 28
@@ -705,7 +705,7 @@ export const categories = [
                         "priceJOD": 35
                     }
                 ],
-                "itemImages": ["ultimate-chocolate-bundt-1.jpg", "ultimate-chocolate-bundt-2.jpg"]
+                "itemImages": [brioche]
             }
         ]
     },

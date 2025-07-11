@@ -641,7 +641,7 @@ const categories = [
                 "id": "ciabatta",
                 "itemName": "Ciabatta",
                 "itemDescription": "Italian rustic bread with an airy crumb and crisp crust — perfect for sandwiches.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -650,7 +650,7 @@ const categories = [
                 "id": "focaccia",
                 "itemName": "Focaccia",
                 "itemDescription": "Soft Italian flatbread brushed with olive oil, sea salt, and fresh herbs.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -659,7 +659,7 @@ const categories = [
                 "id": "brioche-buns",
                 "itemName": "Brioche Buns",
                 "itemDescription": "Buttery, fluffy buns for gourmet burgers or breakfast sandwiches.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -668,7 +668,7 @@ const categories = [
                 "id": "buttermilk-biscuits",
                 "itemName": "Buttermilk Biscuits",
                 "itemDescription": "Southern-style biscuits, flaky and rich — a comfort classic.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -677,7 +677,7 @@ const categories = [
                 "id": "popovers",
                 "itemName": "Popovers",
                 "itemDescription": "Light, airy rolls with a crisp shell — best served warm with butter.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -686,7 +686,7 @@ const categories = [
                 "id": "parker-house-rolls",
                 "itemName": "Parker House Rolls",
                 "itemDescription": "Soft, folded dinner rolls brushed with butter — a timeless table favorite.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -695,7 +695,7 @@ const categories = [
                 "id": "garlic-knots",
                 "itemName": "Garlic Knots",
                 "itemDescription": "Soft, chewy knots brushed with garlic butter and fresh herbs.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -704,7 +704,7 @@ const categories = [
                 "id": "classic-cornbread",
                 "itemName": "Classic Cornbread",
                 "itemDescription": "Moist, buttery cornbread with a golden crust — a perfect side for any meal.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -713,7 +713,7 @@ const categories = [
                 "id": "jalapeno-cheddar-cornbread",
                 "itemName": "Jalapeño Cheddar Cornbread",
                 "itemDescription": "Savory cornbread packed with sharp cheddar cheese and a mild jalapeño kick.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -722,7 +722,7 @@ const categories = [
                 "id": "cornbread-muffins",
                 "itemName": "Honey Butter Cornbread Muffins",
                 "itemDescription": "Individual cornbread muffins brushed with sweet honey butter — great for brunch.",
-                "itemPrice": 3.50,
+                itemPrice: 3.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -802,7 +802,7 @@ const categories = [
                 "id": "kouign-amann",
                 "itemName": "Kouign-amann",
                 "itemDescription": "The classic. Crispy flaky and caramelized layers of buttery pastry.",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -811,7 +811,7 @@ const categories = [
                 "id": "chocolate-kouign-amann",
                 "itemName": "Chocolate Ganache filled Kouign-amann",
                 "itemDescription": "With chocolate ganache filling.",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -820,7 +820,7 @@ const categories = [
                 "id": "kouign-amann",
                 "itemName": "Almond frangipane filled Kouign-amann",
                 "itemDescription": "With almond frangipane filling..",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -829,7 +829,7 @@ const categories = [
                 "id": "blueberry-muffin",
                 "itemName": "Blueberry Muffin",
                 "itemDescription": "Fluffy muffin loaded with juicy blueberries.",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -838,7 +838,7 @@ const categories = [
                 "id": "banana-nut-muffin",
                 "itemName": "Banana Nut Muffin",
                 "itemDescription": "Moist muffin packed with ripe bananas and crunchy walnuts.",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -847,7 +847,7 @@ const categories = [
                 "id": "cranberry-scone",
                 "itemName": "Cranberry Orange Scone",
                 "itemDescription": "Buttery scone with tart cranberries and a hint of orange zest.",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -856,7 +856,7 @@ const categories = [
                 "id": "classic-scone",
                 "itemName": "Classic English Scone",
                 "itemDescription": "Tender, buttery scone, perfect with jam and cream.",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -865,7 +865,7 @@ const categories = [
                 "id": "coffee-cake",
                 "itemName": "Cinnamon Coffee Cake",
                 "itemDescription": "Soft crumb cake swirled with cinnamon sugar.",
-                "itemPrice": 2.50,
+                itemPrice: 2.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -971,8 +971,7 @@ const categories = [
                 "itemName": "Chocolate Cake",
                 "itemDescription": "Rich, moist chocolate cake filled and frosted with decadent chocolate French buttercream.",
                 "itemImages": [
-                    "chocolate-cake-1.jpg",
-                    "chocolate-cake-2.jpg"
+                    __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
             },
             {
@@ -988,8 +987,7 @@ const categories = [
                 "itemName": "Coconut Cake",
                 "itemDescription": "Soft coconut cake layered with German buttercream and finished with toasted coconut flakes.",
                 "itemImages": [
-                    "coconut-cake-1.jpg",
-                    "coconut-cake-2.jpg"
+                    __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
             },
             {
@@ -1029,7 +1027,7 @@ const categories = [
                 "id": "king-chocolate-cake",
                 "itemName": "King Chocolate Cake",
                 "itemDescription": "Rich chocolate mousse cake layered with cream puffs for a decadent bite.",
-                "itemPrice": 25.00,
+                itemPrice: 25.00,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -1038,7 +1036,7 @@ const categories = [
                 "id": "mikes-lemonade",
                 "itemName": "Mike's Lemonade",
                 "itemDescription": "Moist olive oil cake with zesty lemon curd, mascarpone frosting, and lemon basil sugar.",
-                "itemPrice": 25.00,
+                itemPrice: 25.00,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -1047,7 +1045,7 @@ const categories = [
                 "id": "tias-chocolate-lotus",
                 "itemName": "Tia's Chocolate Lotus Cake",
                 "itemDescription": "Indulgent chocolate cake with layers of chocolate French buttercream and Lotus French buttercream.",
-                "itemPrice": 25.00,
+                itemPrice: 25.00,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
@@ -1072,7 +1070,7 @@ const categories = [
                 "id": "tiramisu-crepe",
                 "itemName": "Tiramisu Mille Crêpe",
                 "itemDescription": "Classic tiramisu flavors layered with coffee-soaked crêpes and mascarpone cream.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "20 layers",
                         "priceJOD": 30
@@ -1090,7 +1088,7 @@ const categories = [
                 "id": "matcha-crepe",
                 "itemName": "Matcha Mille Crêpe",
                 "itemDescription": "Earthy matcha cream layered between delicate green tea crêpes.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "20 layers",
                         "priceJOD": 30
@@ -1108,7 +1106,7 @@ const categories = [
                 "id": "creme-brulee-crepe",
                 "itemName": "Crème Brûlée Mille Crêpe",
                 "itemDescription": "Silky vanilla custard layers with a crisp brûléed top.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "20 layers",
                         "priceJOD": 30
@@ -1126,7 +1124,7 @@ const categories = [
                 "id": "milk-tea-crepe",
                 "itemName": "Milk Tea Mille Crêpe",
                 "itemDescription": "Smooth milk tea pastry cream layered with delicate crêpes.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "20 layers",
                         "priceJOD": 30
@@ -1144,7 +1142,7 @@ const categories = [
                 "id": "chocolate-mocha-crepe",
                 "itemName": "Chocolate Mocha Mille Crêpe",
                 "itemDescription": "Rich chocolate and mocha cream layers for a decadent bite.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "20 layers",
                         "priceJOD": 35
@@ -1162,7 +1160,7 @@ const categories = [
                 "id": "matcha-pistachio-crepe",
                 "itemName": "Matcha Pistachio Mille Crêpe",
                 "itemDescription": "A twist on our matcha cake, layered with nutty pistachio cream.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "20 layers",
                         "priceJOD": 35
@@ -1215,25 +1213,25 @@ const categories = [
                 "id": "baked-cheesecake",
                 "itemName": "Baked Cheesecake",
                 "itemDescription": "Classic rich baked cheesecake with your choice of topping.",
-                "itemPrice": 40,
+                itemPrice: 40,
                 "itemImages": [
-                    "brioche"
+                    __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
             },
             {
                 "id": "no-bake-cheesecake",
                 "itemName": "No-Bake Cheesecake",
                 "itemDescription": "Creamy, smooth no-bake cheesecake served chilled with your favorite topping.",
-                "itemPrice": 35,
+                itemPrice: 35,
                 "itemImages": [
-                    "brioche"
+                    __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
             },
             {
                 "id": "burnt-basque-cheesecake",
                 "itemName": "Burnt Basque Cheesecake",
                 "itemDescription": "Rustic, caramelized Basque-style cheesecake with a creamy center and charred top.",
-                "itemPrice": 45,
+                itemPrice: 45,
                 "itemImages": [
                     "burnt-basque-cheesecake-1.jpg",
                     "burnt-basque-cheesecake-2.jpg"
@@ -1243,36 +1241,36 @@ const categories = [
                 "id": "ricotta-cheesecake",
                 "itemName": "Ricotta Cheesecake",
                 "itemDescription": "Light, fluffy Italian-style cheesecake made with creamy ricotta and a touch of citrus zest.",
-                "itemPrice": 40,
+                itemPrice: 40,
                 "itemImages": [
-                    "brioche"
+                    __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
             },
             {
                 "id": "japanese-souffle-cheesecake",
                 "itemName": "Japanese Soufflé Cheesecake",
                 "itemDescription": "Incredibly light, airy, and jiggly cheesecake with a delicate sweetness.",
-                "itemPrice": 40,
+                itemPrice: 40,
                 "itemImages": [
-                    "brioche"
+                    __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
             },
             {
                 "id": "swirled-cheesecake",
                 "itemName": "Swirled Cheesecake",
                 "itemDescription": "Classic baked cheesecake swirled with rich chocolate ganache or fruit puree for a beautiful marble effect.",
-                "itemPrice": 40,
+                itemPrice: 40,
                 "itemImages": [
-                    "brioche"
+                    __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
             },
             {
                 "id": "savory-goat-cheesecake",
                 "itemName": "Savory Goat Cheese Cheesecake",
                 "itemDescription": "A creamy, tangy goat cheese cheesecake with a herbed pastry crust — perfect as an elegant appetizer or unique brunch item.",
-                "itemPrice": 42,
+                itemPrice: 42,
                 "itemImages": [
-                    "savory-goat-cheesecake.jpg"
+                    __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
             }
         ]
@@ -1293,7 +1291,7 @@ const categories = [
                 "id": "sour-cream-pound",
                 "itemName": "Sour Cream Pound Cake",
                 "itemDescription": "Classic buttery pound cake made extra moist with tangy sour cream.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "Medium",
                         "priceJOD": 18
@@ -1311,7 +1309,7 @@ const categories = [
                 "id": "napolitano-marble",
                 "itemName": "Vanilla Chocolate & Raspberry Napolitano Marble Cake",
                 "itemDescription": "Beautifully marbled pound cake with layers of vanilla, chocolate, and raspberry.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "Medium",
                         "priceJOD": 35
@@ -1329,7 +1327,7 @@ const categories = [
                 "id": "lemon-pound",
                 "itemName": "Lemon Pound Cake with Lemon Curd",
                 "itemDescription": "Bright, zesty pound cake layered with tangy house-made lemon curd.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "Medium",
                         "priceJOD": 25
@@ -1347,7 +1345,7 @@ const categories = [
                 "id": "spiced-coffee-cake",
                 "itemName": "Spiced Coffee Cake with Streusel Topping",
                 "itemDescription": "Tender coffee cake warmly spiced with cinnamon and topped with buttery streusel.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "Medium",
                         "priceJOD": 25
@@ -1365,7 +1363,7 @@ const categories = [
                 "id": "red-velvet-pound",
                 "itemName": "Red Velvet & White Chocolate Chip with Cream Cheese Frosting",
                 "itemDescription": "Moist red velvet pound cake studded with white chocolate chips and topped with smooth cream cheese frosting.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "Medium",
                         "priceJOD": 25
@@ -1376,15 +1374,14 @@ const categories = [
                     }
                 ],
                 "itemImages": [
-                    "red-velvet-pound-1.jpg",
-                    "red-velvet-pound-2.jpg"
+                    __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
             },
             {
                 "id": "ultimate-chocolate-bundt",
                 "itemName": "Ultimate Chocolate Triple Layer Bundt Cake",
                 "itemDescription": "Decadent chocolate bundt cake with rich layers and glossy chocolate glaze.",
-                "itemPrices": [
+                itemPrice: [
                     {
                         "size": "Medium",
                         "priceJOD": 28
@@ -1395,8 +1392,7 @@ const categories = [
                     }
                 ],
                 "itemImages": [
-                    "ultimate-chocolate-bundt-1.jpg",
-                    "ultimate-chocolate-bundt-2.jpg"
+                    __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
                 ]
             }
         ]
@@ -2088,7 +2084,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/ui/card.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$categoryData$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/data/categoryData.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 'use client';
+;
 ;
 ;
 ;
@@ -2109,20 +2107,20 @@ const CategoryHero = ({ title, subtitle, backgroundImage })=>/*#__PURE__*/ (0, _
                         priority: true
                     }, void 0, false, {
                         fileName: "[project]/app/categories/[slug]/page.tsx",
-                        lineNumber: 45,
+                        lineNumber: 39,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-black/60"
                     }, void 0, false, {
                         fileName: "[project]/app/categories/[slug]/page.tsx",
-                        lineNumber: 53,
+                        lineNumber: 47,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/categories/[slug]/page.tsx",
-                lineNumber: 44,
+                lineNumber: 38,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2133,7 +2131,7 @@ const CategoryHero = ({ title, subtitle, backgroundImage })=>/*#__PURE__*/ (0, _
                         children: title
                     }, void 0, false, {
                         fileName: "[project]/app/categories/[slug]/page.tsx",
-                        lineNumber: 57,
+                        lineNumber: 51,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2141,19 +2139,19 @@ const CategoryHero = ({ title, subtitle, backgroundImage })=>/*#__PURE__*/ (0, _
                         children: subtitle
                     }, void 0, false, {
                         fileName: "[project]/app/categories/[slug]/page.tsx",
-                        lineNumber: 60,
+                        lineNumber: 54,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/categories/[slug]/page.tsx",
-                lineNumber: 56,
+                lineNumber: 50,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/categories/[slug]/page.tsx",
-        lineNumber: 43,
+        lineNumber: 37,
         columnNumber: 5
     }, this);
 _c = CategoryHero;
@@ -2165,7 +2163,15 @@ const ItemCard = ({ slug, item })=>/*#__PURE__*/ (0, __TURBOPACK__imported__modu
                 item.itemImages?.[0] && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "relative h-64 overflow-hidden",
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        typeof item.itemImages[0] === "string" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                            src: item.itemImages[0],
+                            alt: item.itemName,
+                            className: "w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        }, void 0, false, {
+                            fileName: "[project]/app/categories/[slug]/page.tsx",
+                            lineNumber: 67,
+                            columnNumber: 25
+                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             src: item.itemImages[0],
                             alt: item.itemName,
                             width: 800,
@@ -2173,14 +2179,14 @@ const ItemCard = ({ slug, item })=>/*#__PURE__*/ (0, __TURBOPACK__imported__modu
                             className: "w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         }, void 0, false, {
                             fileName: "[project]/app/categories/[slug]/page.tsx",
-                            lineNumber: 72,
-                            columnNumber: 21
+                            lineNumber: 73,
+                            columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
                         }, void 0, false, {
                             fileName: "[project]/app/categories/[slug]/page.tsx",
-                            lineNumber: 79,
+                            lineNumber: 81,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2190,18 +2196,18 @@ const ItemCard = ({ slug, item })=>/*#__PURE__*/ (0, __TURBOPACK__imported__modu
                                 children: item.itemName
                             }, void 0, false, {
                                 fileName: "[project]/app/categories/[slug]/page.tsx",
-                                lineNumber: 81,
+                                lineNumber: 83,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/categories/[slug]/page.tsx",
-                            lineNumber: 80,
+                            lineNumber: 82,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/categories/[slug]/page.tsx",
-                    lineNumber: 71,
+                    lineNumber: 65,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -2212,7 +2218,7 @@ const ItemCard = ({ slug, item })=>/*#__PURE__*/ (0, __TURBOPACK__imported__modu
                             children: item.itemDescription
                         }, void 0, false, {
                             fileName: "[project]/app/categories/[slug]/page.tsx",
-                            lineNumber: 89,
+                            lineNumber: 91,
                             columnNumber: 17
                         }, this),
                         item.itemPrice && typeof item.itemPrice === "number" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2224,7 +2230,7 @@ const ItemCard = ({ slug, item })=>/*#__PURE__*/ (0, __TURBOPACK__imported__modu
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/categories/[slug]/page.tsx",
-                            lineNumber: 94,
+                            lineNumber: 96,
                             columnNumber: 21
                         }, this),
                         item.itemPrices && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2235,7 +2241,7 @@ const ItemCard = ({ slug, item })=>/*#__PURE__*/ (0, __TURBOPACK__imported__modu
                                     children: "Sizes & Prices:"
                                 }, void 0, false, {
                                     fileName: "[project]/app/categories/[slug]/page.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 103,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2249,18 +2255,18 @@ const ItemCard = ({ slug, item })=>/*#__PURE__*/ (0, __TURBOPACK__imported__modu
                                             ]
                                         }, idx, true, {
                                             fileName: "[project]/app/categories/[slug]/page.tsx",
-                                            lineNumber: 102,
+                                            lineNumber: 106,
                                             columnNumber: 33
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/app/categories/[slug]/page.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 104,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/categories/[slug]/page.tsx",
-                            lineNumber: 98,
+                            lineNumber: 102,
                             columnNumber: 21
                         }, this),
                         item.itemPrice && typeof item.itemPrice === "object" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2271,7 +2277,7 @@ const ItemCard = ({ slug, item })=>/*#__PURE__*/ (0, __TURBOPACK__imported__modu
                                     children: "Options & Prices:"
                                 }, void 0, false, {
                                     fileName: "[project]/app/categories/[slug]/page.tsx",
-                                    lineNumber: 110,
+                                    lineNumber: 116,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2285,40 +2291,40 @@ const ItemCard = ({ slug, item })=>/*#__PURE__*/ (0, __TURBOPACK__imported__modu
                                             ]
                                         }, key, true, {
                                             fileName: "[project]/app/categories/[slug]/page.tsx",
-                                            lineNumber: 113,
+                                            lineNumber: 119,
                                             columnNumber: 33
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/app/categories/[slug]/page.tsx",
-                                    lineNumber: 111,
+                                    lineNumber: 117,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/categories/[slug]/page.tsx",
-                            lineNumber: 109,
+                            lineNumber: 115,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/categories/[slug]/page.tsx",
-                    lineNumber: 88,
+                    lineNumber: 90,
                     columnNumber: 13
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/categories/[slug]/page.tsx",
-            lineNumber: 69,
+            lineNumber: 63,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/categories/[slug]/page.tsx",
-        lineNumber: 68,
+        lineNumber: 62,
         columnNumber: 5
     }, this);
 _c1 = ItemCard;
 function CategoryPage({ params }) {
-    const { slug } = params;
+    const { slug } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["use"])(params);
     const category = __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$data$2f$categoryData$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["categories"].find((cat)=>cat.id === slug);
     if (!category) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2326,7 +2332,7 @@ function CategoryPage({ params }) {
             children: "Category not found"
         }, void 0, false, {
             fileName: "[project]/app/categories/[slug]/page.tsx",
-            lineNumber: 128,
+            lineNumber: 136,
             columnNumber: 16
         }, this);
     }
@@ -2339,7 +2345,7 @@ function CategoryPage({ params }) {
                 backgroundImage: category.image
             }, void 0, false, {
                 fileName: "[project]/app/categories/[slug]/page.tsx",
-                lineNumber: 133,
+                lineNumber: 141,
                 columnNumber: 13
             }, this),
             category.details && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2350,7 +2356,7 @@ function CategoryPage({ params }) {
                         children: "Details"
                     }, void 0, false, {
                         fileName: "[project]/app/categories/[slug]/page.tsx",
-                        lineNumber: 141,
+                        lineNumber: 149,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("pre", {
@@ -2358,13 +2364,13 @@ function CategoryPage({ params }) {
                         children: JSON.stringify(category.details, null, 2)
                     }, void 0, false, {
                         fileName: "[project]/app/categories/[slug]/page.tsx",
-                        lineNumber: 142,
+                        lineNumber: 150,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/categories/[slug]/page.tsx",
-                lineNumber: 140,
+                lineNumber: 148,
                 columnNumber: 17
             }, this),
             category.cupcakeQuantityOptions && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2375,7 +2381,7 @@ function CategoryPage({ params }) {
                         children: "Cupcake Options"
                     }, void 0, false, {
                         fileName: "[project]/app/categories/[slug]/page.tsx",
-                        lineNumber: 150,
+                        lineNumber: 158,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2389,18 +2395,18 @@ function CategoryPage({ params }) {
                                 ]
                             }, opt.quantity, true, {
                                 fileName: "[project]/app/categories/[slug]/page.tsx",
-                                lineNumber: 153,
+                                lineNumber: 161,
                                 columnNumber: 29
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/categories/[slug]/page.tsx",
-                        lineNumber: 151,
+                        lineNumber: 159,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/categories/[slug]/page.tsx",
-                lineNumber: 149,
+                lineNumber: 157,
                 columnNumber: 17
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2414,28 +2420,28 @@ function CategoryPage({ params }) {
                                 item: item
                             }, item.id, false, {
                                 fileName: "[project]/app/categories/[slug]/page.tsx",
-                                lineNumber: 165,
+                                lineNumber: 173,
                                 columnNumber: 29
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/categories/[slug]/page.tsx",
-                        lineNumber: 163,
+                        lineNumber: 171,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/categories/[slug]/page.tsx",
-                    lineNumber: 162,
+                    lineNumber: 170,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/categories/[slug]/page.tsx",
-                lineNumber: 161,
+                lineNumber: 169,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/categories/[slug]/page.tsx",
-        lineNumber: 132,
+        lineNumber: 140,
         columnNumber: 9
     }, this);
 }

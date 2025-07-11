@@ -5,20 +5,21 @@ import Image from "next/image";
 import { Card, CardContent } from "@/app/ui/card";
 import { categories } from "@/app/data/categoryData";
 import type { StaticImageData } from "next/image";
+import { use } from "react";
 
 interface Params {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 }
 
 interface Item {
     id: string;
     itemName: string;
     itemDescription: string;
-    itemPrice?: number | Record<string, number>;
+    itemPrice?: number | Record<string, number | undefined>;
     itemPrices?: { size: string; priceJOD: number }[];
-    itemImages: (StaticImageData | string)[];
+    itemImages: StaticImageData[];
 }
 
 type Category = {
@@ -29,14 +30,7 @@ type Category = {
     itemCount?: number;
     details?: any;
     cupcakeQuantityOptions?: { quantity: number; priceJOD: number }[];
-    items: {
-        id: string;
-        itemName: string;
-        itemDescription: string;
-        itemPrice?: number | Record<string, number>;
-        itemPrices?: { size: string; priceJOD: number }[];
-        itemImages: (StaticImageData | string)[];
-    }[];
+    items: Item[];
 };
 
 const CategoryHero = ({ title, subtitle, backgroundImage }: { title: string; subtitle: string; backgroundImage: StaticImageData }) => (
@@ -69,13 +63,21 @@ const ItemCard = ({ slug, item }: { slug: string; item: Category['items'][0] }) 
         <Card className="group cursor-pointer elegant-shadow hover:shadow-2xl transition-all duration-500 overflow-hidden border-0 bg-white">
             {item.itemImages?.[0] && (
                 <div className="relative h-64 overflow-hidden">
-                    <Image
-                        src={item.itemImages[0]}
-                        alt={item.itemName}
-                        width={800}
-                        height={600}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
+                    {typeof item.itemImages[0] === "string" ? (
+                        <img
+                            src={item.itemImages[0]}
+                            alt={item.itemName}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        />
+                    ) : (
+                        <Image
+                            src={item.itemImages[0]}
+                            alt={item.itemName}
+                            width={800}
+                            height={600}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        />
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     <div className="absolute bottom-4 left-4 right-4 text-white">
                         <h3 className="text-xl font-goglast font-bold mb-1 text-shadow tracking-[0.5rem]">
@@ -91,7 +93,9 @@ const ItemCard = ({ slug, item }: { slug: string; item: Category['items'][0] }) 
                 </p>
 
                 {item.itemPrice && typeof item.itemPrice === "number" && (
-                    <p className="text-umami-navy font-semibold">Price: {item.itemPrice} JOD</p>
+                    <p className="text-umami-navy font-semibold">
+                        Price: {item.itemPrice} JOD
+                    </p>
                 )}
 
                 {item.itemPrices && (
@@ -99,7 +103,9 @@ const ItemCard = ({ slug, item }: { slug: string; item: Category['items'][0] }) 
                         <h4 className="font-bold">Sizes & Prices:</h4>
                         <ul className="list-disc pl-5">
                             {item.itemPrices.map((price, idx) => (
-                                <li key={idx}>{price.size}: {price.priceJOD} JOD</li>
+                                <li key={idx}>
+                                    {price.size}: {price.priceJOD} JOD
+                                </li>
                             ))}
                         </ul>
                     </div>
@@ -110,7 +116,9 @@ const ItemCard = ({ slug, item }: { slug: string; item: Category['items'][0] }) 
                         <h4 className="font-bold">Options & Prices:</h4>
                         <ul className="list-disc pl-5">
                             {Object.entries(item.itemPrice).map(([key, val]) => (
-                                <li key={key}>{key}: {val} JOD</li>
+                                <li key={key}>
+                                    {key}: {val} JOD
+                                </li>
                             ))}
                         </ul>
                     </div>
@@ -121,7 +129,7 @@ const ItemCard = ({ slug, item }: { slug: string; item: Category['items'][0] }) 
 );
 
 export default function CategoryPage({ params }: Params) {
-    const { slug } = params;
+    const { slug } = use(params);
     const category = categories.find((cat) => cat.id === slug);
 
     if (!category) {
