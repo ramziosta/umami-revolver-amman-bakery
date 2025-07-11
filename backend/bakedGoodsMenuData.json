@@ -1,0 +1,574 @@
+[
+  {
+    "id": "breads",
+    "order": 1,
+    "name": "Breads",
+    "description": "Handcrafted small-batch Sourdough, French, and Italian breads. Enjoy our artisanal loaves, custom orders, and fresh dinner rolls, made with care and the finest ingredients.",
+    "icon": "Croissant",
+    "items": [
+      {
+        "name": "White Sourdough",
+        "description": "Classic crunchy and chewy white sourdough made with French flour",
+        "weight": "850g",
+        "price": "JOD 6",
+        "image": "../assets/sourdough.jpg"
+      },
+      {
+        "name": "Whole Wheat Sourdough",
+        "description": "100% Whole wheat Italian flour",
+        "weight": "850g",
+        "price": "JOD 6",
+        "image": "../assets/wholewheat.jpg"
+      },
+      {
+        "name": "Artisanal Loaf Sourdough",
+        "description": "Specialty blend of grains flours",
+        "weight": "850g",
+        "price": "JOD 6",
+        "image": "../assets/artisan.jpeg"
+      },
+      {
+        "name": "100%  Rye Sourdough",
+        "description": "Russian Rye Flour and Caraway Seeds",
+        "weight": "850g",
+        "price": "JOD 6",
+        "image": "../assets/rye.jpeg"
+      },
+      {
+        "name": "MultiSeed Whole Grain Sourdough",
+        "description": "With a blend of Pumpkin, Sesame, Sunflower, poppy and Black Seeds",
+        "weight": "850g",
+        "price": "JOD 7",
+        "image": "../assets/multiseed.jpg"
+      },
+      {
+        "name": "Brioche Loaf",
+        "description": "A rich, buttery French bread with a tender crumb and golden crust, perfect for \"Pan Perdu\". Variations include:",
+        "specs": [
+          "Classic",
+          "Chocolate chip",
+          " Raisin & walnut",
+          "Apple Cinnamon"
+        ],
+        "weight": "450g",
+        "price": "JOD 7 JOD 8",
+        "image": "../assets/brioche.jpeg"
+      },
+      {
+        "name": "Cinnamon Swirl Bread",
+        "description": "Sweet and Buttery with a swirl of Cinnamon Sugar. Perfect for french toast. Cream Cheese Glaze on the side.",
+        "weight": "450g",
+        "price": "JOD 8",
+        "image": "../assets/cinnamon.jpeg"
+      },
+      {
+        "name": "Ciabatta",
+        "description": "Classic Italian Bread with a chewy crust and open crumb",
+        "weight": "6 pieces",
+        "price": "JOD 5",
+        "image": "../assets/ciabatta.jpeg"
+      },
+      {
+        "name": "Focaccia",
+        "description": "A fluffy, olive oil-rich Italian flatbread topped with herbs, salt, and seasonal toppings. Flavors include:",
+        "specs": [
+          "Classic Herb",
+          "Tomato Feta and Basil",
+          "Garlic Confit with Black and Green Olives",
+          " Sausage and Cheddar",
+          "Caramelized Onions, Mushroom and Goat Cheese"
+        ],
+        "weight": "800g",
+        "price": "JOD 7",
+        "image": "../assets/focaccia.jpg"
+      }
+    ]
+  },
+  {
+    "id": "cookies-bars",
+    "order": 2,
+    "name": "Cookies, Bars & Brownies",
+    "description": "Indulge in our timeless classics, as well as custom creations tailored just for you. We introduce exciting new flavors every month, with seasonal updates to keep things fresh. Be sure to check back often for the latest treats!",
+    "quantityPricing": "Cookies:\n6 pieces: 18 JOD\n8 pieces: 24 JOD\n10 pieces: 30 JOD\n12 pieces: 35 JOD\nBars & Brownies:\n6 pieces: 20 JOD\n8 pieces: 32 JOD\n10 pieces: 38 JOD\n12 pieces: 40 JOD",
+    "items": [
+      {
+        "name": "Best Chocolate Chip Cookie",
+        "description": "Brown butter cookie with a mix of fine chocolates and a sprinkle of sea salt for balance.",
+        "price": "",
+        "image": "../assets/chocolate-chip-cookies.jpg"
+      },
+      {
+        "name": "Dark Chocolate Peanut Butter Chip",
+        "description": "",
+        "price": "",
+        "image": "../assets/darkchocolate.jpg"
+      },
+      {
+        "name": "Oatmeal Raisin",
+        "description": "With plump Black and Golden Raisins",
+        "price": "",
+        "image": "../assets/oatmeal-raisin.jpg"
+      },
+      {
+        "name": "Lemon Drop",
+        "description": "Zesty with White Chocolate Chips",
+        "price": "",
+        "image": "../assets/lemon-drop.jpg"
+      },
+      {
+        "name": "Samoa Cookie",
+        "description": "Girl Scout's cookie inspiration: Rich chocolate, gooey caramel, and toasted coconut over a shortbread cookie base.",
+        "price": "",
+        "image": "../assets/samoas.jpg"
+      },
+      {
+        "name": "Stamped Sugar Cookies",
+        "description": "Classic buttery and nutty sugar cookies, hand-stamped for a charming, artisanal touch. Flavors include: ",
+        "specs": [
+          "Almond and Honey",
+          " Espresso Chocolate",
+          "Lemon Zest",
+          "Chai Spice",
+          "Orange Cardamom"
+        ],
+        "price": "",
+        "image": "../assets/sugar-cookies.jpg"
+      },
+      {
+        "name": "Ginger Cookies",
+        "description": "Classic cookies with a warm blend of ginger, spice and everything nice, molasses, and a crackly sugar crust.",
+        "price": "",
+        "image": "../assets/ginger-cookies.jpg"
+      },
+      {
+        "name": "Red Velvet Macadamia",
+        "description": "Chewy and crunchy with a hint of cocoa with chocolate chips.",
+        "image": "../assets/red-velvet.jpg",
+        "price": ""
+      },
+      {
+        "name": "Limoncello Cheesecake Bars",
+        "description": "Citrusy and creamy",
+        "price": "",
+        "image": "../assets/limoncello.jpg"
+      },
+      {
+        "name": "Strawberry Crumble",
+        "description": "Soft chewy center with a crunch Streusel topping",
+        "price": "",
+        "image": "../assets/strawberry-crumble.jpg"
+      },
+      {
+        "name": "Millionaire Shortbread",
+        "description": "Classic buttery Shortbread with Caramel Center and Chocolate Frosting",
+        "price": "",
+        "image": "../assets/millionaire-shortbread.jpg"
+      },
+      {
+        "name": "GF Chocolate Chip",
+        "description": "Gluten-free version of the classic favorite",
+        "price": "",
+        "image": "../assets/gf-cc-cookie.jpg"
+      },
+      {
+        "name": "Brownie with Tahini Swirls",
+        "description": "With Halava bits",
+        "price": "",
+        "image": "../assets/brownies-tahini.jpg"
+      },
+      {
+        "name": "Rich as F@#$ Brownies",
+        "description": "With All Valrohna Chocolate chip and Ducle de Leche",
+        "price": "",
+        "image": "../assets/brownies.jpg"
+      },
+      {
+        "name": "The decadent Blondie",
+        "description": "With toasted walnuts and white chocolate chips",
+        "price": ""
+      },
+      {
+        "name": "Matcha Brownies",
+        "description": "With pistachios",
+        "price": "",
+        "image": "../assets/matcha-brownies.jpg"
+      },
+      {
+        "name": "Red Velvet and Cream Cheese Brownies",
+        "description": "Light chocolate with a slight of tang",
+        "price": "",
+        "image": "../assets/redvelvet-brownies.png"
+      }
+    ]
+  },
+  {
+    "id": "cakes-cupcakes",
+    "order": 3,
+    "name": "Cakes, Cheesecakes & Cupcakes",
+    "description": "From classic favorites to inventive seasonal creations, our cakes, cheesecakes, and cupcakes are made to delight. Any cake flavor can be made into cupcakes, and we happily take custom orders. New flavors are added monthly—check back often to see what’s fresh from the oven!",
+    "quantityPricing": "Cupcakes: 6 pieces: 18 JOD, 8 pieces: 24 JOD, 10 pieces: 30 JOD, 12 pieces: 35 JOD",
+    "items": [
+      {
+        "name": "Tiered Cakes",
+        "description": "Tailored Layer Cakes",
+        "weight": "Available in: 2-tier, 3-tier, and 4-tier\n sizes: 6 inch, 8 inch, 10 inch\n   ",
+        "price": "",
+        "specs": [
+          "Signature flavors include:\n Vanilla,\n Chocolate,\n Red Velvet,\n Carrot,\n Banana,\n Coffee,\n and Lemon.",
+          "Fillings:\n Vanilla Bean Custard,\n Strawberry,\n Raspberry,\n Blueberry,\n Caramel,\n Chocolate,\n Banana Mousse,\n Lemon Curd,\n Coffee Cream,\n Oreo,\n Lotus,\n and seasonal favorites like Passion fruit, Mango, Peach, and more.",
+          "Frostings: French buttercream in:\n Vanilla Bean,\n Chocolate,\n White Chocolate,\n Salted Caramel,\n Mocha \n Lotus.",
+          "Additional frosting options include:\n Toasted Meringue,\n Cream Cheese,\n Marshmallow,\n Whipped Cream,\n Ganache\n Toasted Coconut."
+        ],
+         "image": "/assets/layer-cake.png"
+      },{
+        "name": "Specialty Cakes",
+        "description": "Unique flavors from our kitchen, you cannot get anywhere else!",
+        "weight": "",
+        "price": "",
+        "specs": [
+          "Specialty Cakes:","King Chocolate Cake: Chocolate Mousse with Cream puffs",
+          "Mike's Lemonade: Olive Oil Cake with Lemon Curd, Mascarpone frosting and Lemon Basil Sugar",
+          "Tia's Chocolate Lotus Cake: Chocolate Cake, Chocolate French Butter Cream, Lotus French Butter Cream"
+
+        ],
+         "image": "/assets/chocolate-mousse.jpeg"
+      },
+      {
+        "name": "Bundt and Coffee Cakes",
+        "weight": "Available in medium and large sizes",
+        "price": "Available in Medium Bundt Cake (serves 6–8) and Full Bundt Cake (serves 12–16) ",
+        "specs": [
+          "Sour Cream Pound Cake: 18 JOD / 25 JOD",
+          " Vanilla Chocolate & Raspberry Napolitano  Marble Cake 35 JOD / 45 JOD",
+          " Lemon Pound Cake with Lemon Curd: 25 JOD / 35 JOD",
+          " Spiced Coffee with Streusel Topping: 25 JOD / 35 JOD",
+          " Red Velvet n white chocolate chip with Cream Cheese Frosting 25 JOD / 35 JOD",
+          " Ultimate Chocolate, Triple Layer Bundt Cake with Chocolate glaze 28 JOD / 35 JOD."
+        ],
+        "image": "/assets/napolitan.jpeg"
+      },
+      {
+        "name": "Mille Crepe Cakes",
+        "description": "Delicate mille crêpe cakes made with layers of thin crepes, filled with luscious creams, and elegantly frosted. Also available in custom flavors",
+        "weight": "Available in 8 inch, 20 layer, and 30 layer sizes",
+        "specs": [
+          "Tiramisu 30 JOD / 40 JOD",
+          "Matcha: 30 JOD / 40 JOD",
+          "Crème Brûlée: 30 JOD / 40 JOD",
+          "Milk Tea: 30 JOD / 40 JOD",
+          "Chocolate Mocha: 35 JOD / 45 JOD"
+        ],
+        "image": "/assets/tiramisu-mille-crepe.jpeg"
+      },
+      {
+        "name": "Cupcakes & Muffins",
+        "description": "Custard Castella, Chocolate Espresso Cream, Rosemary Orange, Lemon Blueberry, Multigrain Health, Apple Granola, Ginger Orange Crunch",
+        "weight": "Available in 6, 8, 12, and 16 cup sizes and more",
+        "price": "",
+        "specs": [
+          "Cupcakes:",
+          " 6 pieces: 18 JOD",
+          " 8 pieces: 24 JOD",
+          " 10 pieces: 30 JOD",
+          " 12 pieces: 35 JOD"
+        ],
+         "image": "/assets/cupcake.png"
+      },
+      {
+        "name": "Cheesecake",
+        "description": "Baked, No-Bake Cheesecake, and  Burnt Basque Cheesecake served with a variety of toppings as:",
+        "weight": "Available in 9 inches serving 10-12 pieces",
+        "price": "Baked: 40 JOD, No-Bake: 35 JOD, Burnt Basque: 45 JOD",
+        "specs": [
+          "Strawberry Compote",
+          " Blueberry Compote",
+          " Raspberry Compote",
+          " Salted Caramel",
+          " Chocolate Sauce",
+          " Seasonal Fruit Compote",
+          " Dulce De Leche",
+          "and more...",
+          "Chocolate cheese cake add 5 JOD"
+        ],
+        "image": "/assets/cheesecake.png"
+      }
+    ]
+  },
+  {
+    "id": "brunch",
+    "order": 4,
+    "name": "Brunch",
+    "description": "Our brunch menu brings together comforting classics and savory delights made from scratch. From fluffy quiches and loaded egg bakes to herb-scented biscuits and crêpes, each dish is crafted with care and rich flavors. Customize your plate with a variety of fillings, sauces, and seasonal ingredients—perfect for leisurely mornings and hearty appetites.",
+    "icon": "EggFried",
+    "quantityPricing": "Scones: 6 pieces: 15 JOD, 8 pieces: 20 JOD, 10 pieces: 25 JOD, 12 pieces: 30 JOD.",
+    "items": [
+      {
+        "name": "Quiche",
+        "description": "Lorraine: Bacon and Swiss, Mediterranean:Tomato Basil and Feta, French: Mushroom and Goat Cheese",
+        "weight": "8 inch deep dish pie",
+        "price": "18 JOD to 30 JOD",
+        "specs": [
+          "Three cheese: 18 JOD ",
+          "Lorraine: Bacon and Swiss: 22 JOD",
+          " Mediterranean:Tomato Basil and Feta: 20 JOD",
+          "Mushroom and Goat Cheese: 20 JOD",
+          " Smoked Salmon and Asparagus: 25 JOD"
+        ]
+      },
+      {
+        "name": "Egg Bake Casserole",
+        "description": "Potato Strata topped with eggs, and fillings including: Mushrooms, Sausage, veggies, and Cheeses. Sauces include: Black Peppercorn Gravy, Ranchero, Hollandaise and more.",
+        "weight": "9 inch pie",
+        "price": "15 JOD to 30 JOD",
+        "specs": [
+          "Mushroom and Sausage: 20 JOD",
+          "Mexican chorizo and peppers, with Ranchero Sauce: 25 JOD",
+          "Salmon and Asparagus: 30 JOD"
+        ]
+      },
+      {
+        "name": "Home Fries",
+        "description": "Crispy oven baked Potatoes with roasted garlic and herbs. Add cheese, bacon and veggies extra: Onions, Mushrooms and peppers.",
+        "weight": "",
+        "price": "",
+        "specs": [
+          "medium(8-12 ppl) 10 JOD, large(12-20 ppl) 20 JOD and (30-40 ppl) x-large pan 25 JOD",
+          "Extra toppings: 2 JOD, 5 JOD, 7 JOD"
+        ]
+      },
+      {
+        "name": "Savory Egg Crêpe",
+        "description": "Served with house salad. Filled with eggs, and cheese, extra fillings including: .",
+        "weight": "2 pieces per order",
+        "price": "JOD 10",
+        "specs": [
+          "Sausage n Cheddar",
+          " mushrooms and caramelized onions",
+          "chicken and spinach",
+          "veggies"
+        ]
+      },
+      {
+        "name": "Savory Herb Scone",
+        "description": "Parmesan and chive",
+        "price": "2.0 JOD"
+      },
+      {
+        "name": "Buttermilk Biscuits",
+        "description": "Classic, Cheese, Roasted Garlic and Herb, Bacon and Cheddar.",
+        "price": "2.0 JOD to 2.5 JOD",
+        "specs": [
+          "Classic Scones:\n 6 pieces: 12 JOD\n 8 pieces: 15 JOD\n 10 pieces: 18 JOD\n 12 pieces: 22 JOD",
+          "Cheese Scones:\n 6 pieces: 15 JOD\n8 pieces: 20 JOD\n10 pieces: 25 JOD\n12 pieces: 30 JOD",
+          "Roasted Garlic and Herb Scones:\n 6 pieces: 15 JOD\n8 pieces: 20 JOD\n10 pieces: 25 JOD\n12 pieces: 30 JOD",
+          "Bacon and Cheddar Scones:\n 6 pieces: 15 JOD\n8 pieces: 20 JOD\n10 pieces: 25 JOD\n12 pieces: 30 JOD"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pies-galettes",
+    "order": 5,
+    "name": "Pies, Cobblers & Galettes",
+    "description": "Our pies, cobblers, and galettes celebrate the richness of seasonal fruit and timeless comfort. From buttery lattice-topped pies to rustic open-faced galettes and bubbling cobblers with golden biscuit crusts, each treat is made by hand with love and premium ingredients. Ask us about custom fillings and rotating seasonal specials!",
+    "icon": "PieChart",
+    "items": [
+      {
+        "name": "Rustic Seasonal Galette",
+        "description": "Free-form tart with options like cinnamon apples, grilled peaches with burrata, or stone fruits.",
+        "weight": "medium(8-12 ppl), large(12-20) ppl",
+        "price": "20 JOD / 30 JOD"
+      },
+      {
+        "name": "Berry Cobbler",
+        "description": "Mixed seasonal berries baked with vanilla biscuit topping.",
+        "weight": "medium(8-12 ppl), large(12-20) ppl",
+        "price": "25 JOD / 35 JOD"
+      },
+      {
+        "name": "Pecan Pie",
+        "description": "Toasted pecans in a rich brown sugar custard with flaky pie crust.",
+        "weight": "8 inch",
+        "price": "25 JOD",
+        "image": "/assets/pecan-pie.jpg"
+      },
+      {
+        "name": "Pumpkin Pie",
+        "description": "Pumpkin in a rich butternut custard with flaky pie crust.",
+        "weight": "8 inch",
+        "price": "25 JOD"
+      },
+      {
+        "name": "Chocolate Cream Pie",
+        "description": "Rich chocolate custard in a flaky pie crust with whipped cream and chocolate shavings",
+        "weight": "8 inch",
+        "price": "25 JOD"
+      },
+      {
+        "name": "Apple Pie",
+        "description": "Classic apple pie with flaky crust and spiced apple filling.",
+        "weight": "8 inch",
+        "price": "20 JOD"
+      },
+      {
+        "name": "Banoffie Pie",
+        "description": "Banana,chocolate, toffee, and whipped cream in a graham cracker crust.",
+        "weight": "8 inch",
+        "price": "25 JOD"
+      },
+      {
+        "name": "Lemon Meringue Pie",
+        "description": "Tart and creamy lemon custard in a flaky pie crust with toasted meringue.",
+        "weight": "8 inch",
+        "price": "20 JOD"
+      },
+      {
+        "name": "Peach Cobbler",
+        "description": "Fresh peaches baked with vanilla biscuit topping.",
+        "weight": "medium(8-12 ppl), large(12-20) ppl",
+        "price": "20 JOD / 30 JOD"
+      }
+    ]
+  },
+  {
+    "id": "bamboloni",
+    "order": 6,
+    "name": "Bamboloni",
+    "icon": "Doughnut",
+    "description": "Our Bamboloni are handcrafted Italian doughnuts made from enriched brioche dough for an irresistibly soft, airy texture. Each one is filled with decadent creams, curds, or jams and finished with unique coatings for a perfect bite. We also offer custom flavors and seasonal varieties to keep things deliciously fresh.",
+    "quantityPricing": "6 pieces: 18 JOD,  8 pieces: 24 JOD,  10 pieces: 30 JOD,  12 pieces: 35 JOD",
+    "items": [
+      {
+        "name": "Crème brûlée",
+        "description": "Filled with French pastry cream with a burnt sugar crunch",
+        "price": ""
+      },
+      {
+        "name": "Chocolate",
+        "description": "Filled with chocolate pastry cream and coated with cocoa powder and sugar",
+        "price": ""
+      },
+      {
+        "name": "Café Latte",
+        "description": "Filled with coffee cream",
+        "price": ""
+      },
+      {
+        "name": "Mexicano",
+        "description": "Filled with dulce de leche and coated with cinnamon sugar",
+        "price": ""
+      },
+      {
+        "name": "Thai Dream",
+        "description": "Filled with coconut cream, mango mousse and coated with toasted coconut",
+        "price": ""
+      },
+      {
+        "name": "Strawberry",
+        "description": "Filled with strawberry jam and pastry cream",
+        "price": ""
+      },
+      {
+        "name": "Lemon",
+        "description": "Filled with lemon curd and topped with toasted marshmallow",
+        "price": ""
+      }
+    ]
+  },
+  {
+    "id": "tiramisu",
+    "order": 7,
+    "name": "Tiramisu",
+    "icon": "cake",
+    "description": "From classic Italian to a more modern twist. Also available in custom and seasonal flavors.",
+    "quantityPricing": "Serves 8-10 ppl",
+    "items": [
+      {
+        "name": "Original",
+        "description": "Classic Italian recipe with espresso-soaked sponge, mascarpone cream, and a hint of vanilla.",
+        "price": "25 JOD"
+      },
+      {
+        "name": "Marsala Wine Zabayone",
+        "description": "A refined twist featuring Marsala zabayone folded into silky mascarpone and layered with espresso-dipped ladyfingers.",
+        "price": "30 JOD"
+      },
+      {
+        "name": "Strawberry Almond",
+        "description": "Strawberry-soaked ladyfingers layered with almond mascarpone cream and fresh strawberry compote.",
+        "price": "30 JOD"
+      },
+      {
+        "name": "Pistachio Matcha",
+        "description": "Toasted pistachio cream and earthy matcha mascarpone, layered with coffee-kissed sponge.",
+        "price": "30 JOD"
+      },
+      {
+        "name": "Coconut Mango",
+        "description": "Tropical fusion of coconut mascarpone and golden mango preserves layered with espresso sponge.",
+        "price": "30 JOD"
+      },
+      {
+        "name": "Milk Tea",
+        "description": "Earl Grey–infused mascarpone cream and milk tea glaze layered with coffee-soaked sponge.",
+        "price": "25 JOD"
+      },
+      {
+        "name": "Lemon Mascarpone",
+        "description": "Lemon-zest mascarpone layered with sponge and topped with glossy lemon curd.",
+        "price": "30 JOD"
+      }
+    ]
+  },
+  {
+    "id": "choux-craquelin",
+    "order": 8,
+    "name": "Choux au Craquelin",
+    "icon": "cake",
+    "description": "Crisp craquelin-topped choux filled with luxurious creams and mousses — elegant, airy, and indulgent. Seasonal and custom flavors available.",
+    "quantityPricing": "6 pieces: 18 JOD, 8 pieces: 24 JOD, 10 pieces: 30 JOD, 12 pieces: 35 JOD",
+    "items": [
+      {
+        "name": "Heavenly Vanilla Bean Diplomat",
+        "description": "Silky vanilla bean pastry cream lightened with chantilly in a classic golden shell.",
+        "price": "",
+        "image": "/assets/choux.jpg"
+      },
+      {
+        "name": "Chocolate Crémeux",
+        "description": "Filled with rich dark chocolate crémeux and topped with cocoa craquelin.",
+        "price": ""
+      },
+      {
+        "name": "Strawberry Mousse",
+        "description": "Light strawberry mousse center with a hint of vanilla.",
+        "price": ""
+      },
+      {
+        "name": "Cinnamon Churro",
+        "description": "Cinnamon-infused cream and a brown sugar craquelin shell rolled in cinnamon sugar.",
+        "price": ""
+      },
+      {
+        "name": "Lemon Mousse",
+        "description": "With zesty lemon mousse and candied lemon.",
+        "price": ""
+      },
+      {
+        "name": "Mocha Late",
+        "description": "Espresso cream with a dark chocolate glaze and a touch of sea salt.",
+        "price": ""
+      },
+      {
+        "name": "Coconut Cream",
+        "description": "Filled with coconut cream and rolled in toasted coconut flakes.",
+        "price": ""
+      },
+      {
+        "name": "Arabesque",
+        "description": "Delicate rose water cream with a pistachio crunch and rose petal garnish.",
+        "price": ""
+      }
+    ]
+  }
+]
