@@ -1388,7 +1388,7 @@ const categories = [
             {
                 "id": "kouign-amann",
                 "itemName": "Almond frangipane filled Kouign-amann",
-                "itemDescription": "With almond frangipane filling..",
+                "itemDescription": "With almond frangipane filling.",
                 itemPrice: 2.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
@@ -1396,8 +1396,8 @@ const categories = [
             },
             {
                 "id": "blueberry-muffin",
-                "itemName": "Blueberry Muffin",
-                "itemDescription": "Fluffy muffin loaded with juicy blueberries.",
+                "itemName": "Blueberry Streusel Muffin",
+                "itemDescription": "Fluffy muffin loaded with juicy blueberries and to[[ed with crunchy streusel.",
                 itemPrice: 2.50,
                 itemImages: [
                     __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$app$2f$assets$2f$brioche$2e$jpeg__$28$static__in__ecmascript$2922$__$7d$__$5b$app$2d$client$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"]
@@ -1405,7 +1405,7 @@ const categories = [
             },
             {
                 "id": "banana-nut-muffin",
-                "itemName": "Banana Nut Muffin",
+                "itemName": "Whole GrainBanana Nut Muffin",
                 "itemDescription": "Moist muffin packed with ripe bananas and crunchy walnuts.",
                 itemPrice: 2.50,
                 itemImages: [

@@ -1,24 +1,19 @@
 import type {StaticImageData} from "next/image";
+
 import multiSeedSourdough from "@/app/assets/multiseed-sourdough.jpg";
-import brioche from "@/app/assets/brioche.jpeg";
-import ciabatta from "@/app/assets/ciabatta.jpeg";
-import muffins from "@/app/assets/muffins.jpg";
-import tieredCake from "@/app/assets/tieredCake.png";
-import specialtyCakes from "@/app/assets/specialty-cakes.png";
-import milleCrepeCake from "@/app/assets/mille-crepe-cake.jpg";
-import cheesecake from "@/app/assets/cheesecake.jpg";
+import whiteSourdough from "@/app/assets/white-sourdough.jpg";
+import wholeWheat from "@/app/assets/wholewheat.jpg";
+import rye from "@/app/assets/rye.jpeg";
+import artisan from "@/app/assets/artisan.jpeg";
+
 import poundCake from "@/app/assets/pound-cake.jpg";
 import bamboloni from "@/app/assets/bamboloni.jpg";
 import choux from "@/app/assets/choux.jpg";
 import tiramisu from "@/app/assets/tiramisu.jpg";
 import galettes from "@/app/assets/galette.jpg";
 import brownies from "@/app/assets/brownies.jpg";
-import seasonal from "@/app/assets/lemon-basil.png";
-import quicheImage from "@/app/assets/quiche.jpg";
-import whiteSourdough from "@/app/assets/white-sourdough.jpg";
-import wholeWheat from "@/app/assets/wholewheat.jpg";
-import rye from "@/app/assets/rye.jpeg";
-import artisan from "@/app/assets/artisan.jpeg";
+
+import ciabatta from "@/app/assets/ciabatta.jpeg";
 import focaccia from "@/app/assets/focaccia.jpg";
 import cornBread from "@/app/assets/corn-bread.jpg";
 import jalapenoCornbread from "@/app/assets/jalapeno-corn-bread.png";
@@ -27,6 +22,8 @@ import parkerHouseRolls from "@/app/assets/parker-house-rolls.jpg";
 import popovers from "@/app/assets/popovers.jpg";
 import biscuits from "@/app/assets/buttermilk-biscuits.jpg";
 import briocheBuns from "@/app/assets/brioche-buns.jpg";
+
+import brioche from "@/app/assets/brioche.jpeg";
 import cinnamon from "@/app/assets/cinnamon.png";
 import babka from "@/app/assets/babka.jpg";
 import appleRaisinWalnut from "@/app/assets/apple-raisin-walnut.jpeg";
@@ -34,6 +31,34 @@ import cranberryPecan from "@/app/assets/cranberry-pecan.png";
 import monkeyBread from "@/app/assets/monkey-bread.png";
 import milkBread from "@/app/assets/milk-bread.png";
 
+
+import kouignAmann from "@/app/assets/kouign-amann.jpg";
+import chocolateKouignAmann from "@/app/assets/chocolate-kouign-amann.jpg";
+import almondKouignAmann from "@/app/assets/almond-kouign-amann.jpeg";
+import blueberryMuffin from "@/app/assets/blueberry-muffins.jpg";
+import bananaMuffin from "@/app/assets/banana-muffins.jpg";
+import cranberryScones from "@/app/assets/cranberry-orange-scones.jpg";
+import englishScones from "@/app/assets/english-scones.png";
+import coffeeCake from "@/app/assets/coffee-cake-loaf.png";
+
+import chocolateMousse from "@/app/assets/chocolate-mousse.jpeg";
+import dadsFavorite from "@/app/assets/dads-favorite.png";
+import lotusCake from "@/app/assets/lotus-cake.png";
+import seasonal from "@/app/assets/lemon-basil.png";
+
+import ricottaCheesecake from "@/app/assets/ricottaCheesecake.jpg";
+import nyCheeseCake from "@/app/assets/cheesecake.png";
+import burntBasqueCheesecake from "@/app/assets/burnt-basque.png";
+import goatCheesecake from "@/app/assets/goat-cheesecake.jpg";
+import noBakeCheesecake from "@/app/assets/no-bake-cheesecake.png";
+import japaneseCheesecake from "@/app/assets/japanese-cheesecake.png";
+import swirlCheesecake from "@/app/assets/swirl-cheesecake.png";
+
+import muffins from "@/app/assets/muffins.jpg";
+import tieredCake from "@/app/assets/tieredCake.png";
+import specialtyCakes from "@/app/assets/specialty-cakes.png";
+import milleCrepeCake from "@/app/assets/mille-crepe-cake.jpg";
+import quicheImage from "@/app/assets/quiche.jpg";
 
 type Category = {
     id: string;
@@ -270,55 +295,55 @@ export const categories = [
                 "itemName": "Kouign-amann",
                 "itemDescription": "The classic. Crispy flaky and caramelized layers of buttery pastry.",
                 itemPrice: 2.50,
-                itemImages: [brioche]
+                itemImages: [kouignAmann]
             },
             {
                 "id": "chocolate-kouign-amann",
                 "itemName": "Chocolate Ganache filled Kouign-amann",
                 "itemDescription": "With chocolate ganache filling.",
                 itemPrice: 2.50,
-                itemImages: [brioche]
+                itemImages: [chocolateKouignAmann]
             },    {
                 "id": "kouign-amann",
                 "itemName": "Almond frangipane filled Kouign-amann",
-                "itemDescription": "With almond frangipane filling..",
+                "itemDescription": "With almond frangipane filling.",
                 itemPrice: 2.50,
-                itemImages: [brioche]
+                itemImages: [almondKouignAmann]
             },
             {
                 "id": "blueberry-muffin",
-                "itemName": "Blueberry Muffin",
-                "itemDescription": "Fluffy muffin loaded with juicy blueberries.",
+                "itemName": "Blueberry Streusel Muffin",
+                "itemDescription": "Fluffy muffin loaded with juicy blueberries and to[[ed with crunchy streusel.",
                 itemPrice: 2.50,
-                itemImages: [brioche]
+                itemImages: [blueberryMuffin]
             },
             {
                 "id": "banana-nut-muffin",
-                "itemName": "Banana Nut Muffin",
+                "itemName": "Whole Grain Banana Nut Muffin",
                 "itemDescription": "Moist muffin packed with ripe bananas and crunchy walnuts.",
                 itemPrice: 2.50,
-                itemImages: [brioche]
+                itemImages: [bananaMuffin]
             },
             {
                 "id": "cranberry-scone",
                 "itemName": "Cranberry Orange Scone",
                 "itemDescription": "Buttery scone with tart cranberries and a hint of orange zest.",
                 itemPrice: 2.50,
-                itemImages: [brioche]
+                itemImages: [cranberryScones]
             },
             {
                 "id": "classic-scone",
                 "itemName": "Classic English Scone",
                 "itemDescription": "Tender, buttery scone, perfect with jam and cream.",
                 itemPrice: 2.50,
-                itemImages: [brioche]
+                itemImages: [englishScones]
             },
             {
                 "id": "coffee-cake",
                 "itemName": "Cinnamon Coffee Cake",
                 "itemDescription": "Soft crumb cake swirled with cinnamon sugar.",
                 itemPrice: 2.50,
-                itemImages: [brioche]
+                itemImages: [coffeeCake]
             }
         ]
     },
@@ -438,21 +463,28 @@ export const categories = [
                 "itemName": "King Chocolate Cake",
                 "itemDescription": "Rich chocolate mousse cake layered with cream puffs for a decadent bite.",
                 itemPrice: 25.00,
-                itemImages: [brioche]
+                itemImages: [chocolateMousse]
             },
             {
                 "id": "mikes-lemonade",
                 "itemName": "Mike's Lemonade",
                 "itemDescription": "Moist olive oil cake with zesty lemon curd, mascarpone frosting, and lemon basil sugar.",
                 itemPrice: 25.00,
-                itemImages: [brioche]
+                itemImages: [seasonal]
             },
             {
                 "id": "tias-chocolate-lotus",
                 "itemName": "Tia's Chocolate Lotus Cake",
                 "itemDescription": "Indulgent chocolate cake with layers of chocolate French buttercream and Lotus French buttercream.",
                 itemPrice: 25.00,
-                itemImages: [brioche]
+                itemImages: [lotusCake]
+            },
+            {
+                "id": "dads-favorite",
+                "itemName": "Dad's Favorite Fruit & Nut Cake",
+                "itemDescription": "Loaded with soaked mixture of dried fruits and toasted nuts, topped with a zesty orange glaze.",
+                itemPrice: 25.00,
+                itemImages: [dadsFavorite]
             }
         ]
     },
@@ -571,7 +603,7 @@ export const categories = [
     {
         "id": "cheesecake",
         "name": "Cheesecake",
-        image: cheesecake,
+        image: ricottaCheesecake,
         "description": "Classic NY, no-bake, burnt Basque, Italian ricotta, airy Japanese, and a savory goat cheese.",
         "itemCount": 7,
         "details": {
@@ -606,14 +638,14 @@ export const categories = [
                 "itemName": "Baked Cheesecake",
                 "itemDescription": "Classic rich baked cheesecake with your choice of topping.",
                 itemPrice: 40,
-                "itemImages": [brioche]
+                "itemImages": [nyCheeseCake]
             },
             {
                 "id": "no-bake-cheesecake",
                 "itemName": "No-Bake Cheesecake",
                 "itemDescription": "Creamy, smooth no-bake cheesecake served chilled with your favorite topping.",
                 itemPrice: 35,
-                "itemImages": [brioche]
+                "itemImages": [noBakeCheesecake]
             },
             {
                 "id": "burnt-basque-cheesecake",
@@ -621,8 +653,7 @@ export const categories = [
                 "itemDescription": "Rustic, caramelized Basque-style cheesecake with a creamy center and charred top.",
                 itemPrice: 45,
                 "itemImages": [
-                    "burnt-basque-cheesecake-1.jpg",
-                    "burnt-basque-cheesecake-2.jpg"
+                    burntBasqueCheesecake
                 ]
             },
             {
@@ -630,28 +661,28 @@ export const categories = [
                 "itemName": "Ricotta Cheesecake",
                 "itemDescription": "Light, fluffy Italian-style cheesecake made with creamy ricotta and a touch of citrus zest.",
                 itemPrice: 40,
-                "itemImages": [brioche]
+                "itemImages": [ricottaCheesecake]
             },
             {
                 "id": "japanese-souffle-cheesecake",
                 "itemName": "Japanese Soufflé Cheesecake",
                 "itemDescription": "Incredibly light, airy, and jiggly cheesecake with a delicate sweetness.",
                 itemPrice: 40,
-                "itemImages": [brioche]
+                "itemImages": [japaneseCheesecake]
             },
             {
                 "id": "swirled-cheesecake",
                 "itemName": "Swirled Cheesecake",
                 "itemDescription": "Classic baked cheesecake swirled with rich chocolate ganache or fruit puree for a beautiful marble effect.",
                 itemPrice: 40,
-                "itemImages": [brioche]
+                "itemImages": [swirlCheesecake]
             },
             {
                 "id": "savory-goat-cheesecake",
                 "itemName": "Savory Goat Cheese Cheesecake",
                 "itemDescription": "A creamy, tangy goat cheese cheesecake with a herbed pastry crust — perfect as an elegant appetizer or unique brunch item.",
                 itemPrice: 42,
-                "itemImages": [brioche]
+                "itemImages": [goatCheesecake]
             }
         ]
     },
