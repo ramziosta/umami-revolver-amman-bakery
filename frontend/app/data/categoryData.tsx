@@ -147,8 +147,8 @@ export const categories = [
             },
             {
                 id: 'artisanal',
-                itemName: "Artisanal Loaf Sourdough",
-                itemDescription: "A rustic country sourdough crafted from our unique blend of local, French, and Italian wheat, plus hints of barley for extra depth — hearty, aromatic, and naturally leavened.",
+                itemName: "Artisanal Whole Grain Loaf Sourdough",
+                itemDescription: "Crafted from our unique blend of wholegrain flours: Local, French, and Italian wheat, plus hints of barley for extra depth.",
                 itemPrice: 3.50,
                 itemImages: [artisan]
             },
@@ -162,7 +162,7 @@ export const categories = [
             {
                 id: 'MultiSeedWholeGrain',
                 itemName: "MultiSeed Whole Grain Sourdough",
-                itemDescription: "A hearty sourdough loaf loaded with pumpkin seeds, sunflower seeds, flaxseed, nigella, sesame, and oatmeal multigrain. Crafted with a balanced blend of local, French, and Italian flours for deep flavor and a satisfying crunch.",
+                itemDescription: "Our Artisan Loaf loaded with pumpkin seeds, sunflower seeds, flaxseed, nigella, sesame, and oatmeal.",
                 itemPrice: 3.50,
                 itemImages: [multiSeedSourdough]
             }]
