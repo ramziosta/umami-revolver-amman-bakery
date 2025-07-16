@@ -28,16 +28,16 @@ const featuredProducts = [
     price: 45.00,
     image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
     badge: 'Premium',
-    description: 'Layers of vanilla sponge with Madagascar vanilla bean cream'
+    description: 'Layers of vanilla sponge with Madagascar vanilla bean white'
   }
 ];
 
 const FeaturedProducts = () => {
   return (
-    <section className="py-20 bg-umami-cream">
+    <section className="py-20 bg-umami-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-goglast text-umami-navy mb-4 font-bold tracking-[0.5rem]">
+          <h2 className="text-5xl font-goglast text-umami-black mb-4 font-bold tracking-[0.5rem]">
             Featured Favorites
           </h2>
           <p className="text-xl text-umami-charcoal/80 max-w-2xl mx-auto leading-relaxed">
@@ -56,8 +56,8 @@ const FeaturedProducts = () => {
                 />
                 <Badge 
                   className={`absolute top-4 left-4 ${
-                    product.badge === 'Bestseller' ? 'bg-umami-pink' :
-                    product.badge === 'New' ? 'bg-umami-blue' : 'bg-umami-navy'
+                    product.badge === 'Bestseller' ? 'bg-umami-black' :
+                    product.badge === 'New' ? 'bg-umami-blue' : 'bg-umami-black'
                   } text-white`}
                 >
                   {product.badge}
@@ -65,7 +65,7 @@ const FeaturedProducts = () => {
               </div>
               
               <CardContent className="p-6">
-                <h3 className="text-2xl font-goglast text-umami-navy mb-2 font-bold">
+                <h3 className="text-2xl font-goglast text-umami-black mb-2 font-bold">
                   {product.name}
                 </h3>
                 
@@ -75,7 +75,7 @@ const FeaturedProducts = () => {
                 
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2">
-                    <span className="text-2xl font-bold text-umami-navy">
+                    <span className="text-2xl font-bold text-umami-black">
                       ${product.price}
                     </span>
                     {product.originalPrice && (
@@ -87,7 +87,7 @@ const FeaturedProducts = () => {
                 </div>
                 
                 <Button 
-                  className="w-full bg-umami-navy hover:bg-umami-charcoal text-white hover-invert transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="w-full bg-umami-black hover:bg-umami-charcoal text-white hover-invert transition-all duration-300 flex items-center justify-center space-x-2"
                   size="lg"
                 >
                   <ShoppingCart className="h-5 w-5" />
@@ -102,7 +102,7 @@ const FeaturedProducts = () => {
           <Button 
             size="lg"
             variant="outline"
-            className="border-2 border-umami-navy text-umami-navy hover:bg-umami-navy hover:text-white transition-all duration-300 px-8 py-4"
+            className="border-2 border-umami-black text-umami-black hover:bg-umami-black hover:text-white transition-all duration-300 px-8 py-4"
           >
             View All Products
           </Button>

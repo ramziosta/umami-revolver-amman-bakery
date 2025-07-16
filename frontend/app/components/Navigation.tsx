@@ -15,26 +15,26 @@ const Navigation = () => {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
-                        <h1 className="text-4xl font-goglast goglast-tracking text-umami-pink  hover:text-umami-blue font-bold ml-4">
+                        <h1 className="text-4xl font-goglast font-black text-umami-pink tracking-wide  hover:text-umami-blue ml-4 transition-colors duration-300">
                             Umami
                         </h1>
                     </Link>
-                    <nav className="text-xl font-bold hidden md:flex items-center space-x-8">
+                    <nav className="text-xl hidden md:flex items-center  space-x-8">
                         <Link
-                            href="/categories"
-                            className="text-umami-charcoal hover:text-umami-pink transition-colors duration-300 font-black"
+                            href="/menu"
+                            className="text-umami-charcoal hover:text-umami-pink  transition-colors duration-300"
                         >
                             What We Bake
                         </Link>
                         <Link
                             href="/about"
-                            className="text-umami-charcoal hover:text-umami-pink  transition-colors duration-300 font-black"
+                            className="text-umami-charcoal hover:text-umami-pink   transition-colors duration-300 "
                         >
                             About
                         </Link>
                         <Link
                             href="/contact"
-                            className="text-umami-charcoal hover:text-umami-pink  transition-colors duration-300 font-black"
+                            className="text-umami-charcoal hover:text-umami-pink   transition-colors duration-300 "
                         >
                             Contact
                         </Link>
@@ -46,7 +46,7 @@ const Navigation = () => {
                         <Button
                             variant="ghost"
                             size="icon"
-                            className="md:hidden hover:bg-umami-cream"
+                            className="md:hidden hover:bg-umami-white"
                             onClick={() => setIsMobileMenuOpen(true)}
                         >
                             <Menu className="h-5 w-5 text-umami-charcoal" />

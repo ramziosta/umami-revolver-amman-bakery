@@ -7,7 +7,14 @@ import milleCrepeCake from "../assets/mille-crepe-cake.jpg";
 import sourdough from "../assets/multiseed-sourdough.jpg"
 import Image from 'next/image';
 
-const categories = [
+type ShowcaseCategory = {
+  id: string;
+  name: string;
+  image: StaticImageData;
+  description: string;
+};
+
+const categories: ShowcaseCategory[] = [
   {
     id: 'bread',
     name: 'Artisan Breads',
@@ -24,7 +31,7 @@ const categories = [
     id: 'mille-crepe-cakes',
     name: 'Mille Crêpe Cakes',
     image: milleCrepeCake,
-    description: 'Light, layered crêpe cakes filled with luscious creams.',
+    description: 'Light, layered crêpe cakes filled with luscious whites.',
   },
   {
     id: 'seasonal-treats',
@@ -39,10 +46,10 @@ const CategoriesShowcase = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-5xl lg:text-6xl font-goglast text-umami-navy mb-3 font-bold goglast-tracking">
+          <h2 className="text-5xl lg:text-6xl font-goglast text-umami-black mb-3  goglast-tracking">
             Featured Specialty Collections
           </h2>
-          <p className="text-3xl lg:text-4xl font-[900] font-glimp text-umami-pink/80 max-w-xl mx-auto leading-relaxed">
+          <p className="max-w-4xl mx-auto text-umami-black font-glimp text-2xl lg:text-3xl font-[100] tracking-[0.5rem] leading-relaxed">
             Discover our carefully curated selection of unique and premium baked goods.
           </p>
         </div>
@@ -60,16 +67,16 @@ const CategoriesShowcase = () => {
                     alt={category.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black  via-black/20 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <h3 className="text-xl font-goglast font-bold mb-1 tracking-[0.5rem] text-shadow">
+                    <h3 className="text-xl font-goglast  mb-1 tracking-[0.5rem] text-shadow">
                       {category.name}
                     </h3>
                   </div>
                 </div>
                 
-                <CardContent className="p-6 bg-white group-hover:bg-umami-cream transition-colors duration-300">
-                  <p className="text-umami-navy text-lg font-bold leading-relaxed">
+                <CardContent className="p-6 bg-white group-hover:bg-umami-white transition-colors duration-300">
+                  <p className="text-umami-black text-lg  leading-relaxed">
                     {category.description}
                   </p>
                 </CardContent>

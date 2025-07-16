@@ -28,7 +28,7 @@ const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => {
                         <Link
                             href="/frontend/public"
                             onClick={onClose}
-                            className="text-umami-navy font-goglast hover:text-umami-charcoal transition-colors duration-300"
+                            className="text-umami-white font-goglast hover:text-umami-charcoal transition-colors duration-300"
                         >
                             Umami
                         </Link>

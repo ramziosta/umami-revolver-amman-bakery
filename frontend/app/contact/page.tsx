@@ -21,10 +21,10 @@
 //         </div>
 //
 //         <div className="relative h-full flex flex-col justify-center items-center text-center px-4 z-10">
-//             <h1 className="text-5xl md:text-7xl font-goglast goglast-tracking text-umami-cream mb-6 leading-tight">
+//             <h1 className="text-5xl md:text-7xl font-goglast goglast-tracking text-umami-white mb-6 leading-tight">
 //                 Get in touch with any questions or special requests.
 //             </h1>
-//             <p className="max-w-4xl mx-auto text-umami-cream/90 font-glimp text-xl leading-relaxed">
+//             <p className="max-w-4xl mx-auto text-umami-white/90 font-glimp text-xl leading-relaxed">
 //                 We'd love to hear from you. Reach out for reservations, inquiries, or just to say hello.
 //                 Connect with us for custom orders, private dining, or any special request — we're here
 //                 to bring your vision to the table.
@@ -83,7 +83,7 @@
 //         <h3 className="font-playfair text-lg mb-4 text-umami-navy">Connect With Us</h3>
 //         <div className="flex space-x-4">
 //             <a href="https://instagram.com/umamiamman"
-//                className="w-10 h-10 rounded-full bg-umami-navy flex items-center justify-center text-umami-cream hover:bg-umami-blue transition-colors">
+//                className="w-10 h-10 rounded-full bg-umami-navy flex items-center justify-center text-umami-white hover:bg-umami-blue transition-colors">
 //                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
 //                      viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
 //                      strokeLinecap="round" strokeLinejoin="round">
@@ -93,7 +93,7 @@
 //                 </svg>
 //             </a>
 //             <a href="https://www.facebook.com/profile.php?id=61570837547092#"
-//                className="w-10 h-10 rounded-full bg-umami-navy flex items-center justify-center text-umami-cream hover:bg-umami-blue transition-colors">
+//                className="w-10 h-10 rounded-full bg-umami-navy flex items-center justify-center text-umami-white hover:bg-umami-blue transition-colors">
 //                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
 //                      viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
 //                      strokeLinecap="round" strokeLinejoin="round">
@@ -196,7 +196,7 @@
 //
 // // Contact form component
 // const ContactForm = ({ formData, status, onSubmit, onChange }) => (
-//     <div className="bg-umami-cream/40 p-8 rounded-lg elegant-shadow" id="contact-form">
+//     <div className="bg-umami-white/40 p-8 rounded-lg elegant-shadow" id="contact-form">
 //         <h2 className="text-4xl font-goglast goglast-tracking text-umami-navy mb-8 font-bold">
 //             Send a Message
 //         </h2>
@@ -247,7 +247,7 @@
 //
 //             <Button
 //                 type="submit"
-//                 className="w-full bg-umami-navy text-umami-cream hover:bg-umami-blue font-glimp tracking-wider py-3"
+//                 className="w-full bg-umami-navy text-umami-white hover:bg-umami-blue font-glimp tracking-wider py-3"
 //                 disabled={status === "Sending..."}
 //             >
 //                 {status === "Sending..." ? "Sending..." : "Send Message"}

@@ -20,9 +20,9 @@ const config: Config = {
         },
         extend: {
             fontFamily: {
-                'goglast': ['Goglast', 'sans-serif'],
-                'glimp': ['Glory', 'sans-serif'],
-                'brownless': ['brownless', 'sans-serif']
+                goglast: ['goglast', 'sans-serif'],
+                glimp: ['Open Sans', 'sans-serif'],
+                'blanka': ['Blanka', "sans-serif"],
             },
             colors: {
                 border: 'hsl(var(--border))',
