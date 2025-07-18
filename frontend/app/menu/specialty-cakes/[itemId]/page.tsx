@@ -7,11 +7,10 @@ import Image from 'next/image';
 
 
 interface ItemPageProps {
-    params: {
+    params: Promise<{
         itemId: string;
-    };
+    }>;
 }
-
 export default async function ItemPage({ params }: ItemPageProps) {
     const { itemId } = await params
 

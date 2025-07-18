@@ -6,11 +6,10 @@ import Image from 'next/image';
 import {Card, CardContent} from "@/app/ui/card";
 
 
-
 interface ItemPageProps {
-    params: {
+    params: Promise<{
         itemId: string;
-    };
+    }>;
 }
 export default async function ItemPage({ params }: ItemPageProps) {
     const { itemId } = await params

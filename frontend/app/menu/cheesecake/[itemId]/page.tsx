@@ -5,11 +5,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 
-
 interface ItemPageProps {
-    params: {
+    params: Promise<{
         itemId: string;
-    };
+    }>;
 }
 
 export default async function ItemPage({ params }: ItemPageProps) {
