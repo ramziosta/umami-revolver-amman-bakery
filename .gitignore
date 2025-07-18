@@ -37,7 +37,9 @@ backend
 .vercel
 frontend/.env
 frontend/.next
-backend/.env
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+backend/firebase-admin.json
+backend/firebase-admin.json
