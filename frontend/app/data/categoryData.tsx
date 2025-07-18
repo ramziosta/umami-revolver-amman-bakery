@@ -15,6 +15,11 @@ import parkerHouseRolls from "@/app/assets/parker-house-rolls.jpg";
 import popovers from "@/app/assets/popovers.jpg";
 import biscuits from "@/app/assets/buttermilk-biscuits.jpg";
 import briocheBuns from "@/app/assets/brioche-buns.jpg";
+import plainFocaccia from "@/app/assets/plain-focaccia.png";
+import tomatoFocaccia from "@/app/assets/tomato-basil-focaccia.png";
+import garlicOliveFocaccia from "@/app/assets/garlic-olive-focaccia.png";
+import sausageCheddarFocaccia from "@/app/assets/sausage-cheddar-focaccia.png";
+import mushroomGoatFocaccia from "@/app/assets/mushroom-goat-focaccia.png";
 
 import brioche from "@/app/assets/brioche.jpeg";
 import cinnamon from "@/app/assets/cinnamon.png";
@@ -33,6 +38,7 @@ import bananaMuffin from "@/app/assets/banana-muffins.jpg";
 import cranberryScones from "@/app/assets/cranberry-orange-scones.jpg";
 import englishScones from "@/app/assets/english-scones.png";
 import coffeeCake from "@/app/assets/coffee-cake-loaf.png";
+import breton from "@/app/assets/breton.png";
 
 import specialtyCakes from "@/app/assets/specialty-cakes.png";
 import chocolateMousse from "@/app/assets/chocolate-mousse.jpeg";
@@ -169,7 +175,7 @@ export type Variation = {
     id: string;
     name: string;
     description: string;
-    price: number | string;
+    price: string;
     images: string[]; // or StaticImageData[] if you import Next.js images
 };
 
@@ -381,48 +387,47 @@ export const categories = [
                         itemName: "Focaccia",
                         itemDescription: "A fluffy, olive oil-rich Italian flatbread brushed with olive oil, sea salt, and fresh herbs. From the classic to a wide selection of toppings.",
                         itemPrice: 3.50,
-                        itemImages: [focaccia],
+                        itemImages: [plainFocaccia],
                         variations: [
                             {
                                 id: "classic-focaccia",
                                 name: "Classic",
                                 description: "Plain focaccia drizzled with olive oil, sprinkled with sea salt, and topped with fresh herbs.",
-                                "price": 3.50,
-                                "images": [ciabatta]
+                                price: "1/2 sheet: 5 JOD, 1 full sheet: 12 JOD",
+                                images: [plainFocaccia]
                             },
                             {
                                 id: "tomato-basil-feta",
                                 name: "Tomato, Basil & Feta",
                                 description: "Focaccia topped with juicy tomatoes, fragrant basil leaves, and creamy crumbled feta.",
-                                "price": 3.50,
-                                "images": [focaccia]
+                                price: "1/2 sheet: 7 JOD, 1 full sheet: 14 JOD",
+                                images: [tomatoFocaccia]
                             },
                             {
                                 id: "garlic-olive",
                                 name: "Garlic & Olive",
                                 description: "Focaccia with slow-roasted garlic confit and a mix of black and green olives.",
-                                "price": 3.50,
-                                "images": [brioche]
+                                price: "1/2 sheet: 7 JOD, 1 full sheet: 14 JOD",
+                                images: [garlicOliveFocaccia]
                             },
                             {
                                 id: "sausage-cheddar",
                                 name: "Sausage & Cheddar",
                                 description: "Savory focaccia loaded with spiced sausage and melted sharp cheddar cheese.",
-                                "price": 3.50,
-                                "images": [focaccia]
+                                price: "1/2 sheet: 7 JOD, 1 full sheet: 14 JOD",
+                                images: [sausageCheddarFocaccia]
                             },
                             {
                                 id: "mushroom-goat-cheese",
                                 name: "Mushroom & Goat Cheese",
                                 description: "Rustic focaccia topped with caramelized onions, sautéed mushrooms, and tangy goat cheese.",
-                                "price": 3.50,
-                                "images": [focaccia]
+                                price: "1/2 sheet: 7 JOD, 1 full sheet: 14 JOD",
+                                images: [mushroomGoatFocaccia]
                             }
                         ],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 1/2, price: "See Item"},
+                            {quantity: 1, price: "See Item"},
                         ],
                         ingredients: "flour",
                         allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
@@ -436,12 +441,12 @@ export const categories = [
                         itemPrice: 3.50,
                         itemImages: [briocheBuns],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 7"},
+                            {quantity: 12, price: "JOD 12"},
+                            {quantity: 24, price: "JOD 23"},
                         ],
-                        ingredients: "flour",
-                        allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
+                        ingredients: "flour, butter, milk, eggs",
+                        allergens: "Made with flour, butter, milk, eggs and is prepared in a kitchen that processes nuts, and dairy products.",
                         seasonal: false,
                         weight: 800,
                         variations: [],
@@ -450,19 +455,19 @@ export const categories = [
                     },
                     {
                         id: "buttermilk-biscuits",
-                        itemName: "Butter,ilk Biscuits",
+                        itemName: "Buttermilk Biscuits",
                         itemDescription: "Southern-style biscuits, flaky and rich — a comfort classic.",
                         itemPrice: 3.50,
                         itemImages: [biscuits],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 6"},
+                            {quantity: 12, price: "JOD 12"},
+                            {quantity: 24, price: "JOD 20"},
                         ],
-                        ingredients: "flour",
+                        ingredients: "flour, buttermilk, butter",
                         allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
                         seasonal: false,
-                        weight: 800,
+                        weight: 80,
                         variations: [],
 
 
@@ -470,15 +475,15 @@ export const categories = [
                     {
                         id: "popovers",
                         itemName: "Popovers",
-                        itemDescription: "Light, airy rolls with a crisp shell — best served warm with butter.",
+                        itemDescription: "Light, airy rolls with a crisp shell.",
                         itemPrice: 3.50,
                         itemImages: [popovers],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 4"},
+                            {quantity: 12, price: "JOD 8"},
+                            {quantity: 24, price: "JOD 14"},
                         ],
-                        ingredients: "flour",
+                        ingredients: "flour, milk , eggs",
                         allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
                         seasonal: false,
                         weight: 800,
@@ -493,11 +498,11 @@ export const categories = [
                         itemPrice: 3.50,
                         itemImages: [parkerHouseRolls],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 4"},
+                            {quantity: 12, price: "JOD 8"},
+                            {quantity: 24, price: "JOD 12"},
                         ],
-                        ingredients: "flour",
+                        ingredients: "flour, milk, eggs",
                         allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
                         seasonal: false,
                         weight: 800,
@@ -507,16 +512,16 @@ export const categories = [
                     },
                     {
                         id: "garlic-knots",
-                        itemName: "Garlic Knots",
+                        itemName: "Sourdough Garlic Knots",
                         itemDescription: "Soft, chewy knots brushed with garlic butter and fresh herbs.",
                         itemPrice: 3.50,
                         itemImages: [garlicKnots],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 3"},
+                            {quantity: 12, price: "JOD 6"},
+                            {quantity: 24, price: "JOD 12"},
                         ],
-                        ingredients: "flour",
+                        ingredients: "flour, garlic, herbs",
                         allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
                         seasonal: false,
                         weight: 800,
@@ -531,12 +536,12 @@ export const categories = [
                         itemPrice: 3.50,
                         itemImages: [cornBread],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 4"},
+                            {quantity: 12, price: "JOD 8"},
+                            {quantity: 24, price: "JOD 15"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, corn, butter, milk, eggs",
+                        allergens: "flour, corn, butter, milk, eggs and is prepared in a kitchen that processes nuts, and dairy products. ",
                         seasonal: false,
                         weight: 800,
                         variations: [],
@@ -550,12 +555,12 @@ export const categories = [
                         itemPrice: 3.50,
                         itemImages: [jalapenoCornbread],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 6"},
+                            {quantity: 12, price: "JOD 12"},
+                            {quantity: 24, price: "JOD 18"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, corn, butter, milk, eggs",
+                        allergens:"flour, corn, butter, milk, eggs and is prepared in a kitchen that processes nuts, and dairy products. ",
                         seasonal: false,
                         weight: 800,
                         variations: [],
@@ -573,7 +578,7 @@ export const categories = [
             description:
                 'Classic, spiced or filled with irresistible inclusions.',
             itemCount:
-                5,
+                7,
             items:
                 [
                     {
@@ -587,8 +592,8 @@ export const categories = [
                             {quantity: 2, price: "JOD 12"},
                             {quantity: 3, price: "JOD 18"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, butter milk, eggs",
+                        allergens: "flour, butter, milk, eggs",
                         seasonal: false,
                         weight: 800,
                         variations: [],
@@ -602,12 +607,12 @@ export const categories = [
                         itemPrice: 3.50,
                         itemImages: [cinnamon],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 1, price: "JOD 7"},
+                            {quantity: 2, price: "JOD 14"},
+                            {quantity: 3, price: "JOD 20"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, butter, milk, eggs",
+                        allergens: "flour,butter, milk, eggs",
                         seasonal: false,
                         weight: 800,
                         variations: [],
@@ -621,12 +626,12 @@ export const categories = [
                         itemPrice: 3.50,
                         itemImages: [babka],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 1, price: "JOD 7"},
+                            {quantity: 2, price: "JOD 14"},
+                            {quantity: 3, price: "JOD 20"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, butter, milk,eggs, chocolate",
+                        allergens: "flour, butter, milk,eggs",
                         seasonal: false,
                         weight: 800,
                         variations: [],
@@ -635,17 +640,17 @@ export const categories = [
                     },
                     {
                         id: 'milk-bread',
-                        itemName: "Milk Bread",
-                        itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
+                        itemName: "Shokupan Milk Bread",
+                        itemDescription: "A Japanese-style milk bread with a tender, slightly sweet crumb.",
                         itemPrice: 3.50,
                         itemImages: [milkBread],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 1, price: "JOD 5"},
+                            {quantity: 2, price: "JOD 10"},
+                            {quantity: 3, price: "JOD 14"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients:  "flour, butter, milk, eggs",
+                        allergens:  "flour, butter, milk, eggs",
                         seasonal: false,
                         weight: 800,
                         variations: [],
@@ -655,16 +660,16 @@ export const categories = [
                     {
                         id: 'apple-raisin',
                         itemName: "Apple Raisin Walnut Brioche",
-                        itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
+                        itemDescription: "A rich, buttery brioche loaf loaded with sweet  and tart apples, plump raisins, and toasted walnuts. Soft, fluffy, and gently spiced.",
                         itemPrice: 3.50,
                         itemImages: [appleRaisinWalnut],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 3, price: "JOD 16"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, butter, milk, eggs, walnuts, raisins, apples",
+                        allergens: "flour, butter, milk, eggs, nuts",
                         seasonal: false,
                         weight: 800,
                         variations: [],
@@ -674,16 +679,16 @@ export const categories = [
                     {
                         id: 'cranberry',
                         itemName: "Cranberry Pecan Babka",
-                        itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
+                        itemDescription: "A classic French-style brioche with a swirled with tangy dried cranberries, toasted pecans, and a hint of warm spices and citrus zest.",
                         itemPrice: 3.50,
                         itemImages: [cranberryPecan],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 1, price: "JOD 12"},
+                            {quantity: 3, price: "JOD 16"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, butter, milk, eggs, pecans",
+                        allergens: "flour, butter, milk, eggs, nuts",
                         seasonal: false,
                         weight: 800,
                         variations: [],
@@ -693,19 +698,30 @@ export const categories = [
                     {
                         id: 'monkey-bread',
                         itemName: "Pull-apart Monkey Bread",
-                        itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
+                        itemDescription: "A fun, shareable treat made of soft brioche-style dough balls rolled in cinnamon sugar, layered together, and baked until golden and caramelized. Perfect for brunch tables or cozy gatherings — simply pull apart and enjoy!",
                         itemPrice: 3.50,
                         itemImages: [monkeyBread],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 1, price: "Medium JOD 12"},
+                            {quantity: 1, price: "Large JOD 15"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, butter, milk, eggs",
+                        allergens: "flour, butter, milk, eggs",
                         seasonal: false,
                         weight: 800,
-                        variations: [],
+                        variations: [{
+                            id: "medium",
+                            name: "Medium",
+                            description: "",
+                            price: "12 JOD",
+                            images: [monkeyBread]
+                        },{
+                            id: "large",
+                            name: "Large",
+                            description: "",
+                            price: "15 JOD",
+                            images: [monkeyBread]
+                        },],
 
 
                     }]
@@ -724,19 +740,39 @@ export const categories = [
                     {
                         id: "kouign-amann",
                         itemName: "Kouign-amann",
-                        itemDescription: "The classic. Crispy flaky and caramelized layers of buttery pastry.",
+                        itemDescription: "A classic Breton pastry — crisp, caramelized layers of buttery laminated dough with a delicate sweet-salty finish. Golden on the outside, soft and flaky inside.",
                         itemPrice: 2.50,
                         itemImages: [kouignAmann],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 10"},
+                            {quantity: 12, price: "JOD 16"},
+                            {quantity: 24, price: "JOD 20"},
+                            {quantity: 1, price: "medium JOD 12"},
+                            {quantity: 1, price: "large JOD 18"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, butter, eggs",
+                        allergens: "flour, butter, eggs",
                         seasonal: false,
                         weight: 800,
-                        variations: [],
+                        variations: [{
+                            id: "Kouignettes",
+                            name: "Kouignettes",
+                            description: "Mini Breton pastries come in 3 sizes:6 pieces, 12 pieces, and 24 pieces.",
+                            price: "",
+                            images: [kouignAmann]
+                        },{
+                            id: "medium",
+                            name: "Medium Breton butter cake",
+                            description: "6-inch round (serves 4–6)",
+                            price: "12 JOD",
+                            images: [breton]
+                        },{
+                            id: "large",
+                            name: "Large Breton butter cake",
+                            description: "8-inch round (serves 6–8)",
+                            price: "18 JOD",
+                            images: [breton]
+                        },],
 
 
                     },
@@ -747,31 +783,37 @@ export const categories = [
                         itemPrice: 2.50,
                         itemImages: [chocolateKouignAmann],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 16"},
+                            {quantity: 6, price: "JOD 24"},
+                            {quantity: 12, price: "JOD 40"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, butter, sugar, eggs, chocolate",
+                        allergens: "flour, butter, eggs",
                         seasonal: false,
                         weight: 800,
-                        variations: [],
+                        variations: [{
+                            id: "Kouignettes",
+                            name: "Kouignettes",
+                            description: "The chocolate version of Mini Breton pastries come in 3 sizes: 6 pieces for 12 JOD , 12 pieces for 24 JOD, and 24 pieces for 40 JOD.",
+                            price: "",
+                            images: [chocolateKouignAmann]
+                        },],
 
 
                     },
                     {
-                        id: "kouign-amann",
-                        itemName: "Almond frangipane filled Kouign-amann",
+                        id: "frangipan-kouign-amann",
+                        itemName: "Almond frangipan filled Kouign-amann",
                         itemDescription: "With almond frangipane filling.",
                         itemPrice: 2.50,
                         itemImages: [almondKouignAmann],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 16"},
+                            {quantity: 6, price: "JOD 24"},
+                            {quantity: 12, price: "JOD 40"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, sugar, butter, milk, eggs, almond",
+                        allergens: "flour, sugar, butter, milk, eggs, nuts",
                         seasonal: false,
                         weight: 800,
                         variations: [],
@@ -785,9 +827,9 @@ export const categories = [
                         itemPrice: 2.50,
                         itemImages: [blueberryMuffin],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 6"},
+                            {quantity: 12, price: "JOD 12"},
+                            {quantity: 24, price: "JOD 18"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
@@ -804,9 +846,9 @@ export const categories = [
                         itemPrice: 2.50,
                         itemImages: [bananaMuffin],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 6"},
+                            {quantity: 12, price: "JOD 12"},
+                            {quantity: 24, price: "JOD 18"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
@@ -823,9 +865,9 @@ export const categories = [
                         itemPrice: 2.50,
                         itemImages: [cranberryScones],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 6"},
+                            {quantity: 12, price: "JOD 12"},
+                            {quantity: 24, price: "JOD 18"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
@@ -842,9 +884,9 @@ export const categories = [
                         itemPrice: 2.50,
                         itemImages: [englishScones],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 6"},
+                            {quantity: 12, price: "JOD 12"},
+                            {quantity: 24, price: "JOD 18"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",

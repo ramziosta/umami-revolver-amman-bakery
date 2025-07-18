@@ -1,8 +1,11 @@
 // app/menu/sweet-breads/[itemId]/page.tsx
-import {categories } from  '@/app/data/categoryData';
+'use client';
+
+import { categories } from '@/app/data/categoryData';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { use, useState } from 'react';
 
 interface ItemPageProps {
     params: Promise<{
@@ -10,25 +13,26 @@ interface ItemPageProps {
     }>;
 }
 
-export default async function ItemPage({ params }: ItemPageProps) {
-    const { itemId } = await params
+export default function ItemPage({ params }: ItemPageProps) {
+    const { itemId } = use(params);
 
-    const category = categories.find((cat) => cat.id === 'sweet-breads')
+    const category = categories.find((cat) => cat.id === 'sweet-breads');
     if (!category) {
-        notFound()
+        notFound();
     }
 
-    const item = category.items.find((item) => item.id === itemId)
+    const item = category.items.find((item) => item.id === itemId);
     if (!item) {
-        notFound()
+        notFound();
     }
 
+    const [selectedImage, setSelectedImage] = useState(item.itemImages[0]);
     return (
         <div className="min-h-screen bg-umami-white">
             {/* Hero Image */}
             <section className="relative h-[60vh] overflow-hidden">
                 <Image
-                    src={item.itemImages[0]}
+                    src={selectedImage}
                     alt={item.itemName}
                     fill
                     sizes="100vh"
@@ -65,39 +69,82 @@ export default async function ItemPage({ params }: ItemPageProps) {
                     <span className="mx-2 text-gray-400">/</span>
                     <span className="text-gray-600">{item.itemName}</span>
                 </nav>
+
                 <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16">
                     {/* Details Content */}
                     <div className="space-y-8">
                         <div>
-                            <h2 className="text-3xl font-[0.3rem] text-umami-black tracking-[0.3rem] mb-4">{item.itemName}</h2>
-                            <p className="text-umami-black text-glimp leading-relaxed font-glimp">
+                            <h2 className="text-3xl font-glimp tracking-[0.5rem] text-umami-charcoal mb-4">
+                                {item.itemName}
+                            </h2>
+                            <p className="text-umami-charcoal font-glimp leading-relaxed">
                                 {item.itemDescription}
                             </p>
                         </div>
 
+                        {/* Variations */}
+                        {item.variations && item.variations.length > 0 && (
+                            <div className="mt-8">
+                                <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-4">
+                                    Variations
+                                </h3>
+                                <div className="space-y-4 text-umami-charcoal border-umami-charcoal">
+                                    {item.variations.map((variation) => (
+                                        <button
+                                            key={variation.id}
+                                            onClick={() => {
+                                                if (variation.images && variation.images.length > 0) {
+                                                    setSelectedImage(variation.images[0]);
+                                                }
+                                            }}
+                                            className="w-full text-left border p-4 rounded ont-glimp border-umami-charcoal hover:bg-umami-cream/50 transition"
+                                        >
+                                            <h4 className="font-glimp text-lg mb-1">{variation.name}</h4>
+                                            <p className="text-umami-charcoal text-sm mb-2">
+                                                {variation.description}
+                                            </p> <p className="text-umami-charcoal text-sm mb-2">
+                                            {variation.price}
+                                        </p>
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
                         {/* Ingredients & Allergens */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div>
-                                <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-2">Ingredients</h3>
-                                <p className="text-umami-black text-sm">{item.ingredients}</p>
+                                <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-2">
+                                    Ingredients
+                                </h3>
+                                <p className="text-umami-charcoal text-sm">{item.ingredients}</p>
                             </div>
                             <div>
-                                <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-2">Allergens</h3>
-                                <p className="text-umami-black text-sm">{item.allergens}</p>
+                                <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-2">
+                                    Allergens
+                                </h3>
+                                <p className="text-umami-charcoal text-sm">{item.allergens}</p>
                             </div>
                         </div>
 
                         {/* Quantity Options */}
                         <div>
-                            <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-4">Quantity & Pricing</h3>
+                            <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-4">
+                                Quantity & Pricing
+                            </h3>
+                            {item.id === "focaccia" && (
+                                <p className="font-glimp text-umami-charcoal mt-2 mb-2">
+                                    1/2 sheet serves ~10–12 • Full sheet serves ~20–24
+                                </p>
+                            )}
                             <div className="space-y-3">
                                 {item.quantityOptions.map((option, index) => (
                                     <div
                                         key={index}
-                                        className="flex justify-between items-center p-2 bg-umami-white border border-umami-charcoal tracking-  rounded-lg"
+                                        className="flex justify-between items-center p-2 bg-umami-white border border-umami-charcoal rounded-lg"
                                     >
-                                        <span className="font-glimp text-umami-black ">{option.quantity}</span>
-                                        <span className="text-lg  text-umami-charcoal">{option.price}</span>
+                                        <span className="font-glimp text-umami-charcoal">{option.quantity}</span>
+                                        <span className="text-lg text-umami-charcoal">{option.price}</span>
                                     </div>
                                 ))}
                             </div>
@@ -105,7 +152,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 
                         {/* Action Buttons */}
                         <div className="flex gap-4">
-                            <button className="flex-1 bg-umami-charcoal text-umami-white py-3 px-6 rounded-lg font-semibold hover:bg-umami-black transition-colors">
+                            <button className="flex-1 bg-umami-charcoal text-umami-white py-3 px-6 rounded-lg font-semibold hover:bg-umami-charcoal transition-colors">
                                 Add to Cart
                             </button>
                             <Link
@@ -120,15 +167,15 @@ export default async function ItemPage({ params }: ItemPageProps) {
                     {/* Large Image */}
                     <div className="hidden lg:block rounded-lg overflow-hidden shadow-xl">
                         <Image
-                            src={item.itemImages[0]}
+                            src={selectedImage}
                             alt={item.itemName}
                             width={500}
                             height={500}
-                            className="w-full h-full object-cover"
+                            className="object-cover"
                         />
                     </div>
                 </div>
             </section>
         </div>
-    )
+    );
 }

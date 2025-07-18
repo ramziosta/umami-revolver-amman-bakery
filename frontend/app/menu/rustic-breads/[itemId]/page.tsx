@@ -74,10 +74,10 @@ export default function ItemPage({ params }: ItemPageProps) {
                     {/* Details Content */}
                     <div className="space-y-8">
                         <div>
-                            <h2 className="text-3xl font-glimp tracking-[0.5rem] text-umami-black mb-4">
+                            <h2 className="text-3xl font-glimp tracking-[0.5rem] text-umami-charcoal mb-4">
                                 {item.itemName}
                             </h2>
-                            <p className="text-umami-black font-glimp leading-relaxed">
+                            <p className="text-umami-charcoal font-glimp leading-relaxed">
                                 {item.itemDescription}
                             </p>
                         </div>
@@ -88,7 +88,7 @@ export default function ItemPage({ params }: ItemPageProps) {
                                 <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-4">
                                     Variations
                                 </h3>
-                                <div className="space-y-4">
+                                <div className="space-y-4 text-umami-charcoal border-umami-charcoal">
                                     {item.variations.map((variation) => (
                                         <button
                                             key={variation.id}
@@ -97,11 +97,13 @@ export default function ItemPage({ params }: ItemPageProps) {
                                                     setSelectedImage(variation.images[0]);
                                                 }
                                             }}
-                                            className="w-full text-left border p-4 rounded hover:bg-umami-cream transition"
+                                            className="w-full text-left border p-4 rounded ont-glimp border-umami-charcoal hover:bg-umami-cream/50 transition"
                                         >
                                             <h4 className="font-glimp text-lg mb-1">{variation.name}</h4>
-                                            <p className="text-umami-black text-sm mb-2">
+                                            <p className="text-umami-charcoal text-sm mb-2">
                                                 {variation.description}
+                                            </p> <p className="text-umami-charcoal text-sm mb-2">
+                                                {variation.price}
                                             </p>
                                         </button>
                                     ))}
@@ -115,13 +117,13 @@ export default function ItemPage({ params }: ItemPageProps) {
                                 <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-2">
                                     Ingredients
                                 </h3>
-                                <p className="text-umami-black text-sm">{item.ingredients}</p>
+                                <p className="text-umami-charcoal text-sm">{item.ingredients}</p>
                             </div>
                             <div>
                                 <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-2">
                                     Allergens
                                 </h3>
-                                <p className="text-umami-black text-sm">{item.allergens}</p>
+                                <p className="text-umami-charcoal text-sm">{item.allergens}</p>
                             </div>
                         </div>
 
@@ -130,13 +132,18 @@ export default function ItemPage({ params }: ItemPageProps) {
                             <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-4">
                                 Quantity & Pricing
                             </h3>
+                            {item.id === "focaccia" && (
+                                <p className="font-glimp text-umami-charcoal mt-2 mb-2">
+                                    1/2 sheet serves ~10–12 • Full sheet serves ~20–24
+                                </p>
+                            )}
                             <div className="space-y-3">
                                 {item.quantityOptions.map((option, index) => (
                                     <div
                                         key={index}
                                         className="flex justify-between items-center p-2 bg-umami-white border border-umami-charcoal rounded-lg"
                                     >
-                                        <span className="font-glimp text-umami-black">{option.quantity}</span>
+                                        <span className="font-glimp text-umami-charcoal">{option.quantity}</span>
                                         <span className="text-lg text-umami-charcoal">{option.price}</span>
                                     </div>
                                 ))}
@@ -145,7 +152,7 @@ export default function ItemPage({ params }: ItemPageProps) {
 
                         {/* Action Buttons */}
                         <div className="flex gap-4">
-                            <button className="flex-1 bg-umami-charcoal text-umami-white py-3 px-6 rounded-lg font-semibold hover:bg-umami-black transition-colors">
+                            <button className="flex-1 bg-umami-charcoal text-umami-white py-3 px-6 rounded-lg font-semibold hover:bg-umami-charcoal transition-colors">
                                 Add to Cart
                             </button>
                             <Link
@@ -164,7 +171,7 @@ export default function ItemPage({ params }: ItemPageProps) {
                             alt={item.itemName}
                             width={500}
                             height={500}
-                            className="w-full h-full object-cover"
+                            className="object-cover"
                         />
                     </div>
                 </div>
