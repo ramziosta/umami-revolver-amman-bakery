@@ -1,20 +1,19 @@
-// app/menu/artisan-sourdoughs/[itemId]/page.tsx
-
-import { categories } from '@/app/data/categoryData'
-import { notFound } from 'next/navigation'
-import Link from 'next/link'
-import Image from 'next/image'
+// app/menu/seasonal/[itemId]/page.tsx
+import {categories } from  '@/app/data/categoryData';
+import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import Image from 'next/image';
 
 interface ItemPageProps {
     params: Promise<{
-        itemId: string
-    }>
+        itemId: string;
+    }>;
 }
 
 export default async function ItemPage({ params }: ItemPageProps) {
     const { itemId } = await params
 
-    const category = categories.find((cat) => cat.id === 'artisan-sourdoughs')
+    const category = categories.find((cat) => cat.id === 'seasonal')
     if (!category) {
         notFound()
     }
@@ -58,7 +57,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
                     </Link>
                     <span className="mx-2 text-gray-400">/</span>
                     <Link
-                        href="/menu/artisan-sourdoughs"
+                        href="/menu/seasonal"
                         className="text-umami-charcoal hover:text-blue-800"
                     >
                         {category.name}
@@ -86,14 +85,6 @@ export default async function ItemPage({ params }: ItemPageProps) {
                                 <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-2">Allergens</h3>
                                 <p className="text-umami-black text-sm">{item.allergens}</p>
                             </div>
-
-                            
-                                    <div>
-                                        <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-2">Weight</h3>
-                                        <p className="text-umami-black text-sm">{item.weight} gms</p>
-                                    </div>
-                                )
-
                         </div>
 
                         {/* Quantity Options */}
@@ -118,7 +109,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
                                 Add to Cart
                             </button>
                             <Link
-                                href="/menu/artisan-sourdoughs"
+                                href="/menu/seasonal"
                                 className="px-6 py-3 border border-umami-charcoal text-umami-charcoal rounded-lg font-semibold hover:bg-umami-white hover:shadow transition-colors"
                             >
                                 Back to Category

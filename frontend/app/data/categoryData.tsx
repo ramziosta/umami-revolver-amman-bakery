@@ -24,8 +24,8 @@ import cranberryPecan from "@/app/assets/cranberry-pecan.png";
 import monkeyBread from "@/app/assets/monkey-bread.png";
 import milkBread from "@/app/assets/milk-bread.png";
 
-import muffins from "@/app/assets/muffins.jpg";
-import kouignAmann from "@/app/assets/kouign-amann.jpg";
+import muffins from "@/app/assets/kouigan-amann2.jpg";
+import kouignAmann from "@/app/assets/kouigan-amann5.jpg";
 import chocolateKouignAmann from "@/app/assets/chocolate-kouign-amann.jpg";
 import almondKouignAmann from "@/app/assets/almond-kouign-amann.jpeg";
 import blueberryMuffin from "@/app/assets/blueberry-muffins.jpg";
@@ -47,8 +47,6 @@ import goatCheesecake from "@/app/assets/goat-cheesecake.jpg";
 import noBakeCheesecake from "@/app/assets/no-bake-cheesecake.png";
 import japaneseCheesecake from "@/app/assets/japanese-cheesecake.png";
 import swirlCheesecake from "@/app/assets/swirl-cheesecake.png";
-
-import poundCake from "@/app/assets/pound-cake.jpg";
 
 import bamboloni from "@/app/assets/bamboloni.jpg";
 import chocolateDoughnut from "@/app/assets/chocolate-doughnut.png";
@@ -77,10 +75,25 @@ import matchaTiramisu from "@/app/assets/matcha-pistachio-tiramisu.png";
 import lemonTiramisu from "@/app/assets/lemon-tiramisu.png";
 import teaTiramisu from "@/app/assets/tea-tiramisu.png";
 
-
 import tieredCake from "@/app/assets/tieredCake.png";
-import milleCrepeCake from "@/app/assets/mille-crepe-cake.jpg";
-import quicheImage from "@/app/assets/quiche.jpg";
+import bananaCake from "@/app/assets/banana-cake.png";
+import bananaCupcake from "@/app/assets/banana-cupcake.png";
+import chocolateCake from "@/app/assets/chocolate-cake.png";
+import chocolateCupcake from "@/app/assets/chocolate-cupcake.png";
+import germanChocolateCake from "@/app/assets/german-chocolate-cake.png";
+import germanChocolateCupcake from "@/app/assets/german-chocolate-cupcake.png";
+import coconutCupcake from "@/app/assets/coconut-cupcake.png";
+import strawberryCake from "@/app/assets/strawberry-cake.png";
+import strawberryCupcake from "@/app/assets/strawberry-cupcake.png";
+import carrotCake from "@/app/assets/carrot-cake.png";
+import carrotCupcake from "@/app/assets/carrot-cupcake.png";
+import coconutCake from "@/app/assets/coconut-cake.png";
+import confettiCake from "@/app/assets/confetti-cake.png";
+import confettiCupcake from "@/app/assets/confetti-cupcake.png";
+import blackForestCake from "@/app/assets/black-forest-cake.png";
+import blackForestCupcake from "@/app/assets/black-forest-cupcake.png";
+import redVelvetCake from "@/app/assets/red-velvet-cake.png";
+import redVelvetCupcake from "@/app/assets/red-velvet-cupcake.png";
 
 import brownies from "@/app/assets/brownies.jpg";
 import chocolateChip from "@/app/assets/chocolate-chip-cookies.jpg";
@@ -110,9 +123,54 @@ import banoffeePie from "@/app/assets/banoffeePie.png";
 import lemonBlueberryPie from "@/app/assets/lemonBlueberryPie.png";
 import fruitCobbler from "@/app/assets/fruitCobbler.png";
 
-type QuantityOption = {
-    quantity: string;
-    price: string;
+import milleCrepeCake from "@/app/assets/mille-crepe-cake.jpg";
+import tiramisuCrepe from "@/app/assets/tiramisu-mille-crepe.jpeg";
+import matchaCrepe from "@/app/assets/matcha-mille-crepe.jpg";
+import cremeBruleeCrepe from "@/app/assets/creme-brulee-mille-crepe.png";
+import milkTeaCrepe from "@/app/assets/milk-tea-mille-crepe.png";
+import pistachioCrepe from "@/app/assets/pistachio-mille-crepe.png";
+import raspberryCrepe from "@/app/assets/raspberry-almond-mille-crepe.png";
+
+import neapolitanPoundCake from "@/app/assets/pound-cake.jpg";
+import sourCreamPoundCake from "@/app/assets/sour-cream-cream-cheese-pound-cake.png";
+import lemonPoundCake from "@/app/assets/lemon-pound-cake.png";
+import coffeePoundCake from "@/app/assets/coffee-pound-cake.png";
+import redVelvetPoundCake from "@/app/assets/red-velvet-pound-cake.png";
+import driedFruitsPoundCake from "@/app/assets/dried-fruits-nuts-pound-cake.png";
+import ombrePoundCake from "@/app/assets/ombre-pound-cake.png";
+import chocolatePoundCake from "@/app/assets/triple-chocolate-pound-cake.png";
+
+import quicheImage from "@/app/assets/quiche.jpg";
+import strata from "@/app/assets/strata.png";
+import frittata from "@/app/assets/frittata.png";
+import quicheLorraine from "@/app/assets/quiche-lorraine.png";
+import threeCheeseQuiche from "@/app/assets/three-cheese-quiche.png";
+import mushroomGoatCheeseQuiche from "@/app/assets/mushroom-goat-cheese-quiche.png";
+import salmonAsparagusQuiche from "@/app/assets/salmon-asparagus-quiche.png";
+
+
+export interface QuantityOption {
+    quantity: number;
+    priceJOD: number;
+}
+
+export interface CakeTierOption {
+    diameterInch: number;
+    servings: number;
+    priceJOD: number;
+}
+
+export interface CakeTier {
+    layers: number;
+    options: CakeTierOption[];
+}
+
+export type Variation = {
+    id: string;
+    name: string;
+    description: string;
+    price: number | string;
+    images: string[]; // or StaticImageData[] if you import Next.js images
 };
 
 export interface Category {
@@ -121,18 +179,42 @@ export interface Category {
     image?: StaticImageData | string | null;
     categoryDescription: string;
     description: string;
+
+    // Optional for cake/bespoke categories
+    details?: {
+        frostings?: string[];
+        fillingsAndToppings?: string[];
+    };
+
+    // ciabatta
+    variations?: Variation[];
+
+    // Optional for cake/bespoke categories
+    cakePricing?: {
+        tiers: CakeTier[];
+    };
+
+    cupcakeQuantityOptions?: QuantityOption[];
+
     itemCount?: number;
+
+
     items: {
         id: string;
         itemName: string;
         itemDescription: string;
         itemImages: (StaticImageData | string)[];
-        quantityOptions: QuantityOption[];
+        quantityOptions: {
+            quantity: number;
+            price: string | number; // supports "JOD 6" or 6
+        }[];
         ingredients: string;
         allergens: string;
-        seasonal: boolean;
+        seasonal?: boolean;
+        weight?: number;
+        variations?: Variation[];
     }[];
-};
+}
 
 export const categories = [
         {
@@ -150,13 +232,17 @@ export const categories = [
                     itemPrice: "",
                     itemImages: [whiteSourdough],
                     quantityOptions: [
-                        {quantity: "1 loaf", price: "JOD 6"},
-                        {quantity: "2 Loaves", price: "JOD 12"},
-                        {quantity: "3 Loaves", price: "JOD 18"},
+                        {quantity: "1 loaf", price: "JOD 4"},
+                        {quantity: "2 Loaves", price: "JOD 8"},
+                        {quantity: "3 Loaves", price: "JOD 11"},
                     ],
                     ingredients: "flour",
-                    allergens: "flour, eggs",
+                    allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
                     seasonal: false,
+                    weight: 800,
+                    variations: [],
+
+
                 },
                 {
                     id: 'WholeWheat',
@@ -164,14 +250,18 @@ export const categories = [
                     itemDescription: "A hearty whole wheat sourdough made with stone-ground Italian Primativa flour — rustic, nutty, and full of old-world character.",
                     itemImages: [wholeWheat],
                     itemPrice: "", quantityOptions: [
-                        {quantity: 1, price: "JOD 6"},
-                        {quantity: 2, price: "JOD 12"},
-                        {quantity: 3, price: "JOD 18"},
+                        {quantity: "1 loaf", price: "JOD 4"},
+                        {quantity: "2 Loaves", price: "JOD 8"},
+                        {quantity: "3 Loaves", price: "JOD 11"},
                     ],
 
                     ingredients: "flour",
-                    allergens: "flour, eggs",
-                    seasonal: false
+                    allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
+                    seasonal: false,
+                    weight: 800,
+                    variations: [],
+
+
                 },
                 {
                     id: 'artisanal',
@@ -185,17 +275,20 @@ export const categories = [
                         [artisan],
                     quantityOptions:
                         [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: "1 loaf", price: "JOD 4"},
+                            {quantity: "2 Loaves", price: "JOD 8"},
+                            {quantity: "3 Loaves", price: "JOD 11"},
                         ],
 
                     ingredients:
                         "flour",
                     allergens:
-                        "flour, eggs",
-                    seasonal:
-                        false
+                        "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
+                    seasonal: false,
+                    weight: 800,
+                    variations: [],
+
+
                 },
                 {
                     id: 'Rye',
@@ -209,16 +302,19 @@ export const categories = [
                         [rye],
                     quantityOptions:
                         [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: "1 loaf", price: "JOD 4"},
+                            {quantity: "2 Loaves", price: "JOD 8"},
+                            {quantity: "3 Loaves", price: "JOD 11"},
                         ],
                     ingredients:
                         "flour",
                     allergens:
-                        "flour, eggs",
-                    seasonal:
-                        false
+                        "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
+                    seasonal: false,
+                    weight: 800,
+                    variations: [],
+
+
                 },
                 {
                     id: 'multi-seed-whole-grain',
@@ -232,16 +328,19 @@ export const categories = [
                         [multiSeedSourdough],
                     quantityOptions:
                         [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: "1 loaf", price: "JOD 4"},
+                            {quantity: "2 Loaves", price: "JOD 8"},
+                            {quantity: "3 Loaves", price: "JOD 11"},
                         ],
                     ingredients:
-                        "flour",
+                        "flour, seeds, nuts",
                     allergens:
-                        "flour, eggs",
-                    seasonal:
-                        false
+                        "Made with flour, seeds and nuts and is prepared in a kitchen that processes eggs, and dairy products.",
+                    seasonal: false,
+                    weight: 800,
+                    variations: [],
+
+
                 }
             ]
         },
@@ -265,13 +364,17 @@ export const categories = [
                         itemPrice: 3.50,
                         itemImages: [ciabatta],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 3"},
+                            {quantity: 12, price: "JOD 5"},
+                            {quantity: 24, price: "JOD 10"},
                         ],
                         ingredients: "flour",
-                        allergens: "flour, eggs",
-                        seasonal: false
+                        allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "focaccia",
@@ -279,13 +382,13 @@ export const categories = [
                         itemDescription: "A fluffy, olive oil-rich Italian flatbread brushed with olive oil, sea salt, and fresh herbs. From the classic to a wide selection of toppings.",
                         itemPrice: 3.50,
                         itemImages: [focaccia],
-                        details: [
+                        variations: [
                             {
                                 id: "classic-focaccia",
                                 name: "Classic",
                                 description: "Plain focaccia drizzled with olive oil, sprinkled with sea salt, and topped with fresh herbs.",
                                 "price": 3.50,
-                                "images": [focaccia]
+                                "images": [ciabatta]
                             },
                             {
                                 id: "tomato-basil-feta",
@@ -299,7 +402,7 @@ export const categories = [
                                 name: "Garlic & Olive",
                                 description: "Focaccia with slow-roasted garlic confit and a mix of black and green olives.",
                                 "price": 3.50,
-                                "images": [focaccia]
+                                "images": [brioche]
                             },
                             {
                                 id: "sausage-cheddar",
@@ -322,8 +425,9 @@ export const categories = [
                             {quantity: 3, price: "JOD 18"},
                         ],
                         ingredients: "flour",
-                        allergens: "flour, eggs",
-                        seasonal: false
+                        allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
+                        seasonal: false,
+                        weight: 800,
                     },
                     {
                         id: "brioche-buns",
@@ -337,12 +441,16 @@ export const categories = [
                             {quantity: 3, price: "JOD 18"},
                         ],
                         ingredients: "flour",
-                        allergens: "flour, eggs",
-                        seasonal: false
+                        allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "buttermilk-biscuits",
-                        itemName: "Buttermilk Biscuits",
+                        itemName: "Butter,ilk Biscuits",
                         itemDescription: "Southern-style biscuits, flaky and rich — a comfort classic.",
                         itemPrice: 3.50,
                         itemImages: [biscuits],
@@ -352,8 +460,12 @@ export const categories = [
                             {quantity: 3, price: "JOD 18"},
                         ],
                         ingredients: "flour",
-                        allergens: "flour, eggs",
-                        seasonal: false
+                        allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "popovers",
@@ -367,8 +479,12 @@ export const categories = [
                             {quantity: 3, price: "JOD 18"},
                         ],
                         ingredients: "flour",
-                        allergens: "flour, eggs",
-                        seasonal: false
+                        allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "parker-house-rolls",
@@ -382,8 +498,12 @@ export const categories = [
                             {quantity: 3, price: "JOD 18"},
                         ],
                         ingredients: "flour",
-                        allergens: "flour, eggs",
-                        seasonal: false
+                        allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "garlic-knots",
@@ -397,8 +517,12 @@ export const categories = [
                             {quantity: 3, price: "JOD 18"},
                         ],
                         ingredients: "flour",
-                        allergens: "flour, eggs",
-                        seasonal: false
+                        allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "classic-cornbread",
@@ -413,7 +537,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "jalapeno-cheddar-cornbread",
@@ -428,7 +556,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                 ]
         },
@@ -457,7 +589,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: 'cinnamon',
@@ -472,7 +608,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: 'babka',
@@ -487,7 +627,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: 'milk-bread',
@@ -502,7 +646,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: 'apple-raisin',
@@ -517,7 +665,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: 'cranberry',
@@ -532,7 +684,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: 'monkey-bread',
@@ -547,7 +703,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     }]
         },
         {
@@ -574,7 +734,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "chocolate-kouign-amann",
@@ -589,7 +753,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "kouign-amann",
@@ -604,7 +772,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "blueberry-muffin",
@@ -619,7 +791,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "banana-nut-muffin",
@@ -634,7 +810,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "cranberry-scone",
@@ -649,7 +829,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "classic-scone",
@@ -664,7 +848,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "coffee-cake",
@@ -679,7 +867,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     }
                 ]
         },
@@ -728,6 +920,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
 
                     },
@@ -747,6 +943,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
 
                     },
@@ -766,6 +966,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
 
                     },
@@ -785,6 +989,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
 
                     },
@@ -804,6 +1012,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
                     },
                     {
@@ -822,6 +1034,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
                     },
                     {
@@ -840,6 +1056,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
                     },
                     {
@@ -858,6 +1078,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
                     },
                     {
@@ -876,6 +1100,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
                     },
                     {
@@ -894,6 +1122,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
                     },
                     {
@@ -912,6 +1144,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
                     },
                     {
@@ -930,6 +1166,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
                     },
                     {
@@ -948,6 +1188,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
                     },
                     {
@@ -966,6 +1210,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
                     },
                     {
@@ -984,6 +1232,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
                     },
                     {
@@ -1002,6 +1254,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
                     },
                     {
@@ -1020,6 +1276,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                         itemPrice: 3.99,
                     }
                 ]
@@ -1028,188 +1288,252 @@ export const categories = [
             id: "tiered-cakes",
             name: "Tiered Cakes & Cupcakes",
             image: tieredCake,
-            categoryDescription:"cakes n cupcakes",
+            categoryDescription: "cakes n cupcakes",
             description: "Layered, tailored and unforgettable.",
             itemCount: 7,
             details: {
-                    frostings:
-                        [
-                            "Vanilla Bean Butter Cream",
-                            "French Buttercream",
-                            "German Butter Cream",
-                            "Cream Cheese Frosting",
-                            "Chocolate Butter Cream",
-                            "Salted Caramel Butter Cream",
-                            "Lemon Butter Cream",
-                            "Raspberry Butter Cream",
-                            "Strawberry Butter Cream",
-                            "Blueberry Butter Cream",
-                            "Lavender Butter Cream",
-                            "Coffee Butter Cream",
-                            "Earl Grey Butter Cream",
-                            "Peanut Butter Butter Cream",
-                            "Toasted Meringue",
-                            "Whipped Marshmallow",
-                            "Whipped Cream",
-                            "Chocolate Ganache"
-                        ],
-                    fillingsAndToppings:
-                        [
-                            "Vanilla Bean Custard",
-                            "Strawberry",
-                            "Raspberry",
-                            "Blueberry",
-                            "Caramel",
-                            "Chocolate",
-                            "Banana Mousse",
-                            "Lemon Curd",
-                            "Coffee Cream",
-                            "Oreo",
-                            "Lotus",
-                            "Passion Fruit",
-                            "Mango",
-                            "Peach",
-                            "Toasted Coconut",
-                            "Pineapple",
-                            "Banana",
-                            "Peanut Butter"
-                        ]
-                },
+                frostings:
+                    [
+                        "Vanilla Bean Butter Cream",
+                        "French Buttercream",
+                        "German Butter Cream",
+                        "Cream Cheese Frosting",
+                        "Chocolate Butter Cream",
+                        "Salted Caramel Butter Cream",
+                        "Lemon Butter Cream",
+                        "Raspberry Butter Cream",
+                        "Strawberry Butter Cream",
+                        "Blueberry Butter Cream",
+                        "Lavender Butter Cream",
+                        "Coffee Butter Cream",
+                        "Earl Grey Butter Cream",
+                        "Peanut Butter Butter Cream",
+                        "Toasted Meringue",
+                        "Whipped Marshmallow",
+                        "Whipped Cream",
+                        "Chocolate Ganache"
+                    ],
+                fillingsAndToppings:
+                    [
+                        "Vanilla Bean Custard",
+                        "Strawberry",
+                        "Raspberry",
+                        "Blueberry",
+                        "Caramel",
+                        "Chocolate",
+                        "Banana Mousse",
+                        "Lemon Curd",
+                        "Coffee Cream",
+                        "Oreo",
+                        "Lotus",
+                        "Passion Fruit",
+                        "Mango",
+                        "Peach",
+                        "Toasted Coconut",
+                        "Pineapple",
+                        "Banana",
+                        "Peanut Butter"
+                    ]
+            },
             cakePricing: {
-                    tiers:
-                        [
-                            {
-                                layers: 2,
-                                options: [
-                                    {diameterInch: 6, "servings": 12, priceJOD: 35},
-                                    {diameterInch: 8, "servings": 24, priceJOD: 60}
-                                ]
-                            },
-                            {
-                                layers: 3,
-                                options: [
-                                    {diameterInch: 6, "servings": 18, priceJOD: 50},
-                                    {diameterInch: 8, "servings": 36, priceJOD: 85},
-                                    {diameterInch: 10, "servings": 50, priceJOD: 120}
-                                ]
-                            },
-                            {
-                                layers: 4,
-                                options: [
-                                    {diameterInch: 8, "servings": 48, priceJOD: 110},
-                                    {diameterInch: 10, "servings": 65, priceJOD: 150}
-                                ]
-                            }
-                        ]
-                },
+                tiers:
+                    [
+                        {
+                            layers: 2,
+                            options: [
+                                {diameterInch: 6, "servings": 12, priceJOD: 35},
+                                {diameterInch: 8, "servings": 24, priceJOD: 60}
+                            ]
+                        },
+                        {
+                            layers: 3,
+                            options: [
+                                {diameterInch: 6, "servings": 18, priceJOD: 50},
+                                {diameterInch: 8, "servings": 36, priceJOD: 85},
+                                {diameterInch: 10, "servings": 50, priceJOD: 120}
+                            ]
+                        },
+                        {
+                            layers: 4,
+                            options: [
+                                {diameterInch: 8, "servings": 48, priceJOD: 110},
+                                {diameterInch: 10, "servings": 65, priceJOD: 150}
+                            ]
+                        }
+                    ]
+            },
             cupcakeQuantityOptions: [
-                    {quantity: 4, priceJOD: 15},
-                    {quantity: 6, priceJOD: 20},
-                    {quantity: 8, priceJOD: 25},
-                    {quantity: 10, priceJOD: 30},
-                    {quantity: 12, priceJOD: 35},
-                    {quantity: 24, priceJOD: 65}
-                ],
+                {quantity: 4, priceJOD: 15},
+                {quantity: 6, priceJOD: 20},
+                {quantity: 8, priceJOD: 25},
+                {quantity: 10, priceJOD: 30},
+                {quantity: 12, priceJOD: 35},
+                {quantity: 24, priceJOD: 65}
+            ],
             items: [
-                    {
-                        id: "white-confetti-cake",
-                        itemName: "White Confetti Cake",
-                        itemDescription: "Classic white cake layered with colorful confetti sprinkles and frosted with silky French buttercream.",
-                        itemImages: [brioche],
-                        quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
-                        ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
-                        seasonal: false
-                    },
-                    {
-                        id: "chocolate-cake",
-                        itemName: "Chocolate Cake",
-                        itemDescription: "Rich, moist chocolate cake filled and frosted with decadent chocolate French buttercream.",
-                        itemImages: [brioche],
-                        quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
-                        ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
-                        seasonal: false
-                    },
-                    {
-                        id: "germans-chocolate-cake",
-                        itemName: "German's Chocolate Cake",
-                        itemDescription: "Classic German's chocolate cake layered with coconut-pecan filling and chocolate frosting.",
-                        itemImages: [brioche],
-                        quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
-                        ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
-                        seasonal: false
-                    },
-                    {
-                        id: "black-forest-cake",
-                        itemName: "Black Forest Cake",
-                        itemDescription: "Decadent chocolate sponge layered with fresh cherries, whipped cream, and dark chocolate shavings.",
-                        itemImages: [brioche],
-                        quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
-                        ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
-                        seasonal: false
-                    },
-                    {
-                        id: "coconut-cake",
-                        itemName: "Coconut Cake",
-                        itemDescription: "Soft coconut cake layered with German buttercream and finished with toasted coconut flakes.",
-                        itemImages: [brioche],
-                        quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
-                        ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
-                        seasonal: false
-                    },
-                    {
-                        id: "banana-nut-cake",
-                        itemName: "Banana Nut Cake",
-                        itemDescription: "Moist banana cake studded with nuts and layered with salted caramel filling and frosting.",
-                        itemImages: [brioche],
-                        quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
-                        ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
-                        seasonal: false
-                    },
-                    {
-                        id: "carrot-pecan-cake",
-                        itemName: "Classic Carrot Pecan Cake",
-                        itemDescription: "Tender spiced carrot cake with crunchy pecans, filled and frosted with luscious cream cheese frosting.",
-                        itemImages: [brioche],
-                        quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
-                        ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
-                        seasonal: false
-                    }
-                ]
+                {
+                    id: "white-confetti-cake",
+                    itemName: "White Confetti Cake",
+                    itemDescription: "Classic white cake layered with colorful confetti sprinkles and frosted with silky French buttercream.",
+                    itemImages: [confettiCake, confettiCupcake],
+                    quantityOptions: [
+                        {quantity: 1, price: "JOD 6"},
+                        {quantity: 2, price: "JOD 12"},
+                        {quantity: 3, price: "JOD 18"},
+                    ],
+                    ingredients: "flour",
+                    allergens: "flour, eggs",
+                    seasonal: false,
+                    weight: 800,
+                    variations: [],
+
+
+                },
+                {
+                    id: "chocolate-cake",
+                    itemName: "Chocolate Cake",
+                    itemDescription: "Rich, moist chocolate cake filled and frosted with decadent chocolate French buttercream.",
+                    itemImages: [chocolateCake, chocolateCupcake],
+                    quantityOptions: [
+                        {quantity: 1, price: "JOD 6"},
+                        {quantity: 2, price: "JOD 12"},
+                        {quantity: 3, price: "JOD 18"},
+                    ],
+                    ingredients: "flour",
+                    allergens: "flour, eggs",
+                    seasonal: false,
+                    weight: 800,
+                    variations: [],
+
+
+                },
+                {
+                    id: "germans-chocolate-cake",
+                    itemName: "German's Chocolate Cake",
+                    itemDescription: "Classic German's chocolate cake layered with coconut-pecan filling and chocolate frosting.",
+                    itemImages: [germanChocolateCake, germanChocolateCupcake],
+                    quantityOptions: [
+                        {quantity: 1, price: "JOD 6"},
+                        {quantity: 2, price: "JOD 12"},
+                        {quantity: 3, price: "JOD 18"},
+                    ],
+                    ingredients: "flour",
+                    allergens: "flour, eggs",
+                    seasonal: false,
+                    weight: 800,
+                    variations: [],
+
+
+                },
+                {
+                    id: "black-forest-cake",
+                    itemName: "Black Forest Cake",
+                    itemDescription: "Decadent chocolate sponge layered with fresh cherries, whipped cream, and dark chocolate shavings.",
+                    itemImages: [blackForestCake, blackForestCupcake],
+                    quantityOptions: [
+                        {quantity: 1, price: "JOD 6"},
+                        {quantity: 2, price: "JOD 12"},
+                        {quantity: 3, price: "JOD 18"},
+                    ],
+                    ingredients: "flour",
+                    allergens: "flour, eggs",
+                    seasonal: false,
+                    weight: 800,
+                    variations: [],
+
+
+                },
+                {
+                    id: "coconut-cake",
+                    itemName: "Coconut Cake",
+                    itemDescription: "Soft coconut cake layered with German buttercream and finished with toasted coconut flakes.",
+                    itemImages: [coconutCake, coconutCupcake],
+                    quantityOptions: [
+                        {quantity: 1, price: "JOD 6"},
+                        {quantity: 2, price: "JOD 12"},
+                        {quantity: 3, price: "JOD 18"},
+                    ],
+                    ingredients: "flour",
+                    allergens: "flour, eggs",
+                    seasonal: false,
+                    weight: 800,
+                    variations: [],
+
+
+                },
+                {
+                    id: "banana-nut-cake",
+                    itemName: "Banana Nut Cake",
+                    itemDescription: "Moist banana cake studded with nuts and layered with salted caramel filling and frosting.",
+                    itemImages: [bananaCake, bananaCupcake],
+                    quantityOptions: [
+                        {quantity: 1, price: "JOD 6"},
+                        {quantity: 2, price: "JOD 12"},
+                        {quantity: 3, price: "JOD 18"},
+                    ],
+                    ingredients: "flour",
+                    allergens: "flour, eggs",
+                    seasonal: false,
+                    weight: 800,
+                    variations: [],
+
+
+                },
+                {
+                    id: "carrot-pecan-cake",
+                    itemName: "Classic Carrot Pecan Cake",
+                    itemDescription: "Tender spiced carrot cake with crunchy pecans, filled and frosted with luscious cream cheese frosting.",
+                    itemImages: [carrotCake, carrotCupcake],
+                    quantityOptions: [
+                        {quantity: 1, price: "JOD 6"},
+                        {quantity: 2, price: "JOD 12"},
+                        {quantity: 3, price: "JOD 18"},
+                    ],
+                    ingredients: "flour",
+                    allergens: "flour, eggs",
+                    seasonal: false,
+                    weight: 800,
+                    variations: [],
+
+
+                },
+                {
+                    id: "strawberry-cake",
+                    itemName: "Strawberry White Chocolate ganache Cake",
+                    itemDescription: "Strawberry Cake with strawberry white chocolate ganache, fresh strawberries.",
+                    itemImages: [strawberryCake, strawberryCupcake],
+                    quantityOptions: [
+                        {quantity: 1, price: "JOD 6"},
+                        {quantity: 2, price: "JOD 12"},
+                        {quantity: 3, price: "JOD 18"},
+                    ],
+                    ingredients: "flour",
+                    allergens: "flour, eggs",
+                    seasonal: false,
+                    weight: 800,
+                    variations: [],
+
+
+                },
+                {
+                    id: "red-velvet-cake",
+                    itemName: "Original Southern Red Velvet Cake",
+                    itemDescription: "Classic Southern red velvet cake with a rich cocoa flavor, layered with tangy smooth cream cheese frosting.",
+                    itemImages: [redVelvetCake, redVelvetCupcake],
+                    quantityOptions: [
+                        {quantity: 1, price: "JOD 6"},
+                        {quantity: 2, price: "JOD 12"},
+                        {quantity: 3, price: "JOD 18"},
+                    ],
+                    ingredients: "flour",
+                    allergens: "flour, eggs",
+                    seasonal: false,
+                    weight: 800,
+                    variations: [],
+
+
+                }
+            ]
         },
         {
             id: "specialty-cakes",
@@ -1231,7 +1555,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false, itemImages: [chocolateMousse]
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+                        itemImages: [chocolateMousse]
                     },
                     {
                         id: "mikes-lemonade",
@@ -1245,7 +1573,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false, itemImages: [seasonal]
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+                        itemImages: [seasonal]
                     },
                     {
                         id: "tias-chocolate-lotus",
@@ -1259,7 +1591,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false, itemImages: [lotusCake]
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+                        itemImages: [lotusCake]
                     },
                     {
                         id: "dads-favorite",
@@ -1273,7 +1609,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false, itemImages: [dadsFavorite]
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+                        itemImages: [dadsFavorite]
                     }
                 ]
         },
@@ -1309,7 +1649,7 @@ export const categories = [
                                 priceJOD: 40
                             }
                         ],
-                        itemImages: [brioche],
+                        itemImages: [tiramisuCrepe],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -1317,7 +1657,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "matcha-crepe",
@@ -1333,7 +1677,7 @@ export const categories = [
                                 priceJOD: 40
                             }
                         ],
-                        itemImages: [brioche],
+                        itemImages: [matchaCrepe],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -1341,7 +1685,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "creme-brulee-crepe",
@@ -1357,7 +1705,7 @@ export const categories = [
                                 priceJOD: 40
                             }
                         ],
-                        itemImages: [brioche],
+                        itemImages: [cremeBruleeCrepe],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -1365,12 +1713,16 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "milk-tea-crepe",
-                        itemName: "Milk Tea Mille Crêpe",
-                        itemDescription: "Smooth milk tea pastry cream layered with delicate crêpes.",
+                        itemName: "Earl Grey Milk Tea Mille Crêpe",
+                        itemDescription: "Lightly fragrant  and smooth Earl Grey infused milk tea pastry cream layered with delicate crêpes.",
                         itemPrice: [
                             {
                                 size: "20 layers",
@@ -1381,7 +1733,7 @@ export const categories = [
                                 priceJOD: 40
                             }
                         ],
-                        itemImages: [brioche],
+                        itemImages: [milkTeaCrepe],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -1389,12 +1741,16 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
-                        id: "chocolate-mocha-crepe",
-                        itemName: "Chocolate Mocha Mille Crêpe",
-                        itemDescription: "Rich chocolate and mocha cream layers for a decadent bite.",
+                        id: "chocolate-crepe",
+                        itemName: "Chocolate Mille Crêpe",
+                        itemDescription: "Rich chocolate and smooth vanilla cream layers for a decadent bite.",
                         itemPrice: [
                             {
                                 size: "20 layers",
@@ -1405,7 +1761,7 @@ export const categories = [
                                 priceJOD: 45
                             }
                         ],
-                        itemImages: [brioche],
+                        itemImages: [milleCrepeCake],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -1413,7 +1769,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "matcha-pistachio-crepe",
@@ -1429,7 +1789,7 @@ export const categories = [
                                 priceJOD: 45
                             }
                         ],
-                        itemImages: [brioche],
+                        itemImages: [pistachioCrepe],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -1437,7 +1797,39 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
+                    },
+                    {
+                        id: "raspberry-almond-crepe",
+                        itemName: "Raspberry Almond & White Chocolate Ganache Mille Crêpe",
+                        itemDescription: "Delicate layers of crêpes filled with almond cream, tangy raspberry compote, and a luscious white chocolate ganache.",
+                        itemPrice: [
+                            {
+                                size: "20 layers",
+                                priceJOD: 35
+                            },
+                            {
+                                size: "30 layers",
+                                priceJOD: 45
+                            }
+                        ],
+                        itemImages: [raspberryCrepe],
+                        quantityOptions: [
+                            {quantity: 1, price: "JOD 6"},
+                            {quantity: 2, price: "JOD 12"},
+                            {quantity: 3, price: "JOD 18"},
+                        ],
+                        ingredients: "flour",
+                        allergens: "flour, eggs",
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     }
                 ]
         },
@@ -1493,7 +1885,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "no-bake-cheesecake",
@@ -1508,7 +1904,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "burnt-basque-cheesecake",
@@ -1522,7 +1922,11 @@ export const categories = [
                             {quantity: 3, price: "JOD 18"},
                         ], ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "ricotta-cheesecake",
@@ -1537,7 +1941,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "japanese-souffle-cheesecake",
@@ -1552,7 +1960,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "swirled-cheesecake",
@@ -1567,7 +1979,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "savory-goat-cheesecake",
@@ -1582,14 +1998,18 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     }
                 ]
         },
         {
             id: "pound-cakes",
             name: "Pound, Bundt & Coffee Cakes",
-            image: poundCake,
+            image: neapolitanPoundCake,
             description: 'Buttery, moist and tender, classic and beyond.',
             details:
                 {
@@ -1604,8 +2024,8 @@ export const categories = [
                 [
                     {
                         id: "sour-cream-pound",
-                        itemName: "Sour Cream Pound Cake",
-                        itemDescription: "Classic buttery pound cake made extra moist with tangy sour cream.",
+                        itemName: "Sour Cream-Glazed Cream cheese Pound Cake",
+                        itemDescription: "Classic buttery pound cake made extra moist with tangy cream cheese and topped with white chocolate sour cream frosting.",
                         itemPrice: [
                             {
                                 size: "Medium",
@@ -1616,7 +2036,7 @@ export const categories = [
                                 priceJOD: 25
                             }
                         ],
-                        itemImages: [brioche],
+                        itemImages: [sourCreamPoundCake],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -1624,11 +2044,15 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
-                        id: "napolitano-marble",
-                        itemName: "Vanilla Chocolate & Raspberry Napolitano Marble Cake",
+                        id: "neapolitan-marble",
+                        itemName: "Vanilla Chocolate & Raspberry Neapolitan Marble Cake",
                         itemDescription: "Beautifully marbled pound cake with layers of vanilla, chocolate, and raspberry.",
                         itemPrice: [
                             {
@@ -1640,7 +2064,7 @@ export const categories = [
                                 priceJOD: 45
                             }
                         ],
-                        itemImages: [brioche],
+                        itemImages: [neapolitanPoundCake],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -1648,7 +2072,7 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: true
                     },
                     {
                         id: "lemon-pound",
@@ -1664,7 +2088,7 @@ export const categories = [
                                 priceJOD: 35
                             }
                         ],
-                        itemImages: [brioche],
+                        itemImages: [lemonPoundCake],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -1672,7 +2096,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "spiced-coffee-cake",
@@ -1688,7 +2116,7 @@ export const categories = [
                                 priceJOD: 35
                             }
                         ],
-                        itemImages: [brioche],
+                        itemImages: [coffeePoundCake],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -1696,7 +2124,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "red-velvet-pound",
@@ -1712,7 +2144,7 @@ export const categories = [
                                 priceJOD: 35
                             }
                         ],
-                        itemImages: [brioche],
+                        itemImages: [redVelvetPoundCake],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -1720,11 +2152,43 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
-                        id: "ultimate-chocolate-bundt",
-                        itemName: "Ultimate Chocolate Triple Layer Bundt Cake",
+                        id: "fruit-nuts-bundt",
+                        itemName: "Dad's Favorite Dried Fruits & Nuts Bundt Cake",
+                        itemDescription: "Loaded with Black & Golden Raisins, Cranberries, Apricots, Prunes, Walnuts, Almonds, and topped with a citrus glaze.",
+                        itemPrice: [
+                            {
+                                size: "Medium",
+                                priceJOD: 28
+                            },
+                            {
+                                size: "Large",
+                                priceJOD: 35
+                            }
+                        ],
+                        itemImages: [driedFruitsPoundCake],
+                        quantityOptions: [
+                            {quantity: 1, price: "JOD 6"},
+                            {quantity: 2, price: "JOD 12"},
+                            {quantity: 3, price: "JOD 18"},
+                        ],
+                        ingredients: "flour",
+                        allergens: "flour, eggs",
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
+                    },
+                    {
+                        id: "ombre-bundt",
+                        itemName: "Ombre Chocolate Mocha Triple Layer Pound Cake",
                         itemDescription: "Decadent chocolate bundt cake with rich layers and glossy chocolate glaze.",
                         itemPrice: [
                             {
@@ -1736,7 +2200,7 @@ export const categories = [
                                 priceJOD: 35
                             }
                         ],
-                        itemImages: [brioche],
+                        itemImages: [ombrePoundCake],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -1744,8 +2208,41 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
+                    },
+                    {
+                        id: "ultimate-chocolate-bundt",
+                        itemName: "Ultimate Triple Chocolate Bundt Cake",
+                        itemDescription: "Decadent chocolate bundt cake with  chocolate chips and glossy chocolate glaze.",
+                        itemPrice: [
+                            {
+                                size: "Medium",
+                                priceJOD: 28
+                            },
+                            {
+                                size: "Large",
+                                priceJOD: 35
+                            }
+                        ],
+                        itemImages: [chocolatePoundCake],
+                        quantityOptions: [
+                            {quantity: 1, price: "JOD 6"},
+                            {quantity: 2, price: "JOD 12"},
+                            {quantity: 3, price: "JOD 18"},
+                        ],
+                        ingredients: "flour",
+                        allergens: "flour, eggs",
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     }
+
                 ]
         },
         {
@@ -1793,7 +2290,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "chocolate-bamboloni",
@@ -1807,7 +2308,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "cafe-latte-bamboloni",
@@ -1821,7 +2326,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "mexicano-bamboloni",
@@ -1835,7 +2344,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "thai-dream-bamboloni",
@@ -1849,7 +2362,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "strawberry-bamboloni",
@@ -1863,7 +2380,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "lemon-bamboloni",
@@ -1877,7 +2398,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     }
                 ]
         },
@@ -1914,7 +2439,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "chocolate-cremeux",
@@ -1928,7 +2457,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "strawberry-mousse",
@@ -1942,7 +2475,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "matcha",
@@ -1956,7 +2493,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "cinnamon-churro",
@@ -1970,7 +2511,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "lemon-mousse",
@@ -1984,7 +2529,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "mocha-latte",
@@ -1998,7 +2547,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "coconut-cream",
@@ -2012,7 +2565,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "arabesque",
@@ -2026,7 +2583,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     }
 
                 ]
@@ -2063,7 +2624,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "marsala-zabayone-tiramisu",
@@ -2078,7 +2643,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "strawberry-almond-tiramisu",
@@ -2093,7 +2662,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "pistachio-matcha-tiramisu",
@@ -2108,7 +2681,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "coconut-mango-tiramisu",
@@ -2123,7 +2700,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "milk-tea-tiramisu",
@@ -2138,7 +2719,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "lemon-mascarpone-tiramisu",
@@ -2153,7 +2738,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     }
                 ]
         },
@@ -2202,7 +2791,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "berry-cobbler",
@@ -2217,7 +2810,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "pecan-pie",
@@ -2232,7 +2829,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "pumpkin-pie",
@@ -2247,7 +2848,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "chocolate-cream-pie",
@@ -2262,7 +2867,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "apple-pie",
@@ -2277,7 +2886,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "banoffee-pie",
@@ -2292,7 +2905,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "lemon-meringue-pie",
@@ -2307,7 +2924,11 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "peach-cobbler",
@@ -2322,20 +2943,24 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: false
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     }
                 ]
         },
-// {
-//     id: 'seasonal-treats',
-//     name: 'Seasonal Treats',
-//     image: seasonal,
-//     description: 'Inspired by the freshest seasonal ingredients.',
-//     itemCount: 4,
-//     items: [],
-//      itemPrice: 3.99, ingredients:"flour",
-//         allergens:"flour, eggs"
-// },
+        // {
+        //     id: 'seasonal',
+        //     name: 'Seasonal Treats',
+        //     image: seasonal,
+        //     description: 'Inspired by the freshest seasonal ingredients.',
+        //     itemCount: 4,
+        //     items: [],
+        //     itemPrice: 3.99, ingredients: "flour",
+        //     allergens: "flour, eggs"
+        // },
         {
             id: "brunch",
             name:
@@ -2349,11 +2974,11 @@ export const categories = [
             items:
                 [
                     {
-                        id: "scones",
-                        itemName: "Classic Scones",
-                        itemDescription: "Flaky, buttery scones in seasonal flavors. Perfect for brunch or teatime.",
-                        itemPrice: {"6": 15, "8": 20, "10": 25, "12": 30},
-                        itemImages: [quicheImage],
+                        id: "strata",
+                        itemName: "Egg Bake Strata",
+                        itemDescription: "Hearty potato strata topped with eggs and your choice of fillings. Options: Mushroom & Sausage, Chorizo & Peppers with Ranchero Sauce, or Salmon & Asparagus.",
+                        itemPrice: {"MushroomSausage": 20, "ChorizoPeppers": 25, "SalmonAsparagus": 30},
+                        itemImages: [strata],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -2362,13 +2987,36 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
+                    },
+                    {
+                        id: "frittata",
+                        itemName: "Italian Egg Frittata",
+                        itemDescription: "Hearty potato strata topped with eggs and your choice of fillings. Options: Mushroom & Sausage, Chorizo & Peppers with Ranchero Sauce, or Salmon & Asparagus.",
+                        itemPrice: {"MushroomSausage": 20, "ChorizoPeppers": 25, "SalmonAsparagus": 30},
+                        itemImages: [frittata],
+                        quantityOptions: [
+                            {quantity: 1, price: "JOD 6"},
+                            {quantity: 2, price: "JOD 12"},
+                            {quantity: 3, price: "JOD 18"},
+                        ],
+                        ingredients: "flour",
+                        allergens: "flour, eggs",
+                        seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "quiche-lorraine",
                         itemName: "Quiche Lorraine",
                         itemDescription: "Classic deep-dish quiche with smoky bacon and Swiss cheese.",
                         itemPrice: 22,
-                        itemImages: [quicheImage],
+                        itemImages: [quicheLorraine],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -2377,6 +3025,10 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "quiche-mediterranean",
@@ -2392,13 +3044,17 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "quiche-three-cheese",
                         itemName: "Three Cheese Quiche",
                         itemDescription: "Fluffy, cheesy egg custard baked in a crisp shell.",
                         itemPrice: 18,
-                        itemImages: [quicheImage],
+                        itemImages: [threeCheeseQuiche],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -2407,13 +3063,17 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "quiche-mushroom-goat",
                         itemName: "Mushroom & Goat Cheese Quiche",
                         itemDescription: "Sautéed mushrooms and tangy goat cheese in a rich egg custard.",
                         itemPrice: 20,
-                        itemImages: [quicheImage],
+                        itemImages: [mushroomGoatCheeseQuiche],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -2422,13 +3082,17 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
                     {
                         id: "quiche-salmon-asparagus",
                         itemName: "Smoked Salmon & Asparagus Quiche",
-                        itemDescription: "Delicate smoked salmon and tender asparagus in a flaky crust.",
+                        itemDescription: "Salmon, asparagus & capers in a flaky crust.",
                         itemPrice: 25,
-                        itemImages: [quicheImage],
+                        itemImages: [salmonAsparagusQuiche],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
                             {quantity: 2, price: "JOD 12"},
@@ -2437,22 +3101,12 @@ export const categories = [
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
+                        weight: 800,
+                        variations: [],
+
+
                     },
-                    {
-                        id: "egg-bake",
-                        itemName: "Egg Bake Casserole",
-                        itemDescription: "Hearty potato strata topped with eggs and your choice of fillings. Options: Mushroom & Sausage, Chorizo & Peppers with Ranchero Sauce, or Salmon & Asparagus.",
-                        itemPrice: {"MushroomSausage": 20, "ChorizoPeppers": 25, "SalmonAsparagus": 30},
-                        itemImages: [quicheImage],
-                        quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
-                        ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
-                        seasonal: false,
-                    }
+
                 ]
         }
     ]
