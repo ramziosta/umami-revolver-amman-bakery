@@ -6,7 +6,7 @@ import seasonal from '../assets/lemon-basil.png';
 import milleCrepeCake from "../assets/mille-crepe-cake.jpg";
 import sourdough from "../assets/multiseed-sourdough.jpg"
 import Image from 'next/image';
-
+import { StaticImageData } from 'next/image';
 type ShowcaseCategory = {
   id: string;
   name: string;
