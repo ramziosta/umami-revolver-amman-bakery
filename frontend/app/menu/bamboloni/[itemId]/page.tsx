@@ -1,28 +1,26 @@
 // app/menu/bamboloni/[itemId]/page.tsx
-import {categories } from  '@/app/data/categoryData';
+import { categories } from '@/app/data/categoryData';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
-
-
 interface ItemPageProps {
-    params: {
+    params: Promise<{
         itemId: string;
-    };
+    }>;
 }
 
 export default async function ItemPage({ params }: ItemPageProps) {
-    const { itemId } = await params
+    const { itemId } = await params;
 
-    const category = categories.find((cat) => cat.id === 'bamboloni')
+    const category = categories.find((cat) => cat.id === 'bamboloni');
     if (!category) {
-        notFound()
+        notFound();
     }
 
-    const item = category.items.find((item) => item.id === itemId)
+    const item = category.items.find((item) => item.id === itemId);
     if (!item) {
-        notFound()
+        notFound();
     }
 
     return (
