@@ -14,7 +14,7 @@ interface ItemPageProps {
 }
 
 export default function ItemPage({ params }: ItemPageProps) {
-    const { itemId } = use(params);
+    const itemId = params.itemId;
 
     const category = categories.find(cat => cat.id === 'rustic-breads');
     if (!category) notFound();
