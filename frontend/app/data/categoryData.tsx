@@ -1,4 +1,4 @@
-import type {StaticImageData} from "next/image";
+import { StaticImageData } from 'next/image';
 
 import multiSeedSourdough from "@/app/assets/multiseed-sourdough.jpg";
 import whiteSourdough from "@/app/assets/white-sourdough.jpg";
