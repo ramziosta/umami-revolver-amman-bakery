@@ -85,17 +85,15 @@ export default function ItemPage({ params }: ItemPageProps) {
                                 Quantity & Pricing
                             </h3>
                             <div className="space-y-3">
-                                {item.quantityOptions.map((option, index) => {
+                                {item.quantityOptions?.map((option, index) => {
                                     if (!option) return null;
                                     return (
-                                        <div key={index} className="...">
-                                            <div className="flex flex-row justify-between w-full">
-                                                <div className="text-xl font-bold text-umami-black tracking-wide">
-                                                    {option.quantity}
-                                                </div>
-                                                <div className="text-xl font-bold text-umami-black tracking-wide">
-                                                    {option.price}
-                                                </div>
+                                        <div key={index} className="flex flex-row justify-between w-full">
+                                            <div className="text-xl font-bold text-umami-black tracking-wide">
+                                                {option.quantity}
+                                            </div>
+                                            <div className="text-xl font-bold text-umami-black tracking-wide">
+                                                {option.price}
                                             </div>
                                         </div>
                                     );

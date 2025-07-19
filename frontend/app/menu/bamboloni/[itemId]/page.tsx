@@ -91,17 +91,15 @@ export default async function ItemPage({ params }: ItemPageProps) {
                         <div>
                             <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-4">Quantity & Pricing</h3>
                             <div className="space-y-3">
-                                {item.quantityOptions.map((option, index) => {
+                                {item.quantityOptions?.map((option, index) => {
                                     if (!option) return null;
                                     return (
-                                        <div key={index} className="...">
-                                            <div className="flex flex-row justify-between w-full">
-                                                <div className="text-xl font-bold text-umami-black tracking-wide">
-                                                    {option.quantity}
-                                                </div>
-                                                <div className="text-xl font-bold text-umami-black tracking-wide">
-                                                    {option.price}
-                                                </div>
+                                        <div key={index} className="flex flex-row justify-between w-full">
+                                            <div className="text-xl font-bold text-umami-black tracking-wide">
+                                                {option.quantity}
+                                            </div>
+                                            <div className="text-xl font-bold text-umami-black tracking-wide">
+                                                {option.price}
                                             </div>
                                         </div>
                                     );
