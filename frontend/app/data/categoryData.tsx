@@ -157,7 +157,7 @@ import salmonAsparagusQuiche from "@/app/assets/salmon-asparagus-quiche.png";
 
 export interface QuantityOption {
     quantity: number | string;
-    priceJOD: number | string;
+    price: number | string;
 }
 
 export interface CakeTierOption {
