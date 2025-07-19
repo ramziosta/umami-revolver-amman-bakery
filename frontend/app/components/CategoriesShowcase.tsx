@@ -16,7 +16,7 @@ type ShowcaseCategory = {
 
 const categories: ShowcaseCategory[] = [
   {
-    id: 'bread',
+    id: 'artisan-sourdoughs',
     name: 'Artisan Breads',
     image: sourdough,
     description: 'Using the best flours, grains and seeds.',
@@ -34,7 +34,7 @@ const categories: ShowcaseCategory[] = [
     description: 'Light, layered crêpe cakes filled with luscious whites.',
   },
   {
-    id: 'seasonal-treats',
+    id: 'seasonal',
     name: 'Seasonal Treats',
     image: seasonal,
     description: 'Inspired by the freshest seasonal ingredients.',
@@ -56,7 +56,7 @@ const CategoriesShowcase = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((category) => (
-            <Link key={category.id} href={`/category/${category.id}`}>
+            <Link key={category.id} href={`/menu/${category.id}`}>
               <Card className="group cursor-pointer elegant-shadow hover:shadow-2xl transition-all duration-500 overflow-hidden border-0">
                 <div className="relative h-64 overflow-hidden">
                   <Image

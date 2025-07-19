@@ -156,8 +156,8 @@ import salmonAsparagusQuiche from "@/app/assets/salmon-asparagus-quiche.png";
 
 
 export interface QuantityOption {
-    quantity: number;
-    priceJOD: number;
+    quantity: number | string;
+    priceJOD: number | string;
 }
 
 export interface CakeTierOption {
@@ -210,9 +210,9 @@ export interface Category {
         itemName: string;
         itemDescription: string;
         itemImages: (StaticImageData | string)[];
-        quantityOptions: {
-            quantity: number;
-            price: string | number; // supports "JOD 6" or 6
+        quantityOptions?: {
+            quantity: number | string;
+            price: string | number;
         }[];
         ingredients: string;
         allergens: string;
@@ -238,15 +238,21 @@ export const categories = [
                     itemPrice: "",
                     itemImages: [whiteSourdough],
                     quantityOptions: [
-                        {quantity: "1 loaf", price: "JOD 4"},
-                        {quantity: "2 Loaves", price: "JOD 8"},
-                        {quantity: "3 Loaves", price: "JOD 11"},
+                        {quantity: "1 Loaf", price: "JOD 5"},
+                        {quantity: "2 Loaves", price: "JOD 9"},
+                        {quantity: "3 Loaves", price: "JOD 13"},
                     ],
                     ingredients: "flour",
                     allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
                     seasonal: false,
                     weight: 800,
-                    variations: [],
+                    variations: [{
+                        id: "white-kilo",
+                        name: "1250 gm Loaf 8 JOD",
+                        description: "",
+                        price: "",
+                        images: [whiteSourdough]
+                    },],
 
 
                 },
@@ -255,17 +261,24 @@ export const categories = [
                     itemName: "Whole Wheat Sourdough",
                     itemDescription: "A hearty whole wheat sourdough made with stone-ground Italian Primativa flour — rustic, nutty, and full of old-world character.",
                     itemImages: [wholeWheat],
-                    itemPrice: "", quantityOptions: [
-                        {quantity: "1 loaf", price: "JOD 4"},
-                        {quantity: "2 Loaves", price: "JOD 8"},
-                        {quantity: "3 Loaves", price: "JOD 11"},
+                    itemPrice: "",
+                    quantityOptions: [
+                        {quantity: "1 Loaf", price: "JOD 5"},
+                        {quantity: "2 Loaves", price: "JOD 9"},
+                        {quantity: "3 Loaves", price: "JOD 13"},
                     ],
 
                     ingredients: "flour",
                     allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
                     seasonal: false,
                     weight: 800,
-                    variations: [],
+                    variations: [{
+                        id: "wheat-kilo",
+                        name: "1250 gm Loaf 8 JOD",
+                        description: "",
+                        price: "",
+                        images: [wholeWheat]
+                    },],
 
 
                 },
@@ -279,12 +292,11 @@ export const categories = [
                         "",
                     itemImages:
                         [artisan],
-                    quantityOptions:
-                        [
-                            {quantity: "1 loaf", price: "JOD 4"},
-                            {quantity: "2 Loaves", price: "JOD 8"},
-                            {quantity: "3 Loaves", price: "JOD 11"},
-                        ],
+                    quantityOptions: [
+                        {quantity: "1 Loaf", price: "JOD 5"},
+                        {quantity: "2 Loaves", price: "JOD 9"},
+                        {quantity: "3 Loaves", price: "JOD 13"},
+                    ],
 
                     ingredients:
                         "flour",
@@ -292,7 +304,14 @@ export const categories = [
                         "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
                     seasonal: false,
                     weight: 800,
-                    variations: [],
+                    variations: [{
+                        id: "artisan-kilo",
+                        name: "1250 gm Loaf 8 JOD",
+                        description: "",
+                        price: "",
+                        images: [artisan]
+                    },],
+
 
 
                 },
@@ -306,19 +325,24 @@ export const categories = [
                         "",
                     itemImages:
                         [rye],
-                    quantityOptions:
-                        [
-                            {quantity: "1 loaf", price: "JOD 4"},
-                            {quantity: "2 Loaves", price: "JOD 8"},
-                            {quantity: "3 Loaves", price: "JOD 11"},
-                        ],
+                    quantityOptions: [
+                        {quantity: "1 Loaf", price: "JOD 6"},
+                        {quantity: "2 Loaves", price: "JOD 11"},
+                        {quantity: "3 Loaves", price: "JOD 16"},
+                    ],
                     ingredients:
                         "flour",
                     allergens:
                         "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
                     seasonal: false,
                     weight: 800,
-                    variations: [],
+                    variations: [{
+                        id: "rye-kilo",
+                        name: "1250 gm Loaf 8 JOD",
+                        description: "",
+                        price: "",
+                        images: [rye]
+                    },],
 
 
                 },
@@ -332,19 +356,24 @@ export const categories = [
                         "",
                     itemImages:
                         [multiSeedSourdough],
-                    quantityOptions:
-                        [
-                            {quantity: "1 loaf", price: "JOD 4"},
-                            {quantity: "2 Loaves", price: "JOD 8"},
-                            {quantity: "3 Loaves", price: "JOD 11"},
-                        ],
+                    quantityOptions: [
+                        {quantity: "1 Loaf", price: "JOD 6"},
+                        {quantity: "2 Loaves", price: "JOD 11"},
+                        {quantity: "3 Loaves", price: "JOD 16"},
+                    ],
                     ingredients:
                         "flour, seeds, nuts",
                     allergens:
                         "Made with flour, seeds and nuts and is prepared in a kitchen that processes eggs, and dairy products.",
                     seasonal: false,
                     weight: 800,
-                    variations: [],
+                    variations: [{
+                        id: "artisan-kilo",
+                        name: "1250 gm Loaf 8 JOD",
+                        description: "",
+                        price: "",
+                        images: [multiSeedSourdough]
+                    },],
 
 
                 }
@@ -388,6 +417,10 @@ export const categories = [
                         itemDescription: "A fluffy, olive oil-rich Italian flatbread brushed with olive oil, sea salt, and fresh herbs. From the classic to a wide selection of toppings.",
                         itemPrice: 3.50,
                         itemImages: [plainFocaccia],
+                        quantityOptions: [
+                            {quantity: 1/2, price: "See Item"},
+                            {quantity: 1, price: "See Item"},
+                        ],
                         variations: [
                             {
                                 id: "classic-focaccia",
@@ -424,10 +457,6 @@ export const categories = [
                                 price: "1/2 sheet: 7 JOD, 1 full sheet: 14 JOD",
                                 images: [mushroomGoatFocaccia]
                             }
-                        ],
-                        quantityOptions: [
-                            {quantity: 1/2, price: "See Item"},
-                            {quantity: 1, price: "See Item"},
                         ],
                         ingredients: "flour",
                         allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
@@ -603,7 +632,7 @@ export const categories = [
                     {
                         id: 'cinnamon',
                         itemName: "Cinnamon Roll Bread",
-                        itemDescription: "A classic French-style brioche with a soft, buttery crust and a light, airy interior.",
+                        itemDescription: "Fluffy brioche loaf rolled  and twisted with cinnamon sugar for a sweet, buttery swirl.",
                         itemPrice: 3.50,
                         itemImages: [cinnamon],
                         quantityOptions: [
@@ -733,8 +762,8 @@ export const categories = [
                 "Breakfast Pastries & Muffins",
             description:
                 "Fresh baked morning treats, the perfect indulgence with coffee or tea.",
-            image:
-            muffins,
+            itemCount: 8,
+            image: muffins,
             items:
                 [
                     {
@@ -827,12 +856,11 @@ export const categories = [
                         itemPrice: 2.50,
                         itemImages: [blueberryMuffin],
                         quantityOptions: [
-                            {quantity: 6, price: "JOD 6"},
-                            {quantity: 12, price: "JOD 12"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 18"},
+                            {quantity: 12, price: "JOD 30"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, sugar, eggs, milk, blueberries",
+                        allergens: "flour, sugar, eggs, milk",
                         seasonal: false,
                         weight: 800,
                         variations: [],
@@ -846,12 +874,11 @@ export const categories = [
                         itemPrice: 2.50,
                         itemImages: [bananaMuffin],
                         quantityOptions: [
-                            {quantity: 6, price: "JOD 6"},
-                            {quantity: 12, price: "JOD 12"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 18"},
+                            {quantity: 12, price: "JOD 30"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, sugar, eggs, milk, bananas, walnuts",
+                        allergens: "flour, sugar, eggs, milk, nuts",
                         seasonal: false,
                         weight: 800,
                         variations: [],
@@ -865,12 +892,11 @@ export const categories = [
                         itemPrice: 2.50,
                         itemImages: [cranberryScones],
                         quantityOptions: [
-                            {quantity: 6, price: "JOD 6"},
-                            {quantity: 12, price: "JOD 12"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 18"},
+                            {quantity: 12, price: "JOD 30"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, sugar, eggs, milk, cranberries",
+                        allergens: "flour, sugar, eggs, milk",
                         seasonal: false,
                         weight: 800,
                         variations: [],
@@ -884,12 +910,11 @@ export const categories = [
                         itemPrice: 2.50,
                         itemImages: [englishScones],
                         quantityOptions: [
-                            {quantity: 6, price: "JOD 6"},
-                            {quantity: 12, price: "JOD 12"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 6, price: "JOD 12"},
+                            {quantity: 12, price: "JOD 22"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, sugar, eggs, milk",
+                        allergens: "flour, sugar, eggs, milk",
                         seasonal: false,
                         weight: 800,
                         variations: [],
@@ -903,12 +928,12 @@ export const categories = [
                         itemPrice: 2.50,
                         itemImages: [coffeeCake],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 2, price: "JOD 12"},
-                            {quantity: 3, price: "JOD 18"},
+                            {quantity: 1, price: "JOD 10"},
+                            {quantity: 2, price: "JOD 18"},
+                            {quantity: 3, price: "JOD 25"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, sugar, eggs, milk",
+                        allergens: "flour, sugar, eggs, milk",
                         seasonal: false,
                         weight: 800,
                         variations: [],
@@ -952,17 +977,16 @@ export const categories = [
                         itemDescription: "Brown butter cookie with a mix of fine chocolates and a sprinkle of sea salt for balance.",
                         itemImages: [chocolateChip],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, sugar, butter, eggs, chocolate",
+                        allergens: "flour, sugar, butter, eggs",
                         seasonal: false,
-                        weight: 800,
+                        weight: 70,
                         variations: [],
 
 
@@ -975,17 +999,15 @@ export const categories = [
                         itemDescription: "Decadent dark chocolate cookie with peanut butter chips.",
                         itemImages: [chocolatePeanut],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, sugar, butter, eggs, chocolate, peanut butter",
+                        allergens: "flour, sugar, butter, eggs, nuts",
                         seasonal: false,
-                        weight: 800,
+                        weight: 70,
                         variations: [],
 
 
@@ -998,17 +1020,15 @@ export const categories = [
                         itemDescription: "Classic chewy cookie with plump black and golden raisins.",
                         itemImages: [oatmealRaisin],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, sugar, butter, eggs, raisin, walnuts",
+                        allergens: "flour, sugar, butter, eggs, nuts",
                         seasonal: false,
-                        weight: 800,
+                        weight: 70,
                         variations: [],
 
 
@@ -1021,17 +1041,15 @@ export const categories = [
                         itemDescription: "Zesty lemon cookie with white chocolate chips.",
                         itemImages: [lemonDrop],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, sugar, butter, eggs, lemon, white chocolate",
+                        allergens: "flour, sugar, butter, eggs",
                         seasonal: false,
-                        weight: 800,
+                        weight: 70,
                         variations: [],
 
 
@@ -1039,22 +1057,20 @@ export const categories = [
 
                     },
                     {
-                        id: "samoa-cookie",
+                        id: 'samoa-cookie',
                         itemName: "Samoa Cookie",
                         itemDescription: "Inspired by the Girl Scout classic: chocolate, gooey caramel, and toasted coconut over shortbread.",
                         itemImages: [samoa],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},,
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, sugar, butter, eggs, chocolate, coconut",
+                        allergens: "flour, sugar, butter, eggs",
                         seasonal: false,
-                        weight: 800,
+                        weight: 70,
                         variations: [],
 
 
@@ -1063,21 +1079,53 @@ export const categories = [
                     {
                         id: "stamped-sugar-cookies",
                         itemName: "Stamped Sugar Cookies",
-                        itemDescription: "Classic buttery and nutty sugar cookies, hand-stamped for an artisanal touch. Flavors include: Almond Honey, Espresso Chocolate, Lemon Zest, Chai Spice, Orange Cardamom.",
+                        itemDescription: "Classic buttery and nutty sugar cookies, hand-stamped for an artisanal touch. Made with a unique blend of the finest white, whole wheat and Almond flours. Flavors include: ",
                         itemImages: [sugarCookie],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
-                        ingredients: "flour",
-                        allergens: "flour, eggs",
+                        ingredients: "flour, sugar, butter, eggs",
+                        allergens:"flour, sugar, butter, eggs, nuts",
                         seasonal: false,
-                        weight: 800,
-                        variations: [],
+                        weight: 60,
+                        variations: [          {
+                            id: "almond-honey",
+                            name: "Almond Honey",
+                            description: "",
+                            price: "",
+                            images: [sugarCookie],
+                        },
+                        {
+                            id: "espresso-chocolate",
+                            name: "Espresso Chocolate",
+                            description: "",
+                            price: "",
+                            images: [sugarCookie],
+                        },
+                        {
+                            id: "lemon-zest",
+                            name: "Lemon Zest",
+                            description: "",
+                            price: "",
+                            images: [sugarCookie],
+                        },
+                        {
+                            id: "chai-spice",
+                            name: "Chai Spice",
+                            description: "",
+                            price: "",
+                            images: [sugarCookie],
+                        },
+                        {
+                            id: "orange-cardamom",
+                            name: "Orange Cardamom",
+                            description: "",
+                            price: "",
+                            images: [sugarCookie],
+                        },],
 
 
                         itemPrice: 3.99,
@@ -1088,17 +1136,15 @@ export const categories = [
                         itemDescription: "Classic ginger spice cookies with molasses and a crackly sugar crust.",
                         itemImages: [gingerCookie],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
-                        weight: 800,
+                        weight: 60,
                         variations: [],
 
 
@@ -1110,17 +1156,15 @@ export const categories = [
                         itemDescription: "Chewy, crunchy red velvet cookie with macadamia nuts and chocolate chips.",
                         itemImages: [redVelvetCookie],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
-                        weight: 800,
+                        weight: 60,
                         variations: [],
 
 
@@ -1132,17 +1176,15 @@ export const categories = [
                         itemDescription: "Gluten-free version of our classic chocolate chip cookie.",
                         itemImages: [gfCookie],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
-                        weight: 800,
+                        weight: 60,
                         variations: [],
 
 
@@ -1154,17 +1196,15 @@ export const categories = [
                         itemDescription: "Citrusy, creamy cheesecake bars with a fresh zest.",
                         itemImages: [limoncelloBar],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
-                        weight: 800,
+                        weight: 100,
                         variations: [],
 
 
@@ -1176,17 +1216,15 @@ export const categories = [
                         itemDescription: "Soft, chewy bar with strawberry filling and crunchy streusel topping.",
                         itemImages: [strawberryCrumble],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
-                        weight: 800,
+                        weight: 100,
                         variations: [],
 
 
@@ -1198,17 +1236,15 @@ export const categories = [
                         itemDescription: "Classic buttery shortbread with caramel center and chocolate frosting.",
                         itemImages: [millionaireShortbread],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
-                        weight: 800,
+                        weight: 100,
                         variations: [],
 
 
@@ -1220,17 +1256,15 @@ export const categories = [
                         itemDescription: "Rich brownie with tahini swirls and halva bits.",
                         itemImages: [tahiniBrownie],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
-                        weight: 800,
+                        weight: 100,
                         variations: [],
 
 
@@ -1242,17 +1276,15 @@ export const categories = [
                         itemDescription: "Ultra-rich brownies with all Valrhona chocolate chips and dulce de leche.",
                         itemImages: [brownies],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
-                        weight: 800,
+                        weight: 100,
                         variations: [],
 
 
@@ -1264,20 +1296,16 @@ export const categories = [
                         itemDescription: "Buttery blondie bar with toasted walnuts and white chocolate chips.",
                         itemImages: [blondie],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
-                        weight: 800,
+                        weight: 100,
                         variations: [],
-
-
                         itemPrice: 3.99,
                     },
                     {
@@ -1286,20 +1314,16 @@ export const categories = [
                         itemDescription: "Earthy matcha brownies with pistachios.",
                         itemImages: [matchaBrownie],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
-                        weight: 800,
+                        weight: 100,
                         variations: [],
-
-
                         itemPrice: 3.99,
                     },
                     {
@@ -1308,20 +1332,16 @@ export const categories = [
                         itemDescription: "Light chocolate brownies with a swirl of tangy cream cheese.",
                         itemImages: [redVelvetBrownie],
                         quantityOptions: [
-                            {quantity: 1, price: "JOD 6"},
-                            {quantity: 4, price: "JOD 6"},
-                            {quantity: 8, price: "JOD 12"},
-                            {quantity: 10, price: "JOD 18"},
-                            {quantity: 12, price: "JOD 18"},
-                            {quantity: 24, price: "JOD 18"},
+                            {quantity: 4, price: "JOD 14"},
+                            {quantity: 8, price: "JOD 25"},
+                            {quantity: 12, price: "JOD 32"},
+                            {quantity: 24, price: "JOD 55"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
                         seasonal: false,
-                        weight: 800,
+                        weight: 100,
                         variations: [],
-
-
                         itemPrice: 3.99,
                     }
                 ]
@@ -1536,8 +1556,6 @@ export const categories = [
                     seasonal: false,
                     weight: 800,
                     variations: [],
-
-
                 },
                 {
                     id: "strawberry-cake",
@@ -1730,8 +1748,6 @@ export const categories = [
                         seasonal: false,
                         weight: 800,
                         variations: [],
-
-
                     },
                     {
                         id: "creme-brulee-crepe",
@@ -1758,8 +1774,6 @@ export const categories = [
                         seasonal: false,
                         weight: 800,
                         variations: [],
-
-
                     },
                     {
                         id: "milk-tea-crepe",

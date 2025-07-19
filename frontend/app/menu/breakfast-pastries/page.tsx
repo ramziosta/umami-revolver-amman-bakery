@@ -52,8 +52,9 @@ export default function BreakfastPastriesPage() {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {category.items.map((item, index) => (
+                            <Link href={`/menu/breakfast-pastries/${item.id}`} key={`${item.id}-${index}`}>
                             <Card
-                                key={`${item.id}-${index}`}
+
                                 className="group cursor-pointer elegant-shadow hover:shadow-2xl transition-all duration-500 overflow-hidden border-0 bg-white"
                             >
                                 <div className="relative h-64 overflow-hidden">
@@ -81,19 +82,17 @@ export default function BreakfastPastriesPage() {
                                     <p className="text-umami-black leading-relaxed mb-4 line-clamp-2">
                                         {item.itemDescription}
                                     </p>
-                                    <div className="flex justify-between items-center mb-4">
-                                        {/*<span className="text-lg font-bold text-umami-charcoal">*/}
-                                        {/*  {item.quantityOptions[0]?.price}sdfdsfsdf*/}
-                                        {/*</span>*/}
-                                    </div>
-                                    <Link
-                                        href={`/menu/breakfast-pastries/${item.id}`}
-                                        className="inline-block w-full text-center bg-umami-charcoal text-umami-white py-2 px-4 rounded hover:bg-umami-black transition-colors"
-                                    >
+
+
+                                     <span
+                                         className="inline-block w-full text-center bg-umami-charcoal text-umami-white py-2 px-4 rounded hover:bg-umami-black transition-colors"
+                                     >
                                         View Details
-                                    </Link>
+                                  </span>
+
                                 </CardContent>
                             </Card>
+                            </Link>
                         ))}
                     </div>
                 </div>

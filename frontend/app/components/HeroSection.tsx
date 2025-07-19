@@ -15,14 +15,14 @@ const HeroSection = () => {
                 priority
             />
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/45"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto animate-fade-in">
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-goglast text-white tracking-[0.5rem] mb-4 ">
           Artisan Baked
-          <span className="block text-umami-pink hover:transition-colors duration-300">Perfection</span>
+          <span className="block text-umami-cream hover:transition-colors duration-300">Perfection</span>
         </h1>
 
           <p className="max-w-4xl mx-auto text-umami-cream/90 font-glimp text-2xl lg:text-3xl font-[100] tracking-[0.5rem] leading-relaxed">

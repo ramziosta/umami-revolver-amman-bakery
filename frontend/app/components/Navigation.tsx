@@ -9,15 +9,16 @@ const Navigation = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     return (
-        <div>
+        <div className="bg-umami-cream/50">
             <div className="container mx-auto px-4 py-4  " >
 
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
-                        <h1 className="text-4xl font-goglast font-black text-umami-pink tracking-wide  hover:text-umami-blue ml-4 transition-colors duration-300">
-                            Umami
+                        <h1 className="text-2xl font-goglast font-black text-umami-pink tracking-[0.3rem] hover:text-umami-blue ml-4 transition-colors duration-300">
+                            Umami Amman Bakery & Pâtisserie
                         </h1>
+
                     </Link>
                     <nav className="text-xl hidden md:flex items-center  space-x-8">
                         <Link

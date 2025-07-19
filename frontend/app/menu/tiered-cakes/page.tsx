@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardContent } from "@/app/ui/card";
-import { categories } from "@/app/data/categoryData"; // ✅ Import your categories
-import type { StaticImageData } from "next/image";
+import {Card, CardContent} from "@/app/ui/card";
+import {categories} from "@/app/data/categoryData"; // ✅ Import your categories
+import type {StaticImageData} from "next/image";
 import React from "react";
 
 // ✅ Get the category data from `categories`
@@ -15,7 +15,9 @@ if (!tieredCakes) {
 }
 
 // Assert that tieredCakes has a details property
-const tieredCakesWithDetails = tieredCakes as { details: { frostings: string[], fillingsAndToppings: string[] } } & typeof tieredCakes;
+const tieredCakesWithDetails = tieredCakes as {
+    details: { frostings: string[], fillingsAndToppings: string[] }
+} & typeof tieredCakes;
 
 const CakeHero = () => (
     <section className="relative h-[70vh] overflow-hidden">
@@ -40,9 +42,11 @@ const CakeHero = () => (
 
 const CakePricingTable = () => (
     <section className="container bg-umami-cream/50 mx-auto pt-4 pb-16">
-        <h2 className="text-3xl text-umami-black font-black font-goglast text-center tracking-[0.3rem] m-8">Cake Size & Tier Pricing</h2>
+        <h2 className="text-3xl text-umami-black font-black font-goglast text-center tracking-[0.3rem] m-8">Cake Size &
+            Tier Pricing</h2>
         <div className="overflow-x-auto">
-            <table className="w-full max-w-3xl mx-auto border-collapse border border-gray-300 text-umami-white font-glimp">
+            <table
+                className="w-full max-w-3xl mx-auto border-collapse border border-gray-300 text-umami-white font-glimp">
                 <thead>
                 <tr className="bg-umami-charcoal/90 text-umami-cream uppercase tracking-wider text-xs">
                     <th className="text-left py-2 px-3">Layers</th>
@@ -86,7 +90,8 @@ const CakePricingTable = () => (
 
 const FrostingsAndFillings = () => (
     <section className="container bg-umami-cream/50 mx-auto pt-4 pb-16">
-        <h2 className="text-3xl text-umami-black font-black font-goglast text-center tracking-[0.3rem] m-8">Frostings, Fillings & Toppings</h2>
+        <h2 className="text-3xl text-umami-black font-black font-goglast text-center tracking-[0.3rem] m-8">Frostings,
+            Fillings & Toppings</h2>
         <div className="space-y-12">
             {/* Frostings */}
             <div className="mx-10">
@@ -107,7 +112,8 @@ const FrostingsAndFillings = () => (
 
             {/* Fillings & Toppings */}
             <div className="mx-10">
-                <h3 className="text-2xl text-umami-black font-black font-goglast tracking-[0.3rem] m-8">Fillings & Toppings</h3>
+                <h3 className="text-2xl text-umami-black font-black font-goglast tracking-[0.3rem] m-8">Fillings &
+                    Toppings</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 mx-10">
                     <ul className="list-disc pl-5 font-umami-glimp text-umami-black">
                         {tieredCakesWithDetails.details.fillingsAndToppings.slice(0, 9).map((fill) => (
@@ -125,9 +131,10 @@ const FrostingsAndFillings = () => (
     </section>
 );
 
-const CakeItemCard = ({ item }: { item: any }) => (
+const CakeItemCard = ({item}: { item: any }) => (
     <Link href={`/menu/tiered-cakes/${item.id}`}>
-        <Card className="group cursor-pointer elegant-shadow hover:shadow-2xl transition overflow-hidden border-0 bg-white">
+        <Card
+            className="group cursor-pointer elegant-shadow hover:shadow-2xl transition overflow-hidden border-0 bg-white">
             <div className="relative h-64 overflow-hidden">
                 <Image
                     src={item.itemImages[0]}
@@ -147,6 +154,11 @@ const CakeItemCard = ({ item }: { item: any }) => (
                 <p className="text-umami-black leading-relaxed">
                     {item.itemDescription}
                 </p>
+                <span
+                    className="inline-block w-full text-center bg-umami-charcoal text-umami-white mt-2 py-2 px-4 rounded hover:bg-umami-black transition-colors"
+                >
+                                        View Details
+                                      </span>
             </CardContent>
         </Card>
     </Link>
@@ -154,10 +166,11 @@ const CakeItemCard = ({ item }: { item: any }) => (
 
 const CakesGrid = () => (
     <section className="container mx-auto px-4 pb-16">
-        <h2 className="text-3xl text-umami-black font-black font-goglast text-center tracking-[0.3rem] m-8">Classic Crowd Pleasers & All Time Favorites</h2>
+        <h2 className="text-3xl text-umami-black font-black font-goglast text-center tracking-[0.3rem] m-8">Classic
+            Crowd Pleasers & All Time Favorites</h2>
         <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tieredCakes.items.map((item) => (
-                <CakeItemCard key={item.id} item={item} />
+                <CakeItemCard key={item.id} item={item}/>
             ))}
         </div>
     </section>
@@ -166,10 +179,10 @@ const CakesGrid = () => (
 export default function CakePage() {
     return (
         <div className="min-h-screen bg-umami-white">
-            <CakeHero />
-            <FrostingsAndFillings />
-            <CakesGrid />
-            <CakePricingTable />
+            <CakeHero/>
+            <FrostingsAndFillings/>
+            <CakesGrid/>
+            <CakePricingTable/>
         </div>
     );
 }

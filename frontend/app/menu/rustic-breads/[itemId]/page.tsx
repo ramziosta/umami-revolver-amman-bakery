@@ -97,14 +97,14 @@ export default function ItemPage({ params }: ItemPageProps) {
                                                     setSelectedImage(variation.images[0]);
                                                 }
                                             }}
-                                            className="w-full text-left border p-4 rounded ont-glimp border-umami-charcoal hover:bg-umami-cream/50 transition"
+                                            className="w-full text-left border p-4 rounded ont-glimp border-umami-charcoal hover:bg-umami-cream/5 transition"
                                         >
                                             <h4 className="font-glimp text-lg mb-1">{variation.name}</h4>
                                             <p className="text-umami-charcoal text-sm mb-2">
                                                 {variation.description}
                                             </p> <p className="text-umami-charcoal text-sm mb-2">
-                                                {variation.price}
-                                            </p>
+                                            {variation.price}
+                                        </p>
                                         </button>
                                     ))}
                                 </div>
@@ -138,15 +138,18 @@ export default function ItemPage({ params }: ItemPageProps) {
                                 </p>
                             )}
                             <div className="space-y-3">
-                                {item.quantityOptions.map((option, index) => (
-                                    <div
-                                        key={index}
-                                        className="flex justify-between items-center p-2 bg-umami-white border border-umami-charcoal rounded-lg"
-                                    >
-                                        <span className="font-glimp text-umami-charcoal">{option.quantity}</span>
-                                        <span className="text-lg text-umami-charcoal">{option.price}</span>
-                                    </div>
-                                ))}
+                                {item.quantityOptions.map((option, index) => {
+                                    if (!option) return null;
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="flex justify-between items-center p-2 bg-umami-white border border-umami-charcoal rounded-lg"
+                                        >
+                                            <span className="font-glimp text-umami-charcoal">{option.quantity}</span>
+                                            <span className="text-lg text-umami-charcoal">{option.price}</span>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
 

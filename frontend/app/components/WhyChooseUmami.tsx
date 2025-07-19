@@ -42,7 +42,7 @@ const features = [
 
 const WhyChooseUmami = () => {
   return (
-    <section className="py-32 ">
+    <section className="py-32 bg-umami-cream/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-5xl lg:text-6xl font-goglast text-umami-black mb-3  goglast-tracking">

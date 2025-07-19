@@ -1,5 +1,5 @@
 // app/menu/cookies-bars-brownies/page.tsx
-import {categories } from  '@/app/data/categoryData';
+import {categories} from '@/app/data/categoryData';
 import Link from 'next/link';
 import Image from 'next/image';
 import {Card, CardContent} from "@/app/ui/card";
@@ -52,48 +52,56 @@ export default function ChocolatesBarsBrowniesPage() {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {category.items.map((item, index) => (
-                            <Card
-                                key={`${item.id}-${index}`}
-                                className="group cursor-pointer elegant-shadow hover:shadow-2xl transition-all duration-500 overflow-hidden border-0 bg-white"
+                            <Link
+                                href={`/menu/cookies-bars-brownies/${item.id}` } key={`${item.id}-${index}`}
                             >
-                                <div className="relative h-64 overflow-hidden">
-                                    <Image
-                                        src={item.itemImages[0]}
-                                        alt={item.itemName}
-                                        width={800}
-                                        height={600}
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent"></div>
-                                    <div className="absolute bottom-4 left-4 right-4 text-white">
-                                        <h3 className="text-xl font-goglast mb-1 text-shadow tracking-[0.5rem]">
-                                            {item.itemName}
-                                        </h3>
-                                        {item.seasonal && (
-                                            <span className="px-2 py-1 bg-yellow-200 text-yellow-800 text-xs rounded-full">
+                                <Card
+
+                                    className="group cursor-pointer elegant-shadow hover:shadow-2xl transition-all duration-500 overflow-hidden border-0 bg-white"
+                                >
+                                    <div className="relative h-64 overflow-hidden">
+                                        <Image
+                                            src={item.itemImages[0]}
+                                            alt={item.itemName}
+                                            width={800}
+                                            height={600}
+                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                        />
+                                        <div
+                                            className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent"></div>
+                                        <div className="absolute bottom-4 left-4 right-4 text-white">
+                                            <h3 className="text-xl font-goglast mb-1 text-shadow tracking-[0.5rem]">
+                                                {item.itemName}
+                                            </h3>
+                                            {item.seasonal && (
+                                                <span
+                                                    className="px-2 py-1 bg-yellow-200 text-yellow-800 text-xs rounded-full">
                         Seasonal
                       </span>
-                                        )}
+                                            )}
+                                        </div>
                                     </div>
-                                </div>
 
-                                <CardContent className="p-6 bg-white group-hover:bg-umami-white transition-colors duration-300">
-                                    <p className="text-umami-black leading-relaxed mb-4 line-clamp-2">
-                                        {item.itemDescription}
-                                    </p>
-                                    <div className="flex justify-between items-center mb-4">
-                    {/*<span className="text-lg font-bold text-umami-charcoal">*/}
-                    {/*  {item.quantityOptions[0]?.price}sdfdsfsdf*/}
-                    {/*</span>*/}
-                                    </div>
-                                    <Link
-                                        href={`/menu/cookies-bars-brownies/${item.id}`}
-                                        className="inline-block w-full text-center bg-umami-charcoal text-umami-white py-2 px-4 rounded hover:bg-umami-black transition-colors"
-                                    >
+                                    <CardContent
+                                        className="p-6 bg-white group-hover:bg-umami-white transition-colors duration-300">
+                                        <p className="text-umami-black leading-relaxed mb-4 line-clamp-2">
+                                            {item.itemDescription}
+                                        </p>
+                                        <div className="flex justify-between items-center mb-4">
+                                            {/*<span className="text-lg font-bold text-umami-charcoal">*/}
+                                            {/*  {item.quantityOptions[0]?.price}sdfdsfsdf*/}
+                                            {/*</span>*/}
+                                        </div>
+
+                                        <span
+                                            className="inline-block w-full text-center bg-umami-charcoal text-umami-white py-2 px-4 rounded hover:bg-umami-black transition-colors"
+                                        >
                                         View Details
-                                    </Link>
-                                </CardContent>
-                            </Card>
+                                  </span>
+
+                                    </CardContent>
+                                </Card>
+                            </Link>
                         ))}
                     </div>
                 </div>

@@ -92,15 +92,18 @@ export default async function ItemPage({ params }: ItemPageProps) {
                         <div>
                             <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-4">Quantity & Pricing</h3>
                             <div className="space-y-3">
-                                {item.quantityOptions.map((option, index) => (
-                                    <div
-                                        key={index}
-                                        className="flex justify-between items-center p-2 bg-umami-white border border-umami-charcoal tracking-  rounded-lg"
-                                    >
-                                        <span className="font-glimp text-umami-black ">{option.quantity}</span>
-                                        <span className="text-lg  text-umami-charcoal">{option.price}</span>
-                                    </div>
-                                ))}
+                                {item.quantityOptions.map((option, index) => {
+                                    if (!option) return null;
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="flex justify-between items-center p-2 bg-umami-white border border-umami-charcoal rounded-lg"
+                                        >
+                                            <span className="font-glimp text-umami-black">{option.quantity}</span>
+                                            <span className="text-lg text-umami-charcoal">{option.price}</span>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
 

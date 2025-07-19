@@ -52,9 +52,9 @@ export default function PoundCakesPage() {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {category.items.map((item, index) => (
-                            <Card
-                                key={`${item.id}-${index}`}
-                                className="group cursor-pointer elegant-shadow hover:shadow-2xl transition-all duration-500 overflow-hidden border-0 bg-white"
+                            <Link key={`${item.id}-${index}`}
+                                href={`/menu/pound-cakes/${item.id}`}>
+                            <Card className="group cursor-pointer elegant-shadow hover:shadow-2xl transition-all duration-500 overflow-hidden border-0 bg-white"
                             >
                                 <div className="relative h-64 overflow-hidden">
                                     <Image
@@ -86,14 +86,15 @@ export default function PoundCakesPage() {
                                         {/*  {item.quantityOptions[0]?.price}sdfdsfsdf*/}
                                         {/*</span>*/}
                                     </div>
-                                    <Link
-                                        href={`/menu/pound-cakes/${item.id}`}
+                                    <span
                                         className="inline-block w-full text-center bg-umami-charcoal text-umami-white py-2 px-4 rounded hover:bg-umami-black transition-colors"
                                     >
                                         View Details
-                                    </Link>
+                                      </span>
+
                                 </CardContent>
                             </Card>
+                            </Link>
                         ))}
                     </div>
                 </div>

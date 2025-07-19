@@ -52,8 +52,10 @@ export default function PiesCobblersGalettesPage() {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {category.items.map((item, index) => (
+                            <Link key={`${item.id}-${index}`}
+                                href={`/menu/pies-cobblers-galettes/${item.id}`}
+                            >
                             <Card
-                                key={`${item.id}-${index}`}
                                 className="group cursor-pointer elegant-shadow hover:shadow-2xl transition-all duration-500 overflow-hidden border-0 bg-white"
                             >
                                 <div className="relative h-64 overflow-hidden">
@@ -86,14 +88,16 @@ export default function PiesCobblersGalettesPage() {
                                         {/*  {item.quantityOptions[0]?.price}sdfdsfsdf*/}
                                         {/*</span>*/}
                                     </div>
-                                    <Link
-                                        href={`/menu/pies-cobblers-galettes/${item.id}`}
-                                        className="inline-block w-full text-center bg-umami-charcoal text-umami-white py-2 px-4 rounded hover:bg-umami-black transition-colors"
-                                    >
+
+                                             <span
+                                                 className="inline-block w-full text-center bg-umami-charcoal text-umami-white py-2 px-4 rounded hover:bg-umami-black transition-colors"
+                                             >
                                         View Details
-                                    </Link>
+                                  </span>
+
                                 </CardContent>
                             </Card>
+                            </Link>
                         ))}
                     </div>
                 </div>
