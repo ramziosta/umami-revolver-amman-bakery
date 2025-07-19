@@ -210,7 +210,7 @@ export interface Category {
         itemName: string;
         itemDescription: string;
         itemImages: (StaticImageData | string)[];
-        quantityOptions?: QuantityOption[]; // Use the QuantityOption interface directly
+        quantityOptions?: QuantityOption[];
         ingredients: string;
         allergens: string;
         seasonal?: boolean;
