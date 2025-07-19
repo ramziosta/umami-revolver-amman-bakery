@@ -167,32 +167,43 @@ export interface CakeTierOption {
 }
 
 export interface CakeTier {
-    layers: number;
-    options: CakeTierOption[];
+    layers?: number;
+    options?: CakeTierOption[];
 }
 
 export type Variation = {
-    id: string;
-    name: string;
-    description: string;
-    price: string;
-    images: string[]; // or StaticImageData[] if you import Next.js images
+    id?: string;
+    name?: string;
+    description?: string;
+    price?: string;
+    images?: (StaticImageData | string)[]; // Match items image format
 };
 
 export interface Category {
     id: string;
     name: string;
     image?: StaticImageData | string | null;
-    categoryDescription: string;
-    description: string;
+    categoryDescription?: string;
+    description?: string;
 
     // Optional for cake/bespoke categories
     details?: {
+        sizes?: Array<{
+            type: string;
+            serves?: string;
+            priceRangeJOD?: string;
+            size?: string;
+        }>;
         frostings?: string[];
         fillingsAndToppings?: string[];
+        availableSizes?: string[];
+        availableSize?: string;
+        extraCharges?: Array<{option: string; additionalprice: number}>;
+        toppings?: string[];
+        crustOptions?: string[];
     };
 
-    // ciabatta
+    // Category-level variations (for ciabatta-style categories)
     variations?: Variation[];
 
     // Optional for cake/bespoke categories
@@ -201,10 +212,9 @@ export interface Category {
     };
 
     cupcakeQuantityOptions?: QuantityOption[];
-
     itemCount?: number;
 
-
+    // Items array - most categories will have this
     items: {
         id: string;
         itemName: string;
@@ -215,6 +225,8 @@ export interface Category {
         allergens: string;
         seasonal?: boolean;
         weight?: number;
+        // Flexible pricing to handle all your formats
+        itemPrice?: number | string | {[key: string]: number} | Array<{size: string; price: number}>;
         variations?: Variation[];
     }[];
 }
@@ -377,16 +389,12 @@ export const categories = [
             ]
         },
         {
-            id:
-                "rustic-breads",
-            name:
-                "Rustic & Dinner Breads",
-            image:
-            ciabatta,
-            description:
-                "Table breads and classic sides for every meal.",
-            itemCount:
-                9,
+            id: "rustic-breads",
+            name: "Rustic & Dinner Breads",
+            image: ciabatta,
+            categoryDescription: "Table breads and classic sides for every meal.", // Add this
+            description: "Table breads and classic sides for every meal.",
+            itemCount: 9,
             items:
                 [
                     {
@@ -597,12 +605,10 @@ export const categories = [
         },
         {
             id: 'sweet-breads',
-            name:
-                'Brioche and Sweet Breads',
-            image:
-            brioche,
-            description:
-                'Classic, spiced or filled with irresistible inclusions.',
+            name: 'Brioche and Sweet Breads',
+            image: brioche,
+            categoryDescription: 'Classic, spiced or filled with irresistible inclusions.',
+            description: 'Classic, spiced or filled with irresistible inclusions.',
             itemCount:
                 7,
             items:
@@ -710,7 +716,7 @@ export const categories = [
                         itemImages: [cranberryPecan],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
-                            {quantity: 1, price: "JOD 12"},
+                            {quantity: 2, price: "JOD 12"},
                             {quantity: 3, price: "JOD 16"},
                         ],
                         ingredients: "flour, butter, milk, eggs, pecans",
@@ -757,6 +763,7 @@ export const categories = [
                 "breakfast-pastries",
             name:
                 "Breakfast Pastries & Muffins",
+            categoryDescription: "Fresh baked morning treats, the perfect indulgence with coffee or tea.", // Add this
             description:
                 "Fresh baked morning treats, the perfect indulgence with coffee or tea.",
             itemCount: 8,
@@ -849,7 +856,7 @@ export const categories = [
                     {
                         id: "blueberry-muffin",
                         itemName: "Blueberry Streusel Muffin",
-                        itemDescription: "Fluffy muffin loaded with juicy blueberries and to[[ed with crunchy streusel.",
+                        itemDescription: "Fluffy muffin loaded with juicy blueberries and topped with crunchy streusel.",
                         itemPrice: 2.50,
                         itemImages: [blueberryMuffin],
                         quantityOptions: [
@@ -946,6 +953,7 @@ export const categories = [
                 "Cookies, Bars & Brownies",
             image:
             brownies,
+            categoryDescription: 'Classic and creative sweet bites for any occasion.',
             description:
                 'Classic and creative sweet bites for any occasion.',
             itemCount:
@@ -1062,7 +1070,7 @@ export const categories = [
                             {quantity: 4, price: "JOD 14"},
                             {quantity: 8, price: "JOD 25"},
                             {quantity: 12, price: "JOD 32"},
-                            {quantity: 24, price: "JOD 55"},,
+                            {quantity: 24, price: "JOD 55"},
                         ],
                         ingredients: "flour, sugar, butter, eggs, chocolate, coconut",
                         allergens: "flour, sugar, butter, eggs",
@@ -1596,6 +1604,7 @@ export const categories = [
             id: "specialty-cakes",
             name: "Specialty Cakes",
             image: specialtyCakes,
+            categoryDescription: "Unique and signature specialty cakes",
             description: "Signature cakes with unique flavor combinations.",
             itemCount: 3,
             items:
@@ -1678,6 +1687,7 @@ export const categories = [
             id: "mille-crepe-cakes",
             name: "Mille Crêpe Cakes",
             image: milleCrepeCake,
+            categoryDescription: "Light layered crepe cakes",
             description: 'Light, layered crêpe cakes filled with luscious creams.',
             itemCount: 6,
             details:
@@ -1890,6 +1900,7 @@ export const categories = [
             id: "cheesecake",
             name: "Cheesecake",
             image: ricottaCheesecake,
+            categoryDescription: "Premium cheesecakes in various styles",
             description: "Classic NY, no-bake, burnt Basque, Italian ricotta, airy Japanese, and a savory goat cheese.",
             itemCount: 7,
             details:
@@ -2125,7 +2136,9 @@ export const categories = [
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
-                        seasonal: true
+                        seasonal: true,
+                        weight: 800,
+                        variations: [],
                     },
                     {
                         id: "lemon-pound",
@@ -2305,6 +2318,7 @@ export const categories = [
                 "Bamboloni",
             image:
             bamboloni,
+            categoryDescription: "Italian-style filled doughnuts",
             description:
                 'Italian-style filled doughnuts — soft, fluffy, irresistible.',
             itemCount:
@@ -2466,8 +2480,8 @@ export const categories = [
                 "Choux au Craquelin",
             image:
             choux,
-            description:
-                'Delicate cream puffs with crisp craquelin tops.',
+            categoryDescription: "Premium French pastry collection",
+            description: "Delicate cream puffs with crisp craquelin tops.",
             itemCount:
                 8,
             // details: {
@@ -2652,6 +2666,7 @@ export const categories = [
                 "Tiramisu",
             image:
             tiramisu,
+            categoryDescription: "Italian dessert collection",
             description:
                 'Classic and seasonal with a modern twist.',
             itemCount:
@@ -2806,6 +2821,7 @@ export const categories = [
                 "pies Cobblers & Galettes",
             image:
             galettes,
+            categoryDescription: "Rustic pastry collection",
             description:
                 'Rustic, seasonal fruit pies and hand-crafted pastries.',
             itemCount:
@@ -3010,7 +3026,142 @@ export const categories = [
         //     image: seasonal,
         //     description: 'Inspired by the freshest seasonal ingredients.',
         //     itemCount: 4,
-        //     items: [],
+        //          items:
+    //                 [
+    //                     {
+    //                         id: "original-tiramisu",
+    //                         itemName: "Original Tiramisu",
+    //                         itemDescription: "Classic Italian recipe with espresso-soaked sponge, mascarpone cream, and a hint of vanilla.",
+    //                         itemPrice: 25,
+    //                         itemImages: [classicTiramisu],
+    //                         quantityOptions: [
+    //                             {quantity: 1, price: "JOD 6"},
+    //                             {quantity: 2, price: "JOD 12"},
+    //                             {quantity: 3, price: "JOD 18"},
+    //                         ],
+    //                         ingredients: "flour",
+    //                         allergens: "flour, eggs",
+    //                         seasonal: false,
+    //                         weight: 800,
+    //                         variations: [],
+    //
+    //
+    //                     },
+    //                     {
+    //                         id: "marsala-zabayone-tiramisu",
+    //                         itemName: "Marsala Wine Zabayone",
+    //                         itemDescription: "A refined twist featuring Marsala zabayone folded into silky mascarpone and layered with espresso-dipped ladyfingers.",
+    //                         itemPrice: 30,
+    //                         itemImages: [marsalaTiramisu],
+    //                         quantityOptions: [
+    //                             {quantity: 1, price: "JOD 6"},
+    //                             {quantity: 2, price: "JOD 12"},
+    //                             {quantity: 3, price: "JOD 18"},
+    //                         ],
+    //                         ingredients: "flour",
+    //                         allergens: "flour, eggs",
+    //                         seasonal: false,
+    //                         weight: 800,
+    //                         variations: [],
+    //
+    //
+    //                     },
+    //                     {
+    //                         id: "strawberry-almond-tiramisu",
+    //                         itemName: "Strawberry Almond",
+    //                         itemDescription: "Strawberry-soaked ladyfingers layered with almond mascarpone cream and fresh strawberry compote.",
+    //                         itemPrice: 30,
+    //                         itemImages: [strawberryTiramisu],
+    //                         quantityOptions: [
+    //                             {quantity: 1, price: "JOD 6"},
+    //                             {quantity: 2, price: "JOD 12"},
+    //                             {quantity: 3, price: "JOD 18"},
+    //                         ],
+    //                         ingredients: "flour",
+    //                         allergens: "flour, eggs",
+    //                         seasonal: false,
+    //                         weight: 800,
+    //                         variations: [],
+    //
+    //
+    //                     },
+    //                     {
+    //                         id: "pistachio-matcha-tiramisu",
+    //                         itemName: "Pistachio Matcha",
+    //                         itemDescription: "Toasted pistachio cream and earthy matcha mascarpone.",
+    //                         itemPrice: 30,
+    //                         itemImages: [matchaTiramisu],
+    //                         quantityOptions: [
+    //                             {quantity: 1, price: "JOD 6"},
+    //                             {quantity: 2, price: "JOD 12"},
+    //                             {quantity: 3, price: "JOD 18"},
+    //                         ],
+    //                         ingredients: "flour",
+    //                         allergens: "flour, eggs",
+    //                         seasonal: false,
+    //                         weight: 800,
+    //                         variations: [],
+    //
+    //
+    //                     },
+    //                     {
+    //                         id: "coconut-mango-tiramisu",
+    //                         itemName: "Coconut Mango",
+    //                         itemDescription: "Tropical fusion of coconut mascarpone and golden mango.",
+    //                         itemPrice: 30,
+    //                         itemImages: [mangoTiramisu],
+    //                         quantityOptions: [
+    //                             {quantity: 1, price: "JOD 6"},
+    //                             {quantity: 2, price: "JOD 12"},
+    //                             {quantity: 3, price: "JOD 18"},
+    //                         ],
+    //                         ingredients: "flour",
+    //                         allergens: "flour, eggs",
+    //                         seasonal: false,
+    //                         weight: 800,
+    //                         variations: [],
+    //
+    //
+    //                     },
+    //                     {
+    //                         id: "milk-tea-tiramisu",
+    //                         itemName: "Milk Tea",
+    //                         itemDescription: "Earl Grey–infused mascarpone cream and milk tea glaze layered with Earl Grey-soaked sponge.",
+    //                         itemPrice: 25,
+    //                         itemImages: [teaTiramisu],
+    //                         quantityOptions: [
+    //                             {quantity: 1, price: "JOD 6"},
+    //                             {quantity: 2, price: "JOD 12"},
+    //                             {quantity: 3, price: "JOD 18"},
+    //                         ],
+    //                         ingredients: "flour",
+    //                         allergens: "flour, eggs",
+    //                         seasonal: false,
+    //                         weight: 800,
+    //                         variations: [],
+    //
+    //
+    //                     },
+    //                     {
+    //                         id: "lemon-mascarpone-tiramisu",
+    //                         itemName: "Lemon Mascarpone",
+    //                         itemDescription: "Lemon-zest mascarpone layered with sponge and lemon curd.",
+    //                         itemPrice: 30,
+    //                         itemImages: [lemonTiramisu],
+    //                         quantityOptions: [
+    //                             {quantity: 1, price: "JOD 6"},
+    //                             {quantity: 2, price: "JOD 12"},
+    //                             {quantity: 3, price: "JOD 18"},
+    //                         ],
+    //                         ingredients: "flour",
+    //                         allergens: "flour, eggs",
+    //                         seasonal: false,
+    //                         weight: 800,
+    //                         variations: [],
+    //
+    //
+    //                     }
+    //                 ],
         //     itemPrice: 3.99, ingredients: "flour",
         //     allergens: "flour, eggs"
         // },
@@ -3030,7 +3181,7 @@ export const categories = [
                         id: "strata",
                         itemName: "Egg Bake Strata",
                         itemDescription: "Hearty potato strata topped with eggs and your choice of fillings. Options: Mushroom & Sausage, Chorizo & Peppers with Ranchero Sauce, or Salmon & Asparagus.",
-                        itemPrice: {"MushroomSausage": 20, "ChorizoPeppers": 25, "SalmonAsparagus": 30},
+                        itemPrice: 20,
                         itemImages: [strata],
                         quantityOptions: [
                             {quantity: 1, price: "JOD 6"},
@@ -3041,7 +3192,29 @@ export const categories = [
                         allergens: "flour, eggs",
                         seasonal: false,
                         weight: 800,
-                        variations: [],
+                        variations: [
+                            {
+                                id: "mushroom-sausage",
+                                name: "Mushroom & Sausage",
+                                description: "With mushrooms and sausage",
+                                price: "JOD 20",
+                                images: [strata]
+                            },
+                            {
+                                id: "chorizo-peppers",
+                                name: "Chorizo & Peppers",
+                                description: "With ranchero sauce",
+                                price: "JOD 25",
+                                images: [strata]
+                            },
+                            {
+                                id: "salmon-asparagus",
+                                name: "Salmon & Asparagus",
+                                description: "Premium option",
+                                price: "JOD 30",
+                                images: [strata]
+                            }
+                        ],
 
 
                     },
