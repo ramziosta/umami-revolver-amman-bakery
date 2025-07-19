@@ -50,7 +50,7 @@ export default function ItemPage({ params }: ItemPageProps) {
             </section>
 
             {/* Details */}
-            <section className="p-16 m-12">
+            <section className="p-10 lg:p-16 lg:m-12">
                 <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16">
                     {/* Details Content */}
                     <div className="space-y-8">
@@ -85,17 +85,18 @@ export default function ItemPage({ params }: ItemPageProps) {
                                 Quantity & Pricing
                             </h3>
                             <div className="space-y-3">
-                                {item.quantityOptions.map((option, index) => (
-                                    <div
-                                        key={index}
-                                        className="flex justify-between items-center p-4 bg-umami-white border border-umami-charcoal rounded-lg"
-                                    >
-                    <span className="font-glimp text-umami-black">
-                      {option.quantity}
-                    </span>
-                                        <span className="text-lg text-umami-charcoal">{option.price}</span>
-                                    </div>
-                                ))}
+                                {item.quantityOptions.map((option, index) => {
+                                    if (!option) return null;
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="flex justify-between items-center p-2 bg-umami-white border border-umami-charcoal rounded-lg"
+                                        >
+                                            <span className="font-glimp text-umami-black">{option.quantity}</span>
+                                            <span className="text-lg text-umami-charcoal">{option.price}</span>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
 

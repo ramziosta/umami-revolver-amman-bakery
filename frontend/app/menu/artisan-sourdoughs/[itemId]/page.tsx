@@ -51,7 +51,7 @@ export default function ItemPage({ params }: ItemPageProps) {
             </section>
 
             {/* Details */}
-            <section className="p-16 m-12">
+            <section className="p-10 lg:p-16 lg:m-12">
                 {/* Breadcrumb */}
                 <nav className="mb-8 text-sm">
                     <Link href="/menu" className="text-umami-charcoal hover:text-blue-800">

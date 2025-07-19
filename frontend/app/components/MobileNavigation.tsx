@@ -15,7 +15,7 @@ interface MobileNavigationProps {
 
 const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => {
     const navigationItems = [
-        { title: 'Categories', href: '/categories' },
+        { title: 'What We Bake', href: '/menu' },
         { title: 'About', href: '/about' },
         { title: 'Contact', href: '/contact' },
     ];

@@ -38,7 +38,7 @@ export default function RusticBreadsPage() {
             </section>
 
             {/* Items Grid */}
-            <section className="p-16 m-12">
+            <section className="p-10 lg:p-16 lg:m-12">
                 <nav className="mb-8 text-sm flex flex-row">
                     <Link href="/menu" className="text-umami-charcoal hover:text-blue-800">
                         Menu

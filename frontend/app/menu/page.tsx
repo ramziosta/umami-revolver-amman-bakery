@@ -52,34 +52,33 @@ const Categories = () => {
                     </p>
                 </div>
             </section>
-            <section className="p-16 m-12">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <section className="px-4 py-8 sm:px-8 sm:py-12 lg:px-16 lg:py-16">
+                <div className="container mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
                         {categories.map((category) => (
                             <Link href={`/menu/${category.id}`} key={category.id}>
-                                <Card
-                                    className="group cursor-pointer elegant-shadow hover:shadow-2xl transition-all duration-500 overflow-hidden border-0 bg-white">
-                                    <div className="relative h-64 overflow-hidden">
+                                <Card className="group cursor-pointer elegant-shadow hover:shadow-2xl transition-all duration-500 overflow-hidden border-0 bg-white h-full">
+                                    <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
                                         <Image
                                             src={category.image}
                                             alt={category.name}
-                                            width={800}
+                                            width={900}
                                             height={600}
                                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent"></div>
-                                        <div className="absolute bottom-4 left-4 right-4 text-white">
-                                            <h3 className="text-xl font-goglast  mb-1 text-shadow tracking-[0.5rem]">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+                                        <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 text-white">
+                                            <h3 className="text-lg sm:text-xl font-goglast mb-1 text-shadow tracking-[0.2rem] sm:tracking-[0.5rem]">
                                                 {category.name}
                                             </h3>
-                                            <p className="text-sm text-umami-white font-glimp font-[100] ">
+                                            <p className="text-xs sm:text-sm text-umami-white font-glimp font-[100]">
                                                 {category.itemCount} items
                                             </p>
                                         </div>
                                     </div>
 
-                                    <CardContent className="p-6 bg-white group-hover:bg-umami-white transition-colors duration-300">
-                                        <p className="text-umami-black leading-relaxed">
+                                    <CardContent className="p-4 sm:p-6 bg-white group-hover:bg-umami-white transition-colors duration-300 flex-1">
+                                        <p className="text-sm sm:text-base text-umami-black leading-relaxed line-clamp-3">
                                             {category.description}
                                         </p>
                                     </CardContent>
