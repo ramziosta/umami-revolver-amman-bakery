@@ -140,21 +140,15 @@ export default function ItemPage({ params }: ItemPageProps) {
                                 </p>
                             )}
                             <div className="space-y-3">
-                                {item.id === "focaccia" && (
-                                    <p className="font-glimp text-umami-charcoal mt-2 mb-2">
-                                        1/2 sheet serves ~10–12 • Full sheet serves ~20–24
-                                    </p>
-                                )}
-                                <div className="space-y-3">
-                                    {item.quantityOptions?.filter(option => option !== null && option !== undefined).map((option, index) => (
-                                        <div
-                                            key={index}
-                                            className="flex justify-between items-center p-2 bg-umami-white border border-umami-charcoal rounded-lg"
-                                        >
-                                            <span className="font-glimp text-umami-black">{option.quantity}</span>
-                                            <span className="text-lg text-umami-charcoal">{option.price}</span>
-                                        </div>
-                                    ))}
+                                {item.quantityOptions?.filter(option => option !== null && option !== undefined).map((option, index) => (
+                                    <div
+                                        key={index}
+                                        className="flex justify-between items-center p-2 bg-umami-white border border-umami-charcoal rounded-lg"
+                                    >
+                                        <span className="font-glimp text-umami-black">{option.quantity}</span>
+                                        <span className="text-lg text-umami-charcoal">{option.price}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
