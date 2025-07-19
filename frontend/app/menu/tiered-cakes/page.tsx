@@ -71,7 +71,7 @@ const CakePricingTable = () => (
                                 <td className="py-2 px-3"></td>
                                 <td className="py-2 px-3">{opt.diameterInch}"</td>
                                 <td className="py-2 px-3">{opt.servings}</td>
-                                <td className="py-2 px-3 font-semibold">{opt.priceJOD} JOD</td>
+                                <td className="py-2 px-3 font-semibold">{opt.price} JOD</td>
                             </tr>
                         ))}
                     </React.Fragment>
