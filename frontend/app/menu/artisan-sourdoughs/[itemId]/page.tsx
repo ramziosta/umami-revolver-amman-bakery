@@ -131,7 +131,10 @@ export default function ItemPage({ params }: ItemPageProps) {
                                                 {option.quantity}
                                             </div>
                                             <div className="text-xl font-bold text-umami-black tracking-wide">
-                                                {option.price}
+                                                {typeof option.price === 'number'
+                                                    ? `${option.price} JOD`
+                                                    : option.price
+                                                }
                                             </div>
                                         </div>
                                     );
