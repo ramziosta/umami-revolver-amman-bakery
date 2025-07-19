@@ -116,7 +116,6 @@ export default function ItemPage({ params }: ItemPageProps) {
                                         <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-2">Weight</h3>
                                         <p className="text-umami-black text-sm">{item.weight} gms</p>
                                     </div>
-                                )
 
                         </div>
 
@@ -127,15 +126,12 @@ export default function ItemPage({ params }: ItemPageProps) {
                                 {item.quantityOptions.map((option, index) => {
                                     if (!option) return null;
                                     return (
-                                        <div key={index} className="...">
-                                            <div className="flex flex-row justify-between w-full">
-                                                <div className="text-xl font-bold text-umami-black tracking-wide">
-                                                    {option.quantity}
-                                                </div>
-                                                <div className="text-xl font-bold text-umami-black tracking-wide">
-                                                    {option.price}
-                                                </div>
-                                            </div>
+                                        <div
+                                            key={index}
+                                            className="flex justify-between items-center p-2 bg-umami-white border border-umami-charcoal rounded-lg"
+                                        >
+                                            <span className="font-glimp text-umami-black">{option.quantity}</span>
+                                            <span className="text-lg text-umami-charcoal">{option.price}</span>
                                         </div>
                                     );
                                 })}

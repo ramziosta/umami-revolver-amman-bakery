@@ -5,28 +5,25 @@ import { categories } from '@/app/data/categoryData';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { use, useState } from 'react';
+import { useState } from 'react';
 
 interface ItemPageProps {
-    params: Promise<{
+    params: {
         itemId: string;
-    }>;
+    };
 }
 
 export default function ItemPage({ params }: ItemPageProps) {
-    const { itemId } = use(params);
+    const { itemId } = params;
 
     const category = categories.find((cat) => cat.id === 'rustic-breads');
-    if (!category) {
-        notFound();
-    }
+    if (!category) notFound();
 
     const item = category.items.find((item) => item.id === itemId);
-    if (!item) {
-        notFound();
-    }
+    if (!item) notFound();
 
     const [selectedImage, setSelectedImage] = useState(item.itemImages[0]);
+
     return (
         <div className="min-h-screen bg-umami-white">
             {/* Hero Image */}
@@ -60,10 +57,7 @@ export default function ItemPage({ params }: ItemPageProps) {
                         Menu
                     </Link>
                     <span className="mx-2 text-gray-400">/</span>
-                    <Link
-                        href="/menu/rustic-breads"
-                        className="text-umami-charcoal hover:text-blue-800"
-                    >
+                    <Link href="/menu/rustic-breads" className="text-umami-charcoal hover:text-blue-800">
                         {category.name}
                     </Link>
                     <span className="mx-2 text-gray-400">/</span>
@@ -97,14 +91,13 @@ export default function ItemPage({ params }: ItemPageProps) {
                                                     setSelectedImage(variation.images[0]);
                                                 }
                                             }}
-                                            className="w-full text-left border p-4 rounded ont-glimp border-umami-charcoal hover:bg-umami-cream/5 transition"
+                                            className="w-full text-left border p-4 rounded font-glimp border-umami-charcoal hover:bg-umami-cream/5 transition"
                                         >
                                             <h4 className="font-glimp text-lg mb-1">{variation.name}</h4>
                                             <p className="text-umami-charcoal text-sm mb-2">
                                                 {variation.description}
-                                            </p> <p className="text-umami-charcoal text-sm mb-2">
-                                            {variation.price}
-                                        </p>
+                                            </p>
+                                            <p className="text-umami-charcoal text-sm mb-2">{variation.price}</p>
                                         </button>
                                     ))}
                                 </div>
@@ -141,15 +134,12 @@ export default function ItemPage({ params }: ItemPageProps) {
                                 {item.quantityOptions.map((option, index) => {
                                     if (!option) return null;
                                     return (
-                                        <div key={index} className="...">
-                                            <div className="flex flex-row justify-between w-full">
-                                                <div className="text-xl font-bold text-umami-black tracking-wide">
-                                                    {option.quantity}
-                                                </div>
-                                                <div className="text-xl font-bold text-umami-black tracking-wide">
-                                                    {option.price}
-                                                </div>
-                                            </div>
+                                        <div
+                                            key={index}
+                                            className="flex justify-between items-center p-2 bg-umami-white border border-umami-charcoal rounded-lg"
+                                        >
+                                            <span className="font-glimp text-umami-black">{option.quantity}</span>
+                                            <span className="text-lg text-umami-charcoal">{option.price}</span>
                                         </div>
                                     );
                                 })}
@@ -158,7 +148,7 @@ export default function ItemPage({ params }: ItemPageProps) {
 
                         {/* Action Buttons */}
                         <div className="flex gap-4">
-                            <button className="flex-1 bg-umami-charcoal text-umami-white py-3 px-6 rounded-lg font-semibold hover:bg-umami-charcoal transition-colors">
+                            <button className="flex-1 bg-umami-charcoal text-umami-white py-3 px-6 rounded-lg font-semibold hover:bg-umami-black transition-colors">
                                 Add to Cart
                             </button>
                             <Link
