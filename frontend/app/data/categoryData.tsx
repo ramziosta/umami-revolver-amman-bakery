@@ -163,7 +163,7 @@ export interface QuantityOption {
 export interface CakeTierOption {
     diameterInch: number;
     servings: number;
-    priceJOD: number;
+    price: number;
 }
 
 export interface CakeTier {
@@ -953,16 +953,16 @@ export const categories = [
             // details: {
             //     "quantityOptions": {
             //         "cookies": [
-            //             {"quantity": 6, priceJOD: 18},
-            //             {"quantity": 8, priceJOD: 24},
-            //             {"quantity": 10, priceJOD: 30},
-            //             {"quantity": 12, priceJOD: 35}
+            //             {"quantity": 6, price: 18},
+            //             {"quantity": 8, price: 24},
+            //             {"quantity": 10, price: 30},
+            //             {"quantity": 12, price: 35}
             //         ],
             //         "barsBrownies": [
-            //             {"quantity": 6, priceJOD: 20},
-            //             {"quantity": 8, priceJOD: 32},
-            //             {"quantity": 10, priceJOD: 38},
-            //             {"quantity": 12, priceJOD: 40}
+            //             {"quantity": 6, price: 20},
+            //             {"quantity": 8, price: 32},
+            //             {"quantity": 10, price: 38},
+            //             {"quantity": 12, price: 40}
             //         ]
             //     }
             // },
@@ -1400,34 +1400,34 @@ export const categories = [
                         {
                             layers: 2,
                             options: [
-                                {diameterInch: 6, "servings": 12, priceJOD: 35},
-                                {diameterInch: 8, "servings": 24, priceJOD: 60}
+                                {diameterInch: 6, "servings": 12, price: 35},
+                                {diameterInch: 8, "servings": 24, price: 60}
                             ]
                         },
                         {
                             layers: 3,
                             options: [
-                                {diameterInch: 6, "servings": 18, priceJOD: 50},
-                                {diameterInch: 8, "servings": 36, priceJOD: 85},
-                                {diameterInch: 10, "servings": 50, priceJOD: 120}
+                                {diameterInch: 6, "servings": 18, price: 50},
+                                {diameterInch: 8, "servings": 36, price: 85},
+                                {diameterInch: 10, "servings": 50, price: 120}
                             ]
                         },
                         {
                             layers: 4,
                             options: [
-                                {diameterInch: 8, "servings": 48, priceJOD: 110},
-                                {diameterInch: 10, "servings": 65, priceJOD: 150}
+                                {diameterInch: 8, "servings": 48, price: 110},
+                                {diameterInch: 10, "servings": 65, price: 150}
                             ]
                         }
                     ]
             },
             cupcakeQuantityOptions: [
-                {quantity: 4, priceJOD: 15},
-                {quantity: 6, priceJOD: 20},
-                {quantity: 8, priceJOD: 25},
-                {quantity: 10, priceJOD: 30},
-                {quantity: 12, priceJOD: 35},
-                {quantity: 24, priceJOD: 65}
+                {quantity: 4, price: 15},
+                {quantity: 6, price: 20},
+                {quantity: 8, price: 25},
+                {quantity: 10, price: 30},
+                {quantity: 12, price: 35},
+                {quantity: 24, price: 65}
             ],
             items: [
                 {
@@ -1699,11 +1699,11 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "20 layers",
-                                priceJOD: 30
+                                price: 30
                             },
                             {
                                 size: "30 layers",
-                                priceJOD: 40
+                                price: 40
                             }
                         ],
                         itemImages: [tiramisuCrepe],
@@ -1727,11 +1727,11 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "20 layers",
-                                priceJOD: 30
+                                price: 30
                             },
                             {
                                 size: "30 layers",
-                                priceJOD: 40
+                                price: 40
                             }
                         ],
                         itemImages: [matchaCrepe],
@@ -1753,11 +1753,11 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "20 layers",
-                                priceJOD: 30
+                                price: 30
                             },
                             {
                                 size: "30 layers",
-                                priceJOD: 40
+                                price: 40
                             }
                         ],
                         itemImages: [cremeBruleeCrepe],
@@ -1779,11 +1779,11 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "20 layers",
-                                priceJOD: 30
+                                price: 30
                             },
                             {
                                 size: "30 layers",
-                                priceJOD: 40
+                                price: 40
                             }
                         ],
                         itemImages: [milkTeaCrepe],
@@ -1807,11 +1807,11 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "20 layers",
-                                priceJOD: 35
+                                price: 35
                             },
                             {
                                 size: "30 layers",
-                                priceJOD: 45
+                                price: 45
                             }
                         ],
                         itemImages: [milleCrepeCake],
@@ -1835,11 +1835,11 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "20 layers",
-                                priceJOD: 35
+                                price: 35
                             },
                             {
                                 size: "30 layers",
-                                priceJOD: 45
+                                price: 45
                             }
                         ],
                         itemImages: [pistachioCrepe],
@@ -1863,11 +1863,11 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "20 layers",
-                                priceJOD: 35
+                                price: 35
                             },
                             {
                                 size: "30 layers",
-                                priceJOD: 45
+                                price: 45
                             }
                         ],
                         itemImages: [raspberryCrepe],
@@ -1899,7 +1899,7 @@ export const categories = [
                         [
                             {
                                 option: "Chocolate Cheesecake",
-                                additionalPriceJOD: 5
+                                additionalprice: 5
                             }
                         ],
                     toppings:
@@ -2082,11 +2082,11 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "Medium",
-                                priceJOD: 18
+                                price: 18
                             },
                             {
                                 size: "Large",
-                                priceJOD: 25
+                                price: 25
                             }
                         ],
                         itemImages: [sourCreamPoundCake],
@@ -2110,11 +2110,11 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "Medium",
-                                priceJOD: 35
+                                price: 35
                             },
                             {
                                 size: "Large",
-                                priceJOD: 45
+                                price: 45
                             }
                         ],
                         itemImages: [neapolitanPoundCake],
@@ -2134,11 +2134,11 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "Medium",
-                                priceJOD: 25
+                                price: 25
                             },
                             {
                                 size: "Large",
-                                priceJOD: 35
+                                price: 35
                             }
                         ],
                         itemImages: [lemonPoundCake],
@@ -2162,11 +2162,11 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "Medium",
-                                priceJOD: 25
+                                price: 25
                             },
                             {
                                 size: "Large",
-                                priceJOD: 35
+                                price: 35
                             }
                         ],
                         itemImages: [coffeePoundCake],
@@ -2190,11 +2190,11 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "Medium",
-                                priceJOD: 25
+                                price: 25
                             },
                             {
                                 size: "Large",
-                                priceJOD: 35
+                                price: 35
                             }
                         ],
                         itemImages: [redVelvetPoundCake],
@@ -2218,11 +2218,11 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "Medium",
-                                priceJOD: 28
+                                price: 28
                             },
                             {
                                 size: "Large",
-                                priceJOD: 35
+                                price: 35
                             }
                         ],
                         itemImages: [driedFruitsPoundCake],
@@ -2246,11 +2246,11 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "Medium",
-                                priceJOD: 28
+                                price: 28
                             },
                             {
                                 size: "Large",
-                                priceJOD: 35
+                                price: 35
                             }
                         ],
                         itemImages: [ombrePoundCake],
@@ -2274,11 +2274,11 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "Medium",
-                                priceJOD: 28
+                                price: 28
                             },
                             {
                                 size: "Large",
-                                priceJOD: 35
+                                price: 35
                             }
                         ],
                         itemImages: [chocolatePoundCake],
@@ -2313,19 +2313,19 @@ export const categories = [
             //     "quantityOptions": [
             //         {
             //             "quantity": 6,
-            //             priceJOD: 18
+            //             price: 18
             //         },
             //         {
             //             "quantity": 8,
-            //             priceJOD: 24
+            //             price: 24
             //         },
             //         {
             //             "quantity": 10,
-            //             priceJOD: 30
+            //             price: 30
             //         },
             //         {
             //             "quantity": 12,
-            //             priceJOD: 35
+            //             price: 35
             //         }
             //     ]
             // },
@@ -2472,10 +2472,10 @@ export const categories = [
                 8,
             // details: {
             //     "quantityOptions": [
-            //         {"quantity": 6, priceJOD: 18},
-            //         {"quantity": 8, priceJOD: 24},
-            //         {"quantity": 10, priceJOD: 30},
-            //         {"quantity": 12, priceJOD: 35}
+            //         {"quantity": 6, price: 18},
+            //         {"quantity": 8, price: 24},
+            //         {"quantity": 10, price: 30},
+            //         {"quantity": 12, price: 35}
             //     ]
             // },
             items:
