@@ -132,11 +132,6 @@ export default function ItemPage({ params }: ItemPageProps) {
                             <h3 className="text-xl font-glimp font-500 tracking-[0.3rem] text-umami-charcoal mb-4">
                                 Quantity & Pricing
                             </h3>
-                            {item.id === "focaccia" && (
-                                <p className="font-glimp text-umami-charcoal mt-2 mb-2">
-                                    1/2 sheet serves ~10–12 • Full sheet serves ~20–24
-                                </p>
-                            )}
                             <div className="space-y-3">
                                 {item.quantityOptions.map((option, index) => {
                                     if (!option) return null;
