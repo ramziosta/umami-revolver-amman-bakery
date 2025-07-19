@@ -5,17 +5,16 @@ import { categories } from '@/app/data/categoryData';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import {use, useState} from 'react';
 
 interface ItemPageProps {
-    params: {
+    params: Promise<{
         itemId: string;
-    };
+    }>;
 }
 
 export default function ItemPage({ params }: ItemPageProps) {
-    const { itemId } = params;
-
+    const { itemId } = use(params);
     const category = categories.find((cat) => cat.id === 'rustic-breads');
     if (!category) notFound();
 
