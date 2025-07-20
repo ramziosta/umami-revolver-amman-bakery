@@ -20,104 +20,54 @@ const config: Config = {
         },
         extend: {
             fontFamily: {
-                goglast: ['goglast', 'sans-serif'],
-                glimp: ['Open Sans', 'sans-serif'],
-                'blanka': ['Blanka', "sans-serif"],
+                blanka: ['Lovan', 'sans-serif'],
+                ppneuemontreal: ['PP Neue Montreal', 'sans-serif'],
             },
             colors: {
-                border: 'hsl(var(--border))',
-                input: 'hsl(var(--input))',
-                ring: 'hsl(var(--ring))',
-                background: 'hsl(var(--background))',
-                foreground: 'hsl(var(--foreground))',
-                primary: {
-                    DEFAULT: 'hsl(var(--primary))',
-                    foreground: 'hsl(var(--primary-foreground))'
-                },
-                secondary: {
-                    DEFAULT: 'hsl(var(--secondary))',
-                    foreground: 'hsl(var(--secondary-foreground))'
-                },
-                destructive: {
-                    DEFAULT: 'hsl(var(--destructive))',
-                    foreground: 'hsl(var(--destructive-foreground))'
-                },
-                muted: {
-                    DEFAULT: 'hsl(var(--muted))',
-                    foreground: 'hsl(var(--muted-foreground))'
-                },
-                accent: {
-                    DEFAULT: 'hsl(var(--accent))',
-                    foreground: 'hsl(var(--accent-foreground))'
-                },
-                popover: {
-                    DEFAULT: 'hsl(var(--popover))',
-                    foreground: 'hsl(var(--popover-foreground))'
-                },
-                card: {
-                    DEFAULT: 'hsl(var(--card))',
-                    foreground: 'hsl(var(--card-foreground))'
-                },
-                sidebar: {
-                    DEFAULT: 'hsl(var(--sidebar-background))',
-                    foreground: 'hsl(var(--sidebar-foreground))',
-                    primary: 'hsl(var(--sidebar-primary))',
-                    'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-                    accent: 'hsl(var(--sidebar-accent))',
-                    'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-                    border: 'hsl(var(--sidebar-border))',
-                    ring: 'hsl(var(--sidebar-ring))'
-                },
-                // Umami Brand Colors
+                background: '#F9F5EF', // or pure #FFFFFF if you want it super clean
                 umami: {
-                    navy: '#395670',
-                    blue: '#1275B3',
-                    charcoal: '#3E3C3C',
-                    gray: '#B6B6B6',
-                    cream: '#F9EFDF',
                     black: '#000000',
                     white: '#FFFFFF',
-                    pink: '#DE1B87',
-                }
+                    cream: '#fbf7e9',
+                    charcoal: '#3E3C3C',  // for subtle softer black text if needed
+                    berry: '#C44569',      // keep as a tiny highlight only
+                    transparent: 'transparent',
+                    current: 'currentColor',
+                },
+                primary: {
+                    DEFAULT: '#000000',
+                    foreground: '#FFFFFF',
+                },
+                secondary: {
+                    DEFAULT: '#C44569',
+                    foreground: '#FFFFFF',
+                },
+                border: '#3E3C3C',
             },
             borderRadius: {
                 lg: 'var(--radius)',
                 md: 'calc(var(--radius) - 2px)',
-                sm: 'calc(var(--radius) - 4px)'
+                sm: 'calc(var(--radius) - 4px)',
             },
             keyframes: {
                 'accordion-down': {
-                    from: {
-                        height: '0'
-                    },
-                    to: {
-                        height: 'var(--radix-accordion-content-height)'
-                    }
+                    from: { height: '0' },
+                    to: { height: 'var(--radix-accordion-content-height)' },
                 },
                 'accordion-up': {
-                    from: {
-                        height: 'var(--radix-accordion-content-height)'
-                    },
-                    to: {
-                        height: '0'
-                    }
+                    from: { height: 'var(--radix-accordion-content-height)' },
+                    to: { height: '0' },
                 },
                 'fade-in': {
-                    '0%': {
-                        opacity: '0',
-                        transform: 'translateY(10px)'
-                    },
-                    '100%': {
-                        opacity: '1',
-                        transform: 'translateY(0)'
-                    }
-                }
+                    '0%': { opacity: '0', transform: 'translateY(10px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
             },
             animation: {
                 'accordion-down': 'accordion-down 0.2s ease-out',
                 'accordion-up': 'accordion-up 0.2s ease-out',
-                'fade-in': 'fade-in 0.6s ease-out'
-            }
+                'fade-in': 'fade-in 0.6s ease-out',
+            },
         }
     },
     plugins: [require("tailwindcss-animate")],

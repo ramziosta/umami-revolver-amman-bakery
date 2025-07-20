@@ -22,26 +22,29 @@ const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => {
 
     return (
         <Sheet open={isOpen} onOpenChange={onClose}>
-            <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-umami-cream">
+            <SheetContent
+                side="left"
+                className="w-[300px] sm:w-[400px] bg-umami-cream"
+            >
                 <SheetHeader>
                     <SheetTitle className="text-left">
                         <Link
-                            href="/frontend/public"
+                            href="/"
                             onClick={onClose}
-                            className="text-umami-pink font-goglast tracking-widest hover:text-umami-charcoal transition-colors duration-300"
+                            className="text-umami-black font-blanka tracking-[0.1em] hover:text-umami-berry transition-colors duration-300 text-2xl"
                         >
-                            Umami Amman Bakery & Patisserie
+                            Umami Amman
                         </Link>
                     </SheetTitle>
                 </SheetHeader>
 
-                <nav className="flex flex-col space-y-4 mt-8 bg-umami-cream">
+                <nav className="flex flex-col space-y-4 mt-8">
                     {navigationItems.map((item) => (
                         <Link
                             key={item.title}
                             href={item.href}
                             onClick={onClose}
-                            className="text-umami-charcoal hover:text-umami-navy transition-colors duration-300 font-medium text-2xl py-2 border-b border-umami-gray/20 last:border-b-0"
+                            className="text-umami-charcoal font-ppneuemontreal hover:text-umami-berry transition-colors duration-300  text-xl py-2 border-b border-umami-caramel/40 last:border-b-0 pl-2"
                         >
                             {item.title}
                         </Link>

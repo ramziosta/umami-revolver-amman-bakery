@@ -1,71 +1,73 @@
 'use client'
-import { Button } from '../ui/button';
+import {Button} from '../ui/button';
 import Link from "next/link";
 import MobileNavigation from './MobileNavigation';
-import { useState } from 'react';
+import {useState} from 'react';
 import {Menu} from "lucide-react";
 import Notice from './Notice';
+
 const Navigation = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     return (
-        <div className="bg-umami-cream/50">
-            <div className="container mx-auto px-4 py-4  " >
-
+        <div className="bg-umami-cream">
+            <div className="container mx-auto px-4 py-6">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center space-x-2">
-                        <h1 className="text-2xl font-goglast font-black text-umami-pink tracking-[0.3rem] hover:text-umami-blue ml-4 transition-colors duration-300">
-                            Umami Amman Bakery & Pâtisserie
-                        </h1>
-
+                    <Link href="/">
+                        <div className="flex items-center flex-col group ">
+                            <h1 className="text-4xl lg:text-5xl font-blanka tracking-tight group-hover:text-umami-berry transition-colors duration-300">
+                                UMAMI AMMAN
+                            </h1>
+                            <span
+                                className="text-sm text-umami-charcoal italic group-hover:text-umami-berry transition-colors duration-300">Artisan
+                                Viennoiserie & Pâtisserie
+                            </span>
+                        </div>
                     </Link>
-                    <nav className="text-xl hidden md:flex items-center  space-x-8">
+
+                    {/* Nav Links */}
+                    <nav
+                        className="hidden md:flex items-center space-x-8 font-ppneuemontreal uppercase   tracking-[0.15em]">
                         <Link
                             href="/menu"
-                            className="text-umami-charcoal hover:text-umami-pink  transition-colors duration-300"
+                            className="text-umami-black hover:text-umami-berry transition-colors duration-300 border-b border-transparent hover:border-umami-berry pb-1"
                         >
-                            What We Bake
+                            Our Bakes
                         </Link>
                         <Link
                             href="/about"
-                            className="text-umami-charcoal hover:text-umami-pink   transition-colors duration-300 "
+                            className="text-umami-black hover:text-umami-berry transition-colors duration-300 border-b border-transparent hover:border-umami-berry pb-1"
                         >
-                            About
+                            Our Story
                         </Link>
                         <Link
                             href="/contact"
-                            className="text-umami-charcoal hover:text-umami-pink   transition-colors duration-300 "
+                            className="text-umami-black hover:text-umami-berry transition-colors duration-300 border-b border-transparent hover:border-umami-berry pb-1"
                         >
-                            Contact
+                            Visit Us
                         </Link>
                     </nav>
 
-                    {/* Actions */}
+                    {/* Mobile Menu Button */}
                     <div className="flex items-center space-x-4">
-                        {/* Mobile Menu Button */}
                         <Button
                             variant="ghost"
                             size="icon"
-                            className="md:hidden hover:bg-umami-white"
+                            className="md:hidden hover:bg-umami-cream"
                             onClick={() => setIsMobileMenuOpen(true)}
                         >
-                            <Menu className="h-5 w-5 text-umami-charcoal" />
+                            <Menu className="h-6 w-6 text-umami-black"/>
                         </Button>
-
                     </div>
                 </div>
             </div>
-            {/* Mobile Navigation Drawer */}
+
             <MobileNavigation
                 isOpen={isMobileMenuOpen}
                 onClose={() => setIsMobileMenuOpen(false)}
             />
         </div>
-
-
-
-
     );
 };
 

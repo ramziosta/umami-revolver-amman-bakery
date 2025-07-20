@@ -5,6 +5,8 @@ import whiteSourdough from "@/app/assets/white-sourdough.jpg";
 import wholeWheat from "@/app/assets/wholewheat.jpg";
 import rye from "@/app/assets/rye.jpeg";
 import artisan from "@/app/assets/artisan.jpeg";
+import whiteSourdough1 from "@/app/assets/sourdough1.jpg";
+import whiteSourdough2 from "@/app/assets/sourdough2.jpg";
 
 import ciabatta from "@/app/assets/ciabatta.jpeg";
 import focaccia from "@/app/assets/focaccia.jpg";
@@ -245,7 +247,7 @@ export const categories = [
                     itemName: "White Sourdough",
                     itemDescription: "A classic sourdough loaf with a crisp, golden crust and a light, tangy, airy crumb — perfect for sandwiches or as an everyday table bread. ",
                     itemPrice: "",
-                    itemImages: [whiteSourdough],
+                    itemImages: [whiteSourdough2, whiteSourdough1, whiteSourdough],
                     quantityOptions: [
                         {quantity: "1 Loaf", price: "JOD 5"},
                         {quantity: "2 Loaves", price: "JOD 9"},
@@ -260,7 +262,7 @@ export const categories = [
                         name: "1250 gm Loaf 8 JOD",
                         description: "",
                         price: "",
-                        images: [whiteSourdough]
+                        images: [whiteSourdough1, whiteSourdough2, whiteSourdough]
                     },],
 
 
@@ -268,7 +270,7 @@ export const categories = [
                 {
                     id: 'WholeWheat',
                     itemName: "Whole Wheat Sourdough",
-                    itemDescription: "A hearty whole wheat sourdough made with stone-ground Italian Primativa flour — rustic, nutty, and full of old-world character.",
+                    itemDescription: "A hearty  sourdough made with stone-ground Italian Primativa flour — rustic, nutty, and full of old-world character.",
                     itemImages: [wholeWheat],
                     itemPrice: "",
                     quantityOptions: [
@@ -287,6 +289,37 @@ export const categories = [
                         description: "",
                         price: "",
                         images: [wholeWheat]
+                    },],
+
+
+                },
+                {
+                    id: 'Rye',
+                    itemName:
+                        "100% Russian Rye Sourdough",
+                    itemDescription:
+                        "A dense, earthy rye loaf inspired by traditional Russian recipes — robust flavor with a deep, hearty crumb and a hint of sourness.",
+                    itemPrice:
+                        "",
+                    itemImages:
+                        [rye],
+                    quantityOptions: [
+                        {quantity: "1 Loaf", price: "JOD 6"},
+                        {quantity: "2 Loaves", price: "JOD 11"},
+                        {quantity: "3 Loaves", price: "JOD 16"},
+                    ],
+                    ingredients:
+                        "flour",
+                    allergens:
+                        "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
+                    seasonal: false,
+                    weight: 800,
+                    variations: [{
+                        id: "rye-kilo",
+                        name: "1250 gm Loaf 8 JOD",
+                        description: "",
+                        price: "",
+                        images: [rye]
                     },],
 
 
@@ -321,37 +354,6 @@ export const categories = [
                         images: [artisan]
                     },],
 
-
-
-                },
-                {
-                    id: 'Rye',
-                    itemName:
-                        "100% Russian Rye Sourdough",
-                    itemDescription:
-                        "A dense, earthy rye loaf inspired by traditional Russian recipes — robust flavor with a deep, hearty crumb and a hint of sourness. Perfect for cheese boards, hearty soups, and sweet jams.",
-                    itemPrice:
-                        "",
-                    itemImages:
-                        [rye],
-                    quantityOptions: [
-                        {quantity: "1 Loaf", price: "JOD 6"},
-                        {quantity: "2 Loaves", price: "JOD 11"},
-                        {quantity: "3 Loaves", price: "JOD 16"},
-                    ],
-                    ingredients:
-                        "flour",
-                    allergens:
-                        "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
-                    seasonal: false,
-                    weight: 800,
-                    variations: [{
-                        id: "rye-kilo",
-                        name: "1250 gm Loaf 8 JOD",
-                        description: "",
-                        price: "",
-                        images: [rye]
-                    },],
 
 
                 },
@@ -765,7 +767,7 @@ export const categories = [
                 "Breakfast Pastries & Muffins",
             categoryDescription: "Fresh baked morning treats, the perfect indulgence with coffee or tea.", // Add this
             description:
-                "Fresh baked morning treats, the perfect indulgence with coffee or tea.",
+                "Fresh baked morning treats, the perfect indulgence.",
             itemCount: 8,
             image: muffins,
             items:
@@ -1357,8 +1359,33 @@ export const categories = [
             image: tieredCake,
             categoryDescription: "cakes n cupcakes",
             description: "Layered, tailored and unforgettable.",
-            itemCount: 7,
+            itemCount: 9,
             details: {
+                cakeFlavors: [
+                    "Vanilla",
+                    "Chocolate",
+                    "Red Velvet",
+                    "Sponge Cake",
+                    "Angel Food Cake",
+                    "Olive Oil Lemon",
+                    "Lemon Cake",
+                    "Strawberry",
+                    "Pumpkin Cake",
+                    "Carrot Cake",
+                    "Banana Cake",
+                    "Coconut Cake",
+                    "Pistachio Cake",
+                    "Almond Cake",
+                    "Hazelnut Cake",
+                    "Earl Grey",
+                    "Matcha",
+                    "Coffee Cake",
+                    "Zucchini Walnut Cake",
+                    "Funfetti Vanilla",
+                    "Date Cake",
+                    "Tahini Cake",
+                    "Orange Blossom Cake",
+                ],
                 frostings:
                     [
                         "Vanilla Bean Butter Cream",
@@ -1606,7 +1633,7 @@ export const categories = [
             image: specialtyCakes,
             categoryDescription: "Unique and signature specialty cakes",
             description: "Signature cakes with unique flavor combinations.",
-            itemCount: 3,
+            itemCount: 4,
             items:
                 [
                     {
@@ -1689,7 +1716,7 @@ export const categories = [
             image: milleCrepeCake,
             categoryDescription: "Light layered crepe cakes",
             description: 'Light, layered crêpe cakes filled with luscious creams.',
-            itemCount: 6,
+            itemCount: 7,
             details:
                 {
                     availableSizes:
@@ -2082,8 +2109,8 @@ export const categories = [
                             "Medium Bundt Cake (serves 6–8)",
                             "Full Bundt Cake (serves 12–16)"
                         ]
-                }
-            ,
+                },
+            itemCount: 8,
             items:
                 [
                     {
@@ -2483,7 +2510,7 @@ export const categories = [
             categoryDescription: "Premium French pastry collection",
             description: "Delicate cream puffs with crisp craquelin tops.",
             itemCount:
-                8,
+                9,
             // details: {
             //     "quantityOptions": [
             //         {"quantity": 6, price: 18},
@@ -2825,7 +2852,7 @@ export const categories = [
             description:
                 'Rustic, seasonal fruit pies and hand-crafted pastries.',
             itemCount:
-                8,
+                9,
             details: {
                 sizes: [
                     {
@@ -3020,151 +3047,146 @@ export const categories = [
                     }
                 ]
         },
-        // {
-        //     id: 'seasonal',
-        //     name: 'Seasonal Treats',
-        //     image: seasonal,
-        //     description: 'Inspired by the freshest seasonal ingredients.',
-        //     itemCount: 4,
-        //          items:
-    //                 [
-    //                     {
-    //                         id: "original-tiramisu",
-    //                         itemName: "Original Tiramisu",
-    //                         itemDescription: "Classic Italian recipe with espresso-soaked sponge, mascarpone cream, and a hint of vanilla.",
-    //                         itemPrice: 25,
-    //                         itemImages: [classicTiramisu],
-    //                         quantityOptions: [
-    //                             {quantity: 1, price: "JOD 6"},
-    //                             {quantity: 2, price: "JOD 12"},
-    //                             {quantity: 3, price: "JOD 18"},
-    //                         ],
-    //                         ingredients: "flour",
-    //                         allergens: "flour, eggs",
-    //                         seasonal: false,
-    //                         weight: 800,
-    //                         variations: [],
-    //
-    //
-    //                     },
-    //                     {
-    //                         id: "marsala-zabayone-tiramisu",
-    //                         itemName: "Marsala Wine Zabayone",
-    //                         itemDescription: "A refined twist featuring Marsala zabayone folded into silky mascarpone and layered with espresso-dipped ladyfingers.",
-    //                         itemPrice: 30,
-    //                         itemImages: [marsalaTiramisu],
-    //                         quantityOptions: [
-    //                             {quantity: 1, price: "JOD 6"},
-    //                             {quantity: 2, price: "JOD 12"},
-    //                             {quantity: 3, price: "JOD 18"},
-    //                         ],
-    //                         ingredients: "flour",
-    //                         allergens: "flour, eggs",
-    //                         seasonal: false,
-    //                         weight: 800,
-    //                         variations: [],
-    //
-    //
-    //                     },
-    //                     {
-    //                         id: "strawberry-almond-tiramisu",
-    //                         itemName: "Strawberry Almond",
-    //                         itemDescription: "Strawberry-soaked ladyfingers layered with almond mascarpone cream and fresh strawberry compote.",
-    //                         itemPrice: 30,
-    //                         itemImages: [strawberryTiramisu],
-    //                         quantityOptions: [
-    //                             {quantity: 1, price: "JOD 6"},
-    //                             {quantity: 2, price: "JOD 12"},
-    //                             {quantity: 3, price: "JOD 18"},
-    //                         ],
-    //                         ingredients: "flour",
-    //                         allergens: "flour, eggs",
-    //                         seasonal: false,
-    //                         weight: 800,
-    //                         variations: [],
-    //
-    //
-    //                     },
-    //                     {
-    //                         id: "pistachio-matcha-tiramisu",
-    //                         itemName: "Pistachio Matcha",
-    //                         itemDescription: "Toasted pistachio cream and earthy matcha mascarpone.",
-    //                         itemPrice: 30,
-    //                         itemImages: [matchaTiramisu],
-    //                         quantityOptions: [
-    //                             {quantity: 1, price: "JOD 6"},
-    //                             {quantity: 2, price: "JOD 12"},
-    //                             {quantity: 3, price: "JOD 18"},
-    //                         ],
-    //                         ingredients: "flour",
-    //                         allergens: "flour, eggs",
-    //                         seasonal: false,
-    //                         weight: 800,
-    //                         variations: [],
-    //
-    //
-    //                     },
-    //                     {
-    //                         id: "coconut-mango-tiramisu",
-    //                         itemName: "Coconut Mango",
-    //                         itemDescription: "Tropical fusion of coconut mascarpone and golden mango.",
-    //                         itemPrice: 30,
-    //                         itemImages: [mangoTiramisu],
-    //                         quantityOptions: [
-    //                             {quantity: 1, price: "JOD 6"},
-    //                             {quantity: 2, price: "JOD 12"},
-    //                             {quantity: 3, price: "JOD 18"},
-    //                         ],
-    //                         ingredients: "flour",
-    //                         allergens: "flour, eggs",
-    //                         seasonal: false,
-    //                         weight: 800,
-    //                         variations: [],
-    //
-    //
-    //                     },
-    //                     {
-    //                         id: "milk-tea-tiramisu",
-    //                         itemName: "Milk Tea",
-    //                         itemDescription: "Earl Grey–infused mascarpone cream and milk tea glaze layered with Earl Grey-soaked sponge.",
-    //                         itemPrice: 25,
-    //                         itemImages: [teaTiramisu],
-    //                         quantityOptions: [
-    //                             {quantity: 1, price: "JOD 6"},
-    //                             {quantity: 2, price: "JOD 12"},
-    //                             {quantity: 3, price: "JOD 18"},
-    //                         ],
-    //                         ingredients: "flour",
-    //                         allergens: "flour, eggs",
-    //                         seasonal: false,
-    //                         weight: 800,
-    //                         variations: [],
-    //
-    //
-    //                     },
-    //                     {
-    //                         id: "lemon-mascarpone-tiramisu",
-    //                         itemName: "Lemon Mascarpone",
-    //                         itemDescription: "Lemon-zest mascarpone layered with sponge and lemon curd.",
-    //                         itemPrice: 30,
-    //                         itemImages: [lemonTiramisu],
-    //                         quantityOptions: [
-    //                             {quantity: 1, price: "JOD 6"},
-    //                             {quantity: 2, price: "JOD 12"},
-    //                             {quantity: 3, price: "JOD 18"},
-    //                         ],
-    //                         ingredients: "flour",
-    //                         allergens: "flour, eggs",
-    //                         seasonal: false,
-    //                         weight: 800,
-    //                         variations: [],
-    //
-    //
-    //                     }
-    //                 ],
-        //     itemPrice: 3.99, ingredients: "flour",
-        //     allergens: "flour, eggs"
-        // },
+        {
+            id: 'seasonal',
+            name: 'Seasonal Treats',
+            image: seasonal,
+            description: 'Inspired by the freshest seasonal ingredients.',
+            itemCount: 6,
+                 items:
+                    [
+                        {
+                            id: "mikes-lemonade",
+                            itemName: "Mike's Lemonade",
+                            itemDescription: "Moist olive oil cake with zesty lemon curd, mascarpone frosting, and lemon basil sugar.",
+                            itemPrice: 25.00,
+                            quantityOptions: [
+                                {quantity: 1, price: "JOD 6"},
+                                {quantity: 2, price: "JOD 12"},
+                                {quantity: 3, price: "JOD 18"},
+                            ],
+                            ingredients: "flour",
+                            allergens: "flour, eggs",
+                            seasonal: false,
+                            weight: 800,
+                            variations: [],
+
+                            itemImages: [seasonal]
+                        },
+                        {
+                            id: "strawberry-almond-tiramisu",
+                            itemName: "Strawberry Almond",
+                            itemDescription: "Strawberry-soaked ladyfingers layered with almond mascarpone cream and fresh strawberry compote.",
+                            itemPrice: 30,
+                            itemImages: [strawberryTiramisu],
+                            quantityOptions: [
+                                {quantity: 1, price: "JOD 6"},
+                                {quantity: 2, price: "JOD 12"},
+                                {quantity: 3, price: "JOD 18"},
+                            ],
+                            ingredients: "flour",
+                            allergens: "flour, eggs",
+                            seasonal: false,
+                            weight: 800,
+                            variations: [],
+
+
+                        },
+                        {
+                            id: "rustic-seasonal-galette",
+                            itemName: "Rustic Seasonal Galette",
+                            itemDescription: "Free-form tart with seasonal options like cinnamon apples, grilled peaches with burrata, or stone fruits.",
+                            itemPrice: {"medium": 20, "large": 30},
+                            itemImages: [galettes],
+                            quantityOptions: [
+                                {quantity: 1, price: "JOD 6"},
+                                {quantity: 2, price: "JOD 12"},
+                                {quantity: 3, price: "JOD 18"},
+                            ],
+                            ingredients: "flour",
+                            allergens: "flour, eggs",
+                            seasonal: false,
+                            weight: 800,
+                            variations: [],
+
+
+                        },
+                        {
+                            id: "thai-dream-bamboloni",
+                            itemName: "Thai Dream",
+                            itemDescription: "Tropical coconut cream and mango mousse filling, finished with toasted coconut.",
+                            itemImages: [coconutDonut],
+                            quantityOptions: [
+                                {quantity: 1, price: "JOD 6"},
+                                {quantity: 2, price: "JOD 12"},
+                                {quantity: 3, price: "JOD 18"},
+                            ],
+                            ingredients: "flour",
+                            allergens: "flour, eggs",
+                            seasonal: false,
+                            weight: 800,
+                            variations: [],
+
+
+                        },
+                        {
+                            id: "neapolitan-marble",
+                            itemName: "Vanilla Chocolate & Raspberry Neapolitan Marble Cake",
+                            itemDescription: "Beautifully marbled pound cake with layers of vanilla, chocolate, and raspberry.",
+                            itemPrice: [
+                                {
+                                    size: "Medium",
+                                    price: 35
+                                },
+                                {
+                                    size: "Large",
+                                    price: 45
+                                }
+                            ],
+                            itemImages: [neapolitanPoundCake],
+                            quantityOptions: [
+                                {quantity: 1, price: "JOD 6"},
+                                {quantity: 2, price: "JOD 12"},
+                                {quantity: 3, price: "JOD 18"},
+                            ],
+                            ingredients: "flour",
+                            allergens: "flour, eggs",
+                            seasonal: true,
+                            weight: 800,
+                            variations: [],
+                        },
+                        {
+                            id: "matcha-pistachio-crepe",
+                            itemName: "Matcha Pistachio Mille Crêpe",
+                            itemDescription: "A twist on our matcha cake, layered with nutty pistachio cream.",
+                            itemPrice: [
+                                {
+                                    size: "20 layers",
+                                    price: 35
+                                },
+                                {
+                                    size: "30 layers",
+                                    price: 45
+                                }
+                            ],
+                            itemImages: [pistachioCrepe],
+                            quantityOptions: [
+                                {quantity: 1, price: "JOD 6"},
+                                {quantity: 2, price: "JOD 12"},
+                                {quantity: 3, price: "JOD 18"},
+                            ],
+                            ingredients: "flour",
+                            allergens: "flour, eggs",
+                            seasonal: false,
+                            weight: 800,
+                            variations: [],
+
+
+                        },
+                    ],
+            itemPrice: 3.99, ingredients: "flour",
+            allergens: "flour, eggs"
+        },
         {
             id: "brunch",
             name:
