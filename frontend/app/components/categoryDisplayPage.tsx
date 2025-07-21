@@ -20,10 +20,10 @@ export default function CategoryDisplayPage({ category }: { category: any }) {
                     <div className="absolute inset-0 bg-black/50"></div>
                 </div>
                 <div className="relative h-full flex flex-col justify-center items-center text-center px-4 z-10">
-                    <h1 className="text-5xl md:text-7xl lg:text-9xl font-blanka text-umami-cream tracking-[0.1em] mb-6">
+                    <h1 className="text-5xl md:text-7xl lg:text-9xl font-blanka text-umami-nube tracking-[0.1em] mb-6">
                         {category.name}
                     </h1>
-                    <p className="max-w-2xl mx-auto font-ppneuemontreal text-umami-cream/90 text-lg md:text-xl xl:text-3xl tracking-[0.05em] leading-relaxed">
+                    <p className="max-w-2xl mx-auto font-ppneuemontreal text-umami-nube text-lg md:text-xl xl:text-3xl tracking-[0.05em] leading-relaxed">
                         {category.description}
                     </p>
                 </div>
@@ -47,7 +47,7 @@ export default function CategoryDisplayPage({ category }: { category: any }) {
                             {category.items.map((item: any, index: any) => (
                                 <Link key={`${item.id}-${index}`} href={`/menu/${category.id}/${item.id}`}>
                                     <Card
-                                        className="group cursor-pointer elegant-shadow hover:shadow-2xl  transition-all duration-500 overflow-hidden border-0 shadow-sm">
+                                        className="group cursor-pointer shadow-sm hover:shadow-md  transition-all duration-500 overflow-hidden border-0 ">
                                         <div className="relative h-80 sm:h-96 lg:h-72 xl:h-80 overflow-hidden">
                                             <Image
                                                 src={item.itemImages[0]}
@@ -76,11 +76,7 @@ export default function CategoryDisplayPage({ category }: { category: any }) {
                                             <p className="text-base sm:text-lg lg:text-base font-ppneuemontreal text-umami-black leading-relaxed mb-6 sm:mb-8 lg:mb-6 line-clamp-3">
                                                 {item.itemDescription}
                                             </p>
-
-                                            <span
-                                                className="inline-block w-full text-center font-ppneuemontreal bg-umami-charcoal text-umami-white py-4 sm:py-5 lg:py-3 px-6 rounded-lg text-base sm:text-lg lg:text-base hover:bg-umami-black transform hover:scale-[1.02] transition-all duration-200">
-                                                View Details
-                                            </span>
+                                            
                                         </CardContent>
                                     </Card>
                                 </Link>

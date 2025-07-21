@@ -2,65 +2,50 @@
 'use client'
 import Link from 'next/link';
 import {Card, CardContent} from '../ui/card';
-import chocolateMousse from "@/app/assets/chocolate-mousse.jpeg";
 import Image from "next/image";
-import type { StaticImageData } from 'next/image';
+
 import {categories} from "@/app/data/categoryData"
 
-type Category = {
-    id: string;
-    name: string;
-    image: StaticImageData;
-    description: string;
-    itemCount: number;
-    items: {
-        id: string;
-        itemName: string;
-        itemDescription: string;
-        itemImages: string[];
-    }[];
-};
-type CategoriesHeroProps = {
-    title: string;
-    subtitle: string;
-    backgroundImage: StaticImageData;
-};
 
-const Categories = () => {
+const MenuPage = () => {
     return (
-        <div className="min-h-screen bg-umami-cream">
+        <div className="min-h-screen">
             {/* Hero */}
-            <section className="relative h-[80vh] overflow-hidden">
-                <div className="absolute inset-0">
-                    <Image
-                        src={chocolateMousse}
-                        alt="Chocolate Mousse"
-                        fill
-                        sizes="100vh"
-                        className="object-cover"
-                        priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-transparent"></div>
+            <section className="grid grid-cols-1 mb-10 md:grid-cols-[60%_40%] min-h-[50vh]">
+                {/* LEFT SIDE */}
+                <div className="bg-umami-nube text-black px-8 md:px-16 py-16 flex flex-col justify-center">
+                    <div className="flex flex-col ml-36 space-y-4">
+
+                        <h1 className="text-8xl md:text-[100px] font-blanka leading-none">
+                            What We Bake
+                        </h1>
+
+                        <p className="font-ppneuemontreal italic text-gray-600 text-lg">
+                            By pre-orders only
+                        </p>
+
+                        <h2 className="text-2xl md:text-4xl leading-snug">
+                            Signature & Seasonal Creations
+                        </h2>
+
+                    </div>
                 </div>
 
-                <div className="relative h-full flex flex-col justify-center items-center text-center px-4 z-10">
-                    <h1 className="text-5xl md:text-7xl lg:text-9xl font-blanka text-umami-cream tracking-[0.1em] mb-6">
-                        What We Bake
-                    </h1>
-                    <p className="max-w-2xl mx-auto font-ppneuemontreal text-umami-cream/90 text-lg md:text-xl xl:text-3xl tracking-[0.05em] leading-relaxed">
-                        Our curated menu showcases exclusive flavors & small-batch creations you won’t find anywhere else — seasonal specialties & refined classics.
+                {/* RIGHT SIDE */}
+                <div className="bg-black text-white px-10 md:px-20 py-20 flex flex-col justify-center">
+                    <p className="text-xl md:text-3xl font-light leading-tight mb-2">
+                        Explore our curated collection of breads, pastries, cakes and more — baked fresh in small batches, inspired by the season and perfected by hand.
                     </p>
                 </div>
             </section>
-
             {/* Grid */}
-            <section className="px-4 py-12 sm:px-8 lg:px-16">
+            <section className="px-4 py-12 mb-10 sm:px-8 lg:px-16">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                         {categories.map((category) => (
                             <Link href={`/menu/${category.id}`} key={category.id}>
                                 <Card
-                                    className="group cursor-pointer overflow-hidden border border-umami-cream shadow-sm hover:shadow-md transition-all duration-500">
+                                    className="group cursor-pointer overflow-hidden border border-umami-white shadow-sm hover:shadow-md transition-all duration-500">
                                     <div className="relative h-64 overflow-hidden">
                                         <Image
                                             src={category.image}
@@ -69,9 +54,11 @@ const Categories = () => {
                                             height={600}
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
-                                        <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 text-umami-cream">
-                                            <h3 className="text-lg sm:text-xl font-blanka tracking-wide mb-1">
+                                        <div
+                                            className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                                        <div
+                                            className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 text-umami-white">
+                                            <h3 className="text-3xl lg:text-2xl  font-blanka tracking-wide mb-1">
                                                 {category.name}
                                             </h3>
                                             <p className="text-xs sm:text-sm font-ppneuemontreal">
@@ -80,7 +67,8 @@ const Categories = () => {
                                         </div>
                                     </div>
 
-                                    <CardContent className="p-4 sm:p-6 bg-umami-cream group-hover:bg-umami-cream transition-colors duration-300 flex-1">
+                                    <CardContent
+                                        className="p-4 sm:p-6 group-hover:bg-umami-nube/10 transition-colors duration-300 flex-1">
                                         <p className="text-sm sm:text-base text-umami-black leading-relaxed line-clamp-3">
                                             {category.description}
                                         </p>
@@ -95,4 +83,4 @@ const Categories = () => {
     );
 };
 
-export default Categories;
+export default MenuPage;

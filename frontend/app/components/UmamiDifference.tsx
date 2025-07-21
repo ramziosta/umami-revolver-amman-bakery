@@ -42,7 +42,7 @@ const features = [
 
 const UmamiDifference = () => {
   return (
-      <section className="py-32 bg-umami-cream">
+      <section className="py-32">
           <div className="container mx-auto px-4">
               <div className="text-center mb-12">
                   <h2 className="text-5xl lg:text-7xl font-blanka text-umami-black mb-4 tracking-tight">
@@ -57,7 +57,7 @@ const UmamiDifference = () => {
                   {features.map((feature, index) => {
                       const IconComponent = feature.icon;
                       return (
-                          <div key={index} className="text-center group hover:bg-umami-black/5 p-8 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">
+                          <div key={index} className="text-center group hover:bg-umami-nube p-8 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">
                               <div className="flex justify-center mb-4">
                                   <div className="w-16 h-16 bg-umami-black rounded-full flex items-center justify-center group-hover:bg-umami-charcoal transition-colors duration-300">
                                       <IconComponent size={40} strokeWidth={1.2} className="text-umami-cream" />
@@ -72,7 +72,7 @@ const UmamiDifference = () => {
               </div>
 
               <div className="flex justify-center mt-12">
-                  <div className="text-center group hover:bg-umami-black/5 p-8 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">
+                  <div className="text-center group hover:bg-umami-black/5 p-8 rounded-lg transition-all duration-300 shadow-md ">
                       <div className="flex justify-center mb-4">
                           <div className="w-16 h-16 border-2 border-umami-charcoal/40 rounded-full flex items-center justify-center bg-umami-berry group-hover:bg-umami-black transition-colors duration-300">
                               <Gem

@@ -10,7 +10,7 @@ const Navigation = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     return (
-        <div className="bg-umami-cream">
+        <div className="">
             <div className="container mx-auto px-4 py-6">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
@@ -33,7 +33,7 @@ const Navigation = () => {
                             href="/menu"
                             className="text-umami-black hover:text-umami-berry transition-colors duration-300 border-b border-transparent hover:border-umami-berry pb-1"
                         >
-                            Our Bakes
+                           What we Bakes
                         </Link>
                         <Link
                             href="/about"
@@ -45,7 +45,7 @@ const Navigation = () => {
                             href="/contact"
                             className="text-umami-black hover:text-umami-berry transition-colors duration-300 border-b border-transparent hover:border-umami-berry pb-1"
                         >
-                            Visit Us
+                            Contact
                         </Link>
                     </nav>
 
@@ -54,7 +54,7 @@ const Navigation = () => {
                         <Button
                             variant="ghost"
                             size="icon"
-                            className="md:hidden hover:bg-umami-cream"
+                            className="md:hidden hover:bg-umami-nube"
                             onClick={() => setIsMobileMenuOpen(true)}
                         >
                             <Menu className="h-6 w-6 text-umami-black"/>

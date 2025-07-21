@@ -30,6 +30,7 @@ const config: Config = {
                     white: '#FFFFFF',
                     cream: '#fbf7e9',
                     charcoal: '#3E3C3C',  // for subtle softer black text if needed
+                    nube: '#F7F7F7',
                     berry: '#C44569',      // keep as a tiny highlight only
                     transparent: 'transparent',
                     current: 'currentColor',
@@ -71,6 +72,7 @@ const config: Config = {
         }
     },
     plugins: [require("tailwindcss-animate")],
+
 };
 
 export default config;

@@ -5,23 +5,23 @@ import whatsapp from "../assets/whatsapp.png";
 
 const Footer = () => {
     return (
-        <footer className="bg-umami-black text-umami-cream">
+        <footer className="bg-umami-black text-umami-nube">
             <div className="container mx-auto px-4 py-20">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
                     {/* Brand */}
                     <div className="md:col-span-2">
                         <Link href="/">
                             <div className="flex flex-col text-umami-berry group mb-4">
-                                <h1 className="text-4xl font-blanka tracking-tight group-hover:text-umami-cream transition-colors duration-300">
+                                <h1 className="text-4xl font-blanka tracking-tight group-hover:text-umami-nube transition-colors duration-300">
                                     UMAMI AMMAN
                                 </h1>
                                 <span
-                                    className="text-sm italic group-hover:text-umami-cream transition-colors duration-300">Artisan
+                                    className="text-sm italic group-hover:text-umami-nube transition-colors duration-300">Artisan
                                 Viennoiserie & Pâtisserie
                             </span>
                             </div>
                         </Link>
-                        <p className="font-ppneuemontreal text-base leading-relaxed max-w-md mb-6 text-umami-cream/90">
+                        <p className="font-ppneuemontreal text-base leading-relaxed max-w-md mb-6 text-umami-nube">
                             Crafting exceptional baked goods with passion, precision and the finest ingredients. From our kitchen to your table — every bite tells a story.
                         </p>
                         <div className="flex space-x-4">
@@ -77,8 +77,8 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-umami-cream/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                    <p className="text-sm text-umami-cream/70 mb-4 md:mb-0">
+                <div className="border-t border-umami-nube mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                    <p className="text-sm text-umami-nube mb-4 md:mb-0">
                         © 2025 Umami Bakery. All rights reserved.
                     </p>
                     <div className="flex space-x-6 text-sm">

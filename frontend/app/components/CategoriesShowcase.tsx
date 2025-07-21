@@ -43,7 +43,7 @@ const categories: ShowcaseCategory[] = [
 
 const CategoriesShowcase = () => {
     return (
-        <section className="py-24 bg-umami-cream">
+        <section className="py-24 bg-umami-nube">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="text-5xl lg:text-7xl font-blanka text-umami-black mb-4 tracking-tight">
@@ -78,7 +78,7 @@ const CategoriesShowcase = () => {
                                 </div>
 
                                 <CardContent
-                                    className="p-6 bg-umami-cream group-hover:bg-umami-cream transition-colors duration-300">
+                                    className="p-6 bg-umami-white group-hover:bg-umami-nube transition-colors duration-300">
                                     <p className="font-ppneuemontreal text-umami-black text-base leading-relaxed">
                                         {category.description}
                                     </p>
