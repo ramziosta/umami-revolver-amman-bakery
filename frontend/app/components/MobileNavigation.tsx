@@ -24,7 +24,7 @@ const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => {
         <Sheet open={isOpen} onOpenChange={onClose}>
             <SheetContent
                 side="left"
-                className="w-[300px] sm:w-[400px] bg-umami-cream"
+                className="w-[300px] sm:w-[400px] bg-umami-white"
             >
                 <SheetHeader>
                     <SheetTitle className="text-left">
@@ -33,7 +33,7 @@ const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => {
                             onClick={onClose}
                             className="text-umami-black font-blanka tracking-[0.1em] hover:text-umami-berry transition-colors duration-300 text-2xl"
                         >
-                            Umami Amman
+                            UMAMI AMMAN
                         </Link>
                     </SheetTitle>
                 </SheetHeader>
