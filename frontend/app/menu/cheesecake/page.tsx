@@ -1,7 +1,7 @@
 // app/menu/cheesecake/page.tsx
 import {categories } from  '@/app/data/categoryData';
 import CategoryDisplayPage from "@/app/components/categoryDisplayPage";
-
+import CheesecakeDetails from "@/app/components/CheesecakeDetails";
 
 export default function CheesecakePage() {
     const category = categories.find((cat) => cat.id === 'cheesecake')
@@ -11,6 +11,11 @@ export default function CheesecakePage() {
     }
 
     return (
-        <CategoryDisplayPage category={category} />
+        <div>
+
+            <CategoryDisplayPage category={category} />
+            <CheesecakeDetails />
+        </div>
+
     )
 }

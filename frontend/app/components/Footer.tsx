@@ -11,27 +11,36 @@ const Footer = () => {
                     {/* Brand */}
                     <div className="md:col-span-2">
                         <Link href="/">
-                            <div className="flex flex-col text-umami-berry group mb-4">
-                                <h1 className="text-4xl font-blanka tracking-tight group-hover:text-umami-nube transition-colors duration-300">
+                            <div className="flex flex-col text-umami-white group mb-4">
+                                <h1 className="text-4xl font-blanka tracking-tight group-hover:text-zinc-400 transition-colors duration-300">
                                     UMAMI AMMAN
                                 </h1>
-                                <span
-                                    className="text-sm italic group-hover:text-umami-nube transition-colors duration-300">Artisan
-                                Viennoiserie & Pâtisserie
-                            </span>
+                                <span className="text-sm italic group-hover:text-zinc-400 transition-colors duration-300">
+              Artisan Viennoiserie & Pâtisserie
+            </span>
                             </div>
                         </Link>
                         <p className="font-ppneuemontreal text-base leading-relaxed max-w-md mb-6 text-umami-nube">
-                            Crafting exceptional baked goods with passion, precision and the finest ingredients. From our kitchen to your table — every bite tells a story.
+                            Crafting exceptional baked goods with passion, precision and the finest ingredients.
+                            From our kitchen to your table — every bite tells a story.
                         </p>
                         <div className="flex space-x-4">
-                            <Link href="https://instagram.com/umamiamman" className="hover:text-umami-berry transition-colors duration-300">
+                            <Link
+                                href="https://instagram.com/umamiamman"
+                                className="hover:text-zinc-400 transition-colors duration-300"
+                            >
                                 Instagram
                             </Link>
-                            <Link href="https://www.facebook.com/profile.php?id=61570837547092#" className="hover:text-umami-berry transition-colors duration-300">
+                            <Link
+                                href="https://www.facebook.com/profile.php?id=61570837547092#"
+                                className="hover:text-zinc-400 transition-colors duration-300"
+                            >
                                 Facebook
                             </Link>
-                            <Link href="/twitter" className="hover:text-umami-berry transition-colors duration-300">
+                            <Link
+                                href="/twitter"
+                                className="hover:text-zinc-400 transition-colors duration-300"
+                            >
                                 Twitter
                             </Link>
                         </div>
@@ -42,17 +51,26 @@ const Footer = () => {
                         <h4 className="text-lg font-blanka lg:text-2xl mb-4 tracking-wide">Quick Links</h4>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/menu" className="hover:text-umami-berry transition-colors duration-300">
+                                <Link
+                                    href="/menu"
+                                    className="hover:text-zinc-400 transition-colors duration-300"
+                                >
                                     What We Bake
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/about" className="hover:text-umami-berry transition-colors duration-300">
+                                <Link
+                                    href="/about"
+                                    className="hover:text-zinc-400 transition-colors duration-300"
+                                >
                                     About Us
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" className="hover:text-umami-berry transition-colors duration-300">
+                                <Link
+                                    href="/contact"
+                                    className="hover:text-zinc-400 transition-colors duration-300"
+                                >
                                     Contact
                                 </Link>
                             </li>
@@ -64,12 +82,18 @@ const Footer = () => {
                         <h4 className="text-lg lg:text-2xl font-blanka mb-4 tracking-wide">Info</h4>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/privacy" className="hover:text-umami-berry transition-colors duration-300">
+                                <Link
+                                    href="/privacy"
+                                    className="hover:text-zinc-400 transition-colors duration-300"
+                                >
                                     Privacy Policy
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/terms" className="hover:text-umami-berry transition-colors duration-300">
+                                <Link
+                                    href="/terms"
+                                    className="hover:text-zinc-400 transition-colors duration-300"
+                                >
                                     Terms of Service
                                 </Link>
                             </li>
@@ -82,10 +106,16 @@ const Footer = () => {
                         © 2025 Umami Bakery. All rights reserved.
                     </p>
                     <div className="flex space-x-6 text-sm">
-                        <Link href="/privacy" className="hover:text-umami-berry transition-colors duration-300">
+                        <Link
+                            href="/privacy"
+                            className="hover:text-zinc-400 transition-colors duration-300"
+                        >
                             Privacy
                         </Link>
-                        <Link href="/terms" className="hover:text-umami-berry transition-colors duration-300">
+                        <Link
+                            href="/terms"
+                            className="hover:text-zinc-400 transition-colors duration-300"
+                        >
                             Terms
                         </Link>
                     </div>

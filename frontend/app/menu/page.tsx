@@ -14,7 +14,7 @@ const MenuPage = () => {
             <section className="grid grid-cols-1 mb-10 md:grid-cols-[60%_40%] min-h-[50vh]">
                 {/* LEFT SIDE */}
                 <div className="bg-umami-nube text-black px-8 md:px-16 py-16 flex flex-col justify-center">
-                    <div className="flex flex-col ml-36 space-y-4">
+                    <div className="flex flex-col ml-26 space-y-4">
 
                         <h1 className="text-8xl md:text-[100px] font-blanka leading-none">
                             What We Bake
@@ -25,16 +25,17 @@ const MenuPage = () => {
                         </p>
 
                         <h2 className="text-2xl md:text-4xl leading-snug">
-                            Signature & Seasonal Creations
+                            Modern Twists & Signature Creations
                         </h2>
-
+                        <p className="text-lg md:text-2xl font-light leading-tight mb-3">
+                            Discover our evolving collection of breads, pastries, cakes and more.</p>
                     </div>
                 </div>
 
                 {/* RIGHT SIDE */}
-                <div className="bg-black text-white px-10 md:px-20 py-20 flex flex-col justify-center">
-                    <p className="text-xl md:text-3xl font-light leading-tight mb-2">
-                        Explore our curated collection of breads, pastries, cakes and more — baked fresh in small batches, inspired by the season and perfected by hand.
+                <div className="bg-black text-white px-10 md:px-10 py-20 flex flex-col justify-center">
+                   <p className="text-2xl md:text-4xl font-light leading-tight mb-3">Baked to order in small batches.</p>
+                    <p className="text-2xl md:text-4xl font-light leading-tight mb-2">Modern twists guided by the season and finished by hand.
                     </p>
                 </div>
             </section>

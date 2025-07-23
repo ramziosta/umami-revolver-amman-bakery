@@ -74,17 +74,17 @@ const UmamiDifference = () => {
               <div className="flex justify-center mt-12">
                   <div className="text-center group hover:bg-umami-black/5 p-8 rounded-lg transition-all duration-300 shadow-md ">
                       <div className="flex justify-center mb-4">
-                          <div className="w-16 h-16 border-2 border-umami-charcoal/40 rounded-full flex items-center justify-center bg-umami-berry group-hover:bg-umami-black transition-colors duration-300">
+                          <div className="w-16 h-16 bg-umami-black rounded-full flex items-center justify-center group-hover:bg-umami-charcoal transition-colors duration-300">
                               <Gem
                                   size={40}
                                   strokeWidth={1.2}
-                                  className="text-umami-cream group-hover:text-umami-berry transition-colors duration-300"
+                                  className="text-umami-cream transition-colors duration-300"
                               />
                           </div>
                       </div>
 
-                      <h3 className="text-2xl md:text-3xl lg:text-5xl font-blanka text-umami-black italic tracking-[0.05em]">
-                          Flavours You Won’t Find Anywhere Else.
+                      <h3 className="text-2xl md:text-3xl lg:text-5xl font-blanka text-umami-black tracking-[0.05em]">
+                          Flavors You Won’t Find Anywhere Else.
                       </h3>
                   </div>
               </div>

@@ -31,7 +31,8 @@ const config: Config = {
                     cream: '#fbf7e9',
                     charcoal: '#3E3C3C',  // for subtle softer black text if needed
                     nube: '#F7F7F7',
-                    berry: '#C44569',      // keep as a tiny highlight only
+                    berry: '#C44569',
+                    gold:'#DAA520',
                     transparent: 'transparent',
                     current: 'currentColor',
                 },

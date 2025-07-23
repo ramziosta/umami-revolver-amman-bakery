@@ -43,23 +43,25 @@ const CakePricingTable = () => (
         <h2 className="text-3xl lg:text-5xl text-umami-black font-black font-blanka text-center tracking-[0.3rem] mb-12">
             Cake Size & Tier Pricing
         </h2>
-
-        <div className="overflow-x-auto">
-            <table className="w-full max-w-5xl mx-auto border-collapse shadow-xl overflow-hidden font-ppneuemontreal text-umami-black rounded-lg">
+        <span className="block text-center text-umami-black text-sm font-ppneuemontreal opacity-60 mt-2">
+          Prices shown are starting points — premium options & customizations available!
+        </span>
+        <div className="overflow-x-auto px-4">
+            <table className="w-full max-w-4xl mx-auto border-collapse shadow-lg overflow-hidden font-ppneuemontreal text-umami-black rounded-lg">
                 <thead>
-                <tr className="bg-umami-charcoal/20 text-umami-black tracking-wide ">
-                    <th className="text-left font-medium  py-4 px-5">Layers</th>
-                    <th className="text-left font-medium  py-4 px-5">Diameter</th>
-                    <th className="text-left font-medium  py-4 px-5">Servings</th>
-                    <th className="text-left font-medium  py-4 px-5">Price (JOD)</th>
+                <tr className="bg-umami-charcoal/20 text-umami-black tracking-wide">
+                    <th className="text-left font-medium py-3 px-4">Layers</th>
+                    <th className="text-left font-medium py-3 px-4">Diameter</th>
+                    <th className="text-left font-medium py-3 px-4">Servings</th>
+                    <th className="text-left font-medium py-3 px-4">Starting Price (JOD)</th>
                 </tr>
                 </thead>
                 <tbody>
                 {tieredCakes.cakePricing?.tiers?.map((tier) => (
                     <React.Fragment key={tier.layers}>
-                        <tr className="bg-umami-charcoal/10 text-umami-black font-blanka text-lg">
-                            <td className="py-4 px-5 tracking-wide" colSpan={4}>
-                           {tier.layers} Layer{tier.layers > 1 ? 's' : ''}
+                        <tr className="bg-umami-charcoal/10 text-umami-black font-blanka text-base md:text-lg">
+                            <td className="py-2 px-4 tracking-wide" colSpan={4}>
+                                {tier.layers} Layer{tier.layers > 1 ? 's' : ''}
                             </td>
                         </tr>
                         {tier.options.map((opt, idx) => (
@@ -67,10 +69,10 @@ const CakePricingTable = () => (
                                 key={`${tier.layers}-${opt.diameterInch}-${idx}`}
                                 className="hover:bg-umami-nube transition-colors duration-200 border-b border-umami-gray/20"
                             >
-                                <td className="py-3 px-5"></td>
-                                <td className="py-3 px-5">{opt.diameterInch}"</td>
-                                <td className="py-3 px-5">{opt.servings}</td>
-                                <td className="py-3 px-5">{opt.price} JOD</td>
+                                <td className="py-3 px-4"></td>
+                                <td className="py-3 px-4">{opt.diameterInch}"</td>
+                                <td className="py-3 px-4">{opt.servings}</td>
+                                <td className="py-3 px-4">{opt.price} JOD</td>
                             </tr>
                         ))}
                     </React.Fragment>
@@ -83,11 +85,61 @@ const CakePricingTable = () => (
                 )}
                 </tbody>
             </table>
+            <p className="mt-4 text-center text-umami-black italic text-md opacity-80 font-ppneuemontreal">
+                Pricing includes classic cake base and simple buttercream finish.
+                Special frostings (French, German), signature fillings (lotus, fresh fruit, custards),
+                premium toppers, florals, or custom decorations may be added for an additional fee starting from 3–10 JOD.
+                Final pricing depends on design complexity and selected options.
+            </p>
+            <h2 className="text-3xl lg:text-5xl mt-6 text-umami-black font-black font-blanka text-center tracking-[0.3rem] mb-12">
+                Cupcake Pricing
+            </h2>
+            <section className="max-w-md mx-auto my-8 shadow-lg">
+
+                <table className="w-full text-left border border-umami-charcoal/20 font-ppneuemontreal">
+                    <thead>
+                    <tr className="bg-umami-charcoal/10">
+                        <th className="py-2 font-medium px-4">Quantity</th>
+                        <th className="py-2 font-medium px-4">Base Price (JOD)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr className="border-t border-umami-charcoal/10">
+                        <td className="py-2 px-4">6 Cupcakes</td>
+                        <td className="py-2 px-4">15 JOD</td>
+                    </tr>
+                    <tr className="border-t border-umami-charcoal/10">
+                        <td className="py-2 px-4">12 Cupcakes</td>
+                        <td className="py-2 px-4">25 JOD</td>
+                    </tr>
+                    <tr className="border-t border-umami-charcoal/10">
+                        <td className="py-2 px-4">24 Cupcakes</td>
+                        <td className="py-2 px-4">48 JOD</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </section>
+            <p className="text-center mt-2 mb-6 text-sm text-umami-black opacity-70 font-ppneuemontreal">
+                Base prices for classic cupcakes. Intricate designs, custom flavours, or themed toppers may be priced individually.
+            </p>
+
+            <div className="text-center font-ppneuemontreal text-umami-black">
+                <h4 className="text-xl lg:text-2xl font-blanka mb-3 tracking-[0.15em]">Classic Flavours</h4>
+                <p className="mb-4">Vanilla Bean • Chocolate • Red Velvet • Lemon Zest • Carrot • Coffee</p>
+
+                <h4 className="text-xl lg:text-2xl font-blanka mb-3 tracking-[0.15em]">Classic Frostings</h4>
+                <p>Vanilla Buttercream • Chocolate Ganache • Cream Cheese • Coffee Frosting • Lemon Buttercream</p>
+            </div>
+
+            <p className="text-center mt-6 text-sm italic text-umami-black font-ppneuemontreal">
+                Want something extra special? We’ll craft custom cupcake designs, unique fillings, and themed decorations — just ask!
+            </p>
         </div>
 
-        <p className="mt-8 text-center text-umami-black italic text-sm opacity-70 font-ppneuemontreal">
-            * Pricing may vary based on custom designs and special requests.
-            Reach out for your personalized quote.
+
+        <p className="mt-6 text-center text-umami-black text-lg opacity-70 font-ppneuemontreal">
+            Need help picking sizes or customizing your dream cake? We’re here to help — get in touch for recommendations, ideas, and a quote.
         </p>
     </section>
 );
@@ -103,13 +155,16 @@ const FrostingsAndFillings = () => (
             with flavour pairings you won’t find anywhere else. Consult us for recommendations and let’s create
             something memorable together.
         </p>
-
-        <div className="space-y-20">
+        <h3 className="text-3xl lg:text-4xl text-umami-black font-boldfont-ppneuemontreal text-center tracking-[0.3rem] mb-12">
+            Choose your Cake Elements
+        </h3>
+        <div className="space-y-20 ">
             {/* Cake Bases */}
+            <h3 className="text-2xl lg:text-4xl text-umami-black font-ppneuemontreal tracking-[0.3rem]  text-center">
+                Cake Bases
+            </h3>
             <div className="bg-umami-nube ">
-                <h3 className="text-2xl lg:text-4xl text-umami-black font-black font-blanka tracking-[0.3rem] mb-6 text-center">
-                    Cake Bases
-                </h3>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {[
                         tieredCakesWithDetails.details.cakeFlavors.slice(0, 8),
@@ -130,16 +185,43 @@ const FrostingsAndFillings = () => (
                 </div>
             </div>
 
-            {/* Frostings */}
+            {/* Crunch */}
+            <h3 className="text-2xl lg:text-4xl text-umami-black font-ppneuemontreal font-blanka tracking-[0.3rem] text-center">
+                Crunch
+            </h3>
             <div className="bg-umami-nube ">
-                <h3 className="text-2xl lg:text-4xl text-umami-black font-black font-blanka tracking-[0.3rem] mb-6 text-center">
-                    Frostings
-                </h3>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {[
-                        tieredCakesWithDetails.details.frostings.slice(0, 6),
-                        tieredCakesWithDetails.details.frostings.slice(6, 12),
-                        tieredCakesWithDetails.details.frostings.slice(12)
+                        tieredCakesWithDetails.details.crunchElements.slice(0, 4),
+                        tieredCakesWithDetails.details.crunchElements.slice(4, 8),
+                        tieredCakesWithDetails.details.crunchElements.slice(8)
+                    ].map((group, index) => (
+                        <ul key={index} className="space-y-4">
+                            {group.map((frost) => (
+                                <li
+                                    key={frost}
+                                    className="bg-umami-nube/60 rounded-lg px-4 py-3 font-ppneuemontreal text-umami-black shadow hover:bg-umami-charcoal/10 transition"
+                                >
+                                     {frost}
+                                </li>
+                            ))}
+                        </ul>
+                    ))}
+                </div>
+            </div>
+
+            {/* Frostings */}
+            <h3 className="text-2xl lg:text-4xl text-umami-black font-ppneuemontreal font-blanka tracking-[0.3rem] text-center">
+                Frostings
+            </h3>
+            <div className="bg-umami-nube ">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {[
+                        tieredCakesWithDetails.details.frostings.slice(0, 8),
+                        tieredCakesWithDetails.details.frostings.slice(8, 16),
+                        tieredCakesWithDetails.details.frostings.slice(16)
                     ].map((group, index) => (
                         <ul key={index} className="space-y-4">
                             {group.map((frost) => (
@@ -230,11 +312,14 @@ export default function CakePage() {
             <CakeHero/>
             <FrostingsAndFillings/>
             <div className="text-center my-10">
+                <p className="mt-8 text-center italic mb-6 text-umami-black text-base md:text-lg lg:text-xl font-ppneuemontreal">
+                    Prefer cupcakes? Any of our cakes can be crafted into custom cupcakes — the same signature flavours, in perfect bite-sized form.
+                </p>
                 <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 border font-blanka text-2xl mb-10 border-umami-charcoal/30 text-umami-black px-8 py-4 hover:bg-umami-nube  transition-colors duration-300"
+                    className="inline-flex items-center gap-2 border font-blanka text-2xl mb-10 border-umami-charcoal/30 text-umami-black px-8 py-4 hover:bg-umami-nube transition-colors duration-300"
                 >
-                   Talk to us about your custom cake
+                    Let’s Design Your Dream Cake
                 </Link>
             </div>
             <CakesGrid/>

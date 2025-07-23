@@ -64,7 +64,7 @@ export default function CategoryDisplayPage({ category }: { category: any }) {
                                                 </h3>
                                                 {item.seasonal && (
                                                     <span
-                                                        className="inline-block px-3 py-1.5 bg-yellow-200 text-yellow-800 text-sm font-medium rounded-full">
+                                                        className="inline-block px-3 py-1.5 bg-umami-white text-umami-black text-sm font-medium rounded-full">
                                                     Seasonal
                                                 </span>
                                                 )}

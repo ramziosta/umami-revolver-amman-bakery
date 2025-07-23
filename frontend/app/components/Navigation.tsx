@@ -16,11 +16,11 @@ const Navigation = () => {
                     {/* Logo */}
                     <Link href="/">
                         <div className="flex items-center flex-col group ">
-                            <h1 className="text-4xl lg:text-5xl font-blanka tracking-tight group-hover:text-umami-berry transition-colors duration-300">
+                            <h1 className="text-4xl lg:text-5xl font-blanka tracking-tight group-hover:text-zinc-600 transition-colors duration-300">
                                 UMAMI AMMAN
                             </h1>
                             <span
-                                className="text-sm text-umami-charcoal italic group-hover:text-umami-berry transition-colors duration-300">Artisan
+                                className="text-sm text-umami-charcoal italic group-hover:text-zinc-600 transition-colors duration-300">Artisan
                                 Viennoiserie & Pâtisserie
                             </span>
                         </div>
@@ -31,19 +31,19 @@ const Navigation = () => {
                         className="hidden md:flex items-center space-x-8 font-ppneuemontreal uppercase   tracking-[0.15em]">
                         <Link
                             href="/menu"
-                            className="text-umami-black hover:text-umami-berry transition-colors duration-300 border-b border-transparent hover:border-umami-berry pb-1"
+                            className="text-umami-black hover:text-zinc-600 transition-colors duration-300 border-b border-transparent hover:border-zinc-600 pb-1"
                         >
-                           What we Bakes
+                           What we Bake
                         </Link>
                         <Link
                             href="/about"
-                            className="text-umami-black hover:text-umami-berry transition-colors duration-300 border-b border-transparent hover:border-umami-berry pb-1"
+                            className="text-umami-black hover:text-zinc-600 transition-colors duration-300 border-b border-transparent hover:border-zinc-600 pb-1"
                         >
                             Our Story
                         </Link>
                         <Link
                             href="/contact"
-                            className="text-umami-black hover:text-umami-berry transition-colors duration-300 border-b border-transparent hover:border-umami-berry pb-1"
+                            className="text-umami-black hover:text-zinc-600 transition-colors duration-300 border-b border-transparent hover:border-zinc-600 pb-1"
                         >
                             Contact
                         </Link>

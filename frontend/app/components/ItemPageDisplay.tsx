@@ -25,11 +25,7 @@ export default function ItemPageDisplay({
                     <h1 className="text-7xl md:text-8xl font-blanka text-umami-white tracking-[0.2em] mb-4">
                         {item.itemName}
                     </h1>
-                    {item.seasonal && (
-                        <span className="inline-block px-4 py-1 bg-yellow-200 text-yellow-800 text-xs rounded-full">
-          Seasonal Specialty
-        </span>
-                    )}
+
                 </div>
             </section>
 
@@ -58,6 +54,11 @@ export default function ItemPageDisplay({
                             <h2 className="text-3xl lg:text-5xl font-blanka tracking-[0.15em] mb-4">
                                 {item.itemName}
                             </h2>
+                            {item.seasonal && (
+                                <span className="inline-block mb-6 px-4 py-2 bg-umami-black text-umami-white text-xs rounded-full">
+                                  Seasonal Specialty
+                                </span>
+                            )}
                             <p className="text-umami-black font-ppneuemontreal leading-relaxed">
                                 {item.itemDescription}
                             </p>
@@ -78,11 +79,15 @@ export default function ItemPageDisplay({
                                                     setSelectedImage(variation.images[0]);
                                                 }
                                             }}
-                                            className="w-full text-left border p-4 rounded font-ppneuemontreal border-umami-charcoal hover:bg-umami-nube transition"
+                                            className="w-full flex justify-between text-left border p-4 rounded font-ppneuemontreal border-umami-charcoal hover:bg-umami-nube transition"
                                         >
-                                            <h4 className="text-lg mb-1">{variation.name}</h4>
-                                            <p className="text-sm mb-1">{variation.description}</p>
-                                            <p className="text-sm">{variation.price}</p>
+                                             <span className="font-ppneuemontreal text-umami-black">
+                                                {variation.name}
+                                             </span>
+                                                <span className="text-lg text-umami-charcoal">
+                                                {variation.price}
+                                            </span>
+
                                         </button>
                                     ))}
                                 </div>
@@ -105,8 +110,9 @@ export default function ItemPageDisplay({
                             </div>
                             <div>
                                 <h3 className="text-xl font-ppneuemontreal uppercase tracking-widest text-umami-charcoal mb-2">
-                                    Weight
+                                    Weight   <span className="text-umami-charcoal lowercase text-sm">(each)</span>
                                 </h3>
+
                                 <p className="text-umami-black text-sm">{item.weight} g</p>
                             </div>
                         </div>
@@ -124,12 +130,12 @@ export default function ItemPageDisplay({
                                             key={index}
                                             className="flex justify-between items-center p-3 bg-umami-white border border-umami-charcoal rounded-lg"
                                         >
-                  <span className="font-ppneuemontreal text-umami-black">
-                    {option.quantity}
-                  </span>
+                                             <span className="font-ppneuemontreal text-umami-black">
+                                                {option.quantity}
+                                             </span>
                                             <span className="text-lg text-umami-charcoal">
-                    {option.price}
-                  </span>
+                                                {option.price}
+                                            </span>
                                         </div>
                                     );
                                 })}
