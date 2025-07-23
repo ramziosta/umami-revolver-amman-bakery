@@ -40,7 +40,7 @@ const CakeHero = () => (
 
 const CakePricingTable = () => (
     <section className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl lg:text-5xl text-umami-black font-black font-blanka text-center tracking-[0.3rem] mb-12">
+        <h2 className="text-3xl lg:text-5xl text-umami-black font-ppneuemontreal text-center tracking-[0.3rem] mb-12">
             Cake Size & Tier Pricing
         </h2>
         <span className="block text-center text-umami-black text-sm font-ppneuemontreal opacity-60 mt-2">
@@ -91,7 +91,7 @@ const CakePricingTable = () => (
                 premium toppers, florals, or custom decorations may be added for an additional fee starting from 3–10 JOD.
                 Final pricing depends on design complexity and selected options.
             </p>
-            <h2 className="text-3xl lg:text-5xl mt-6 text-umami-black font-black font-blanka text-center tracking-[0.3rem] mb-12">
+            <h2 className="text-3xl lg:text-5xl mt-6 text-umami-black font-ppneuemontreal text-center tracking-[0.3rem] mb-12">
                 Cupcake Pricing
             </h2>
             <section className="max-w-md mx-auto my-8 shadow-lg">
@@ -125,10 +125,10 @@ const CakePricingTable = () => (
             </p>
 
             <div className="text-center font-ppneuemontreal text-umami-black">
-                <h4 className="text-xl lg:text-2xl font-blanka mb-3 tracking-[0.15em]">Classic Flavours</h4>
+                <h4 className="text-xl lg:text-2xl font-ppneuemontreal mb-3 tracking-[0.15em]">Classic Flavours</h4>
                 <p className="mb-4">Vanilla Bean • Chocolate • Red Velvet • Lemon Zest • Carrot • Coffee</p>
 
-                <h4 className="text-xl lg:text-2xl font-blanka mb-3 tracking-[0.15em]">Classic Frostings</h4>
+                <h4 className="text-xl lg:text-2xl font-ppneuemontreal mb-3 tracking-[0.15em]">Classic Frostings</h4>
                 <p>Vanilla Buttercream • Chocolate Ganache • Cream Cheese • Coffee Frosting • Lemon Buttercream</p>
             </div>
 
@@ -238,10 +238,11 @@ const FrostingsAndFillings = () => (
             </div>
 
             {/* Fillings & Toppings */}
+            <h3 className="text-2xl lg:text-4xl text-umami-black font-ppneuemontreal tracking-[0.3rem] mb-6 text-center">
+                Fillings & Toppings
+            </h3>
             <div className="bg-umami-nube ">
-                <h3 className="text-2xl lg:text-4xl text-umami-black font-black font-blanka tracking-[0.3rem] mb-6 text-center">
-                    Fillings & Toppings
-                </h3>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {[
                         tieredCakesWithDetails.details.fillingsAndToppings.slice(0, 6),
