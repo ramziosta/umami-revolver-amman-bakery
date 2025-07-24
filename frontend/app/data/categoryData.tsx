@@ -1438,16 +1438,16 @@ export const categories = [
                 crunchElements: [
                     "Vanilla Feuilletine",
                     "Chocolate Feuilletine",
-                    "Hazelnut Praline Crunch",
+                    "Hazelnut Praline",
                     "Almond Dacquoise",
                     "Meringue Layers",
-                    "Crispy Macaron Shells",
+                    "Crispy Macaron",
                     "Nut Brittle",
                     "Crispy Cereal",
                     "Pistachio Nougatine",
-                    "Hazelnut Gianduja Crunch",
+                    "Hazelnut Gianduja",
                     "Caramelized Puffed Rice",
-                    "Cornflake Praline Crunch"
+                    "Cornflake Praline"
                 ]
             },
             cakePricing: {
@@ -2226,8 +2226,7 @@ export const categories = [
                         ],
                         itemImages: [redVelvetPoundCake],
                         quantityOptions: [
-                            {quantity: "Medium (serves 8-10)", price: "28 JOD"},
-                            {quantity: "Large (serves 12-14)", price: "32 JOD"},
+                            {quantity: "Large (serves 8-12 / 3-2 wedges)", price: "35 JOD"},
                         ],
                         ingredients: "flour",
                         allergens: "flour, eggs",
@@ -2499,15 +2498,15 @@ export const categories = [
                     },
                     {
                         id: "chocolate-cremeux",
-                        itemName: "Chocolate Crémeux",
-                        itemDescription: "Filled with rich dark chocolate crémeux and topped with cocoa craquelin.",
+                        itemName: "Chocolate Raspberry Crémeux",
+                        itemDescription: "Filled with rich dark chocolate crémeux, raspberry filling center and topped with cocoa craquelin.",
                         itemImages: [chocolateChoux],
                         quantityOptions: [
                             {quantity: 6, price: "18 JOD"},
                             {quantity: 8, price: "24 JOD"},
                             {quantity: 12, price: "36 JOD"},
                         ],
-                        ingredients: "flour, sugar,milk, butter, eggs, chocolate",
+                        ingredients: "flour, sugar,milk, butter, eggs, chocolate, raspberries",
                         allergens: "flour, eggs, dairy",
                         seasonal: false,
                         weight: 100,
@@ -2548,7 +2547,7 @@ export const categories = [
                     {
                         id: "cinnamon-churro",
                         itemName: "Cinnamon Churro",
-                        itemDescription: "Cinnamon-infused cream and a brown sugar craquelin shell rolled in cinnamon sugar.",
+                        itemDescription: "Cinnamon-infused cream, dulce de leche and a brown sugar craquelin shell rolled in cinnamon sugar.",
                         itemImages: [churroChoux],
                         quantityOptions: [
                             {quantity: 6, price: "18 JOD"},
@@ -2564,7 +2563,7 @@ export const categories = [
                     {
                         id: "lemon-mousse",
                         itemName: "Lemon Mousse",
-                        itemDescription: "Zesty lemon mousse with candied lemon.",
+                        itemDescription: "Zesty lemon mousse with with toasted meringue.",
                         itemImages: [lemonChoux],
                         quantityOptions: [
                             {quantity: 6, price: "18 JOD"},
@@ -2587,7 +2586,7 @@ export const categories = [
                             {quantity: 8, price: "24 JOD"},
                             {quantity: 12, price: "36 JOD"},
                         ],
-                        ingredients: "flour, sugar,milk, butter, eggs",
+                        ingredients: "flour, sugar,milk, butter, eggs, chocolate",
                         allergens: "flour, eggs, dairy",
                         seasonal: false,
                         weight: 100,
@@ -2595,16 +2594,16 @@ export const categories = [
                     },
                     {
                         id: "coconut-cream",
-                        itemName: "Coconut Cream",
-                        itemDescription: "Filled with coconut cream and rolled in toasted coconut flakes.",
+                        itemName: "Coconut Almond Cream",
+                        itemDescription: "Filled with coconut almond cream and rolled in toasted coconut flakes.",
                         itemImages: [coconutChoux],
                         quantityOptions: [
                             {quantity: 6, price: "18 JOD"},
                             {quantity: 8, price: "24 JOD"},
                             {quantity: 12, price: "36 JOD"},
                         ],
-                        ingredients: "flour, sugar,milk, butter, eggs",
-                        allergens: "flour, eggs, dairy",
+                        ingredients: "flour, sugar,milk, butter, eggs, coconut, almond",
+                        allergens: "flour, eggs, dairy, nuts",
                         seasonal: false,
                         weight: 100,
                         variations: [],
@@ -2619,8 +2618,8 @@ export const categories = [
                             {quantity: 8, price: "24 JOD"},
                             {quantity: 12, price: "36 JOD"},
                         ],
-                        ingredients: "flour, sugar,milk, butter, eggs",
-                        allergens: "flour, eggs, dairy",
+                        ingredients: "flour, sugar,milk, butter, eggs, pistachio",
+                        allergens: "flour, eggs, dairy, nuts",
                         seasonal: false,
                         weight: 100,
                         variations: [],
@@ -2650,7 +2649,7 @@ export const categories = [
                 [
                     {
                         id: "original-tiramisu",
-                        itemName: "Original Tiramisu",
+                        itemName: "The Classic",
                         itemDescription: "Classic Italian recipe with espresso-soaked sponge, mascarpone cream, and a hint of vanilla.",
                         itemPrice: 25,
                         itemImages: [classicTiramisu],
@@ -2684,7 +2683,7 @@ export const categories = [
                     },
                     {
                         id: "strawberry-almond-tiramisu",
-                        itemName: "Balsamic Roasted Strawberry Tiramisu",
+                        itemName: "Balsamic Roasted Strawberry & Almond",
                         itemDescription: "Ladyfingers soaked in roasted strawberry balsamic syrup, layered with almond mascarpone cream, fresh strawberry compote.",
                         itemPrice: 30,
                         itemImages: [strawberryTiramisu],
@@ -2694,7 +2693,7 @@ export const categories = [
                         ],
                         ingredients: "flour, sugar, eggs, mascarpone cream, strawberries, balsamic, almonds",
                         allergens: "flour, eggs, dairy, nuts",
-                        seasonal: true,
+                        seasonal: false,
                         weight: 800,
                         variations: [],
                     },
@@ -2726,7 +2725,7 @@ export const categories = [
                         ],
                         ingredients: "flour, sugar, eggs, mascarpone cream, mango, coconut",
                         allergens: "flour, eggs, dairy",
-                        seasonal: false,
+                        seasonal: true,
                         weight: 800,
                         variations: [],
                     },
@@ -2960,17 +2959,17 @@ export const categories = [
                             itemImages: [seasonal]
                         },
                         {
-                            id: "strawberry-almond-tiramisu",
-                            itemName: "Balsamic Roasted Strawberry Tiramisu",
-                            itemDescription: "Ladyfingers soaked in roasted strawberry balsamic syrup, layered with almond mascarpone cream, fresh strawberry compote.",
+                            id: "coconut-mango-tiramisu",
+                            itemName: "Coconut Mango",
+                            itemDescription: "Tropical fusion of coconut mascarpone and golden mango.",
                             itemPrice: 30,
-                            itemImages: [strawberryTiramisu],
+                            itemImages: [mangoTiramisu],
                             quantityOptions: [
                                 {quantity: "Standard (8-10 servings)", price: "35 JOD"},
                                 {quantity: "Large (14-16 servings)", price: "45 JOD"},
                             ],
-                            ingredients: "flour, sugar, eggs, mascarpone cream, strawberries, balsamic, almonds",
-                            allergens: "flour, eggs, dairy, nuts",
+                            ingredients: "flour, sugar, eggs, mascarpone cream, mango, coconut",
+                            allergens: "flour, eggs, dairy",
                             seasonal: true,
                             weight: 800,
                             variations: [],

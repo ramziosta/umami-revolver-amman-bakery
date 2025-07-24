@@ -30,8 +30,8 @@ export default function CategoryDisplayPage({ category }: { category: any }) {
             </section>
 
             {/* Items Grid */}
-            <section className="p-10 lg:p-16 lg:m-12">
-                <nav className="mb-8 text-sm flex flex-row">
+            <section className="p-1 lg:p-16 sm:mt-6 md:mt-6 lg:m-8">
+                <nav className="mb-8 mt-8 md:mt-1 text-sm flex flex-row">
                     <Link href="/menu" className="text-umami-charcoal hover:text-blue-800">
                         Menu
                     </Link>
@@ -47,7 +47,7 @@ export default function CategoryDisplayPage({ category }: { category: any }) {
                             {category.items.map((item: any, index: any) => (
                                 <Link key={`${item.id}-${index}`} href={`/menu/${category.id}/${item.id}`}>
                                     <Card
-                                        className="group cursor-pointer shadow-sm hover:shadow-md  transition-all duration-500 overflow-hidden border-0 ">
+                                        className="group cursor-pointer shadow-sm hover:shadow-md transition-all duration-500 overflow-hidden border-0 ">
                                         <div className="relative h-80 sm:h-96 lg:h-72 xl:h-80 overflow-hidden">
                                             <Image
                                                 src={item.itemImages[0]}

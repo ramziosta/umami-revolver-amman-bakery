@@ -14,7 +14,7 @@ const HeroSection = () => {
                   priority
               />
               {/* Refined Warm Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent"></div>
           </div>
 
           {/* Hero Content */}
