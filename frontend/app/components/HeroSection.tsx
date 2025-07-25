@@ -1,17 +1,20 @@
 import { ArrowDown } from 'lucide-react';
 
+
 const HeroSection = () => {
   return (
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0">
-              <iframe
-                  src="https://player.cloudinary.com/embed/?cloud_name=df2jleiei&public_id=umamiammans_scklr4&profile=cld-adaptive-stream"
-                  width="640"
-                  height="360"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-              ></iframe>
+              <div className="absolute inset-0 w-full h-full">
+                  <iframe
+                      className="w-full h-full"
+                      src="https://player.cloudinary.com/embed/?cloud_name=df2jleiei&public_id=umamiammans_scklr4&profile=cld-adaptive-stream&controls=false&autoplay=true&loop=true&muted=true"
+                      allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                      allowFullScreen
+                      frameBorder="0"
+                  />
+              </div>
               {/* Refined Warm Overlay */}
               <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent"></div>
           </div>
