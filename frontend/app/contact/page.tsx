@@ -1,5 +1,5 @@
 'use client';
-
+import { Suspense } from 'react';
 import React, {useState, useEffect, useRef} from 'react';
 import {
     ArrowDown
@@ -103,7 +103,9 @@ const Contact = () => {
     return (
         <div className="min-h-screen ">
             <ContactHero/>
+            <Suspense fallback={<div>Loading...</div>}>
             <ContactClient />
+            </Suspense>
             <FAQ/>
         </div>
     );
