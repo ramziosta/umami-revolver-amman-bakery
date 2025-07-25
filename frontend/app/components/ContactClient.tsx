@@ -1,14 +1,14 @@
-
+'use client'
 import React, {useEffect, useRef, useState} from "react";
-import {Input} from "@/app/ui/input";
 import {AlertCircle, ArrowDown, Check, Loader2, Mail, Phone} from "lucide-react";
-import {Alert, AlertDescription} from "@/app/ui/alert";
-import {Textarea} from "@/app/ui/textarea";
-import {Button} from "@/app/ui/button";
-import {Card, CardContent, CardHeader, CardTitle} from "@/app/ui/card";
 import {useSearchParams} from "next/navigation";
-import {useToast} from "@/app/hooks/use-toast";
 import emailjs from "@emailjs/browser";
+import {Alert, AlertDescription} from "../ui/alert";
+import {Input} from "../ui/input";
+import {Textarea} from "../ui/textarea";
+import {Button} from "../ui/button";
+import {Card, CardContent, CardHeader, CardTitle} from "../ui/card";
+import {useToast} from "../hooks/use-toast";
 
 interface FormErrors {
     name?: string;
@@ -37,8 +37,17 @@ interface SubjectSelectProps {
     error?: string;
 }
 
+interface ContactFormData {
+    name: string;
+    email: string;
+    phone: string;
+    subject: string;
+    message: string;
+}
+
+// Add the missing ContactFormProps interface
 interface ContactFormProps {
-    formData: FormData;
+    formData: ContactFormData;
     status: 'idle' | 'sending' | 'success' | 'error';
     onSubmit: (e: React.FormEvent) => void;
     onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
@@ -57,7 +66,7 @@ const validatePhone = (phone: string): boolean => {
     return phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''));
 };
 
-const validateForm = (formData: FormData): FormErrors => {
+const validateForm = (formData: ContactFormData): FormErrors => {
     const errors: FormErrors = {};
 
     if (!formData.name.trim()) {
@@ -91,8 +100,8 @@ const validateForm = (formData: FormData): FormErrors => {
     return errors;
 };
 
-// Utility functions
-const createMessageBody = (formData: FormData): string => {
+// Utility functions - Fixed to use ContactFormData instead of FormData
+const createMessageBody = (formData: ContactFormData): string => {
     return `
 CONTACT FORM SUBMISSION
 
@@ -106,7 +115,7 @@ ${formData.message}
 `.trim();
 };
 
-const createTemplateParams = (formData: FormData) => ({
+const createTemplateParams = (formData: ContactFormData) => ({
     from_name: formData.name,
     from_email: formData.email,
     phone: formData.phone || "N/A",
@@ -115,9 +124,9 @@ const createTemplateParams = (formData: FormData) => ({
     reply_to: formData.email,
 });
 
-// Custom hook for form management
+// Custom hook for form management - Fixed to use ContactFormData
 const useContactForm = (initialType: string = '', initialPlan: string = '') => {
-    const [formData, setFormData] = useState<FormData>({
+    const [formData, setFormData] = useState<ContactFormData>({
         name: '',
         email: '',
         phone: '',
@@ -129,7 +138,7 @@ const useContactForm = (initialType: string = '', initialPlan: string = '') => {
     const [touchedFields, setTouchedFields] = useState<Set<string>>(new Set());
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
         setFormData(prev => ({
             ...prev,
             [name]: value
@@ -221,14 +230,14 @@ const FormField: React.FC<FormFieldProps> = ({
         </div>
         {error && (
             <p id={`${id}-error`} className="text-sm text-destructive flex items-center gap-1">
-                <AlertCircle className="h-4 w-4" />
+                <AlertCircle className="h-4 w-4"/>
                 {error}
             </p>
         )}
     </div>
 );
 
-const SubjectSelect: React.FC<SubjectSelectProps> = ({ value, onChange, error }) => (
+const SubjectSelect: React.FC<SubjectSelectProps> = ({value, onChange, error}) => (
     <div className="relative">
         <select
             id="subject"
@@ -245,13 +254,55 @@ const SubjectSelect: React.FC<SubjectSelectProps> = ({ value, onChange, error })
             <option value="custom-order">Custom Order</option>
             <option value="catering">Catering Services</option>
             <option value="wholesale">Wholesale Partnership</option>
-            <option value="wholesale">Careers</option>
+            <option value="careers">Careers</option>
             <option value="feedback">Feedback & Reviews</option>
             <option value="complaint">Issue or Complaint</option>
         </select>
     </div>
 );
 
+const ContactInfo: React.FC = () => (
+    <div className="space-y-8">
+
+        <div className="space-y-4">
+
+            <Card className="card-premium hover:bg-umami-nube hover:shadow-lg  transition-shadow duration-200 ">
+                <CardHeader className="pb-4">
+                    <CardTitle className="flex items-center font-normal gap-3">
+                        <Phone className="h-5 w-5 " />
+                        Phone
+                    </CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p className="text-elegant">
+                        <a href="tel:+15551234567" className="transition-colors inline-flex items-center gap-2">
+                            (962) 7 9089 4715
+                        </a>
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-1">Contact us using the WhatsApp Icon</p>
+                </CardContent>
+            </Card>
+
+            <Card className="card-premium hover:bg-umami-nube hover:shadow-lg transition-shadow duration-200 ">
+                <CardHeader className="pb-4">
+                    <CardTitle className="flex items-center font-normal gap-3">
+                        <Mail className="h-5 w-5 " />
+                        Email
+                    </CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <p className="text-elegant">
+                        <a href="mailto:hello@revolverbyumami.com" className="hover:text-gold transition-colors inline-flex items-center gap-2">
+                            hello@revolverbyumami.com
+                        </a>
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-1">We respond within 4 hours</p>
+                </CardContent>
+            </Card>
+        </div>
+
+    </div>
+);
 const ContactForm: React.FC<ContactFormProps> = ({
                                                      formData,
                                                      status,
@@ -271,7 +322,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
             {status === 'success' && (
                 <Alert className="mb-6 border-green-200 bg-green-50 text-green-800">
-                    <Check className="h-4 w-4" />
+                    <Check className="h-4 w-4"/>
                     <AlertDescription>
                         Thank you! Your message has been sent successfully. We'll be in touch soon.
                     </AlertDescription>
@@ -280,7 +331,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
             {status === 'error' && (
                 <Alert className="mb-6 border-destructive/50 bg-destructive/10">
-                    <AlertCircle className="h-4 w-4" />
+                    <AlertCircle className="h-4 w-4"/>
                     <AlertDescription>
                         There was an error sending your message. Please try again or contact us directly.
                     </AlertDescription>
@@ -328,7 +379,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                     onChange={onChange}
                     error={errors.subject}
                 >
-                    <SubjectSelect value={formData.subject} onChange={onChange} error={errors.subject} />
+                    <SubjectSelect value={formData.subject} onChange={onChange} error={errors.subject}/>
                 </FormField>
 
                 <FormField
@@ -363,7 +414,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                 >
                     {status === 'sending' ? (
                         <>
-                            <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                            <Loader2 className="h-4 w-4 mr-2 animate-spin"/>
                             Sending Message...
                         </>
                     ) : (
@@ -385,53 +436,10 @@ const ContactForm: React.FC<ContactFormProps> = ({
     );
 };
 
-const ContactInfo: React.FC = () => (
-    <div className="space-y-8">
-
-        <div className="space-y-4">
-
-            <Card className="card-premium hover:bg-umami-nube hover:shadow-lg  transition-shadow duration-200 ">
-                <CardHeader className="pb-4">
-                    <CardTitle className="flex items-center font-normal gap-3">
-                        <Phone className="h-5 w-5 " />
-                        Phone
-                    </CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-elegant">
-                        <a href="tel:+15551234567" className="transition-colors inline-flex items-center gap-2">
-                            (962) 7 9089 4715
-                        </a>
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">Contact us using the WhatsApp Icon</p>
-                </CardContent>
-            </Card>
-
-            <Card className="card-premium hover:bg-umami-nube hover:shadow-lg transition-shadow duration-200 ">
-                <CardHeader className="pb-4">
-                    <CardTitle className="flex items-center font-normal gap-3">
-                        <Mail className="h-5 w-5 " />
-                        Email
-                    </CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-elegant">
-                        <a href="mailto:hello@revolverbyumami.com" className="hover:text-gold transition-colors inline-flex items-center gap-2">
-                            hello@revolverbyumami.com
-                        </a>
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">We respond within 4 hours</p>
-                </CardContent>
-            </Card>
-        </div>
-
-    </div>
-);
-
 // Main Contact component
 const ContactClient: React.FC = () => {
     const searchParams = useSearchParams();
-    const { toast } = useToast();
+    const {toast} = useToast();
 
     const initialType = searchParams.get("type") || "";
     const initialPlan = searchParams.get("plan") || "";
@@ -466,7 +474,7 @@ const ContactClient: React.FC = () => {
             setTimeout(() => {
                 const formAnchor = document.getElementById("contact-form");
                 if (formAnchor) {
-                    formAnchor.scrollIntoView({ behavior: "smooth", block: "center" });
+                    formAnchor.scrollIntoView({behavior: "smooth", block: "center"});
                 }
             }, 100);
         }
@@ -526,7 +534,7 @@ const ContactClient: React.FC = () => {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 max-w-7xl mx-auto">
                         <div className="lg:col-span-2">
-                            <ContactInfo />
+                            <ContactInfo/>
                         </div>
                         <div className="lg:col-span-3">
                             <ContactForm
@@ -538,52 +546,6 @@ const ContactClient: React.FC = () => {
                                 onFieldFocus={handleFieldFocus}
                             />
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="py-20 px-6">
-                <div className="container-premium">
-                    <div className="text-center mb-16">
-                        <h2 className="heading-display text-4xl mb-4">Frequently Asked Questions</h2>
-                        <p className="text-elegant text-lg max-w-2xl mx-auto">
-                            Quick answers to common questions about our products and services
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-                        {[
-                            {
-                                q: "Do you take custom orders?",
-                                a: "Yes! We love creating custom cakes and specialty items for special occasions. Please contact us at least 48 hours in advance for custom orders."
-                            },
-                            {
-                                q: "What are your delivery options?",
-                                a: "We offer delivery in Amman and surrounding areas. Delivery is free for orders over 60 JOD — otherwise there’s a 3 JOD delivery fee. If you live outside Amman, please check with us to confirm availability."
-                            },
-                            {
-                                q: "Do you have gluten-free options?",
-                                a: "We offer a selection of gluten-free pastries. We can create custom orders. Please check our online menu or call us for current availability."
-                            },
-                            {
-                                q: "Can I schedule pickup times?",
-                                a: "Currently, we offer delivery only. Check with us for future locations and pick-up options."
-                            }
-                        ].map((faq, index) => (
-                            <Card key={index} className="card-premium hover:bg-umami-nube hover:shadow-lg transition-all duration-200 hover:scale-[1.02] ">
-                                <CardHeader>
-                                    <CardTitle className="text-lg flex items-start gap-2">
-                                        <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                            <span className="text-gold text-sm font-bold">?</span>
-                                        </div>
-                                        {faq.q}
-                                    </CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-elegant pl-8">{faq.a}</p>
-                                </CardContent>
-                            </Card>
-                        ))}
                     </div>
                 </div>
             </section>

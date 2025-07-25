@@ -6,8 +6,10 @@ import {
 } from 'lucide-react';
 import Image from "next/image";
 import contact from "@/app/assets/contact.jpg";
-import {Card, CardContent, CardHeader, CardTitle} from "@/app/ui/card";
-import ContactClient from "@/app/components/ContactClient";
+
+import ContactClient from "../components/ContactClient";
+import {Card, CardContent, CardHeader, CardTitle} from "../ui/card";
+
 
 
 const ContactHero: React.FC = () => (
@@ -43,6 +45,7 @@ const ContactHero: React.FC = () => (
         </div>
     </section>
 );
+
 
 const FAQ = () => {
     return (
