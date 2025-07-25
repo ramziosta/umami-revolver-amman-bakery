@@ -6,13 +6,14 @@ const HeroSection = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0">
-              <Image
-                  src={poundCake}
-                  alt="Artisan Pound Cake"
-                  fill
-                  className="object-cover"
-                  priority
-              />
+              <video
+                  className="absolute inset-0 w-full h-full object-cover"
+                  src="/umamiamman.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+              ></video>
               {/* Refined Warm Overlay */}
               <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent"></div>
           </div>
