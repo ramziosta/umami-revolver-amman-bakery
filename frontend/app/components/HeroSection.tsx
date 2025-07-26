@@ -1,20 +1,19 @@
-'use client'
-
 import { ArrowDown } from 'lucide-react';
+import umamiVideo from '/umamiamman.mp4';
 
-const HeroSection = () => {
+
+export const HeroSection = () => {
   return (
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0">
               <video
                   className="absolute inset-0 w-full h-full object-cover"
-                  src="/umamiamman.mp4"
+                  src="https://res.cloudinary.com/df2jleiei/video/upload/v1753476955/umamiammans_scklr4.mp"
                   autoPlay
                   loop
                   muted
                   playsInline
-                  onError={(e) => console.error('Video failed to load:', e)}
               />
               {/* Refined Warm Overlay */}
               <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent"></div>
@@ -42,4 +41,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+
