@@ -1,5 +1,5 @@
 import Image from "next/image";
-import why from "@/app/assets/kouigan-amann3.jpg";
+import comingSoon from "@/app/assets/coming-soon.png";
 import {ArrowDown} from "lucide-react";
 
 export default function ComingSoon() {
@@ -9,14 +9,14 @@ export default function ComingSoon() {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <Image
-                        src={why}
+                        src={comingSoon}
                         alt="Artisan Pound Cake"
                         fill
                         className="object-cover"
                         priority
                     />
                     {/* Refined Warm Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-transparent"></div>
+                    <div className="absolute inset-0 backdrop-blur bg-gradient-to-b from-black/80 via-black/60 to-transparent"></div>
                 </div>
 
                 {/* Hero Content */}
