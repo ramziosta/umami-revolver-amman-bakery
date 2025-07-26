@@ -23,7 +23,7 @@ export default function Page() {
                 </div>
 
                 {/* Hero Content */}
-                <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-[20vh] md:pt-0">
+                <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-[5vh] sm:pt-[10vh] md:pt-0 flex flex-col items-center justify-center">
                     <p className="max-w-2xl mx-auto font-ppneuemontreal text-umami-nube text-lg md:text-xl xl:text-3xl tracking-[0.05em] leading-relaxed">
                         Welcome to
                     </p>
@@ -53,18 +53,18 @@ export default function Page() {
 
                         <div>
                             <h2 className="text-3xl font-ppneuemontreal mb-4">A Taste of Something Unique </h2>
-                            <p className="text-muted-foreground font-montserrat mb-4">
+                            <p className="text-muted-foreground font-ppneuemontreal mb-4">
                                 Umami is the fifth taste — the deep, satisfying flavor that makes food memorable. For us, Umami means more than taste — it’s a promise of balance, warmth, and craft.
                             </p>
-                            <p className="text-muted-foreground font-montserrat mb-4">
+                            <p className="text-muted-foreground font-ppneuemontreal mb-4">
                                 From our Jordanian roots to New York City’s vibrant kitchens, Umami brings together seasonal ingredients, timeless technique, and bold, modern flavors — all made by hand, with care.
                             </p>
-                            <p className="text-muted-foreground font-montserrat mb-6">
+                            <p className="text-muted-foreground font-ppneuemontreal mb-6">
                                 Whether you’re here for a delicate pastry, a handcrafted cake, or a moment shared over good food, Umami Amman is where global inspiration and local soul come together.
                             </p>
 
                             <div className="flex justify-start">
-                                <Button asChild className="bg-umami-gold text-umami-dark hover:bg-umami-dark hover:text-umami-light font-montserrat tracking-wider">
+                                <Button asChild className="  bg-white border border-black/30 text-umami-dark hover:bg-umami-nube font-ppneuemontreal tracking-wider">
                                     <Link href="/menu">Explore Our Menu</Link>
                                 </Button>
                             </div>
@@ -80,19 +80,19 @@ export default function Page() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-left">
                         <div>
                             <h3 className="font-ppneuemontreal text-xl mb-4 text-umami-dark">Seasonality</h3>
-                            <p className="text-muted-foreground font-montserrat">
+                            <p className="text-muted-foreground font-ppneuemontreal">
                                 We craft pastries and viennoiserie with the finest ingredients each season brings — ensuring every bite is fresh, vibrant, and true to nature.
                             </p>
                         </div>
                         <div>
                             <h3 className="font-ppneuemontreal text-xl mb-4 text-umami-dark">Technique</h3>
-                            <p className="text-muted-foreground font-montserrat">
+                            <p className="text-muted-foreground font-ppneuemontreal">
                                 We honor classical pastry methods while embracing modern ideas — creating confections that comfort, surprise, and delight.
                             </p>
                         </div>
                         <div>
                             <h3 className="font-ppneuemontreal text-xl mb-4 text-umami-dark">Integrity</h3>
-                            <p className="text-muted-foreground font-montserrat">
+                            <p className="text-muted-foreground font-ppneuemontreal">
                                 From careful sourcing to mindful preparation, we hold every detail to the highest standards of craft and care
                             </p>
                         </div>
@@ -105,7 +105,7 @@ export default function Page() {
                     <div className="flex justify-center">
                         <Button
                             asChild
-                            className="border border-umami-dark text-umami-dark hover:bg-umami-gold hover:text-umami-dark font-montserrat tracking-wider transition-colors duration-300"
+                            className="bg-white border border-black/30 text-umami-dark hover:bg-umami-nube hover:text-umami-dark font-ppneuemontreal tracking-wider transition-colors duration-300"
                         >
                             <Link href="/contact">Contact Us</Link>
                         </Button>

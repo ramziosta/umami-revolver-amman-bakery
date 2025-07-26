@@ -47,6 +47,12 @@ const Navigation = () => {
                         >
                             Contact
                         </Link>
+                        <Link
+                            href="/location"
+                            className="text-umami-black hover:text-zinc-600 transition-colors duration-300 border-b border-transparent hover:border-zinc-600 pb-1"
+                        >
+                            Location
+                        </Link>
                     </nav>
 
                     {/* Mobile Menu Button */}

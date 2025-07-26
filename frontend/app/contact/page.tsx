@@ -13,7 +13,7 @@ import {Card, CardContent, CardHeader, CardTitle} from "../ui/card";
 
 
 const ContactHero: React.FC = () => (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-[60vh]  flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
             <Image
@@ -28,7 +28,7 @@ const ContactHero: React.FC = () => (
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-[20vh] md:pt-0">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-[5vh] sm:pt-[10vh] md:pt-0 flex flex-col items-center justify-center">
             <h1 className="text-5xl md:text-7xl lg:text-9xl font-blanka text-umami-nube tracking-[0.1em] mb-6">
                 Contact Us
             </h1>
