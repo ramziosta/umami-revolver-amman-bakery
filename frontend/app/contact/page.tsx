@@ -37,11 +37,6 @@ const ContactHero: React.FC = () => (
                 Have a question, special request, or just want to connect? We’d love to hear from you — reach out
                 anytime.
             </p>
-
-            {/* Scroll Indicator */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 animate-bounce mt-12">
-                <ArrowDown className="h-10 w-10 text-umami-nube"/>
-            </div>
         </div>
     </section>
 );

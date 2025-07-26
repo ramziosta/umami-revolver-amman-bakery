@@ -117,7 +117,7 @@ import limoncelloBar from "@/app/assets/limoncello.jpg";
 import strawberryCrumble from "@/app/assets/strawberry-crumble.jpg";
 import tahiniBrownie from "@/app/assets/brownie-tahini.png";
 import millionaireShortbread from "@/app/assets/millionaire-shortbread.jpg";
-import blondie from "@/app/assets/brownie-tahini.png";
+import blondie from "@/app/assets/blondie.jpg";
 import matchaBrownie from "@/app/assets/matcha-brownies.jpg";
 import redVelvetBrownie from "@/app/assets/redvelvet-brownies.png";
 

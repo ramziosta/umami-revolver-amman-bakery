@@ -1,11 +1,9 @@
 import { ArrowDown } from 'lucide-react';
-import umamiVideo from '/umamiamman.mp4';
-
 
 export const HeroSection = () => {
   return (
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-          {/* Background Image */}
+          {/* Background Video */}
           <div className="absolute inset-0">
               <video
                   className="absolute inset-0 w-full h-full object-cover"
@@ -14,27 +12,27 @@ export const HeroSection = () => {
                   loop
                   muted
                   playsInline
+                  aria-hidden="true"
+                  poster="/fallback-hero.jpg"
               />
-              {/* Refined Warm Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent backdrop-blur-sm" />
           </div>
 
-          {/* Hero Content */}
+          {/* Content */}
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-[20vh] md:pt-0">
-              <h1 className="text-5xl md:text-7xl lg:text-9xl font-blanka text-umami-nube tracking-[0.1em] mb-6">
-                  Artisan Baked
-                  <span className="block font-blanka text-umami-berry tracking-[0.05em] italic">
-        Perfection
-      </span>
+              <h1 className="text-5xl md:text-7xl font-blanka text-white tracking-wide leading-tight mb-4">
+                  Baked to Break the Mold
               </h1>
-
-              <p className="max-w-2xl mx-auto font-ppneuemontreal text-umami-nube text-lg md:text-xl xl:text-3xl tracking-[0.05em] leading-relaxed">
-                  Experience handcrafted baked goods — made with passion, precision, and the finest ingredients. From our kitchen to your table.
+              <p className="text-2xl md:text-4xl italic text-umami-berry font-lovan mb-6">
+                  Flavor. Elevated.
+              </p>
+              <p className="text-xl md:text-2xl text-umami-nube font-ppneuemontreal max-w-2xl mx-auto leading-relaxed mt-2">
+                  Not just baked. Engineered. Every crumb, crust, and layer crafted to surprise. Even our brownie? A bold, edible statement.
               </p>
 
               {/* Scroll Indicator */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 animate-bounce mt-12">
-                  <ArrowDown className="h-10 w-10 text-umami-nube" />
+              <div className="mt-12 flex justify-center animate-bounce">
+                  <ArrowDown className="h-8 w-8 text-umami-nube opacity-80" />
               </div>
           </div>
       </section>

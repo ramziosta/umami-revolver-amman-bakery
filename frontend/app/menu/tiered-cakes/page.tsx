@@ -162,7 +162,7 @@ const CakePricingTable = () => (
 const FrostingsAndFillings = () => (
     <section className="container mx-auto pt-8 pb-20 px-4">
         <h2 className="text-3xl lg:text-5xl text-umami-black font-black font-blanka text-center tracking-[0.3rem] mb-8">
-            Custom Cakes: Flavours, Fillings & Frostings
+            Custom Cakes: Flavours<span className="font-ppneuemontreal">, </span>Fillings & Frostings
         </h2>
 
         <p className="max-w-3xl mx-auto mb-16 text-center text-lg lg:text-xl italic text-umami-black font-ppneuemontreal leading-relaxed">

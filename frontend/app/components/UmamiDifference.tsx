@@ -1,42 +1,41 @@
-
-import { Award, Clock, Heart, Settings, ChefHat, Cake, Truck, Shell, SunSnow, Gem } from 'lucide-react';
+import {Award, Clock, Heart, Settings, ChefHat, Cake, Truck, Shell, SunSnow, Gem} from 'lucide-react';
 
 const features = [
     {
         icon: Award,
-        title: 'Over 15 years of artisan excellence.',
+        title: '15+ Years of Artisan Craft.',
     },
     {
         icon: Clock,
-        title: 'Everything Freshly Baked to Order.',
+        title: 'Baked Fresh. Always to Order.',
     },
     {
         icon: Heart,
-        title: 'Exceptional personal service — always.',
+        title: 'Personal Service, Every Time.',
     },
     {
         icon: ChefHat,
-        title: 'Premium, global & local ingredients.',
+        title: 'Global & Local Ingredients — Premium, No Compromise.',
     },
     {
         icon: Settings,
-        title: 'Bespoke Options & Personalisation.',
+        title: 'Custom Orders, Tailored to You.',
     },
     {
         icon: Cake,
-        title: 'Custom Cakes & Cupcakes.',
+        title: 'Cakes & Cupcakes, Made Your Way.',
     },
     {
         icon: Shell,
-        title: 'All additions & inclusions made in-house.',
+        title: 'Additions? All Made In-House.',
     },
     {
         icon: SunSnow,
-        title: "Desserts inspired by the season’s best",
+        title: "Seasonal Desserts, Naturally Inspired.",
     },
     {
         icon: Truck,
-        title: 'Delivered to your doorstep',
+        title: 'Delivered Straight to Your Door.',
     }
 ];
 
@@ -45,22 +44,30 @@ const UmamiDifference = () => {
         <section className="py-32">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-5xl lg:text-7xl font-blanka text-umami-black mb-4 tracking-tight">
+                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-blanka text-umami-black tracking-tight leading-tight mb-4">
                         The Umami <span className="relative inline-block underline-accent">Difference</span>
                     </h2>
-                    <p className="max-w-3xl mx-auto font-ppneuemontreal text-umami-charcoal text-xl md:text-2xl tracking-[0.05em] leading-relaxed">
-                        Crafted with passion, precision, and the finest ingredients — see what sets us apart.
+
+                    <p className="text-2xl md:text-4xl italic font-ppneuemontreal text-umami-berry mb-6">
+                        Trends fade. Craft lasts.
                     </p>
+                    <p className="max-w-4xl mx-auto mb-4 font-ppneuemontreal text-umami-charcoal text-xl md:text-2xl tracking-[0.05em] leading-relaxed">
+                        Every ingredient has purpose. No fillers. No shortcuts. Never artificial.</p>
+                    <p className="max-w-3xl mx-auto mb-4 font-ppneuemontreal text-umami-charcoal text-xl md:text-2xl tracking-[0.05em] leading-relaxed">
+                        Ratios, refined. Textures, designed. Flavor, elevated.
+                        Every bite feels as intentional as it tastes.</p>
                 </div>
 
                 <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
                     {features.map((feature, index) => {
                         const IconComponent = feature.icon;
                         return (
-                            <div key={index} className="text-center group hover:bg-umami-nube p-8 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">
+                            <div key={index}
+                                 className="text-center group hover:bg-umami-nube p-8 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">
                                 <div className="flex justify-center mb-4">
-                                    <div className="w-16 h-16 bg-umami-black rounded-full flex items-center justify-center group-hover:bg-umami-charcoal transition-colors duration-300">
-                                        <IconComponent size={40} strokeWidth={1.2} className="text-umami-cream" />
+                                    <div
+                                        className="w-16 h-16 bg-umami-black rounded-full flex items-center justify-center group-hover:bg-umami-charcoal transition-colors duration-300">
+                                        <IconComponent size={40} strokeWidth={1.2} className="text-umami-cream"/>
                                     </div>
                                 </div>
                                 <h3 className="text-xl font-ppneuemontreal text-umami-black mb-2 tracking-[0.05em]">
@@ -72,19 +79,14 @@ const UmamiDifference = () => {
                 </div>
 
                 <div className="flex justify-center mt-12">
-                    <div className="text-center group hover:bg-umami-black/5 p-8 rounded-lg transition-all duration-300 shadow-md ">
+                    <div className="text-center group hover:bg-umami-nube p-10 md:p-12 rounded-xl transition-all duration-300 shadow-md">
                         <div className="flex justify-center mb-4">
                             <div className="w-16 h-16 bg-umami-black rounded-full flex items-center justify-center group-hover:bg-umami-charcoal transition-colors duration-300">
-                                <Gem
-                                    size={40}
-                                    strokeWidth={1.2}
-                                    className="text-umami-cream transition-colors duration-300"
-                                />
+                                <Gem size={40} strokeWidth={1.2} className="text-umami-cream" />
                             </div>
                         </div>
-
-                        <h3 className="text-2xl md:text-3xl lg:text-5xl font-blanka text-umami-black tracking-[0.05em]">
-                            Flavors You Won’t Find Anywhere Else.
+                        <h3 className="text-2xl md:text-4xl font-blanka text-umami-black tracking-tight leading-tight">
+                            Flavors You Won’t Find Anywhere Else
                         </h3>
                     </div>
                 </div>

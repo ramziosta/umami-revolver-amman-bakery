@@ -14,33 +14,32 @@ const MenuPage = () => {
             <section className="grid grid-cols-1 mb-10 md:grid-cols-[60%_40%] min-h-[50vh]">
                 {/* LEFT SIDE */}
                 <div className="bg-umami-nube text-black px-8 md:px-16 py-16 flex flex-col justify-center">
-                    <div className="flex flex-col ml-26 space-y-4">
+                    <div className="flex flex-col ml-0 md:ml-24 space-y-4">
 
                         <h1 className="text-8xl md:text-[100px] font-blanka leading-none">
                             What We Bake
                         </h1>
 
                         <p className="font-ppneuemontreal italic text-gray-600 text-lg">
-                            By pre-orders only
+                            Available by pre-order only
                         </p>
 
                         <h2 className="text-2xl md:text-4xl leading-snug">
-                            Modern Twists & Signature Creations
+                            Modern Twists. Signature Creations.
                         </h2>
                         <p className="text-lg md:text-2xl font-light leading-tight mb-3">
-                            Discover our evolving collection of breads, pastries, cakes and more.</p>
+                            Explore our evolving collection of breads, pastries, cakes, and more.</p>
                     </div>
                 </div>
 
                 {/* RIGHT SIDE */}
                 <div className="bg-black text-white px-10 md:px-10 py-20 flex flex-col justify-center">
-                   <p className="text-2xl md:text-4xl font-light leading-tight mb-3">Baked to order in small batches.</p>
-                    <p className="text-2xl md:text-4xl font-light leading-tight mb-2">Modern twists guided by the season and finished by hand.
-                    </p>
+                   <p className="text-2xl md:text-4xl font-light leading-tight mb-3">Baked fresh in small batches.</p>
+                    <p className="text-2xl md:text-4xl font-light leading-tight mb-2">Seasonally inspired. Finished by hand.</p>
                 </div>
             </section>
             {/* Grid */}
-            <section className="px-4 py-12 mb-10 sm:px-8 lg:px-16">
+            <section className="px-4 py-16 mb-10 sm:px-10 lg:px-20">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                         {categories.map((category) => (
