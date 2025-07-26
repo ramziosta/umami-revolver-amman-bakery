@@ -15,7 +15,7 @@ export const HeroSection = () => {
                   aria-hidden="true"
                   poster="/fallback-hero.jpg"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent backdrop-blur-sm" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent" />
           </div>
 
           {/* Content */}
