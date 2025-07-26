@@ -31,7 +31,7 @@ export default function ComingSoon() {
 
                     <div className=" flex flex-col items-center my-10 px-4" >
                         <form
-                            action="https://YOUR_MAILCHIMP_URL" // 👈 replace this
+                            action="http://eepurl.com/jj1OUc" // 👈 replace this
                             method="POST"
                             target="_blank"
                             className="w-full max-w-md flex flex-col md:flex-row gap-2"
