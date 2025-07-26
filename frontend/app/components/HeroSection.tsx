@@ -1,6 +1,6 @@
-import { ArrowDown } from 'lucide-react';
-import umamiVideo from './public/umamiamman.mp4';
+'use client'
 
+import { ArrowDown } from 'lucide-react';
 
 const HeroSection = () => {
   return (
