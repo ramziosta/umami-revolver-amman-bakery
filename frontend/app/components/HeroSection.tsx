@@ -9,7 +9,7 @@ export const HeroSection = () => {
           <div className="absolute inset-0">
               <video
                   className="absolute inset-0 w-full h-full object-cover"
-                  src="https://res.cloudinary.com/df2jleiei/video/upload/v1753476955/umamiammans_scklr4.mp"
+                  src="https://res.cloudinary.com/df2jleiei/video/upload/v1753476955/umamiammans_scklr4.mp4"
                   autoPlay
                   loop
                   muted
