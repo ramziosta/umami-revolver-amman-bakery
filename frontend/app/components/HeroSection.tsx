@@ -21,11 +21,11 @@ export const HeroSection = () => {
 
             {/* Content */}
             <div className="relative z-10 text-center px-4 max-w-3xl mx-auto flex flex-col justify-center items-center h-full sm:pt-[18vh] md:pt-0">
-                <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-blanka text-white tracking-wide leading-snug mb-3">
-                    Baked to Break the Mold
+                <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-9xl font-blanka text-white tracking-wide leading-snug mb-3">
+                    Baked to Break<br /> the Mold
                 </h1>
 
-                <p className="text-lg sm:text-2xl md:text-3xl italic text-umami-berry font-lovan mb-4 sm:mb-6">
+                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl italic text-umami-berry font-lovan mb-4 sm:mb-6">
                     Flavor. Elevated.
                 </p>
 

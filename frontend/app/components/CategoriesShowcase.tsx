@@ -43,7 +43,7 @@ const categories: ShowcaseCategory[] = [
 
 const CategoriesShowcase = () => {
     return (
-        <section className="py-24 bg-umami-nube">
+        <section className="py-20 bg-umami-nube">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="text-5xl lg:text-7xl font-blanka text-umami-black mb-4 tracking-tight">

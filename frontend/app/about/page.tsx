@@ -32,7 +32,10 @@ export default function Page() {
                         UMAMI AMMAN
                     </h1>
                     <p className="max-w-2xl mx-auto font-ppneuemontreal text-umami-nube text-base sm:text-lg md:text-xl xl:text-2xl tracking-[0.05em] leading-relaxed">
-                        Where global flavors, local soul, and honest craft meet. We craft pastries that blend seasonality, timeless technique, and bold, modern flavors.
+                        Where global flavors, local soul, and honest craft meet.
+                    </p>
+                    <p className="max-w-2xl mx-auto font-ppneuemontreal text-umami-nube text-base sm:text-lg md:text-xl xl:text-2xl tracking-[0.05em] leading-relaxed">
+                        A modern pâtisserie and viennoiserie rooted in classic technique—crafted with seasonal ingredients and bold, modern flavors.
                     </p>
                 </div>
 
