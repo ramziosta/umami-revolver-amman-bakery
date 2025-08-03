@@ -35,7 +35,7 @@ yarn-error.log*
 backend
 # vercel
 .vercel
-frontend/.env
+.env
 frontend/.next
 
 # typescript
