@@ -1,8 +1,8 @@
 import * as React from "react"
-import { OTPInput, OTPInputContext } from "@/app/ui/input-otp"
 import { Dot } from "lucide-react"
 
 import { cn } from "../lib/utils"
+import {OTPInput, OTPInputContext} from "input-otp";
 
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>,
