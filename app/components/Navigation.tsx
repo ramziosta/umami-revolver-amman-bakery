@@ -14,7 +14,7 @@ const Navigation = () => {
             <div className="container mx-auto px-4 py-6">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <Link href="/public">
+                    <Link href="/">
                         <div className="flex items-center flex-col group ">
                             <h1 className="text-4xl lg:text-5xl font-blanka tracking-tight group-hover:text-zinc-600 transition-colors duration-300">
                                 UMAMI AMMAN
