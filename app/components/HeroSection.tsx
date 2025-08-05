@@ -1,10 +1,11 @@
 import { ArrowDown } from 'lucide-react';
-import neapolitanPoundCake from "@/app/assets/pound-cake.jpg";
+import PreOrderPopup from "./PreOrderPopup";
 
 export const HeroSection = () => {
     return (
         <section className="relative w-full aspect-video sm:aspect-[4/3] md:aspect-[16/9] lg:h-screen flex items-center justify-center overflow-hidden">
             {/* Background Video */}
+            <PreOrderPopup />
             <div className="absolute inset-0">
                 <video
                     className="w-full h-full object-cover"
