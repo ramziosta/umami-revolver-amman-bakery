@@ -3,7 +3,7 @@ import { StaticImageData } from 'next/image';
 import multiSeedSourdough from "@/app/assets/multiseed-sourdough.jpg";
 import whiteSourdough from "@/app/assets/white-sourdough.jpg";
 import wholeWheat from "@/app/assets/wholewheat.jpg";
-import rye from "@/app/assets/rye.jpeg";
+import rye from "@/app/assets/peasantRye.jpg";
 import artisan from "@/app/assets/artisan.jpeg";
 import whiteSourdough1 from "@/app/assets/sourdough1.jpg";
 import whiteSourdough2 from "@/app/assets/sourdough2.jpg";
@@ -298,7 +298,7 @@ export const categories = [
                     itemName:
                         "100% Russian Rye Sourdough",
                     itemDescription:
-                        "A dense, earthy rye loaf inspired by traditional Russian recipes — robust flavor with a deep, hearty crumb and a hint of sourness.",
+                        '"Peasant style" dense, earthy rye loaf inspired by traditional Russian recipes — robust flavor with a deep, hearty crumb and a hint of sourness.',
                     itemPrice:
                         "",
                     itemImages:
