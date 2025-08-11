@@ -1169,7 +1169,7 @@ export const categories = [
                         itemDescription: "Gluten-free version of our classic chocolate chip cookie.",
                         itemImages: [gfCookie],
                         quantityOptions: [
-                            {quantity: 4, price: "14 JOD"},
+                            {quantity: 4, price: "16 JOD"},
                                  {quantity: 8, price: "25 JOD"},
                             {quantity: 12, price: "32 JOD"},
                             {quantity: 24, price: "55 JOD"},
@@ -1743,8 +1743,8 @@ export const categories = [
                         ],
                         itemImages: [tiramisuCrepe],
                         quantityOptions: [
-                            {quantity: "20 Layers", price: "35 JOD"},
-                            {quantity: "30 Layers ", price: "45 JOD"},
+                            {quantity: "20 Layers", price: "50 JOD"},
+                            {quantity: "30 Layers ", price: "60 JOD"},
                         ],
                         ingredients: "flour, sugar, milk, butter, eggs, mascarpone, coffee",
                         allergens: "flour, milk, eggs",
@@ -1770,8 +1770,8 @@ export const categories = [
                         ],
                         itemImages: [matchaCrepe],
                         quantityOptions: [
-                            {quantity: "20 Layers", price: "35 JOD"},
-                            {quantity: "30 Layers (serves 18-20)", price: "45 JOD"},
+                            {quantity: "20 Layers", price: "40 JOD"},
+                            {quantity: "30 Layers (serves 18-20)", price: "50 JOD"},
                         ],
                         ingredients: "flour, sugar, milk, butter, eggs, mascarpone, matcha",
                         allergens: "flour, milk, eggs",
@@ -1811,17 +1811,17 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "20 layers",
-                                price: 30
+                                price: 35
                             },
                             {
                                 size: "30 layers",
-                                price: 40
+                                price: 45
                             }
                         ],
                         itemImages: [milkTeaCrepe],
                         quantityOptions: [
-                            {quantity: "20 Layers", price: "35 JOD"},
-                            {quantity: "30 Layers (serves 18-20)", price: "45 JOD"},
+                            {quantity: "20 Layers", price: "38 JOD"},
+                            {quantity: "30 Layers (serves 18-20)", price: "48 JOD"},
                         ],
                         ingredients: "flour, sugar, milk, butter, eggs, mascarpone, earl grey tea",
                         allergens: "flour, milk, eggs",
@@ -1847,8 +1847,8 @@ export const categories = [
                         ],
                         itemImages: [milleCrepeCake],
                         quantityOptions: [
-                            {quantity: "20 Layers", price: "35 JOD"},
-                            {quantity: "30 Layers (serves 18-20)", price: "45 JOD"},
+                            {quantity: "20 Layers", price: "45 JOD"},
+                            {quantity: "30 Layers (serves 18-20)", price: "55 JOD"},
                         ],
                         ingredients: "flour, sugar, milk, butter, eggs, mascarpone, chocolate",
                         allergens: "flour, milk, eggs",
