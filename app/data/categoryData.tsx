@@ -1499,7 +1499,8 @@ export const categories = [
                     itemDescription: "Soft, fluffy vanilla bean cake layered with rainbow confetti sprinkles and filled with a light mascarpone whipped cream. Frosted in silky French buttercream and finished with a confetti sprinkle.",
                     itemImages: [confettiCake, confettiCupcake],
                     quantityOptions: [
-                        {quantity: 1, price: "40 JOD"},
+                        {quantity:"2 layer 8 inch", price: "35 JOD"},
+                        {quantity: "3 layer 8 inch", price: "50 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs",
                     allergens: "flour, milk, eggs",
@@ -1510,10 +1511,11 @@ export const categories = [
                 {
                     id: "chocolate-cake",
                     itemName: "Triple Chocolate Cake",
-                    itemDescription: "Rich, moist dark chocolate sponge layered with milk chocolate mousse, chocolate crunch feuilletine and French chocolate buttercream.",
+                    itemDescription: "Rich, moist dark chocolate sponge layered with milk chocolate pudding, chocolate crunch feuilletine and French chocolate buttercream.",
                     itemImages: [chocolateCake, chocolateCupcake],
                     quantityOptions: [
-                        {quantity: 1, price: "45 JOD"},
+                        {quantity:"2 layer 8 inch", price: "35 JOD"},
+                        {quantity: "3 layer 8 inch", price: "50 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs, chocolate",
                     allergens: "flour, milk, eggs",
@@ -1529,7 +1531,8 @@ export const categories = [
                     itemDescription: "Moist dark chocolate sponge brushed with espresso syrup, layered with rich salted caramel ganache and a caramelized coconut-pecan filling, finished with dark chocolate french buttercream and toasted coconut flakes.",
                     itemImages: [germanChocolateCake, germanChocolateCupcake],
                     quantityOptions: [
-                        {quantity: 1, price: "55 JOD"},
+                        {quantity:"2 layer 8 inch", price: "40 JOD"},
+                        {quantity: "3 layer 8 inch", price: "55 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs,coconut, pecans",
                     allergens: "flour, milk, eggs, nuts",
@@ -1545,7 +1548,8 @@ export const categories = [
                     itemDescription: "Decadent chocolate sponge layered with fresh cherries, cherry compote, chocolate cremeux, vanilla bean whipped cream, and dark chocolate shavings.",
                     itemImages: [blackForestCake, blackForestCupcake],
                     quantityOptions: [
-                        {quantity: 1, price: "55 JOD"},
+                        {quantity:"2 layer 8 inch", price: "40 JOD"},
+                        {quantity: "3 layer 8 inch", price: "55 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs, cherries",
                     allergens: "flour, milk, eggs",
@@ -1577,7 +1581,8 @@ export const categories = [
                     itemDescription: "A moist banana sponge studded with toasted pecans, layered with banana pudding filling and finished with a tangy salted caramel cream cheese frosting.",
                     itemImages: [bananaCake, bananaCupcake],
                     quantityOptions: [
-                        {quantity: 1, price: "50 JOD"},
+                        {quantity:"2 layer 8 inch", price: "35 JOD"},
+                        {quantity: "3 layer 8 inch", price: "50 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs, pecans, banana",
                     allergens: "flour, milk eggs, nuts",
@@ -1593,7 +1598,8 @@ export const categories = [
                     itemDescription: "Tender spiced carrot cake with crunchy pecans, and plump golden raisins, filled and frosted with a orange mascarpone cream cheese frosting.",
                     itemImages: [carrotCake, carrotCupcake],
                     quantityOptions: [
-                        {quantity: 1, price: "50 JOD"},
+                        {quantity:"2 layer 8 inch", price: "35 JOD"},
+                        {quantity: "3 layer 8 inch", price: "50 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs, strawberry, white chocolate",
                     allergens: "flour, milk, eggs",
@@ -1607,7 +1613,8 @@ export const categories = [
                     itemDescription: "Strawberry Cake with strawberry mascarpone white chocolate ganache, roasted strawberry filling and fresh strawberries.",
                     itemImages: [strawberryCake, strawberryCupcake],
                     quantityOptions: [
-                        {quantity: 1, price: "55 JOD"},
+                        {quantity:"2 layer 8 inch", price: "40 JOD"},
+                        {quantity: "3 layer 8 inch", price: "55 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs, strawberry, white chocolate",
                     allergens: "flour, milk, eggs",
@@ -1623,7 +1630,8 @@ export const categories = [
                     itemDescription: "Classic Southern red velvet cake with a rich cocoa flavor, layered with tangy smooth cream cheese frosting.",
                     itemImages: [redVelvetCake, redVelvetCupcake],
                     quantityOptions: [
-                        {quantity: 1, price: "45 JOD"},
+                        {quantity:"2 layer 8 inch", price: "30 JOD"},
+                        {quantity: "3 layer 8 inch", price: "40 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs, cocoa powder",
                     allergens: "flour, milk, eggs",
