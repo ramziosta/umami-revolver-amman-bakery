@@ -1677,16 +1677,19 @@ export const categories = [
                     {
                         id: "tias-chocolate-lotus",
                         itemName: "Tia's Chocolate Lotus Cake",
-                        itemDescription: "When Tia couldn’t pick between chocolate cake or Lotus, we blended both into this indulgent treat — now her signature favorite.",
-                        itemPrice: 55.00,
+                        itemDescription: "When Tia couldn’t pick between chocolate cake or Lotus, we blended both into this indulgent 3 layer treat! — now her signature favorite. Rich chocolate cake layered with silky French Lotus Biscoff buttercreams, with Lotus drizzle and finished with more French chocolate buttercream a glossy chocolate ganache drip.",
+                        itemPrice: 75.00,
                         quantityOptions: [
-                            {quantity: 1, price: "45 JOD"},
+                            {quantity: "2 layer 8 inch", price: "55 JOD"},
+                            {quantity: "3 layer 8 inch", price: "75 JOD"},
                         ],
                         ingredients: "flour, sugar, milk, butter, eggs, chocolate",
                         allergens: "flour, eggs, milk",
                         seasonal: false,
-                        weight:  "3 layer 8 inch serves 12-14",
-                        variations: [],
+                        weight:  "3 layer 8 inch serves 14-16",
+                        variations: [
+
+                        ],
 
                         itemImages: [lotusCake]
                     },
