@@ -124,19 +124,19 @@ export default function ItemPage({ params }: ItemPageProps) {
                                 </h3>
                                 <p className="text-umami-black text-sm">{item.allergens}</p>
                             </div>
-                            <div>
-                                <h3 className="text-xl font-ppneuemontreal uppercase tracking-widest text-umami-charcoal mb-2">
-                                   Size   <span className="text-umami-charcoal lowercase text-sm"></span>
-                                </h3>
+                            {/*<div>*/}
+                            {/*    <h3 className="text-xl font-ppneuemontreal uppercase tracking-widest text-umami-charcoal mb-2">*/}
+                            {/*       Size   <span className="text-umami-charcoal lowercase text-sm"></span>*/}
+                            {/*    </h3>*/}
 
-                                <p className="text-umami-black text-sm">{item.weight}</p>
-                            </div>
+                            {/*    <p className="text-umami-black text-sm">{item.weight}</p>*/}
+                            {/*</div>*/}
                         </div>
 
                         {/* Quantity Options */}
                         <div>
                             <h3 className="text-xl font-ppneuemontreal uppercase tracking-widest text-umami-charcoal mb-4">
-                                Quantity & Pricing
+                                Size & Pricing
                             </h3>
                             <div className="space-y-3">
                                 {item.quantityOptions.map((option: QuantityOption, index: any) => {
