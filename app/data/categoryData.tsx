@@ -1565,7 +1565,8 @@ export const categories = [
                     itemDescription: "Soft coconut cake layered with German buttercream, passion fruit filling and finished with toasted coconut flakes.",
                     itemImages: [coconutCake, coconutCupcake],
                     quantityOptions: [
-                        {quantity: 1, price: "50 JOD"},
+                        {quantity:"2 layer 8 inch", price: "35 JOD"},
+                        {quantity: "3 layer 8 inch", price: "50 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs, coconut",
                     allergens: "flour, milk, eggs",
