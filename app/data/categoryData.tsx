@@ -7,6 +7,8 @@ import rye from "@/app/assets/peasantRye.jpg";
 import artisan from "@/app/assets/artisan.jpeg";
 import whiteSourdough1 from "@/app/assets/sourdough1.jpg";
 import whiteSourdough2 from "@/app/assets/sourdough2.jpg";
+import GFMultiGrainLoaf from "@/app/assets/GFMultiGrainLoaf.jpg";
+import gfWhiteBread from "@/app/assets/gfWhiteBread.jpg";
 
 import ciabatta from "@/app/assets/ciabatta.jpeg";
 import focaccia from "@/app/assets/focaccia.jpg";
@@ -236,7 +238,7 @@ export interface Category {
 export const categories = [
         {
             id: 'artisan-sourdoughs',
-            name: 'Artisan Sourdoughs',
+            name: 'Artisan Sourdoughs & Gluten Free',
             image: multiSeedSourdough,
             categoryDescription: 'We craft our breads with a unique blend of the finest local, French, and Italian flours, enriched with wholesome grains and seeds.',
             description: 'Using the best local and imported flours, grains and seeds.',
@@ -387,7 +389,64 @@ export const categories = [
                     },],
 
 
-                }
+                },
+                {
+                    id: 'gf-multigrain-bread',
+                    itemName: "Gluten-Free Multigrain Bread",
+                    itemDescription:
+                        "A hearty gluten-free loaf made with quinoa, brown rice, millet, and buckwheat flour, enriched with flaxseed and psyllium for natural structure and chew.",
+                    itemPrice: "",
+                    itemImages: [GFMultiGrainLoaf],
+                    quantityOptions: [
+                        { quantity: "1 Loaf", price: "10 JOD" },
+                        { quantity: "2 Loaves", price: "18 JOD" },
+                        { quantity: "3 Loaves", price: "27 JOD" },
+                    ],
+                    ingredients:
+                        "Quinoa flour, brown rice flour, millet flour, buckwheat flour, flaxseed, psyllium husk, water, salt, yeast.",
+                    allergens:
+                        "Prepared in a kitchen that processes eggs, dairy, and nuts.",
+                    seasonal: false,
+                    weight: 700,
+                    variations: [
+                        {
+                            id: "gf-multigrain-large",
+                            name: "700 g Loaf",
+                            description: "",
+                            price: "9 JOD",
+                            images: [GFMultiGrainLoaf],
+                        },
+                    ],
+                },
+
+                {
+                    id: 'gf-white-bread',
+                    itemName: "Gluten-Free White Bread",
+                    itemDescription:
+                        "Soft and light gluten-free bread made mainly with white rice flour and potato starch, balanced with flaxseed and psyllium for a tender crumb and perfect for toasting.",
+                    itemPrice: "",
+                    itemImages: [gfWhiteBread],
+                    quantityOptions: [
+                        { quantity: "1 Loaf", price: "9 JOD" },
+                        { quantity: "2 Loaves", price: "17 JOD" },
+                        { quantity: "3 Loaves", price: "25 JOD" },
+                    ],
+                    ingredients:
+                        "White rice flour, potato starch, flaxseed, psyllium husk, water, salt, yeast.",
+                    allergens:
+                        "Prepared in a kitchen that processes eggs, dairy, and nuts.",
+                    seasonal: false,
+                    weight: 700,
+                    variations: [
+                        {
+                            id: "gf-white-large",
+                            name: "700 g Loaf",
+                            description: "",
+                            price: "9 JOD",
+                            images: [gfWhiteBread],
+                        },
+                    ],
+                },
             ]
         },
         {
@@ -1756,8 +1815,8 @@ export const categories = [
                         ],
                         itemImages: [tiramisuCrepe],
                         quantityOptions: [
-                            {quantity: "20 Layers", price: "50 JOD"},
-                            {quantity: "30 Layers ", price: "60 JOD"},
+                            {quantity: "20 Layers", price: "45 JOD"},
+                            {quantity: "30 Layers ", price: "55 JOD"},
                         ],
                         ingredients: "flour, sugar, milk, butter, eggs, mascarpone, coffee",
                         allergens: "flour, milk, eggs",
