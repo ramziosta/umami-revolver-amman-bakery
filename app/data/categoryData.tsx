@@ -86,19 +86,22 @@ import lemonTiramisu from "@/app/assets/lemon-tiramisu.png";
 import teaTiramisu from "@/app/assets/tea-tiramisu.png";
 
 import tieredCake from "@/app/assets/tieredCake.png";
-import bananaCake from "@/app/assets/banana-cake.png";
+import bananaCake from "@/app/assets/dulceAndBanana.png";
+import bananaCake2 from "@/app/assets/dulceAndBanana2.png";
 import bananaCupcake from "@/app/assets/banana-cupcake.png";
 import chocolateCake from "@/app/assets/chocolate-cake.png";
 import chocolateCupcake from "@/app/assets/chocolate-cupcake.png";
 import germanChocolateCake from "@/app/assets/german-chocolate-cake.png";
 import germanChocolateCupcake from "@/app/assets/german-chocolate-cupcake.png";
 import coconutCupcake from "@/app/assets/coconut-cupcake.png";
-import strawberryCake from "@/app/assets/strawberry-cake.png";
+import strawberryCake from "@/app/assets/strawberryCake.jpg";
+import strawberryCake2 from "@/app/assets/strawberryCake2.jpg";
 import strawberryCupcake from "@/app/assets/strawberry-cupcake.png";
 import carrotCake from "@/app/assets/carrot-cake.png";
 import carrotCupcake from "@/app/assets/carrot-cupcake.png";
 import coconutCake from "@/app/assets/coconut-cake.png";
-import confettiCake from "@/app/assets/confetti-cake.png";
+import confettiCake from "@/app/assets/funfetti1.jpg";
+import confettiCake2 from "@/app/assets/funfetti2.jpg";
 import confettiCupcake from "@/app/assets/confetti-cupcake.png";
 import blackForestCake from "@/app/assets/black-forest-cake.png";
 import blackForestCupcake from "@/app/assets/black-forest-cupcake.png";
@@ -1556,7 +1559,7 @@ export const categories = [
                     id: "white-confetti-cake",
                     itemName: "Celebration Confetti Cake",
                     itemDescription: "Soft, fluffy vanilla bean cake layered with rainbow confetti sprinkles and filled with a light mascarpone whipped cream. Frosted in silky French buttercream and finished with a confetti sprinkle.",
-                    itemImages: [confettiCake, confettiCupcake],
+                    itemImages: [confettiCake,confettiCake2, confettiCupcake],
                     quantityOptions: [
                         {quantity:"2 layer 8 inch", price: "35 JOD"},
                         {quantity: "3 layer 8 inch", price: "50 JOD"},
@@ -1637,9 +1640,9 @@ export const categories = [
                 },
                 {
                     id: "banana-nut-cake",
-                    itemName: "Banana Pecan & Salted Caramel Cake",
-                    itemDescription: "A moist banana sponge studded with toasted pecans, layered with banana pudding filling and finished with a tangy salted caramel cream cheese frosting.",
-                    itemImages: [bananaCake, bananaCupcake],
+                    itemName: "Dulce and Banana",
+                    itemDescription: "A moist banana sponge studded with toasted pecans, layered with banana pudding filling and finished with a tangy cream cheese frosting and dulce de leche glaze.",
+                    itemImages: [bananaCake,bananaCake2, bananaCupcake],
                     quantityOptions: [
                         {quantity:"2 layer 8 inch", price: "35 JOD"},
                         {quantity: "3 layer 8 inch", price: "50 JOD"},
@@ -1671,7 +1674,7 @@ export const categories = [
                     id: "strawberry-cake",
                     itemName: "Roasted Strawberry White Chocolate ganache Cake",
                     itemDescription: "Strawberry Cake with strawberry mascarpone white chocolate ganache, roasted strawberry filling and fresh strawberries.",
-                    itemImages: [strawberryCake, strawberryCupcake],
+                    itemImages: [strawberryCake, strawberryCake2, strawberryCupcake],
                     quantityOptions: [
                         {quantity:"2 layer 8 inch", price: "40 JOD"},
                         {quantity: "3 layer 8 inch", price: "55 JOD"},
