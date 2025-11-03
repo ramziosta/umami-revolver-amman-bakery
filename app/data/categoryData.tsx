@@ -1573,7 +1573,7 @@ export const categories = [
                 {
                     id: "chocolate-cake",
                     itemName: "Triple Chocolate Cake",
-                    itemDescription: "Rich, moist dark chocolate sponge layered with milk chocolate pudding, chocolate crunch feuilletine and French chocolate buttercream.",
+                    itemDescription: "Rich, moist dark chocolate sponge layered with milk chocolate crèmeux, chocolate crunch feuilletine and French chocolate buttercream.",
                     itemImages: [chocolateCake, chocolateCupcake],
                     quantityOptions: [
                         {quantity:"2 layer 8 inch", price: "35 JOD"},
