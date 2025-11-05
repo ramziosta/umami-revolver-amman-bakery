@@ -43,9 +43,9 @@ const Navigation = () => {
                         </Link>
                         <Link
                             href="/contact"
-                            className="text-umami-black hover:text-zinc-600 transition-colors duration-300 border-b border-transparent hover:border-zinc-600 pb-1"
+                            className="text-umami-black text-bold hover:text-zinc-600 transition-colors duration-300 border-b border-transparent hover:border-zinc-600 pb-1"
                         >
-                            Contact
+                            Contact / Orders
                         </Link>
                         <Link
                             href="/location"

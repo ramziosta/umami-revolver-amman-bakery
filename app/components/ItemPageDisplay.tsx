@@ -166,7 +166,16 @@ export default function ItemPageDisplay({
                             className="w-full h-full object-cover"
                         />
                     </div>
+                    <div className=" mt-6 border p-6 hover:bg-zinc-300">
+                        <Link
+                            href="/contact"
+                            className="flex text-umami-black hover:text-zinc-600 justify-center transition-colors duration-300  border-transparent hover:border-zinc-600 p-1 text-lg"
+                        >
+                            Order
+                        </Link>
+                    </div>
                 </div>
+
             </section>
         </div>
     );

@@ -29,11 +29,15 @@ export default function ItemPage({ params }: ItemPageProps) {
 
     const [selectedImage, setSelectedImage] = useState(item.itemImages[0]);
     return (
-        <ItemPageDisplay
-            item={item}
-            category={category}
-            selectedImage={selectedImage}
-            setSelectedImage={setSelectedImage}
-        />
+        <>
+            <ItemPageDisplay
+                item={item}
+                category={category}
+                selectedImage={selectedImage}
+                setSelectedImage={setSelectedImage}
+            />
+
+
+        </>
     );
 }

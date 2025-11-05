@@ -17,7 +17,7 @@ const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => {
     const navigationItems = [
         { title: 'What We Bake', href: '/menu' },
         { title: 'About', href: '/about' },
-        { title: 'Contact', href: '/contact' },
+        { title: 'Contact / Orders', href: '/contact' },
     ];
 
     return (
