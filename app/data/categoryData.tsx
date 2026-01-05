@@ -107,6 +107,7 @@ import blackForestCake from "@/app/assets/black-forest-cake.png";
 import blackForestCupcake from "@/app/assets/black-forest-cupcake.png";
 import redVelvetCake from "@/app/assets/red-velvet-cake.png";
 import redVelvetCupcake from "@/app/assets/red-velvet-cupcake.png";
+import bucheCake from "@/app/assets/bucheDeNoel.jpeg";
 
 import brownies from "@/app/assets/brownies.jpg";
 import chocolateChip from "@/app/assets/chocolate-chip-cookies.jpg";
@@ -1542,8 +1543,7 @@ export const categories = [
                     itemDescription: "When Tia couldn’t pick between chocolate cake or Lotus, we blended both into this indulgent 3 layer treat! — now her signature favorite. Rich chocolate cake layered with silky French Lotus Biscoff buttercream, with Lotus drizzle and finished with more French chocolate buttercream a glossy chocolate ganache drip.",
                     itemPrice: 75.00,
                     quantityOptions: [
-                        {quantity: "2 layer 8 inch", price: "55 JOD"},
-                        {quantity: "3 layer 8 inch", price: "75 JOD"},
+                        {quantity: "3 layer 8 inch", price: "55 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs, chocolate",
                     allergens: "flour, eggs, milk",
@@ -1561,8 +1561,7 @@ export const categories = [
                     itemDescription: "Soft, fluffy vanilla bean cake layered with rainbow confetti sprinkles and filled with a light mascarpone whipped cream. Frosted in silky French buttercream and finished with a confetti sprinkle.",
                     itemImages: [confettiCake,confettiCake2, confettiCupcake],
                     quantityOptions: [
-                        {quantity:"2 layer 8 inch", price: "35 JOD"},
-                        {quantity: "3 layer 8 inch", price: "50 JOD"},
+                        {quantity: "3 layer 8 inch", price: "55 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs",
                     allergens: "flour, milk, eggs",
@@ -1576,8 +1575,7 @@ export const categories = [
                     itemDescription: "Rich, moist dark chocolate sponge layered with milk chocolate crèmeux, chocolate crunch feuilletine and French chocolate buttercream.",
                     itemImages: [chocolateCake, chocolateCupcake],
                     quantityOptions: [
-                        {quantity:"2 layer 8 inch", price: "35 JOD"},
-                        {quantity: "3 layer 8 inch", price: "50 JOD"},
+                        {quantity: "3 layer 8 inch", price: "55 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs, chocolate",
                     allergens: "flour, milk, eggs",
@@ -1593,7 +1591,6 @@ export const categories = [
                     itemDescription: "Moist dark chocolate sponge brushed with espresso syrup, layered with rich salted caramel ganache and a caramelized coconut-pecan filling, finished with dark chocolate french buttercream and toasted coconut flakes.",
                     itemImages: [germanChocolateCake, germanChocolateCupcake],
                     quantityOptions: [
-                        {quantity:"2 layer 8 inch", price: "40 JOD"},
                         {quantity: "3 layer 8 inch", price: "55 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs,coconut, pecans",
@@ -1627,8 +1624,7 @@ export const categories = [
                     itemDescription: "Soft coconut cake layered with German buttercream, passion fruit filling and finished with toasted coconut flakes.",
                     itemImages: [coconutCake, coconutCupcake],
                     quantityOptions: [
-                        {quantity:"2 layer 8 inch", price: "35 JOD"},
-                        {quantity: "3 layer 8 inch", price: "50 JOD"},
+                        {quantity: "3 layer 8 inch", price: "55 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs, coconut",
                     allergens: "flour, milk, eggs",
@@ -1644,8 +1640,7 @@ export const categories = [
                     itemDescription: "A moist banana sponge studded with toasted pecans, layered with banana pudding filling and finished with a tangy cream cheese frosting and dulce de leche glaze.",
                     itemImages: [bananaCake,bananaCake2, bananaCupcake],
                     quantityOptions: [
-                        {quantity:"2 layer 8 inch", price: "35 JOD"},
-                        {quantity: "3 layer 8 inch", price: "50 JOD"},
+                        {quantity: "3 layer 6x6x12 inch rectangular cake", price: "55 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs, pecans, banana",
                     allergens: "flour, milk eggs, nuts",
@@ -1657,18 +1652,17 @@ export const categories = [
                 },
                 {
                     id: "carrot-pecan-cake",
-                    itemName: "Spiced Carrot Cake with Citrus Cream Cheese & Pecan Praline",
-                    itemDescription: "Tender spiced carrot cake with crunchy pecans, and plump golden raisins, filled and frosted with a orange mascarpone cream cheese frosting.",
+                    itemName: "Brown Butter Carrot & Pecan Cake",
+                    itemDescription: "Three-layer spiced carrot cake made with brown butter, dual-cut carrots, toasted pecans, and a lactic-forward mascarpone–cream cheese frosting. Finished with honey carrot soak, a white chocolate feuilletine crunch, and crisp carrot curls.",
                     itemImages: [carrotCake, carrotCupcake],
                     quantityOptions: [
-                        {quantity:"2 layer 8 inch", price: "35 JOD"},
-                        {quantity: "3 layer 8 inch", price: "50 JOD"},
+                        { quantity: "3 layer 8 inch", price: "65 JOD" }
                     ],
-                    ingredients: "flour, sugar, milk, butter, eggs, strawberry, white chocolate",
-                    allergens: "flour, milk, eggs",
+                    ingredients: "flour, almond, sugar, butter, eggs, buttermilk, carrots, pecans, cream cheese, mascarpone",
+                    allergens: "gluten, milk, eggs, nuts",
                     seasonal: false,
                     weight: "3 Layer 8 inch",
-                    variations: [],
+                    variations: []
                 },
                 {
                     id: "strawberry-cake",
@@ -1689,21 +1683,46 @@ export const categories = [
                 },
                 {
                     id: "red-velvet-cake",
-                    itemName: "Original Southern Red Velvet Cake",
-                    itemDescription: "Classic Southern red velvet cake with a rich cocoa flavor, layered with tangy smooth cream cheese frosting.",
+                    itemName: "Ruby Red Velvet",
+                    itemDescription: "An ultra-refined ruby red velvet cake with a delicate cocoa note and moist, velvety crumb, layered with smooth tangy mascarpone cream cheese frosting for a clean, elegant finish.",
                     itemImages: [redVelvetCake, redVelvetCupcake],
                     quantityOptions: [
-                        {quantity:"2 layer 8 inch", price: "30 JOD"},
-                        {quantity: "3 layer 8 inch", price: "40 JOD"},
+                        {
+                            quantity: "2-layer 8 inch",
+                            price: 30,
+                            weight: "1.9–2.1 kg",
+                            serves: "10–12"
+                        },
+                        {
+                            quantity: "3-layer 8 inch",
+                            price: 40,
+                            weight: "2.6–2.9 kg",
+                            serves: "14–16"
+                        }
                     ],
-                    ingredients: "flour, sugar, milk, butter, eggs, cocoa powder",
-                    allergens: "flour, milk, eggs",
+                    ingredients: "flour, sugar, butter, eggs, buttermilk, cocoa powder, cream cheese, mascarpone",
+                    allergens: "gluten, milk, eggs",
                     seasonal: false,
-                    weight: "3 Layer 8 inch",
-                    variations: [],
-
-
+                    variations: [
+                        "extra mascarpone cream",
+                        "natural ruby color",
+                        "cupcake format"
+                    ]
                 },
+                {
+                    id: "buche-de-noel",
+                    itemName: "Bûche de Noël",
+                    itemDescription: "A delicate almond sponge layered with chocolate truffle, cookie praline, finished with ganache, topped with cookie crunch and strawberry dots.",
+                    itemImages: [bucheCake,],
+                    quantityOptions: [
+                        {quantity: "½ sheet (30x40 cm) ~12 slices", price: "45 JOD"}
+                    ],
+                    ingredients: "eggs, sugar, almond, cocoa, butter, chocolate, heavy cream",
+                    allergens: "eggs, milk, nuts, gluten",
+                    seasonal: true,
+                    weight: "½ sheet ~12 slices",
+                    variations: []
+                }
             ]
         },
         {
@@ -1796,7 +1815,6 @@ export const categories = [
                         [
                             "8 inch",
                             "20 layers",
-                            "30 layers"
                         ]
                 }
             ,
@@ -1808,23 +1826,19 @@ export const categories = [
                         itemDescription: "Classic tiramisu flavors layered with coffee-soaked crêpes and mascarpone cream.",
                         itemPrice: [
                             {
-                                size: "20 layers",
-                                price: 30
-                            },
-                            {
-                                size: "30 layers",
-                                price: 40
+                                size: "9 inch",
+                                price: 49
                             }
                         ],
                         itemImages: [tiramisuCrepe],
                         quantityOptions: [
-                            {quantity: "20 Layers", price: "45 JOD"},
-                            {quantity: "30 Layers ", price: "55 JOD"},
+                            {quantity: "9 inch", price: "59 JOD"},
+                            {quantity: "7 inch", price: "39 JOD"},
                         ],
                         ingredients: "flour, sugar, milk, butter, eggs, mascarpone, coffee",
                         allergens: "flour, milk, eggs",
                         seasonal: false,
-                        weight: "9 inch serves 12-14",
+                        weight: "9 inch serves 14-16",
                         variations: [],
 
 
@@ -1835,20 +1849,20 @@ export const categories = [
                         itemDescription: "Earthy matcha cream layered between delicate green tea crêpes.",
                         itemPrice: [
                             {
-                                size: "20 layers",
-                                price: 30
+                                size: "9 inch",
+                                price: 55
                             },
                             {
-                                size: "30 layers",
+                                size: "7 inch",
                                 price: 40
                             }
                         ],
                         itemImages: [matchaCrepe],
                         quantityOptions: [
-                            {quantity: "20 Layers", price: "40 JOD"},
-                            {quantity: "30 Layers (serves 18-20)", price: "50 JOD"},
+                            {quantity: "9 inch", price: "55 JOD"},
+                            {quantity: "7 inch", price: "40 JOD"},
                         ],
-                        ingredients: "flour, sugar, milk, butter, eggs, mascarpone, matcha",
+                        ingredients: "flour, sugar, milk, cream, butter, eggs, matcha",
                         allergens: "flour, milk, eggs",
                         seasonal: false,
                         weight: "9 inch serves 12-14",
@@ -1861,19 +1875,16 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "20 layers",
-                                price: 30
+                                price: 55
                             },
-                            {
-                                size: "30 layers",
-                                price: 40
-                            }
+
                         ],
                         itemImages: [cremeBruleeCrepe],
                         quantityOptions: [
-                            {quantity: "20 Layers", price: "35 JOD"},
-                            {quantity: "30 Layers (serves 18-20)", price: "45 JOD"},
+                            {quantity: "9 inch", price: "55 JOD"},
+                            {quantity: "7 inch", price: "38 JOD"},
                         ],
-                        ingredients: "flour, sugar, milk, butter, eggs, mascarpone",
+                        ingredients: "flour, sugar, milk,cream, butter, eggs, vanilla bean",
                         allergens: "flour, milk, eggs",
                         seasonal: false,
                         weight: "9 inch serves 12-14",

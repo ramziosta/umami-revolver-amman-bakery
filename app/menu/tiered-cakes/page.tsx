@@ -50,59 +50,59 @@ const Breadcrumb = () => (
 
 const CakePricingTable = () => (
     <section className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl lg:text-5xl text-umami-black font-ppneuemontreal text-center tracking-[0.3rem] mb-12">
-            Cake Size & Tier Pricing
-        </h2>
-        <span className="block text-center text-umami-black text-sm font-ppneuemontreal opacity-60 mt-2">
-          Prices shown are starting points — premium options & customizations available!
-        </span>
+        {/*<h2 className="text-3xl lg:text-5xl text-umami-black font-ppneuemontreal text-center tracking-[0.3rem] mb-12">*/}
+        {/*    Cake Size & Tier Pricing*/}
+        {/*</h2>*/}
+        {/*<span className="block text-center text-umami-black text-sm font-ppneuemontreal opacity-60 mt-2">*/}
+        {/*  Prices shown are starting points — premium options & customizations available!*/}
+        {/*</span>*/}
         <div className="overflow-x-auto px-4">
-            <table
-                className="w-full max-w-4xl mx-auto border-collapse shadow-lg overflow-hidden font-ppneuemontreal text-umami-black rounded-lg">
-                <thead>
-                <tr className="bg-umami-charcoal/20 text-umami-black tracking-wide">
-                    <th className="text-left font-medium py-3 px-4">Layers</th>
-                    <th className="text-left font-medium py-3 px-4">Diameter</th>
-                    <th className="text-left font-medium py-3 px-4">Servings</th>
-                    <th className="text-left font-medium py-3 px-4">Starting Price (JOD)</th>
-                </tr>
-                </thead>
-                <tbody>
-                {tieredCakes.cakePricing?.tiers?.map((tier) => (
-                    <React.Fragment key={tier.layers}>
-                        <tr className="bg-umami-charcoal/10 text-umami-black font-blanka text-base md:text-lg">
-                            <td className="py-2 px-4 tracking-wide" colSpan={4}>
-                                {tier.layers} Layer{tier.layers > 1 ? 's' : ''}
-                            </td>
-                        </tr>
-                        {tier.options.map((opt, idx) => (
-                            <tr
-                                key={`${tier.layers}-${opt.diameterInch}-${idx}`}
-                                className="hover:bg-umami-nube transition-colors duration-200 border-b border-umami-gray/20"
-                            >
-                                <td className="py-3 px-4"></td>
-                                <td className="py-3 px-4">{opt.diameterInch}"</td>
-                                <td className="py-3 px-4">{opt.servings}</td>
-                                <td className="py-3 px-4">{opt.price} JOD</td>
-                            </tr>
-                        ))}
-                    </React.Fragment>
-                )) || (
-                    <tr>
-                        <td colSpan={4} className="text-center italic py-8">
-                            No pricing information available
-                        </td>
-                    </tr>
-                )}
-                </tbody>
-            </table>
-            <p className="mt-4 text-center text-umami-black italic text-md opacity-80 font-ppneuemontreal">
-                Pricing includes classic cake base and simple buttercream finish.
-                Special frostings (French, German), signature fillings (lotus, fresh fruit, custards),
-                premium toppers, florals, or custom decorations may be added for an additional fee starting from 3–10
-                JOD.
-                Final pricing depends on design complexity and selected options.
-            </p>
+            {/*<table*/}
+            {/*    className="w-full max-w-4xl mx-auto border-collapse shadow-lg overflow-hidden font-ppneuemontreal text-umami-black rounded-lg">*/}
+            {/*    <thead>*/}
+            {/*    <tr className="bg-umami-charcoal/20 text-umami-black tracking-wide">*/}
+            {/*        <th className="text-left font-medium py-3 px-4">Layers</th>*/}
+            {/*        <th className="text-left font-medium py-3 px-4">Diameter</th>*/}
+            {/*        <th className="text-left font-medium py-3 px-4">Servings</th>*/}
+            {/*        <th className="text-left font-medium py-3 px-4">Starting Price (JOD)</th>*/}
+            {/*    </tr>*/}
+            {/*    </thead>*/}
+            {/*    <tbody>*/}
+            {/*    {tieredCakes.cakePricing?.tiers?.map((tier) => (*/}
+            {/*        <React.Fragment key={tier.layers}>*/}
+            {/*            <tr className="bg-umami-charcoal/10 text-umami-black font-blanka text-base md:text-lg">*/}
+            {/*                <td className="py-2 px-4 tracking-wide" colSpan={4}>*/}
+            {/*                    {tier.layers} Layer{tier.layers > 1 ? 's' : ''}*/}
+            {/*                </td>*/}
+            {/*            </tr>*/}
+            {/*            {tier.options.map((opt, idx) => (*/}
+            {/*                <tr*/}
+            {/*                    key={`${tier.layers}-${opt.diameterInch}-${idx}`}*/}
+            {/*                    className="hover:bg-umami-nube transition-colors duration-200 border-b border-umami-gray/20"*/}
+            {/*                >*/}
+            {/*                    <td className="py-3 px-4"></td>*/}
+            {/*                    <td className="py-3 px-4">{opt.diameterInch}"</td>*/}
+            {/*                    <td className="py-3 px-4">{opt.servings}</td>*/}
+            {/*                    <td className="py-3 px-4">{opt.price} JOD</td>*/}
+            {/*                </tr>*/}
+            {/*            ))}*/}
+            {/*        </React.Fragment>*/}
+            {/*    )) || (*/}
+            {/*        <tr>*/}
+            {/*            <td colSpan={4} className="text-center italic py-8">*/}
+            {/*                No pricing information available*/}
+            {/*            </td>*/}
+            {/*        </tr>*/}
+            {/*    )}*/}
+            {/*    </tbody>*/}
+            {/*</table>*/}
+            {/*<p className="mt-4 text-center text-umami-black italic text-md opacity-80 font-ppneuemontreal">*/}
+            {/*    Pricing includes classic cake base and simple buttercream finish.*/}
+            {/*    Special frostings (French, German), signature fillings (lotus, fresh fruit, custards),*/}
+            {/*    premium toppers, florals, or custom decorations may be added for an additional fee starting from 3–10*/}
+            {/*    JOD.*/}
+            {/*    Final pricing depends on design complexity and selected options.*/}
+            {/*</p>*/}
             <h2 className="text-3xl lg:text-5xl mt-6 text-umami-black font-ppneuemontreal text-center tracking-[0.3rem] mb-12">
                 Cupcake Pricing
             </h2>
@@ -290,7 +290,7 @@ export default function CakePage() {
         <div className="min-h-screen bg-umami-nube/50">
             <CakeHero/>
             <Breadcrumb />
-            <FrostingsAndFillings/>
+            {/*<FrostingsAndFillings/>*/}
             <div className="text-center my-10">
                 <p className="mt-8 text-center italic mb-6 text-umami-black text-base md:text-lg lg:text-xl font-ppneuemontreal">
                     Prefer cupcakes? Any of our cakes can be crafted into custom cupcakes — the same signature flavours,
@@ -303,7 +303,7 @@ export default function CakePage() {
                     Let’s Design Your Dream Cake
                 </Link>
             </div>
-            <CakesGrid/>
+           <CakesGrid/>
             <CakePricingTable/>
         </div>
     );
