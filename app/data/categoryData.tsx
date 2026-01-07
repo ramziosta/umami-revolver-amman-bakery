@@ -108,6 +108,7 @@ import blackForestCupcake from "@/app/assets/black-forest-cupcake.png";
 import redVelvetCake from "@/app/assets/red-velvet-cake.png";
 import redVelvetCupcake from "@/app/assets/red-velvet-cupcake.png";
 import bucheCake from "@/app/assets/bucheDeNoel.jpeg";
+import dateCake from "@/app/assets/dateCake.jpg";
 
 import brownies from "@/app/assets/brownies.jpg";
 import chocolateChip from "@/app/assets/chocolate-chip-cookies.jpg";
@@ -1721,6 +1722,20 @@ export const categories = [
                     allergens: "eggs, milk, nuts, gluten",
                     seasonal: true,
                     weight: "½ sheet ~12 slices",
+                    variations: []
+                },
+                {
+                    id: "date-mont-blanc-cake",
+                    itemName: "Mont Blanc Date Cake",
+                    itemDescription: "Date cake with almond sponge, date–mascarpone cream, halva–kataifi crunch, and a Mont Blanc–style date topping.",
+                    itemImages: [dateCake,],
+                    quantityOptions: [
+                        { quantity: "Rectangular cake (10 - 12 slices)", price: "45 JOD" }
+                    ],
+                    ingredients: "flour, almond, sugar, honey, butter, eggs, milk, dates, mascarpone, cream, halva, pistachio",
+                    allergens: "gluten, milk, eggs, nuts, sesame",
+                    seasonal: false,
+                    weight: "Rectangular 10 - 12 slices",
                     variations: []
                 }
             ]

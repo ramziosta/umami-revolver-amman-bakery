@@ -293,7 +293,7 @@ const ContactInfo: React.FC = () => (
                 <CardContent>
                     <p className="text-elegant">
                         <a href="mailto:hello@revolverbyumami.com" className="hover:text-gold transition-colors inline-flex items-center gap-2">
-                            umamiamman@gmail.com
+                            contact@umamiamman.com
                         </a>
                     </p>
                     <p className="text-xs text-muted-foreground mt-1">We respond within 4 hours</p>
