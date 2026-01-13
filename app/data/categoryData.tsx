@@ -2065,8 +2065,8 @@ export const categories = [
                         itemPrice: 40,
                         itemImages: [nyCheeseCake],
                         quantityOptions: [
-                            {quantity: "8 inch", price: "35 JOD"},
-                            {quantity: "9 inch", price: "40 JOD"},
+                            {quantity: "8 inch", price: "40 JOD"},
+                            {quantity: "9 inch", price: "50 JOD"},
                         ],
                         ingredients: "flour, eggs, sugar, butter, other",
                         allergens: "flour, eggs, dairy, other",
@@ -2081,8 +2081,8 @@ export const categories = [
                         itemPrice: 35,
                         itemImages: [noBakeCheesecake],
                         quantityOptions: [
-                            {quantity: "8 inch", price: "30 JOD"},
-                            {quantity: "9 inch", price: "35 JOD"},
+                            {quantity: "8 inch", price: "40 JOD"},
+                            {quantity: "9 inch", price: "50 JOD"},
                         ],
                         ingredients: "flour, eggs, sugar, butter, other",
                         allergens: "flour, eggs, dairy, other",
@@ -2097,8 +2097,9 @@ export const categories = [
                         itemPrice: 45,
                         itemImages: [burntBasqueCheesecake],
                         quantityOptions: [
-                            {quantity: "8 inch", price: "35 JOD"},
-                            {quantity: "9 inch", price: "40 JOD"},
+                            {quantity: "6 inch", price: "25 JOD"},
+                            {quantity: "8 inch", price: "45 JOD"},
+                            {quantity: "9 inch", price: "55 JOD"},
 
                         ],
                         ingredients: "flour, eggs, sugar, butter, other",
@@ -2114,8 +2115,8 @@ export const categories = [
                         itemPrice: 40,
                         itemImages: [ricottaCheesecake],
                         quantityOptions: [
-                            {quantity: "8 inch", price: "30 JOD"},
-                            {quantity: "9 inch", price: "40 JOD"},
+                            {quantity: "8 inch", price: "40 JOD"},
+                            {quantity: "9 inch", price: "50 JOD"},
 
                         ],
                         ingredients: "flour, eggs, sugar, butter, other",
@@ -2131,8 +2132,8 @@ export const categories = [
                         itemPrice: 40,
                         itemImages: [japaneseCheesecake],
                         quantityOptions: [
-                            {quantity: "8 inch", price: "30 JOD"},
-                            {quantity: "9 inch", price: "40 JOD"},
+                            {quantity: "8 inch", price: "40 JOD"},
+                            {quantity: "9 inch", price: "50 JOD"},
 
                         ],
                         ingredients: "flour, eggs, sugar, butter, other",
@@ -2148,8 +2149,8 @@ export const categories = [
                         itemPrice: 40,
                         itemImages: [swirlCheesecake],
                         quantityOptions: [
-                            {quantity: "8 inch", price: "35 JOD"},
-                            {quantity: "9 inch", price: "45 JOD"},
+                            {quantity: "8 inch", price: "45 JOD"},
+                            {quantity: "9 inch", price: "55 JOD"},
 
                         ],
                         ingredients: "flour, eggs, sugar, butter, other",
@@ -2165,8 +2166,8 @@ export const categories = [
                         itemPrice: 42,
                         itemImages: [goatCheesecake],
                         quantityOptions: [
-                            {quantity: "8 inch", price: "35 JOD"},
-                            {quantity: "9 inch", price: "45 JOD"},
+                            {quantity: "8 inch", price: "45 JOD"},
+                            {quantity: "9 inch", price: "55 JOD"},
                             {quantity: "Individual cake servings (minimum of 6)", price: "4 JOD"},
                         ],
                         ingredients: "flour, eggs, sugar, butter, other",
