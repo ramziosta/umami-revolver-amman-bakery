@@ -1544,7 +1544,7 @@ export const categories = [
                     itemDescription: "When Tia couldn’t pick between chocolate cake or Lotus, we blended both into this indulgent 3 layer treat! — now her signature favorite. Rich chocolate cake layered with silky French Lotus Biscoff buttercream, with Lotus drizzle and finished with more French chocolate buttercream a glossy chocolate ganache drip.",
                     itemPrice: 75.00,
                     quantityOptions: [
-                        {quantity: "3 layer 8 inch", price: "55 JOD"},
+                        {quantity: "3 layer 8 inch", price: "65 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs, chocolate",
                     allergens: "flour, eggs, milk",
