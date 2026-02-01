@@ -1576,7 +1576,7 @@ export const categories = [
                     itemDescription: "Rich, moist dark chocolate sponge layered with milk chocolate crèmeux, chocolate crunch feuilletine and French chocolate buttercream.",
                     itemImages: [chocolateCake, chocolateCupcake],
                     quantityOptions: [
-                        {quantity: "3 layer 8 inch", price: "55 JOD"},
+                        {quantity: "3 layer 8 inch", price: "65 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs, chocolate",
                     allergens: "flour, milk, eggs",
@@ -1625,7 +1625,7 @@ export const categories = [
                     itemDescription: "Soft coconut cake layered with German buttercream, passion fruit filling and finished with toasted coconut flakes.",
                     itemImages: [coconutCake, coconutCupcake],
                     quantityOptions: [
-                        {quantity: "3 layer 8 inch", price: "55 JOD"},
+                        {quantity: "3 layer 8 inch", price: "60 JOD"},
                     ],
                     ingredients: "flour, sugar, milk, butter, eggs, coconut",
                     allergens: "flour, milk, eggs",
@@ -3293,3 +3293,51 @@ export const categories = [
         }
     ]
 ;
+
+// Filtered categories for featured menu section
+// Import your images at the top of your actual component file
+
+export const featuredCategories = [
+    {
+        id: 'artisan-sourdoughs',
+        name: 'Artisan Sourdoughs & Gluten Free',
+        image: multiSeedSourdough, // Your imported image
+        description: 'Using the best local and imported flours, grains and seeds.',
+        itemCount: 7
+    },
+    {
+        id: 'cookies-bars-brownies',
+        name: 'Cookies, Bars & Brownies',
+        image: brownies, // Your imported image
+        description: 'Classic and creative sweet bites for any occasion.',
+        itemCount: 18
+    },
+    {
+        id: 'tiered-cakes',
+        name: 'Tiered Cakes & Cupcakes',
+        image: tieredCake, // Your imported image
+        description: 'Layered, tailored and unforgettable.',
+        itemCount: 12
+    },
+    {
+        id: 'specialty-cakes',
+        name: 'Specialty Cakes',
+        image: specialtyCakes, // Your imported image
+        description: 'Signature cakes with unique flavor combinations.',
+        itemCount: 4
+    },
+    {
+        id: 'mille-crepe-cakes',
+        name: 'Mille Crêpe Cakes',
+        image: milleCrepeCake, // Your imported image
+        description: 'Light, layered crêpe cakes filled with luscious creams.',
+        itemCount: 7
+    },
+    {
+        id: 'seasonal',
+        name: 'Seasonal Treats',
+        image: seasonal, // Your imported image
+        description: 'Inspired by the freshest seasonal ingredients.',
+        itemCount: 6
+    }
+];

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import {Card, CardContent} from '../ui/card';
 import Image from "next/image";
 
-import {categories} from "@/app/data/categoryData"
+import {featuredCategories} from "@/app/data/categoryData"
 
 
 const MenuPage = () => {
@@ -42,7 +42,7 @@ const MenuPage = () => {
             <section className="px-4 py-16 mb-10 sm:px-10 lg:px-20">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-                        {categories.map((category) => (
+                        {featuredCategories.map((category) => (
                             <Link href={`/menu/${category.id}`} key={category.id}>
                                 <Card
                                     className="group cursor-pointer overflow-hidden border border-umami-white shadow-sm hover:shadow-md transition-all duration-500">
