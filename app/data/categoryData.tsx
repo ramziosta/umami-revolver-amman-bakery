@@ -1050,31 +1050,31 @@ export const categories = [
                         itemPrice: 3.99,
 
                     },
-                    {
-                        id: "dark-chocolate-peanut-butter-chip",
-                        itemName: "Dark Chocolate Peanut Butter Chip",
-                        itemDescription: "Decadent dark chocolate cookie with peanut butter chips.",
-                        itemImages: [chocolatePeanut],
-                        quantityOptions: [
-                            {quantity: 4, price: "14 JOD"},
-                                 {quantity: 8, price: "25 JOD"},
-                            {quantity: 12, price: "32 JOD"},
-                            {quantity: 24, price: "55 JOD"},
-                        ],
-                        ingredients: "flour, sugar, butter, eggs, chocolate, peanut butter",
-                        allergens: "flour, sugar, butter, eggs, nuts",
-                        seasonal: false,
-                        weight: 70,
-                        variations: [],
-
-
-                        itemPrice: 3.99,
-
-                    },
+                    // {
+                    //     id: "dark-chocolate-peanut-butter-chip",
+                    //     itemName: "Dark Chocolate Peanut Butter Chip",
+                    //     itemDescription: "Decadent dark chocolate cookie with peanut butter chips.",
+                    //     itemImages: [chocolatePeanut],
+                    //     quantityOptions: [
+                    //         {quantity: 4, price: "14 JOD"},
+                    //              {quantity: 8, price: "25 JOD"},
+                    //         {quantity: 12, price: "32 JOD"},
+                    //         {quantity: 24, price: "55 JOD"},
+                    //     ],
+                    //     ingredients: "flour, sugar, butter, eggs, chocolate, peanut butter",
+                    //     allergens: "flour, sugar, butter, eggs, nuts",
+                    //     seasonal: false,
+                    //     weight: 70,
+                    //     variations: [],
+                    //
+                    //
+                    //     itemPrice: 3.99,
+                    //
+                    // },
                     {
                         id: "oatmeal-raisin",
-                        itemName: "Oatmeal Raisin",
-                        itemDescription: "Classic chewy cookie with plump black and golden raisins.",
+                        itemName: "Pecan Brittle and Oats",
+                        itemDescription: "Not your average oat cookie, its loaded with pecan brittle.",
                         itemImages: [oatmealRaisin],
                         quantityOptions: [
                             {quantity: 4, price: "14 JOD"},
@@ -1092,47 +1092,47 @@ export const categories = [
                         itemPrice: 3.99,
 
                     },
-                    {
-                        id: "lemon-drop",
-                        itemName: "Lemon Drop",
-                        itemDescription: "Zesty lemon cookie with white chocolate chips.",
-                        itemImages: [lemonDrop],
-                        quantityOptions: [
-                            {quantity: 4, price: "14 JOD"},
-                                 {quantity: 8, price: "25 JOD"},
-                            {quantity: 12, price: "32 JOD"},
-                            {quantity: 24, price: "55 JOD"},
-                        ],
-                        ingredients: "flour, sugar, butter, eggs, lemon, white chocolate",
-                        allergens: "flour, sugar, butter, eggs",
-                        seasonal: false,
-                        weight: 70,
-                        variations: [],
-
-
-                        itemPrice: 3.99,
-
-                    },
-                    {
-                        id: 'samoa-cookie',
-                        itemName: "Samoa Cookie",
-                        itemDescription: "Inspired by the Girl Scout classic: chocolate, gooey caramel, and toasted coconut over shortbread.",
-                        itemImages: [samoa],
-                        quantityOptions: [
-                            {quantity: 4, price: "14 JOD"},
-                                 {quantity: 8, price: "25 JOD"},
-                            {quantity: 12, price: "32 JOD"},
-                            {quantity: 24, price: "55 JOD"},
-                        ],
-                        ingredients: "flour, sugar, butter, eggs, chocolate, coconut",
-                        allergens: "flour, sugar, butter, eggs",
-                        seasonal: false,
-                        weight: 70,
-                        variations: [],
-
-
-                        itemPrice: 3.99,
-                    },
+                    // {
+                    //     id: "lemon-drop",
+                    //     itemName: "Lemon Drop",
+                    //     itemDescription: "Zesty lemon cookie with white chocolate chips.",
+                    //     itemImages: [lemonDrop],
+                    //     quantityOptions: [
+                    //         {quantity: 4, price: "14 JOD"},
+                    //              {quantity: 8, price: "25 JOD"},
+                    //         {quantity: 12, price: "32 JOD"},
+                    //         {quantity: 24, price: "55 JOD"},
+                    //     ],
+                    //     ingredients: "flour, sugar, butter, eggs, lemon, white chocolate",
+                    //     allergens: "flour, sugar, butter, eggs",
+                    //     seasonal: false,
+                    //     weight: 70,
+                    //     variations: [],
+                    //
+                    //
+                    //     itemPrice: 3.99,
+                    //
+                    // },
+                    // {
+                    //     id: 'samoa-cookie',
+                    //     itemName: "Samoa Cookie",
+                    //     itemDescription: "Inspired by the Girl Scout classic: chocolate, gooey caramel, and toasted coconut over shortbread.",
+                    //     itemImages: [samoa],
+                    //     quantityOptions: [
+                    //         {quantity: 4, price: "14 JOD"},
+                    //              {quantity: 8, price: "25 JOD"},
+                    //         {quantity: 12, price: "32 JOD"},
+                    //         {quantity: 24, price: "55 JOD"},
+                    //     ],
+                    //     ingredients: "flour, sugar, butter, eggs, chocolate, coconut",
+                    //     allergens: "flour, sugar, butter, eggs",
+                    //     seasonal: false,
+                    //     weight: 70,
+                    //     variations: [],
+                    //
+                    //
+                    //     itemPrice: 3.99,
+                    // },
                     {
                         id: "stamped-sugar-cookies",
                         itemName: "Stamped Sugar Cookies",
@@ -1207,26 +1207,26 @@ export const categories = [
 
                         itemPrice: 3.99,
                     },
-                    {
-                        id: "red-velvet-macadamia",
-                        itemName: "Red Velvet Macadamia",
-                        itemDescription: "Chewy, crunchy red velvet cookie with macadamia nuts and chocolate chips.",
-                        itemImages: [redVelvetCookie],
-                        quantityOptions: [
-                            {quantity: 4, price: "14 JOD"},
-                                 {quantity: 8, price: "25 JOD"},
-                            {quantity: 12, price: "32 JOD"},
-                            {quantity: 24, price: "55 JOD"},
-                        ],
-                        ingredients: "flour, sugar, butter, eggs, macadamia nuts, chocolate",
-                        allergens: "flour, eggs, butter, nuts",
-                        seasonal: false,
-                        weight: 60,
-                        variations: [],
-
-
-                        itemPrice: 3.99,
-                    },
+                    // {
+                    //     id: "red-velvet-macadamia",
+                    //     itemName: "Red Velvet Macadamia",
+                    //     itemDescription: "Chewy, crunchy red velvet cookie with macadamia nuts and chocolate chips.",
+                    //     itemImages: [redVelvetCookie],
+                    //     quantityOptions: [
+                    //         {quantity: 4, price: "14 JOD"},
+                    //              {quantity: 8, price: "25 JOD"},
+                    //         {quantity: 12, price: "32 JOD"},
+                    //         {quantity: 24, price: "55 JOD"},
+                    //     ],
+                    //     ingredients: "flour, sugar, butter, eggs, macadamia nuts, chocolate",
+                    //     allergens: "flour, eggs, butter, nuts",
+                    //     seasonal: false,
+                    //     weight: 60,
+                    //     variations: [],
+                    //
+                    //
+                    //     itemPrice: 3.99,
+                    // },
                     {
                         id: "gf-chocolate-chip",
                         itemName: "GF Chocolate Chip",
@@ -1247,46 +1247,46 @@ export const categories = [
 
                         itemPrice: 3.99,
                     },
-                    {
-                        id: "limoncello-cheesecake-bars",
-                        itemName: "Limoncello Cheesecake Bars",
-                        itemDescription: "Citrusy, creamy cheesecake bars with a fresh zest.",
-                        itemImages: [limoncelloBar],
-                        quantityOptions: [
-                            {quantity: 4, price: "14 JOD"},
-                                 {quantity: 8, price: "25 JOD"},
-                            {quantity: 12, price: "32 JOD"},
-                            {quantity: 24, price: "55 JOD"},
-                        ],
-                        ingredients: "flour, sugar, butter, eggs, corn, lemon",
-                        allergens: "flour, sugar, butter, eggs, corn",
-                        seasonal: false,
-                        weight: 100,
-                        variations: [],
-
-
-                        itemPrice: 3.99,
-                    },
-                    {
-                        id: "strawberry-crumble-bar",
-                        itemName: "Strawberry Crumble",
-                        itemDescription: "Soft, chewy bar with strawberry filling and crunchy streusel topping.",
-                        itemImages: [strawberryCrumble],
-                        quantityOptions: [
-                            {quantity: 4, price: "14 JOD"},
-                                 {quantity: 8, price: "25 JOD"},
-                            {quantity: 12, price: "32 JOD"},
-                            {quantity: 24, price: "55 JOD"},
-                        ],
-                        ingredients: "flour, sugar, butter, eggs, strawberry",
-                        allergens: "flour, butter eggs",
-                        seasonal: false,
-                        weight: 100,
-                        variations: [],
-
-
-                        itemPrice: 3.99,
-                    },
+                    // {
+                    //     id: "limoncello-cheesecake-bars",
+                    //     itemName: "Limoncello Cheesecake Bars",
+                    //     itemDescription: "Citrusy, creamy cheesecake bars with a fresh zest.",
+                    //     itemImages: [limoncelloBar],
+                    //     quantityOptions: [
+                    //         {quantity: 4, price: "14 JOD"},
+                    //              {quantity: 8, price: "25 JOD"},
+                    //         {quantity: 12, price: "32 JOD"},
+                    //         {quantity: 24, price: "55 JOD"},
+                    //     ],
+                    //     ingredients: "flour, sugar, butter, eggs, corn, lemon",
+                    //     allergens: "flour, sugar, butter, eggs, corn",
+                    //     seasonal: false,
+                    //     weight: 100,
+                    //     variations: [],
+                    //
+                    //
+                    //     itemPrice: 3.99,
+                    // },
+                    // {
+                    //     id: "strawberry-crumble-bar",
+                    //     itemName: "Strawberry Crumble",
+                    //     itemDescription: "Soft, chewy bar with strawberry filling and crunchy streusel topping.",
+                    //     itemImages: [strawberryCrumble],
+                    //     quantityOptions: [
+                    //         {quantity: 4, price: "14 JOD"},
+                    //              {quantity: 8, price: "25 JOD"},
+                    //         {quantity: 12, price: "32 JOD"},
+                    //         {quantity: 24, price: "55 JOD"},
+                    //     ],
+                    //     ingredients: "flour, sugar, butter, eggs, strawberry",
+                    //     allergens: "flour, butter eggs",
+                    //     seasonal: false,
+                    //     weight: 100,
+                    //     variations: [],
+                    //
+                    //
+                    //     itemPrice: 3.99,
+                    // },
                     {
                         id: "millionaire-shortbread",
                         itemName: "Millionaire Shortbread",
@@ -1307,26 +1307,26 @@ export const categories = [
 
                         itemPrice: 3.99,
                     },
-                    {
-                        id: "brownie-tahini-swirls",
-                        itemName: "Brownie with Tahini Swirls",
-                        itemDescription: "Rich brownie with tahini swirls and halva bits.",
-                        itemImages: [tahiniBrownie],
-                        quantityOptions: [
-                            {quantity: 4, price: "14 JOD"},
-                                 {quantity: 8, price: "25 JOD"},
-                            {quantity: 12, price: "32 JOD"},
-                            {quantity: 24, price: "55 JOD"},
-                        ],
-                        ingredients: "flour, sugar, butter, eggs, sesame",
-                        allergens: "flour, butter, eggs",
-                        seasonal: false,
-                        weight: 100,
-                        variations: [],
-
-
-                        itemPrice: 3.99,
-                    },
+                    // {
+                    //     id: "brownie-tahini-swirls",
+                    //     itemName: "Brownie with Tahini Swirls",
+                    //     itemDescription: "Rich brownie with tahini swirls and halva bits.",
+                    //     itemImages: [tahiniBrownie],
+                    //     quantityOptions: [
+                    //         {quantity: 4, price: "14 JOD"},
+                    //              {quantity: 8, price: "25 JOD"},
+                    //         {quantity: 12, price: "32 JOD"},
+                    //         {quantity: 24, price: "55 JOD"},
+                    //     ],
+                    //     ingredients: "flour, sugar, butter, eggs, sesame",
+                    //     allergens: "flour, butter, eggs",
+                    //     seasonal: false,
+                    //     weight: 100,
+                    //     variations: [],
+                    //
+                    //
+                    //     itemPrice: 3.99,
+                    // },
                     {
                         id: "rich-brownies",
                         itemName: "Rich a$ Fu$k Brownie$",
@@ -1383,24 +1383,24 @@ export const categories = [
                         variations: [],
                         itemPrice: 3.99,
                     },
-                    {
-                        id: "red-velvet-cream-cheese-brownies",
-                        itemName: "Red Velvet & Cream Cheese Brownies",
-                        itemDescription: "Light chocolate brownies with a swirl of tangy cream cheese.",
-                        itemImages: [redVelvetBrownie],
-                        quantityOptions: [
-                            {quantity: 4, price: "14 JOD"},
-                                 {quantity: 8, price: "25 JOD"},
-                            {quantity: 12, price: "32 JOD"},
-                            {quantity: 24, price: "55 JOD"},
-                        ],
-                        ingredients: "flour, sugar, butter, eggs, chocolate, cream cheese",
-                        allergens: "flour, dairy, eggs",
-                        seasonal: false,
-                        weight: 100,
-                        variations: [],
-                        itemPrice: 3.99,
-                    }
+                    // {
+                    //     id: "red-velvet-cream-cheese-brownies",
+                    //     itemName: "Red Velvet & Cream Cheese Brownies",
+                    //     itemDescription: "Light chocolate brownies with a swirl of tangy cream cheese.",
+                    //     itemImages: [redVelvetBrownie],
+                    //     quantityOptions: [
+                    //         {quantity: 4, price: "14 JOD"},
+                    //              {quantity: 8, price: "25 JOD"},
+                    //         {quantity: 12, price: "32 JOD"},
+                    //         {quantity: 24, price: "55 JOD"},
+                    //     ],
+                    //     ingredients: "flour, sugar, butter, eggs, chocolate, cream cheese",
+                    //     allergens: "flour, dairy, eggs",
+                    //     seasonal: false,
+                    //     weight: 100,
+                    //     variations: [],
+                    //     itemPrice: 3.99,
+                    // }
                 ]
         },
         {
