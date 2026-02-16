@@ -403,9 +403,7 @@ export const categories = [
                     itemPrice: "",
                     itemImages: [GFMultiGrainLoaf],
                     quantityOptions: [
-                        { quantity: "1 Loaf", price: "10 JOD" },
-                        { quantity: "2 Loaves", price: "18 JOD" },
-                        { quantity: "3 Loaves", price: "27 JOD" },
+
                     ],
                     ingredients:
                         "Quinoa flour, brown rice flour, millet flour, buckwheat flour, flaxseed, psyllium husk, water, salt, yeast.",
@@ -416,9 +414,9 @@ export const categories = [
                     variations: [
                         {
                             id: "gf-multigrain-large",
-                            name: "700 g Loaf",
+                            name: "Loaf",
                             description: "",
-                            price: "9 JOD",
+                            price: "10 JOD",
                             images: [GFMultiGrainLoaf],
                         },
                     ],
@@ -432,9 +430,6 @@ export const categories = [
                     itemPrice: "",
                     itemImages: [gfWhiteBread],
                     quantityOptions: [
-                        { quantity: "1 Loaf", price: "9 JOD" },
-                        { quantity: "2 Loaves", price: "17 JOD" },
-                        { quantity: "3 Loaves", price: "25 JOD" },
                     ],
                     ingredients:
                         "White rice flour, potato starch, flaxseed, psyllium husk, water, salt, yeast.",
@@ -445,9 +440,9 @@ export const categories = [
                     variations: [
                         {
                             id: "gf-white-large",
-                            name: "700 g Loaf",
+                            name: "Loaf",
                             description: "",
-                            price: "9 JOD",
+                            price: "8 JOD",
                             images: [gfWhiteBread],
                         },
                     ],
