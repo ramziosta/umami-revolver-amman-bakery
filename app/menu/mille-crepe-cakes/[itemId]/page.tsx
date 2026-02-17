@@ -133,8 +133,8 @@ export default function ItemPage({ params }: ItemPageProps) {
                                 <h3 className="text-xl font-ppneuemontreal uppercase tracking-widest text-umami-charcoal mb-2">
                                     Available Sizes
                                 </h3>
-                                <p className="text-umami-black text-sm">9 inch (serves 14-16)</p>
-                                <p className="text-umami-black text-sm"> 7 inch (serves 12-14)</p>
+                                <p className="text-umami-black text-sm">9 inch (serves 16-18)</p>
+                                <p className="text-umami-black text-sm"> 8 inch (serves 12-14)</p>
 
                             </div>
                         </div>

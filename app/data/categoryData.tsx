@@ -1842,8 +1842,8 @@ export const categories = [
                         ],
                         itemImages: [tiramisuCrepe],
                         quantityOptions: [
-                            {quantity: "9 inch", price: "59 JOD"},
-                            {quantity: "7 inch", price: "39 JOD"},
+                            {quantity: "9 inch", price: "60 JOD"},
+                            {quantity: "8 inch", price: "45 JOD"},
                         ],
                         ingredients: "flour, sugar, milk, butter, eggs, mascarpone, coffee",
                         allergens: "flour, milk, eggs",
@@ -1860,17 +1860,17 @@ export const categories = [
                         itemPrice: [
                             {
                                 size: "9 inch",
-                                price: 55
+                                price: 60
                             },
                             {
                                 size: "7 inch",
-                                price: 40
+                                price: 45
                             }
                         ],
                         itemImages: [matchaCrepe],
                         quantityOptions: [
-                            {quantity: "9 inch", price: "55 JOD"},
-                            {quantity: "7 inch", price: "40 JOD"},
+                            {quantity: "9 inch", price: "60 JOD"},
+                            {quantity: "8 inch", price: "45 JOD"},
                         ],
                         ingredients: "flour, sugar, milk, cream, butter, eggs, matcha",
                         allergens: "flour, milk, eggs",
@@ -1892,7 +1892,7 @@ export const categories = [
                         itemImages: [cremeBruleeCrepe],
                         quantityOptions: [
                             {quantity: "9 inch", price: "55 JOD"},
-                            {quantity: "7 inch", price: "38 JOD"},
+                            {quantity: "8 inch", price: "38 JOD"},
                         ],
                         ingredients: "flour, sugar, milk,cream, butter, eggs, vanilla bean",
                         allergens: "flour, milk, eggs",
@@ -1916,8 +1916,8 @@ export const categories = [
                         ],
                         itemImages: [milkTeaCrepe],
                         quantityOptions: [
-                            {quantity: "20 Layers", price: "40 JOD"},
-                            {quantity: "30 Layers (serves 18-20)", price: "50 JOD"},
+                            {quantity: "9 inch", price: "60 JOD"},
+                            {quantity: "8 inch", price: "45 JOD"},
                         ],
                         ingredients: "flour, sugar, milk, butter, eggs, mascarpone, earl grey tea",
                         allergens: "flour, milk, eggs",
@@ -1943,8 +1943,8 @@ export const categories = [
                         ],
                         itemImages: [milleCrepeCake],
                         quantityOptions: [
-                            {quantity: "20 Layers", price: "45 JOD"},
-                            {quantity: "30 Layers (serves 18-20)", price: "55 JOD"},
+                            {quantity: "9 inch", price: "60 JOD"},
+                            {quantity: "8 inch", price: "45 JOD"},
                         ],
                         ingredients: "flour, sugar, milk, butter, eggs, mascarpone, chocolate",
                         allergens: "flour, milk, eggs",
@@ -1970,8 +1970,8 @@ export const categories = [
                         ],
                         itemImages: [pistachioCrepe],
                         quantityOptions: [
-                            {quantity: "20 Layers", price: "50 JOD"},
-                            {quantity: "30 Layers (serves 18-20)", price: "60 JOD"},
+                            {quantity: "9 inch", price: "60 JOD"},
+                            {quantity: "8 inch", price: "45 JOD"},
                         ],
                         ingredients: "flour, sugar, milk, butter, eggs, mascarpone, pistachio, matcha",
                         allergens: "flour, milk, eggs, nuts",
@@ -1997,8 +1997,8 @@ export const categories = [
                         ],
                         itemImages: [raspberryCrepe],
                         quantityOptions: [
-                            {quantity: "20 Layers", price: "55 JOD"},
-                            {quantity: "30 Layers (serves 18-20)", price: "65 JOD"},
+                            {quantity: "9 inch", price: "60 JOD"},
+                            {quantity: "8 inch", price: "45 JOD"},
                         ],
                         ingredients: "flour, sugar, milk, butter, eggs, mascarpone, white chocolate, raspberry, almond",
                         allergens: "flour, milk, eggs, nuts",
