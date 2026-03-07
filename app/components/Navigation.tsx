@@ -17,7 +17,7 @@ const Navigation = () => {
                     <Link href="/">
                         <div className="flex items-center flex-col group ">
                             <h1 className="text-4xl lg:text-5xl font-blanka tracking-tight group-hover:text-zinc-600 transition-colors duration-300">
-                                UMAMI AMMAN
+                                Umami Amman
                             </h1>
                             <span
                                 className="text-sm text-umami-charcoal italic group-hover:text-zinc-600 transition-colors duration-300">Artisan
