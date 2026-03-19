@@ -5,132 +5,146 @@ import whatsapp from "../assets/whatsapp.png";
 
 const Footer = () => {
     return (
-        <footer className="bg-umami-black text-umami-nube">
-            <div className="container mx-auto px-4 py-20">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <footer className="bg-umami-carbon">
+            {/* CTA Section */}
+            <div className="border-b border-umami-dim-grey/20 py-20 md:py-24">
+                <div className="container mx-auto px-6 md:px-12 lg:px-16 text-center">
+                    <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-8" style={{ color: '#C9A96E' }}>
+                        Ready to Taste It
+                    </p>
+                    <p className="font-display italic text-umami-linen/80 text-2xl md:text-3xl lg:text-4xl max-w-2xl mx-auto leading-snug mb-10">
+                        Everything here is made with intention.<br />
+                        Come experience what the standard should be.
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4">
+                        <Link
+                            href="/menu"
+                            className="inline-flex items-center font-structural text-[0.55rem] tracking-[0.28em] uppercase px-8 py-3.5 transition-all duration-300"
+                            style={{ backgroundColor: '#C9A96E', color: '#F0ECE4' }}
+                        >
+                            Explore the Menu &rarr;
+                        </Link>
+                        <Link
+                            href="/contact"
+                            className="inline-flex items-center font-structural text-[0.55rem] tracking-[0.28em] uppercase px-8 py-3.5 border border-umami-linen/30 text-umami-linen/80 hover:bg-umami-linen/5 transition-all duration-300"
+                        >
+                            Place an Order
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
+            {/* Footer Content */}
+            <div className="container mx-auto px-6 md:px-12 lg:px-16 py-16">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     {/* Brand */}
-                    <div className="md:col-span-2">
-                        <Link href="/public">
-                            <div className="flex flex-col text-umami-white group mb-4">
-                                <h1 className="text-4xl font-blanka tracking-tight group-hover:text-zinc-400 transition-colors duration-300">
-                                    UMAMI AMMAN
-                                </h1>
-                                <span className="text-sm italic group-hover:text-zinc-400 transition-colors duration-300">
-              Artisan Viennoiserie & Pâtisserie
-            </span>
+                    <div>
+                        <Link href="/">
+                            <div className="flex flex-col group mb-6">
+                                <span className="text-2xl font-wordmark text-umami-linen group-hover:text-umami-taupe transition-colors duration-300">
+                                    Umami
+                                </span>
+                                <span className="text-[0.5rem] font-structural tracking-[0.35em] uppercase text-umami-dim-grey">
+                                    Amman
+                                </span>
                             </div>
                         </Link>
-                        <p className="font-ppneuemontreal text-base leading-relaxed max-w-md mb-6 text-umami-nube">
-                            Crafting exceptional baked goods with passion, precision and the finest ingredients.
-                            From our kitchen to your table — every bite tells a story.
+                        <p className="font-body font-light text-[0.78rem] leading-[1.8] text-umami-taupe max-w-xs">
+                            Artisan Viennoiserie & Pâtisserie
                         </p>
-                        <div className="flex space-x-4">
+                    </div>
+
+                    {/* Links */}
+                    <div>
+                        <p className="text-[0.52rem] font-structural tracking-[0.35em] uppercase text-umami-dim-grey mb-6">
+                            Navigate
+                        </p>
+                        <nav className="flex flex-col space-y-3">
                             <Link
+                                href="/menu"
+                                className="font-body font-light text-[0.82rem] text-umami-taupe hover:text-umami-linen transition-colors duration-300"
+                            >
+                                Menu
+                            </Link>
+                            <Link
+                                href="/about"
+                                className="font-body font-light text-[0.82rem] text-umami-taupe hover:text-umami-linen transition-colors duration-300"
+                            >
+                                Our Story
+                            </Link>
+                            <Link
+                                href="/contact"
+                                className="font-body font-light text-[0.82rem] text-umami-taupe hover:text-umami-linen transition-colors duration-300"
+                            >
+                                Contact
+                            </Link>
+                        </nav>
+                    </div>
+
+                    {/* Connect */}
+                    <div>
+                        <p className="text-[0.52rem] font-structural tracking-[0.35em] uppercase text-umami-dim-grey mb-6">
+                            Connect
+                        </p>
+                        <nav className="flex flex-col space-y-3">
+                            <a
                                 href="https://instagram.com/umamiamman"
-                                className="hover:text-zinc-400 transition-colors duration-300"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-body font-light text-[0.82rem] text-umami-taupe hover:text-umami-linen transition-colors duration-300"
                             >
                                 Instagram
-                            </Link>
-                            <Link
-                                href="https://www.facebook.com/profile.php?id=61570837547092#"
-                                className="hover:text-zinc-400 transition-colors duration-300"
+                            </a>
+                            <a
+                                href="https://wa.me/962790894715"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-body font-light text-[0.82rem] text-umami-taupe hover:text-umami-linen transition-colors duration-300"
                             >
-                                Facebook
-                            </Link>
-                            <Link
-                                href="/twitter"
-                                className="hover:text-zinc-400 transition-colors duration-300"
+                                WhatsApp
+                            </a>
+                            <a
+                                href="mailto:contact@umamiamman.com"
+                                className="font-body font-light text-[0.82rem] text-umami-taupe hover:text-umami-linen transition-colors duration-300"
                             >
-                                Twitter
-                            </Link>
-                        </div>
-                    </div>
-
-                    {/* Quick Links */}
-                    <div>
-                        <h4 className="text-lg font-blanka lg:text-2xl mb-4 tracking-wide">Quick Links</h4>
-                        <ul className="space-y-2">
-                            <li>
-                                <Link
-                                    href="/menu"
-                                    className="hover:text-zinc-400 transition-colors duration-300"
-                                >
-                                    What We Bake
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/about"
-                                    className="hover:text-zinc-400 transition-colors duration-300"
-                                >
-                                    About Us
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/contact"
-                                    className="hover:text-zinc-400 transition-colors duration-300"
-                                >
-                                    Contact
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Policy Links */}
-                    <div>
-                        <h4 className="text-lg lg:text-2xl font-blanka mb-4 tracking-wide">Info</h4>
-                        <ul className="space-y-2">
-                            <li>
-                                <Link
-                                    href="/privacy"
-                                    className="hover:text-zinc-400 transition-colors duration-300"
-                                >
-                                    Privacy Policy
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/terms"
-                                    className="hover:text-zinc-400 transition-colors duration-300"
-                                >
-                                    Terms of Service
-                                </Link>
-                            </li>
-                        </ul>
+                                contact@umamiamman.com
+                            </a>
+                        </nav>
                     </div>
                 </div>
 
-                <div className="border-t border-umami-nube mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                    <p className="text-sm text-umami-nube mb-4 md:mb-0">
-                        © 2025 Umami Bakery. All rights reserved.
+                {/* Bottom Bar */}
+                <div className="border-t border-umami-dim-grey/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p className="font-body font-light text-[0.72rem] text-umami-dim-grey">
+                        © {new Date().getFullYear()} Umami Amman. All rights reserved.
                     </p>
-                    <div className="flex space-x-6 text-sm">
+                    <div className="flex space-x-6">
                         <Link
                             href="/privacy"
-                            className="hover:text-zinc-400 transition-colors duration-300"
+                            className="font-body font-light text-[0.72rem] text-umami-dim-grey hover:text-umami-taupe transition-colors duration-300"
                         >
                             Privacy
                         </Link>
                         <Link
                             href="/terms"
-                            className="hover:text-zinc-400 transition-colors duration-300"
+                            className="font-body font-light text-[0.72rem] text-umami-dim-grey hover:text-umami-taupe transition-colors duration-300"
                         >
                             Terms
                         </Link>
                     </div>
                 </div>
             </div>
+
+            {/* WhatsApp Floating Button */}
             <a
                 href="https://wa.me/962790894715"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg z-50"
+                className="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1da851] p-3 rounded-full shadow-lg z-50 transition-colors duration-300"
             >
-                <Image src={whatsapp} alt="WhatsApp" className="h-12 w-12" />
+                <Image src={whatsapp} alt="WhatsApp" className="h-10 w-10" />
             </a>
         </footer>
-
     );
 };
 

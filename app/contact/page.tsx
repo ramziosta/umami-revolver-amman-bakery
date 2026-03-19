@@ -61,7 +61,7 @@ const FAQ = () => {
                         },
                         {
                             q: "What are your delivery options?",
-                            a: "We offer delivery in Amman and surrounding areas. Delivery is free for orders over 60 JOD — otherwise there’s a 3 JOD delivery fee. If you live outside Amman, please check with us to confirm availability."
+                            a: "We offer delivery in Amman and surrounding areas. Delivery is free for orders over 60 JOD — otherwise there’s a 5 JOD delivery fee. If you live outside Amman, please check with us to confirm availability."
                         },
                         {
                             q: "Do you have gluten-free options?",
@@ -97,8 +97,7 @@ const FAQ = () => {
 const Contact = () => {
     return (
         <div className="min-h-screen ">
-            <ContactHero/>
-            <Suspense fallback={<div>Loading...</div>}>
+                   <Suspense fallback={<div>Loading...</div>}>
             <ContactClient />
             </Suspense>
             <FAQ/>

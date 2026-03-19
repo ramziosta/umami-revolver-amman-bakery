@@ -32,7 +32,6 @@ export default function RootLayout({
     `}
         </Script>
         <CartProvider>
-            <ConditionalNotice />
             <Navigation/>
             {children}
             <Footer/>

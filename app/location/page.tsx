@@ -21,11 +21,14 @@ export default function ComingSoon() {
 
                 {/* Hero Content */}
                 <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-[20vh] md:pt-0">
-                    <h1 className="text-5xl md:text-7xl lg:text-9xl font-blanka text-umami-nube tracking-[0.1em] mb-6">
-                        UMAMI AMMAN
+                    <h1 className="font-wordmark text-umami-gold text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-tight leading-[0.95] mb-2">
+                        Umami
                     </h1>
+                    <p className="text-umami-linen text-[1.5rem] font-structural tracking-[0.35em] uppercase">Amman</p>
+                    <br />
+                    <br />
 
-                    <p className="max-w-2xl mx-auto font-ppneuemontreal text-umami-nube text-lg md:text-xl xl:text-3xl tracking-[0.05em] leading-relaxed">
+                    <p className="max-w-2xl mx-auto text-umami-linen text-umami-nube text-lg md:text-xl xl:text-3xl tracking-[0.05em] leading-relaxed">
                         Our location is coming soon! Sign up to get notified.
                     </p>
 
@@ -45,13 +48,13 @@ export default function ComingSoon() {
                             />
                             <button
                                 type="submit"
-                                className="bg-black text-white px-6 py-2 font-ppneuemontreal rounded-md hover:bg-gray-800 transition"
+                                className="bg-umami-gold text-white px-6 py-2 font-ppneuemontreal rounded-md hover:bg-umami-gold/70 transition"
                             >
                                 Notify Me
                             </button>
                         </form>
 
-                        <p className="text-sm font-ppneuemontreal text-umami-nube mt-4">
+                        <p className="text-sm text-umami-linen mt-4">
                             We respect your inbox. No spam, just updates.
                         </p>
                     </div>

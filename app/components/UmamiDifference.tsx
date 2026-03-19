@@ -1,93 +1,50 @@
-import {Award, Clock, Heart, Settings, ChefHat, Cake, Truck, Shell, SunSnow, Gem} from 'lucide-react';
-
-const features = [
-    {
-        icon: Award,
-        title: '15+ Years of Artisan Craft.',
-    },
-    {
-        icon: Clock,
-        title: 'Baked Fresh. Always to Order.',
-    },
-    {
-        icon: Heart,
-        title: 'Personal Service, Every Time.',
-    },
-    {
-        icon: ChefHat,
-        title: 'Global & Local Ingredients — Premium, No Compromise.',
-    },
-    {
-        icon: Settings,
-        title: 'Custom Orders, Tailored to You.',
-    },
-    {
-        icon: Cake,
-        title: 'Cakes & Cupcakes, Made Your Way.',
-    },
-    {
-        icon: Shell,
-        title: 'Additions? All Made In-House.',
-    },
-    {
-        icon: SunSnow,
-        title: "Seasonal Desserts, Naturally Inspired.",
-    },
-    {
-        icon: Truck,
-        title: 'Delivered Straight to Your Door.',
-    }
-];
-
 const UmamiDifference = () => {
     return (
-        <section className="py-20">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-blanka text-umami-black tracking-tight leading-tight mb-4">
-                        The Umami <span className="relative inline-block underline-accent">Difference</span>
-                    </h2>
+        <section className="bg-umami-carbon py-24 md:py-32">
+            <div className="container mx-auto px-6 md:px-12 lg:px-16">
+                {/* Section Label */}
+                <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-8" style={{ color: '#C9A96E' }}>
+                    Philosophy
+                </p>
 
-                    <p className="text-2xl md:text-4xl italic font-ppneuemontreal text-umami-berry mb-6">
-                        Trends fade. Craft lasts.
-                    </p>
-                    <p className="max-w-4xl mx-auto mb-4 font-ppneuemontreal text-umami-charcoal text-xl md:text-2xl tracking-[0.05em] leading-relaxed">
-                        Every ingredient has purpose. No fillers. No shortcuts. Never artificial.</p>
-                    <p className="max-w-3xl mx-auto mb-4 font-ppneuemontreal text-umami-charcoal text-xl md:text-2xl tracking-[0.05em] leading-relaxed">
-                        Ratios, refined. Textures, designed. Flavor, elevated.
-                        Every bite feels as intentional as it tastes.</p>
-                </div>
+                {/* Headline */}
+                <h2 className="font-display text-umami-linen text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-2">
+                    Flavor is not accidental.
+                </h2>
+                <p className="font-display italic text-3xl md:text-5xl lg:text-6xl leading-[1.05] mb-16 md:mb-20" style={{ color: '#C9A96E' }}>
+                    It is built.
+                </p>
 
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
-                    {features.map((feature, index) => {
-                        const IconComponent = feature.icon;
-                        return (
-                            <div key={index}
-                                 className="text-center group hover:bg-umami-nube p-8 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">
-                                <div className="flex justify-center mb-4">
-                                    <div
-                                        className="w-16 h-16 bg-umami-black rounded-full flex items-center justify-center group-hover:bg-umami-charcoal transition-colors duration-300">
-                                        <IconComponent size={40} strokeWidth={1.2} className="text-umami-cream"/>
-                                    </div>
-                                </div>
-                                <h3 className="text-xl font-ppneuemontreal text-umami-black mb-2 tracking-[0.05em]">
-                                    {feature.title}
-                                </h3>
-                            </div>
-                        );
-                    })}
-                </div>
+                {/* Three Pillars */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-umami-dim-grey/20">
+                    {/* Balance */}
+                    <div className="bg-umami-carbon p-8 md:p-10">
+                        <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase text-umami-alabaster/60 mb-5">
+                            Balance
+                        </p>
+                        <p className="font-body font-light text-[0.82rem] leading-[1.85] text-umami-taupe">
+                            Sweetness balanced with acidity. Richness lifted with freshness. Nothing here is sweet for its own sake — every recipe is calibrated to the point where you finish and immediately want another bite.
+                        </p>
+                    </div>
 
-                <div className="flex justify-center mt-12">
-                    <div className="text-center group hover:bg-umami-nube p-10 md:p-12 rounded-xl transition-all duration-300 shadow-md">
-                        <div className="flex justify-center mb-4">
-                            <div className="w-16 h-16 bg-umami-black rounded-full flex items-center justify-center group-hover:bg-umami-charcoal transition-colors duration-300">
-                                <Gem size={40} strokeWidth={1.2} className="text-umami-cream" />
-                            </div>
-                        </div>
-                        <h3 className="text-2xl md:text-4xl font-blanka text-umami-black tracking-tight leading-tight">
-                            Flavors You Won’t Find Anywhere Else
-                        </h3>
+                    {/* Technique */}
+                    <div className="bg-umami-carbon p-8 md:p-10 md:border-l md:border-r border-umami-dim-grey/20">
+                        <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase text-umami-alabaster/60 mb-5">
+                            Technique
+                        </p>
+                        <p className="font-body font-light text-[0.82rem] leading-[1.85] text-umami-taupe">
+                            Classical French pastry as the foundation. Laminated doughs, diplomat creams, and precisely tempered chocolate. The technique is never hidden and never showy. You taste it in the result.
+                        </p>
+                    </div>
+
+                    {/* Intention */}
+                    <div className="bg-umami-carbon p-8 md:p-10">
+                        <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase text-umami-alabaster/60 mb-5">
+                            Intention
+                        </p>
+                        <p className="font-body font-light text-[0.82rem] leading-[1.85] text-umami-taupe">
+                            Every item on the menu earns its place. Nothing is added out of habit. Nothing exists because it is easy. Familiar flavors — rebuilt from the ground up.
+                        </p>
                     </div>
                 </div>
             </div>

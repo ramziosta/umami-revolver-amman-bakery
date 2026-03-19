@@ -1,85 +1,79 @@
 import Link from "next/link";
 import {Card, CardContent} from '../ui/card';
 import chocolateMousse from '../assets/chocolate-mousse.jpeg';
-import bamboloni from '../assets/bamboloni.jpg';
-import milleCrepeCake from "../assets/mille-crepe-cake.jpg";
+import milleCrepeCake from "@/app/assets/mille-crepe-cake.jpg";
 import Image from 'next/image';
-import sourdough from "@/app/assets/artisan.jpeg";
 import {StaticImageData} from 'next/image';
 
 type ShowcaseCategory = {
     id: string;
     name: string;
-    image: StaticImageData | string; // Allow both
+    image: StaticImageData | string;
     description: string;
 };
 
 const categories: ShowcaseCategory[] = [
     {
-        id: 'artisan-sourdoughs',
-        name: 'Artisan Breads',
-        image: sourdough,
-        description: 'Using the best Local, French & Italian flours, grains and seeds.',
-    },
-    {
-        id: 'specialty-cakes',
-        name: 'Specialty Cakes',
-        image: chocolateMousse,
-        description: 'Signature cakes with unique flavor combinations.',
-    },
-    {
         id: 'mille-crepe-cakes',
         name: 'Mille Crêpe Cakes',
         image: milleCrepeCake,
-        description: 'Light, layered crêpe cakes filled with luscious whites.',
+        description: 'Twenty paper-thin crêpe layers, filled with house-made diplomat creams. Each cake assembled to order.',
     },
     {
-        id: 'bamboloni',
-        name: 'Bamboloni',
-        image: bamboloni,
-        description: 'Italian-style filled doughnuts — soft, fluffy, irresistible.',
-    }
+        id: 'tiered-cakes',
+        name: 'Specialty Cakes',
+        image: chocolateMousse,
+        description: 'Refined cakes built on French technique — controlled sweetness, real ingredients, no shortcuts.',
+    },
 ];
 
 const CategoriesShowcase = () => {
     return (
-        <section className="py-20 bg-umami-nube">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
-                    <h2 className="text-5xl lg:text-7xl font-blanka text-umami-black mb-4 tracking-tight">
-                        Featured Collections
+        <section className="py-24 md:py-32 bg-umami-linen">
+            <div className="container mx-auto px-6 md:px-12 lg:px-16">
+                {/* Section Header */}
+                <div className="mb-16 max-w-2xl">
+                    <p className="umami-label mb-6">
+                        What We Make
+                    </p>
+                    <h2 className="font-display text-umami-carbon text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-4">
+                        A small menu,
                     </h2>
-                    <p className="max-w-3xl mx-auto font-ppneuemontreal text-umami-charcoal text-xl md:text-2xl tracking-[0.05em] leading-relaxed">
-                        Explore our carefully curated selection of unique, seasonal and signature baked goods.
+                    <p className="font-display italic text-3xl md:text-5xl lg:text-6xl leading-[1.05] text-umami-olive-bark mb-8">
+                        built with care.
+                    </p>
+                    <p className="font-body font-light text-[0.85rem] leading-[1.85] text-umami-dim-grey max-w-lg">
+                        Every item earns its place. No redundancy in flavors. Controlled sweetness. Intentional textures.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {/* Category Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                     {categories.map((category) => (
                         <Link key={category.id} href={`/menu/${category.id}`}>
-                            <Card
-                                className="group cursor-pointer overflow-hidden border border-umami-cream shadow-sm hover:shadow-md transition-all duration-500">
-                                <div className="relative h-64 overflow-hidden">
+                            <Card className="group cursor-pointer overflow-hidden border-0 shadow-none bg-transparent">
+                                <div className="relative h-72 md:h-80 lg:h-96 overflow-hidden">
                                     <Image
                                         fill
-                                        sizes="100vh"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                         priority
                                         src={category.image}
                                         alt={category.name}
-                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                        className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                                     />
-                                    <div
-                                        className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                                    <div className="absolute bottom-4 left-4 right-4 text-umami-cream">
-                                        <h3 className="text-2xl font-blanka tracking-[0.1em] uppercase">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                                    <div className="absolute bottom-6 left-6 right-6">
+                                        <p className="text-[0.5rem] font-structural tracking-[0.35em] uppercase text-white/70 mb-2">
+                                            Explore
+                                        </p>
+                                        <h3 className="font-display text-white text-2xl md:text-3xl">
                                             {category.name}
                                         </h3>
                                     </div>
                                 </div>
 
-                                <CardContent
-                                    className="p-6 bg-umami-white group-hover:bg-umami-nube transition-colors duration-300">
-                                    <p className="font-ppneuemontreal text-umami-black text-base leading-relaxed">
+                                <CardContent className="px-0 pt-5 pb-2 bg-transparent">
+                                    <p className="font-body font-light text-[0.82rem] leading-[1.8] text-umami-dim-grey">
                                         {category.description}
                                     </p>
                                 </CardContent>

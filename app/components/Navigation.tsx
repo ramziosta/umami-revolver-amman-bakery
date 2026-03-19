@@ -1,71 +1,65 @@
 'use client'
-import {Button} from '../ui/button';
 import Link from "next/link";
 import MobileNavigation from './MobileNavigation';
 import {useState} from 'react';
 import {Menu} from "lucide-react";
-import Notice from './Notice';
-
+import {Button} from '../ui/button';
 const Navigation = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isSearchOpen, setIsSearchOpen] = useState(false);
+
     return (
-        <div className="">
-            <div className="container mx-auto px-4 py-6">
+        <div className="bg-umami-linen">
+            <div className="container mx-auto px-6 py-2">
                 <div className="flex items-center justify-between">
-                    {/* Logo */}
+                    {/* Logo — Lovan wordmark only */}
                     <Link href="/">
-                        <div className="flex items-center flex-col group ">
-                            <h1 className="text-4xl lg:text-5xl font-blanka tracking-tight group-hover:text-zinc-600 transition-colors duration-300">
-                                Umami Amman
+                        <div className="flex flex-col group">
+                            <h1 className="text-3xl lg:text-4xl font-wordmark tracking-tight text-umami-gold group-hover:text-umami-dim-grey transition-colors duration-300">
+                                Umami
                             </h1>
-                            <span
-                                className="text-sm text-umami-charcoal italic group-hover:text-zinc-600 transition-colors duration-300">Artisan
-                                Viennoiserie & Pâtisserie
+                            <span className="text-[0.6rem] font-structural tracking-[0.35em] uppercase text-umami-dim-grey group-hover:text-umami-taupe transition-colors duration-300">
+                                Amman
                             </span>
                         </div>
                     </Link>
 
-                    {/* Nav Links */}
-                    <nav
-                        className="hidden md:flex items-center space-x-8 font-ppneuemontreal uppercase   tracking-[0.15em]">
+                    {/* Navigation — Cinzel structural labels */}
+                    <nav className="hidden md:flex items-center space-x-10">
                         <Link
                             href="/menu"
-                            className="text-umami-black hover:text-zinc-600 transition-colors duration-300 border-b border-transparent hover:border-zinc-600 pb-1"
+                            className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
-                           What we Bake
+                            Menu
                         </Link>
                         <Link
                             href="/about"
-                            className="text-umami-black hover:text-zinc-600 transition-colors duration-300 border-b border-transparent hover:border-zinc-600 pb-1"
+                            className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
                             Our Story
                         </Link>
                         <Link
                             href="/contact"
-                            className="text-umami-black text-bold hover:text-zinc-600 transition-colors duration-300 border-b border-transparent hover:border-zinc-600 pb-1"
+                            className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
-                            Contact / Orders
+                            Contact
                         </Link>
                         <Link
                             href="/location"
-                            className="text-umami-black hover:text-zinc-600 transition-colors duration-300 border-b border-transparent hover:border-zinc-600 pb-1"
+                            className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
-                            Location
+                            Visit
                         </Link>
                     </nav>
 
-                    {/* Mobile Menu Button */}
-                    <div className="flex items-center space-x-4">
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            className="md:hidden hover:bg-umami-nube"
-                            onClick={() => setIsMobileMenuOpen(true)}
-                        >
-                            <Menu className="h-6 w-6 text-umami-black"/>
-                        </Button>
-                    </div>
+                    {/* Mobile Menu */}
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        className="md:hidden hover:bg-transparent"
+                        onClick={() => setIsMobileMenuOpen(true)}
+                    >
+                        <Menu className="h-5 w-5 text-umami-carbon" strokeWidth={1.2} />
+                    </Button>
                 </div>
             </div>
 

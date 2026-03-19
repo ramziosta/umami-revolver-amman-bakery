@@ -1,15 +1,13 @@
 'use client'
 import React, {useEffect, useRef, useState} from "react";
-import {AlertCircle, ArrowDown, Check, Loader2, Mail, Phone} from "lucide-react";
+import {AlertCircle, Check, Loader2} from "lucide-react";
 import {useSearchParams} from "next/navigation";
 import emailjs from "@emailjs/browser";
-import {Alert, AlertDescription} from "../ui/alert";
 import {Input} from "../ui/input";
 import {Textarea} from "../ui/textarea";
-import {Button} from "../ui/button";
-import {Card, CardContent, CardHeader, CardTitle} from "../ui/card";
+import Image from "next/image";
 import {useToast} from "../hooks/use-toast";
-
+import contactHero from '@/app/assets/contact.jpg'
 interface FormErrors {
     name?: string;
     email?: string;
@@ -45,7 +43,6 @@ interface ContactFormData {
     message: string;
 }
 
-// Add the missing ContactFormProps interface
 interface ContactFormProps {
     formData: ContactFormData;
     status: 'idle' | 'sending' | 'success' | 'error';
@@ -100,7 +97,6 @@ const validateForm = (formData: ContactFormData): FormErrors => {
     return errors;
 };
 
-// Utility functions - Fixed to use ContactFormData instead of FormData
 const createMessageBody = (formData: ContactFormData): string => {
     return `
 CONTACT FORM SUBMISSION
@@ -124,7 +120,7 @@ const createTemplateParams = (formData: ContactFormData) => ({
     reply_to: formData.email,
 });
 
-// Custom hook for form management - Fixed to use ContactFormData
+// Custom hook for form management
 const useContactForm = (initialType: string = '', initialPlan: string = '') => {
     const [formData, setFormData] = useState<ContactFormData>({
         name: '',
@@ -139,17 +135,9 @@ const useContactForm = (initialType: string = '', initialPlan: string = '') => {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const {name, value} = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-
-        // Clear error for this field when user starts typing
+        setFormData(prev => ({ ...prev, [name]: value }));
         if (errors[name as keyof FormErrors]) {
-            setErrors(prev => ({
-                ...prev,
-                [name]: undefined
-            }));
+            setErrors(prev => ({ ...prev, [name]: undefined }));
         }
     };
 
@@ -161,76 +149,65 @@ const useContactForm = (initialType: string = '', initialPlan: string = '') => {
         const formErrors = validateForm(formData);
         setErrors(formErrors);
         setTouchedFields(new Set(Object.keys(formData)));
-
         return Object.keys(formErrors).length === 0;
     };
 
     const resetForm = () => {
-        setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            subject: '',
-            message: ''
-        });
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
         setErrors({});
         setTouchedFields(new Set());
         setStatus('idle');
     };
 
-    return {
-        formData,
-        status,
-        setStatus,
-        handleChange,
-        resetForm,
-        errors,
-        touchedFields,
-        handleFieldFocus,
-        validateAndSubmit
-    };
+    return { formData, status, setStatus, handleChange, resetForm, errors, touchedFields, handleFieldFocus, validateAndSubmit };
 };
 
-// Enhanced Components
-const FormField: React.FC<FormFieldProps> = ({
-                                                 label,
-                                                 id,
-                                                 value,
-                                                 onChange,
-                                                 placeholder,
-                                                 required = false,
-                                                 type = "text",
-                                                 children,
-                                                 error,
-                                                 icon
-                                             }) => (
-    <div className="space-y-2">
-        <label htmlFor={id} className="block text-sm font-medium text-foreground">
-            {label} {required && <span className="text-destructive">*</span>}
+// Form Field Component
+const FormField: React.FC<FormFieldProps> = ({ label, id, value, onChange, placeholder, required = false, type = "text", children, error }) => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '.4rem' }}>
+        <label
+            htmlFor={id}
+            style={{
+                fontFamily: '"DM Sans", sans-serif',
+                fontWeight: 500,
+                fontSize: '.78rem',
+                color: '#1A1A18',
+            }}
+        >
+            {label} {required && <span style={{ color: '#C9A96E' }}>*</span>}
         </label>
-        <div className="relative">
-            {icon && (
-                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground">
-                    {icon}
-                </div>
-            )}
-            {children || (
-                <Input
-                    id={id}
-                    name={id}
-                    type={type}
-                    value={value}
-                    onChange={onChange}
-                    placeholder={placeholder}
-                    required={required}
-                    className={`bg-umami-nube ${icon ? 'pl-10' : ''} ${error ? 'border-destructive focus:border-destructive' : ''}`}
-                    aria-describedby={error ? `${id}-error` : undefined}
-                />
-            )}
-        </div>
+        {children || (
+            <input
+                id={id}
+                name={id}
+                type={type}
+                value={value}
+                onChange={onChange}
+                placeholder={placeholder}
+                required={required}
+                style={{
+                    fontFamily: '"DM Sans", sans-serif',
+                    fontWeight: 300,
+                    fontSize: '.85rem',
+                    padding: '.65rem .85rem',
+                    background: '#EDE8E0',
+                    border: `1px solid ${error ? '#a33' : '#E8E0D5'}`,
+                    color: '#1A1A18',
+                    outline: 'none',
+                    transition: 'border-color .3s',
+                }}
+            />
+        )}
         {error && (
-            <p id={`${id}-error`} className="text-sm text-destructive flex items-center gap-1">
-                <AlertCircle className="h-4 w-4"/>
+            <p style={{
+                fontFamily: '"DM Sans", sans-serif',
+                fontSize: '.72rem',
+                color: '#a33',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '.25rem',
+            }}>
+                <AlertCircle style={{ width: 12, height: 12 }} />
                 {error}
             </p>
         )}
@@ -238,200 +215,264 @@ const FormField: React.FC<FormFieldProps> = ({
 );
 
 const SubjectSelect: React.FC<SubjectSelectProps> = ({value, onChange, error}) => (
-    <div className="relative">
-        <select
-            id="subject"
-            name="subject"
-            value={value}
-            onChange={onChange}
-            className={`bg-umami-nube w-full px-3 py-2 rounded-md border bg-background text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
-                error ? 'border-destructive focus:border-destructive' : 'border-input'
-            }`}
-            aria-describedby={error ? 'subject-error' : undefined}
-        >
-            <option value="">Select a subject</option>
-            <option value="general">General Inquiry</option>
-            <option value="custom-order">Custom Order</option>
-            <option value="catering">Catering Services</option>
-            <option value="wholesale">Wholesale Partnership</option>
-            <option value="careers">Careers</option>
-            <option value="feedback">Feedback & Reviews</option>
-            <option value="complaint">Issue or Complaint</option>
-        </select>
-    </div>
+    <select
+        id="subject"
+        name="subject"
+        value={value}
+        onChange={onChange}
+        style={{
+            fontFamily: '"DM Sans", sans-serif',
+            fontWeight: 300,
+            fontSize: '.85rem',
+            padding: '.65rem .85rem',
+            background: '#EDE8E0',
+            border: `1px solid ${error ? '#a33' : '#E8E0D5'}`,
+            color: value ? '#1A1A18' : '#8C8278',
+            outline: 'none',
+            width: '100%',
+            transition: 'border-color .3s',
+        }}
+    >
+        <option value="">Select a subject</option>
+        <option value="general">General Inquiry</option>
+        <option value="custom-order">Custom Order</option>
+        <option value="whole-cake">Whole Cake Pre-Order</option>
+        <option value="event">Event / Private Dining</option>
+        <option value="feedback">Feedback</option>
+    </select>
 );
 
+// Contact Info Component
 const ContactInfo: React.FC = () => (
-    <div className="space-y-8">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: '#E8E0D5' }}>
+        {/* WhatsApp */}
+        <a
+            href="https://wa.me/962790894715"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+                display: 'flex', flexDirection: 'column', gap: '.5rem',
+                background: '#F2EEE8', padding: '2rem 2.5rem',
+                textDecoration: 'none', transition: 'background .3s',
+            }}
+            onMouseEnter={e => (e.currentTarget.style.background = '#EDE8E0')}
+            onMouseLeave={e => (e.currentTarget.style.background = '#F2EEE8')}
+        >
+            <span style={{ fontFamily: '"Cinzel", serif', fontSize: '.52rem', letterSpacing: '.32em', textTransform: 'uppercase', color: '#C9A96E' }}>
+                WhatsApp
+            </span>
+            <span style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 300, fontSize: '1.15rem', color: '#1A1A18' }}>
+                +962 7 9089 4715
+            </span>
+            <span style={{ fontFamily: '"DM Sans", sans-serif', fontWeight: 300, fontSize: '.75rem', color: '#8C8278' }}>
+                Fastest way to reach us — orders, questions, custom requests
+            </span>
+        </a>
 
-        <div className="space-y-4">
+        {/* Email */}
+        <a
+            href="mailto:contact@umamiamman.com"
+            style={{
+                display: 'flex', flexDirection: 'column', gap: '.5rem',
+                background: '#F2EEE8', padding: '2rem 2.5rem',
+                textDecoration: 'none', transition: 'background .3s',
+            }}
+            onMouseEnter={e => (e.currentTarget.style.background = '#EDE8E0')}
+            onMouseLeave={e => (e.currentTarget.style.background = '#F2EEE8')}
+        >
+            <span style={{ fontFamily: '"Cinzel", serif', fontSize: '.52rem', letterSpacing: '.32em', textTransform: 'uppercase', color: '#C9A96E' }}>
+                Email
+            </span>
+            <span style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 300, fontSize: '1.15rem', color: '#1A1A18' }}>
+                contact@umamiamman.com
+            </span>
+            <span style={{ fontFamily: '"DM Sans", sans-serif', fontWeight: 300, fontSize: '.75rem', color: '#8C8278' }}>
+                We respond within 4 hours
+            </span>
+        </a>
 
-            <Card className="card-premium hover:bg-umami-nube hover:shadow-lg  transition-shadow duration-200 ">
-                <CardHeader className="pb-4">
-                    <CardTitle className="flex items-center font-normal gap-3">
-                        <Phone className="h-5 w-5 " />
-                        Phone
-                    </CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-elegant">
-                        <a href="tel:+15551234567" className="transition-colors inline-flex items-center gap-2">
-                            (962) 7 9089 4715
-                        </a>
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">Contact us using the WhatsApp Icon</p>
-                </CardContent>
-            </Card>
-
-            <Card className="card-premium hover:bg-umami-nube hover:shadow-lg transition-shadow duration-200 ">
-                <CardHeader className="pb-4">
-                    <CardTitle className="flex items-center font-normal gap-3">
-                        <Mail className="h-5 w-5 " />
-                        Email
-                    </CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-elegant">
-                        <a href="mailto:hello@revolverbyumami.com" className="hover:text-gold transition-colors inline-flex items-center gap-2">
-                            contact@umamiamman.com
-                        </a>
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">We respond within 4 hours</p>
-                </CardContent>
-            </Card>
-        </div>
-
+        {/* Instagram */}
+        <a
+            href="https://instagram.com/umamiamman"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+                display: 'flex', flexDirection: 'column', gap: '.5rem',
+                background: '#F2EEE8', padding: '2rem 2.5rem',
+                textDecoration: 'none', transition: 'background .3s',
+            }}
+            onMouseEnter={e => (e.currentTarget.style.background = '#EDE8E0')}
+            onMouseLeave={e => (e.currentTarget.style.background = '#F2EEE8')}
+        >
+            <span style={{ fontFamily: '"Cinzel", serif', fontSize: '.52rem', letterSpacing: '.32em', textTransform: 'uppercase', color: '#C9A96E' }}>
+                Instagram
+            </span>
+            <span style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 300, fontSize: '1.15rem', color: '#1A1A18' }}>
+                @umamiamman
+            </span>
+            <span style={{ fontFamily: '"DM Sans", sans-serif', fontWeight: 300, fontSize: '.75rem', color: '#8C8278' }}>
+                DM us for orders and enquiries
+            </span>
+        </a>
     </div>
 );
-const ContactForm: React.FC<ContactFormProps> = ({
-                                                     formData,
-                                                     status,
-                                                     onSubmit,
-                                                     onChange,
-                                                     errors,
-                                                     onFieldFocus
-                                                 }) => {
+
+// Contact Form Component
+const ContactForm: React.FC<ContactFormProps> = ({ formData, status, onSubmit, onChange, errors, onFieldFocus }) => {
     const formRef = useRef<HTMLFormElement>(null);
 
     return (
-        <div className="bg-gradient-to-br from-muted/30 to-muted/10 p-8  border border-border/50" id="contact-form">
-            <div className="mb-8">
-                <h2 className="text-3xl font-ppneuemontreal mb-2">Send a Message</h2>
-                <p className="text-muted-foreground">We'll get back to you within 24 hours</p>
+        <div
+            id="contact-form"
+            style={{ background: '#F2EEE8', border: '1px solid #E8E0D5', padding: '3rem' }}
+        >
+            {/* Header */}
+            <div style={{ marginBottom: '2.5rem' }}>
+                <span style={{
+                    fontFamily: '"Cinzel", serif', fontSize: '.58rem', letterSpacing: '.38em',
+                    textTransform: 'uppercase', color: '#C9A96E', display: 'block', marginBottom: '1rem',
+                }}>
+                    Send a Message
+                </span>
+                <h2 style={{
+                    fontFamily: '"Cormorant Garamond", serif', fontWeight: 300,
+                    fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', lineHeight: 1.1,
+                    color: '#1A1A18', margin: '0 0 .75rem',
+                }}>
+                    Tell us what<br />
+                    <em style={{ fontStyle: 'italic', color: '#8C8278' }}>you have in mind.</em>
+                </h2>
+                <p style={{
+                    fontFamily: '"DM Sans", sans-serif', fontWeight: 300,
+                    fontSize: '.82rem', color: '#8C8278', margin: 0,
+                }}>
+                    We respond within 4 hours.
+                </p>
             </div>
 
+            {/* Success alert */}
             {status === 'success' && (
-                <Alert className="mb-6 border-green-200 bg-green-50 text-green-800">
-                    <Check className="h-4 w-4"/>
-                    <AlertDescription>
-                        Thank you! Your message has been sent successfully. We'll be in touch soon.
-                    </AlertDescription>
-                </Alert>
+                <div style={{
+                    background: 'rgba(201,169,110,0.08)', border: '1px solid rgba(201,169,110,0.3)',
+                    padding: '1rem 1.25rem', marginBottom: '1.75rem',
+                    display: 'flex', alignItems: 'flex-start', gap: '.75rem',
+                }}>
+                    <Check style={{ width: 16, height: 16, color: '#C9A96E', flexShrink: 0, marginTop: 2 }} />
+                    <p style={{
+                        fontFamily: '"DM Sans", sans-serif', fontWeight: 300,
+                        fontSize: '.82rem', color: '#4C4746', margin: 0,
+                    }}>
+                        Thank you — your message has been sent. We will be in touch soon.
+                    </p>
+                </div>
             )}
 
+            {/* Error alert */}
             {status === 'error' && (
-                <Alert className="mb-6 border-destructive/50 bg-destructive/10">
-                    <AlertCircle className="h-4 w-4"/>
-                    <AlertDescription>
-                        There was an error sending your message. Please try again or contact us directly.
-                    </AlertDescription>
-                </Alert>
+                <div style={{
+                    background: 'rgba(180,50,50,0.06)', border: '1px solid rgba(180,50,50,0.2)',
+                    padding: '1rem 1.25rem', marginBottom: '1.75rem',
+                    display: 'flex', alignItems: 'flex-start', gap: '.75rem',
+                }}>
+                    <AlertCircle style={{ width: 16, height: 16, color: '#a33', flexShrink: 0, marginTop: 2 }} />
+                    <p style={{
+                        fontFamily: '"DM Sans", sans-serif', fontWeight: 300,
+                        fontSize: '.82rem', color: '#4C4746', margin: 0,
+                    }}>
+                        Something went wrong. Please try again or reach us directly on WhatsApp.
+                    </p>
+                </div>
             )}
 
-            <form ref={formRef} onSubmit={onSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <FormField
-                        label="Full Name"
-                        id="name"
-                        value={formData.name}
-                        onChange={onChange}
-                        placeholder="John Doe"
-                        required
-                        error={errors.name}
-                    />
-
-                    <FormField
-                        label="Email Address"
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={onChange}
-                        placeholder="john@example.com"
-                        required
-                        error={errors.email}
-                    />
+            {/* Form */}
+            <form ref={formRef} onSubmit={onSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                {/* Name + Email row */}
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }} className="umami-form-row">
+                    <FormField label="Full Name" id="name" value={formData.name} onChange={onChange} placeholder="Your name" required error={errors.name} />
+                    <FormField label="Email Address" id="email" type="email" value={formData.email} onChange={onChange} placeholder="your@email.com" required error={errors.email} />
                 </div>
 
-                <FormField
-                    label="Phone Number"
-                    id="phone"
-                    value={formData.phone}
-                    onChange={onChange}
-                    placeholder="+962 7 9089 4715"
-                    required
-                    error={errors.phone}
-                />
+                <FormField label="Phone Number" id="phone" value={formData.phone} onChange={onChange} placeholder="+962 7 9089 4715" required error={errors.phone} />
 
-                <FormField
-                    label="Subject"
-                    id="subject"
-                    value={formData.subject}
-                    onChange={onChange}
-                    error={errors.subject}
-                >
-                    <SubjectSelect value={formData.subject} onChange={onChange} error={errors.subject}/>
+                <FormField label="Subject" id="subject" value={formData.subject} onChange={onChange} error={errors.subject}>
+                    <SubjectSelect value={formData.subject} onChange={onChange} error={errors.subject} />
                 </FormField>
 
-                <FormField
-                    label="Message"
-                    id="message"
-                    value={formData.message}
-                    onChange={onChange}
-                    error={errors.message}
-                >
-                    <Textarea
+                <FormField label="Message" id="message" value={formData.message} onChange={onChange} error={errors.message}>
+                    <textarea
                         id="message"
                         name="message"
                         value={formData.message}
                         onChange={onChange}
                         rows={5}
-                        placeholder="Tell us more about your needs, preferences, or event. The more details you provide, the better we can assist you..."
-                        className={`bg-umami-nube resize-none ${errors.message ? 'border-destructive focus:border-destructive' : ''}`}
+                        placeholder="Tell us about your order, event, or question. The more detail, the better."
+                        style={{
+                            fontFamily: '"DM Sans", sans-serif', fontWeight: 300, fontSize: '.85rem',
+                            padding: '.65rem .85rem', background: '#EDE8E0',
+                            border: `1px solid ${errors.message ? '#a33' : '#E8E0D5'}`,
+                            color: '#1A1A18', outline: 'none', resize: 'none', width: '100%',
+                            transition: 'border-color .3s',
+                        }}
                         required
-                        aria-describedby={errors.message ? 'message-error' : undefined}
                     />
-                    <div className="flex justify-between text-xs text-muted-foreground mt-1">
+                    <div style={{
+                        display: 'flex', justifyContent: 'space-between',
+                        fontFamily: '"DM Sans", sans-serif', fontWeight: 300,
+                        fontSize: '.72rem', color: '#8C8278', marginTop: '.4rem',
+                    }}>
                         <span>Minimum 10 characters</span>
-                        <span>{formData.message.length}/500</span>
+                        <span>{formData.message.length} / 500</span>
                     </div>
                 </FormField>
 
-                <Button
+                {/* Submit */}
+                <button
                     type="submit"
-                    className="w-full text-umami-white bg-gradient-to-r from-umami to-umami-dark hover:from-umami-dark hover:to-umami font-montserrat tracking-wider transition-all duration-200 transform hover:scale-[1.02]"
                     disabled={status === 'sending'}
-                    size="lg"
+                    style={{
+                        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '.75rem',
+                        width: '100%', fontFamily: '"Cinzel", serif', fontSize: '.57rem',
+                        letterSpacing: '.28em', textTransform: 'uppercase',
+                        background: status === 'sending' ? '#b8944f' : '#C9A96E',
+                        color: '#F2EEE8', border: 'none', padding: '1rem',
+                        cursor: status === 'sending' ? 'not-allowed' : 'pointer',
+                        opacity: status === 'sending' ? 0.7 : 1, transition: 'background .3s',
+                    }}
+                    onMouseEnter={e => { if (status !== 'sending') e.currentTarget.style.background = '#b8944f' }}
+                    onMouseLeave={e => { if (status !== 'sending') e.currentTarget.style.background = '#C9A96E' }}
                 >
                     {status === 'sending' ? (
                         <>
-                            <Loader2 className="h-4 w-4 mr-2 animate-spin"/>
-                            Sending Message...
+                            <Loader2 style={{ width: 14, height: 14, animation: 'spin 1s linear infinite' }} />
+                            Sending…
                         </>
                     ) : (
-                        <>
-                            Send Message
-                        </>
+                        'Send Message →'
                     )}
-                </Button>
-                {status === "success" && (
-                    <p className="text-sm text-green-600 text-center mt-2">
-                        ✅ Message sent successfully!
+                </button>
+
+                {status === 'success' && (
+                    <p style={{
+                        fontFamily: '"DM Sans", sans-serif', fontWeight: 300,
+                        fontSize: '.78rem', color: '#C9A96E', textAlign: 'center', margin: 0,
+                    }}>
+                        Message sent successfully.
                     </p>
                 )}
-                <p className="text-xs text-muted-foreground text-center">
-                    By submitting this form, you agree to our privacy policy and terms of service.
+
+                <p style={{
+                    fontFamily: '"DM Sans", sans-serif', fontWeight: 300,
+                    fontSize: '.7rem', color: '#8C8278', textAlign: 'center', margin: 0,
+                }}>
+                    By submitting this form you agree to our privacy policy and terms of service.
                 </p>
             </form>
+
+            <style>{`
+                @media (max-width: 640px) {
+                    .umami-form-row { grid-template-columns: 1fr !important; }
+                }
+            `}</style>
         </div>
     );
 };
@@ -445,25 +486,11 @@ const ContactClient: React.FC = () => {
     const initialPlan = searchParams.get("plan") || "";
 
     const {
-        formData,
-        status,
-        setStatus,
-        handleChange,
-        resetForm,
-        errors,
-        handleFieldFocus,
-        validateAndSubmit
+        formData, status, setStatus, handleChange,
+        resetForm, errors, handleFieldFocus, validateAndSubmit
     } = useContactForm(initialType, initialPlan);
 
-    // Initialize EmailJS - use process.env for Next.js
     useEffect(() => {
-        // Debug: Check if environment variables are loaded
-        console.log('EmailJS Config:', {
-            publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ? 'Set' : 'Missing',
-            serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ? 'Set' : 'Missing',
-            templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ? 'Set' : 'Missing'
-        });
-
         if (process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
             emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
         }
@@ -510,8 +537,8 @@ const ContactClient: React.FC = () => {
             if (result.status === 200) {
                 setStatus("success");
                 toast({
-                    title: "Message sent successfully!",
-                    description: "We'll get back to you within 24 hours.",
+                    title: "Message sent successfully",
+                    description: "We'll respond within 4 hours.",
                 });
                 setTimeout(resetForm, 3000);
             } else {
@@ -529,12 +556,51 @@ const ContactClient: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen ">
-            <section className="py-16 ">
+        <div className="min-h-screen bg-umami-linen">
+            {/* Contact Hero — background image with text overlay */}
+            <section className="relative h-[70vh] md:h-[80vh] overflow-hidden flex items-end">
+                {/* Background image — replace src with your baking/flour overhead photo */}
+                <div className="absolute inset-0">
+
+                    <Image src={contactHero} alt="Baking preparation" fill className="object-cover" priority />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
+                </div>
+
+                <div className="relative z-10 w-full px-6 md:px-12 lg:px-16 pb-16 md:pb-20 max-w-4xl">
+                    {/* Eyebrow */}
+                    <p
+                        className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-8"
+                        style={{ color: '#C9A96E' }}
+                    >
+                        Get in Touch
+                    </p>
+
+                    {/* Headline */}
+                    <h1 className="font-display text-umami-linen text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] mb-2">
+                        Order.
+                    </h1>
+                    <p
+                        className="font-display italic text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] mb-10"
+                        style={{ color: '#C9A96E' }}
+                    >
+                        Ask. Connect.
+                    </p>
+
+                    {/* Sub-copy */}
+                    <p className="font-body font-light text-sm md:text-base text-umami-alabaster/80 max-w-md leading-relaxed">
+                        Pre-orders, custom cakes, questions about the menu
+                        — we respond to everything.
+                    </p>
+                </div>
+            </section>
+
+            {/* Form Section */}
+            <section className="py-16">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 max-w-7xl mx-auto">
                         <div className="lg:col-span-2">
-                            <ContactInfo/>
+                            <ContactInfo />
                         </div>
                         <div className="lg:col-span-3">
                             <ContactForm

@@ -1,132 +1,163 @@
-/* ✅ Bring in CDN fonts */
-@import url('https://fonts.cdnfonts.com/css/blanka');
-@import url('https://fonts.cdnfonts.com/css/pp-neue-montreal');
+/* ── Umami Amman — Rebranded Design System ── */
+
+/* Google Fonts: Cormorant Garamond, Cinzel, DM Sans */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cinzel:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap');
+/* Lovan for logo only — loaded via CDN */
 @import url('https://fonts.cdnfonts.com/css/lovan');
-/* ✅ Tailwind directives */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ✅ Design System */
 @layer base {
   :root {
-    /* ---- Umami Colors ---- */
-    --background: #ffffff; /* cream */
-    --foreground: 62 60 60;     /* charcoal */
-    --card: 255 255 255;
-    --card-foreground: 62 60 60;
-    --popover: 255 255 255;
-    --popover-foreground: 62 60 60;
-    --primary: 57 86 112;
-    --primary-foreground: 255 255 255;
-    --secondary: 182 182 182;
-    --secondary-foreground: 62 60 60;
-    --muted: 249 239 223;
-    --muted-foreground: 62 60 60;
-    --accent: 18 117 179;
-    --accent-foreground: 255 255 255;
-    --destructive: 222 27 135;
-    --destructive-foreground: 255 255 255;
-    --border: 182 182 182;
-    --input: 182 182 182;
-    --ring: 57 86 112;
-    --radius: 0rem;
-    --sidebar-background: 255 255 255;
-    --sidebar-foreground: 62 60 60;
-    --sidebar-primary: 57 86 112;
-    --sidebar-primary-foreground: 255 255 255;
-    --sidebar-accent: 249 239 223;
-    --sidebar-accent-foreground: 62 60 60;
-    --sidebar-border: 182 182 182;
-    --sidebar-ring: 18 117 179;
+    /* ── Umami Brand Palette ── */
+    --umami-carbon:       #1A1916;
+    --umami-carbon-text:  #202020;
+    --umami-dim-grey:     #5E6269;
+    --umami-silver:       #C0C0C0;
+    --umami-alabaster:    #E0E0E0;
+    --umami-linen:        #F0ECE4;
+    --umami-taupe:        #8F7F70;
+    --umami-olive-bark:   #624203;
+    --umami-dark-walnut:  #3E1D00;
+    --umami-stone-brown:  #5C5248;
 
-    /* ✅ If you use next/font variables for Geist: */
-    --font-geist-sans: 'var(--font-geist-sans)';
-    --font-geist-mono: 'var(--font-geist-mono)';
-  }
-
-  .dark {
-    /* dark mode overrides */
-    --background: 62 60 60;
-    --foreground: 249 239 223;
-    --card: 0 0 0;
-    --card-foreground: 249 239 223;
-    --popover: 0 0 0;
-    --popover-foreground: 249 239 223;
-    --primary: 249 239 223;
-    --primary-foreground: 57 86 112;
-    --secondary: 182 182 182;
-    --secondary-foreground: 249 239 223;
-    --muted: 62 60 60;
-    --muted-foreground: 182 182 182;
-    --accent: 18 117 179;
-    --accent-foreground: 249 239 223;
-    --destructive: 222 27 135;
-    --destructive-foreground: 249 239 223;
-    --border: 182 182 182;
-    --input: 182 182 182;
-    --ring: 249 239 223;
-    --sidebar-background: 0 0 0;
-    --sidebar-foreground: 249 239 223;
-    --sidebar-primary: 18 117 179;
-    --sidebar-primary-foreground: 0 0 0;
-    --sidebar-accent: 62 60 60;
-    --sidebar-accent-foreground: 249 239 223;
-    --sidebar-border: 182 182 182;
-    --sidebar-ring: 18 117 179;
+    /* ── Semantic Tokens ── */
+    --background:         #F0ECE4;
+    --foreground:         #202020;
+    --card:               #F0ECE4;
+    --card-foreground:    #202020;
+    --primary:            #1A1916;
+    --primary-foreground: #F0ECE4;
+    --secondary:          #5E6269;
+    --secondary-foreground: #F0ECE4;
+    --muted:              #E0E0E0;
+    --muted-foreground:   #5E6269;
+    --accent:             #624203;
+    --accent-foreground:  #F0ECE4;
+    --destructive:        #8a3a3a;
+    --destructive-foreground: #F0ECE4;
+    --border:             #E0E0E0;
+    --input:              #E0E0E0;
+    --ring:               #624203;
+    --radius:             0px;
   }
 
   * {
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   body {
-
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    color: var(--umami-carbon-text);
+    background-color: var(--umami-linen);
+    letter-spacing: 0.02em;
+    line-height: 1.8;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-
+  h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    line-height: 1.1;
   }
-}
 
-
-.blanka-tracking {
-  @apply font-blanka tracking-wide;
+  h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
 }
 
 @layer utilities {
-  .parallax-bg {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* ── Umami Structural Label ── */
+  .umami-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--umami-olive-bark);
   }
 
-  .text-shadow {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  /* ── Umami Display Heading ── */
+  .umami-display {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    line-height: 1.05;
   }
 
-  .hover-invert {
-    @apply transition-all duration-300 ease-in-out;
+  /* ── Umami Italic Accent (gold italic text) ── */
+  .umami-italic-accent {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--umami-olive-bark);
   }
 
-  .hover-invert:hover {
-    @apply bg-umami-charcoal text-umami-cream;
+  /* ── Umami Body ── */
+  .umami-body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.85rem;
+    line-height: 1.85;
+    color: var(--umami-dim-grey);
   }
 
-  .elegant-shadow {
-    box-shadow: 0 10px 25px rgba(57, 86, 112, 0.1);
+  /* ── Wordmark — Logo Only ── */
+  .umami-wordmark {
+    font-family: 'Lovan', serif;
+    letter-spacing: 0;
+  }
+
+  /* ── Button Styles ── */
+  .umami-btn-primary {
+    font-family: 'Cinzel', serif;
+    font-size: 0.57rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    background: var(--umami-olive-bark);
+    color: var(--umami-linen);
+    padding: 0.85rem 2.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+  }
+
+  .umami-btn-primary:hover {
+    background: var(--umami-dark-walnut);
+  }
+
+  .umami-btn-outline {
+    font-family: 'Cinzel', serif;
+    font-size: 0.57rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--umami-carbon);
+    padding: 0.85rem 2.5rem;
+    border: 1px solid var(--umami-carbon);
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .umami-btn-outline:hover {
+    background: var(--umami-carbon);
+    color: var(--umami-linen);
+  }
+
+  /* ── Divider ── */
+  .umami-divider {
+    width: 40px;
+    height: 1.5px;
+    background: var(--umami-olive-bark);
+    border: none;
   }
 }
-/*.underline-accent::after {*/
-/*    content: '';*/
-/*    display: block;*/
-/*    width: 100%;*/
-/*    height: 3px;*/
-/*    background: #C44569; !* your accent color *!*/
-/*    position: absolute;*/
-/*    transform: rotate(-2deg);*/
-/*    top:65px;*/
-/*    left: 4px;*/
-/*}*/
-
