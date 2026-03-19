@@ -1,21 +1,7 @@
-// app/data/categoryData.ts
-//
-// ── STANDARDIZATION NOTES ──────────────────────────────────────────────────
-// 1. All `quantity` fields → string  (was: number | string)
-// 2. All `price` fields   → string with "JOD" suffix  (was: inconsistent formats)
-// 3. All `weight` fields  → string  (was: number | string)
-// 4. All `variations`     → always present, default []
-// 5. Removed `itemPrice`  → redundant with quantityOptions
-// 6. Removed `categoryDescription` → consolidated into `description`
-// 7. Removed stray category-level fields (ingredients, allergens on seasonal)
-// 8. `itemCount` → derived from items.length
-// ───────────────────────────────────────────────────────────────────────────
 
-import { StaticImageData } from 'next/image';
+
 import type { Category, FeaturedCategory } from '@/app/types/categoryTypes';
 
-// ── IMAGE IMPORTS ──────────────────────────────────────────────────────────
-// (keep all your existing imports exactly as they are)
 
 import multiSeedSourdough from "@/app/assets/multiseed-sourdough.jpg";
 import whiteSourdough from "@/app/assets/white-sourdough.jpg";
