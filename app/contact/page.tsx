@@ -3,10 +3,9 @@ import { Suspense } from 'react';
 import React, {useState, useEffect, useRef} from 'react';
 import Image from "next/image";
 import contact from "@/app/assets/contact.jpg";
-
 import ContactClient from "../components/ContactClient";
 import FAQ from "@/app/components/FAQ";
-import HowToOrder from "@/app/components/howToOrder";
+
 
 const ContactHero: React.FC = () => (
     <section className="relative h-[60vh]  flex items-center justify-center overflow-hidden">
@@ -48,7 +47,6 @@ const Contact = () => {
             </Suspense>
             <FAQ />
             <br />
-            <HowToOrder />
         </div>
     );
 };

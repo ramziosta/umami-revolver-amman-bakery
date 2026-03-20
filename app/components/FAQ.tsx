@@ -5,7 +5,6 @@ import {
     AccordionTrigger,
 } from "@/app/ui/accordion";
 
-
 const faqSections = [
     {
         title: "Ordering",
@@ -64,27 +63,51 @@ const faqSections = [
     }
 ];
 
+const orderSteps = [
+    {
+        q: "Step 1 — Browse the Menu",
+        a: "Explore our full selection of cakes, pastries, and specialty items online. Take note of sizes, flavors, and available custom options."
+    },
+    {
+        q: "Step 2 — Choose Your Item",
+        a: "Decide on the item(s) you want to order, including quantity, flavor variations, and any personalization or custom requests."
+    },
+    {
+        q: "Step 3 — Contact Us",
+        a: "Message us via WhatsApp or the contact form. For WhatsApp, we recommend using this pre-filled template:\n\n\"Hi, I'd like to order [item name] for [date]. Pickup/Delivery to [location].\""
+    },
+    {
+        q: "Step 4 — Confirm Availability & Payment",
+        a: "We will confirm your order availability within 2–4 hours during business hours. Custom or large orders may require additional review. Payment instructions will be sent, including deposit requirements (50% non-refundable for large/custom orders; full payment for standard cakes)."
+    },
+    {
+        q: "Step 5 — Delivery & Pickup",
+        a: "Delivery is available within Amman. A recipient must be present to receive the order. Our driver will call and wait up to 5 minutes. If no one is available, the order will be returned, with no refund or credit, as products are perishable and require immediate refrigeration. Pickup may be available upon request."
+    },
+    {
+        q: "Step 6 — Cake Care",
+        a: "Refrigerate immediately upon receipt. Remove 10–15 minutes before serving for optimal taste. Mille crêpe cakes are delicate and should never be left out in hot conditions."
+    }
+];
+
+
 export default function FAQ() {
     return (
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto py-12">
 
-            {/* ── HEADER ── */}
-            <div className="text-center mb-12">
-                <h2 className="font-display text-3xl md:text-4xl text-umami-carbon mb-3">
-                    Frequently Asked Questions
-                </h2>
-                <p className="text-sm text-umami-dim-grey max-w-md mx-auto">
-                    Quick answers before you reach out — most questions are answered here.
-                </p>
-            </div>
-
-            {/* ── SECTIONS ── */}
-            <div className="space-y-10">
+            {/* ── FAQ SECTION ── */}
+            <div className="mb-16">
+                <div className="text-center mb-12">
+                    <h2 className="font-display text-3xl md:text-4xl text-umami-carbon mb-3">
+                        Frequently Asked Questions
+                    </h2>
+                    <p className="text-sm text-umami-dim-grey max-w-md mx-auto">
+                        Quick answers before you reach out — most questions are answered here.
+                    </p>
+                </div>
 
                 {faqSections.map((section, sIndex) => (
-                    <div key={sIndex}>
-
-                        {/* Section Label */}
+                    <div key={sIndex} className="mb-10">
                         <p
                             className="text-[0.6rem] font-structural tracking-[0.35em] uppercase mb-4"
                             style={{ color: '#C9A96E' }}
@@ -92,7 +115,6 @@ export default function FAQ() {
                             {section.title}
                         </p>
 
-                        {/* Accordion */}
                         <Accordion
                             type="single"
                             collapsible
@@ -103,7 +125,7 @@ export default function FAQ() {
                                 <AccordionItem
                                     key={index}
                                     value={`item-${sIndex}-${index}`}
-                                    className="border border-umami-alabaster rounded-xl px-5 py-2 bg-white transition-all duration-200 hover:shadow-md"
+                                    className="border border-umami-alabaster rounded-xl px-5 py-3 bg-white transition-all duration-200 hover:shadow-md"
                                 >
                                     <AccordionTrigger className="text-left font-medium text-umami-carbon text-base hover:no-underline">
                                         <div className="flex items-start gap-3">
@@ -111,23 +133,57 @@ export default function FAQ() {
                                             {faq.q}
                                         </div>
                                     </AccordionTrigger>
-
-                                    <AccordionContent className="pl-7 pt-2 text-sm text-umami-dim-grey leading-relaxed">
+                                    <AccordionContent className="pl-8 pt-2 text-sm text-umami-dim-grey leading-relaxed whitespace-pre-line">
                                         {faq.a}
                                     </AccordionContent>
                                 </AccordionItem>
                             ))}
                         </Accordion>
-
                     </div>
                 ))}
+            </div>
 
+            {/* ── HOW TO ORDER SECTION ── */}
+            <div>
+                <div className="text-center mb-12">
+                    <h2 className="font-display text-3xl md:text-4xl text-umami-carbon mb-3">
+                        How to Order
+                    </h2>
+                    <p className="text-sm text-umami-dim-grey max-w-md mx-auto">
+                        A step-by-step guide to ensure your pre-order experience is smooth and precise.
+                    </p>
+                </div>
+
+                <Accordion
+                    type="single"
+                    collapsible
+                    defaultValue="step-0"
+                    className="space-y-4"
+                >
+                    {orderSteps.map((step, index) => (
+                        <AccordionItem
+                            key={index}
+                            value={`step-${index}`}
+                            className="border border-umami-alabaster rounded-xl px-5 py-3 bg-white transition-all duration-200 hover:shadow-md"
+                        >
+                            <AccordionTrigger className="text-left font-medium text-umami-carbon text-base hover:no-underline">
+                                <div className="flex items-start gap-3">
+                                    <span className="text-gold font-bold mt-0.5">{index + 1}</span>
+                                    {step.q}
+                                </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="pl-8 pt-2 text-sm text-umami-dim-grey leading-relaxed whitespace-pre-line">
+                                {step.a}
+                            </AccordionContent>
+                        </AccordionItem>
+                    ))}
+                </Accordion>
             </div>
 
             {/* ── SUPPORT NOTE ── */}
             <div className="text-center mt-12">
                 <p className="text-xs text-umami-dim-grey">
-                    Still have a question? Message us directly — we typically respond within a few hours.
+                    Questions? Message us directly — we typically respond within a few hours.
                 </p>
             </div>
 
