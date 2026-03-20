@@ -1,16 +1,12 @@
 'use client';
 import { Suspense } from 'react';
 import React, {useState, useEffect, useRef} from 'react';
-import {
-    ArrowDown
-} from 'lucide-react';
 import Image from "next/image";
 import contact from "@/app/assets/contact.jpg";
 
 import ContactClient from "../components/ContactClient";
-import {Card, CardContent, CardHeader, CardTitle} from "../ui/card";
-
-
+import FAQ from "@/app/components/FAQ";
+import HowToOrder from "@/app/components/howToOrder";
 
 const ContactHero: React.FC = () => (
     <section className="relative h-[60vh]  flex items-center justify-center overflow-hidden">
@@ -42,56 +38,6 @@ const ContactHero: React.FC = () => (
 );
 
 
-const FAQ = () => {
-    return (
-        <section className="py-20 px-6">
-            <div className="container-premium">
-                <div className="text-center mb-16">
-                    <h2 className="heading-display text-4xl mb-4">Frequently Asked Questions</h2>
-                    <p className="text-elegant text-lg max-w-2xl mx-auto">
-                        Quick answers to common questions about our products and services
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-                    {[
-                        {
-                            q: "Do you take custom orders?",
-                            a: "Yes! We love creating custom cakes and specialty items for special occasions. Please contact us at least 48 hours in advance for custom orders."
-                        },
-                        {
-                            q: "What are your delivery options?",
-                            a: "We offer delivery in Amman and surrounding areas. Delivery is free for orders over 60 JOD — otherwise there’s a 5 JOD delivery fee. If you live outside Amman, please check with us to confirm availability."
-                        },
-                        {
-                            q: "Do you have gluten-free options?",
-                            a: "We offer a selection of gluten-free pastries. We can create custom orders. Please check our online menu or call us for current availability."
-                        },
-                        {
-                            q: "Can I schedule pickup times?",
-                            a: "Currently, we offer delivery only. Check with us for future locations and pick-up options."
-                        }
-                    ].map((faq, index) => (
-                        <Card key={index}
-                              className="card-premium hover:bg-umami-nube hover:shadow-lg transition-all duration-200 hover:scale-[1.02] ">
-                            <CardHeader>
-                                <CardTitle className="text-lg flex items-start gap-2">
-                                    <div
-                                        className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <span className="text-gold text-sm font-bold">?</span>
-                                    </div>
-                                    {faq.q}
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-elegant pl-8">{faq.a}</p>
-                            </CardContent>
-                        </Card>
-                    ))}
-                </div>
-            </div>
-        </section>);
-}
 
 // Main Contact component
 const Contact = () => {
@@ -100,7 +46,9 @@ const Contact = () => {
                    <Suspense fallback={<div>Loading...</div>}>
             <ContactClient />
             </Suspense>
-            <FAQ/>
+            <FAQ />
+            <br />
+            <HowToOrder />
         </div>
     );
 };

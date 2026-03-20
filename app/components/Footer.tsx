@@ -78,6 +78,12 @@ const Footer = () => {
                             >
                                 Contact
                             </Link>
+                            <Link
+                                href="/policy"
+                                className="font-body font-light text-[0.82rem] text-umami-taupe hover:text-umami-linen transition-colors duration-300"
+                            >
+                                Policy
+                            </Link>
                         </nav>
                     </div>
 

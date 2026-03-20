@@ -48,6 +48,13 @@ const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => {
                     >
                         Contact
                     </Link>
+                    <Link
+                        href="/location"
+                        className="text-2xl font-wordmark tracking-tight text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
+                        onClick={onClose}
+                    >
+                        Visit
+                    </Link>
                 </nav>
             </div>
         </div>
