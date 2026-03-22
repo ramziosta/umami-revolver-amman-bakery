@@ -68,8 +68,8 @@ export const categories: Category[] = [
                 itemDescription: "Classic tiramisu flavors layered with coffee-soaked crêpes and mascarpone cream.",
                 itemImages: [tiramisuCrepe],
                 quantityOptions: [
-                    { quantity: "9 inch — serves 14–16", price: "60 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "45 JOD" },
+                    { quantity: "9 inch — serves 14–16", price: "58 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "47 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, coffee",
                 allergens: "Gluten, dairy, eggs",
@@ -83,8 +83,8 @@ export const categories: Category[] = [
                 itemDescription: "Earthy matcha cream layered between delicate green tea crêpes.",
                 itemImages: [matchaCrepe],
                 quantityOptions: [
-                    { quantity: "9 inch — serves 12–14", price: "60 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "45 JOD" },
+                    { quantity: "9 inch — serves 12–14", price: "58 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "47 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, cream, butter, eggs, matcha",
                 allergens: "Gluten, dairy, eggs",
@@ -99,7 +99,7 @@ export const categories: Category[] = [
                 itemImages: [cremeBruleeCrepe],
                 quantityOptions: [
                     { quantity: "9 inch — serves 12–14", price: "55 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "38 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "42 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, cream, butter, eggs, vanilla bean",
                 allergens: "Gluten, dairy, eggs",
@@ -113,8 +113,8 @@ export const categories: Category[] = [
                 itemDescription: "Lightly fragrant and smooth Earl Grey infused milk tea pastry cream layered with delicate crêpes.",
                 itemImages: [milkTeaCrepe],
                 quantityOptions: [
-                    { quantity: "9 inch — serves 12–14", price: "60 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "45 JOD" },
+                    { quantity: "9 inch — serves 12–14", price: "58 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "47 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, Earl Grey tea",
                 allergens: "Gluten, dairy, eggs",
@@ -129,7 +129,7 @@ export const categories: Category[] = [
                 itemImages: [milleCrepeCake],
                 quantityOptions: [
                     { quantity: "9 inch — serves 12–14", price: "60 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "45 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "50 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, chocolate",
                 allergens: "Gluten, dairy, eggs",
@@ -144,7 +144,7 @@ export const categories: Category[] = [
                 itemImages: [pistachioCrepe],
                 quantityOptions: [
                     { quantity: "9 inch — serves 12–14", price: "60 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "45 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "50 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, pistachio, matcha",
                 allergens: "Gluten, dairy, eggs, nuts",
@@ -159,7 +159,7 @@ export const categories: Category[] = [
                 itemImages: [raspberryCrepe],
                 quantityOptions: [
                     { quantity: "9 inch — serves 12–14", price: "60 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "45 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "50 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, white chocolate, raspberry, almond",
                 allergens: "Gluten, dairy, eggs, nuts",
