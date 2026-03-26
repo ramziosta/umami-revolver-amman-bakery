@@ -24,14 +24,12 @@ import gingerCookie from "@/app/assets/ginger-cookies.jpg";
 
 import tieredCake from "@/app/assets/tieredCake.png";
 import bananaCake from "@/app/assets/dulceAndBanana.png";
-import bananaCake2 from "@/app/assets/dulceAndBanana2.png";
+import chocolateMousse from "@/app/assets/chocolate-mousse.jpeg";
 import chocolateCake from "@/app/assets/chocolate-cake.png";
 import strawberryCake from "@/app/assets/strawberryCake.jpg";
-import strawberryCake2 from "@/app/assets/strawberryCake2.jpg";
 import carrotCake from "@/app/assets/carrotCake.png";
 import coconutCake from "@/app/assets/coconut-cake.png";
 import confettiCake from "@/app/assets/funfetti1.jpg";
-import confettiCake2 from "@/app/assets/funfetti2.jpg";
 import bucheCake from "@/app/assets/bucheDeNoel.jpeg";
 
 import milleCrepeCake from "@/app/assets/mille-crepe-cake.jpg";
@@ -63,6 +61,21 @@ export const categories: Category[] = [
         itemCount: 7,
         items: [
             {
+                id: "creme-brulee-crepe",
+                itemName: "Crème Brûlée Mille Crêpe",
+                itemDescription: "Silky vanilla custard layers with a crisp brûléed top.",
+                itemImages: [cremeBruleeCrepe],
+                quantityOptions: [
+                    { quantity: "9 inch — serves 12–14", price: "55 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "42 JOD" },
+                ],
+                ingredients: "Flour, sugar, milk, cream, butter, eggs, vanilla bean",
+                allergens: "Gluten, dairy, eggs",
+                seasonal: false,
+                weight: "9 inch — serves 12–14",
+                variations: [],
+            },
+            {
                 id: "tiramisu-crepe",
                 itemName: "Tiramisu Mille Crêpe",
                 itemDescription: "Classic tiramisu flavors layered with coffee-soaked crêpes and mascarpone cream.",
@@ -87,21 +100,6 @@ export const categories: Category[] = [
                     { quantity: "8 inch — serves 10–12", price: "47 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, cream, butter, eggs, matcha",
-                allergens: "Gluten, dairy, eggs",
-                seasonal: false,
-                weight: "9 inch — serves 12–14",
-                variations: [],
-            },
-            {
-                id: "creme-brulee-crepe",
-                itemName: "Crème Brûlée Mille Crêpe",
-                itemDescription: "Silky vanilla custard layers with a crisp brûléed top.",
-                itemImages: [cremeBruleeCrepe],
-                quantityOptions: [
-                    { quantity: "9 inch — serves 12–14", price: "55 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "42 JOD" },
-                ],
-                ingredients: "Flour, sugar, milk, cream, butter, eggs, vanilla bean",
                 allergens: "Gluten, dairy, eggs",
                 seasonal: false,
                 weight: "9 inch — serves 12–14",
@@ -287,7 +285,21 @@ export const categories: Category[] = [
                 ],
                 ingredients: "Flour, sugar, olive oil, eggs, mascarpone, lemon, basil",
                 allergens: "Gluten, dairy, eggs",
-                seasonal: true,
+                seasonal: false,
+                weight: "2 layer 8 inch — serves 10–12",
+                variations: [],
+            },
+            {
+                id: "chocolate-mousse",
+                itemName: "King's Crown Cake",
+                itemDescription: "Chocolate Mousse Cake, Raspberry Ganache, Choux Crown",
+                itemImages: [chocolateMousse],
+                quantityOptions: [
+                    { quantity: "2 layer 8 inch — serves 10–12", price: "48 JOD" },
+                ],
+                ingredients: "Flour, sugar, butter, cream, eggs, chocolate, raspberries",
+                allergens: "Gluten, dairy, eggs",
+                seasonal: false,
                 weight: "2 layer 8 inch — serves 10–12",
                 variations: [],
             },
@@ -436,12 +448,12 @@ export const categories: Category[] = [
                 itemDescription: "A classic sourdough loaf with a crisp, golden crust and a light, tangy, airy crumb — perfect for sandwiches or as an everyday table bread.",
                 itemImages: [whiteSourdough2, whiteSourdough1, whiteSourdough],
                 quantityOptions: [
-                    { quantity: "1 Loaf", price: "5 JOD" },
+                    { quantity: "1 Loaf", price: "6 JOD" },
                 ],
                 ingredients: "Flour, water, salt, sourdough starter",
                 allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
                 seasonal: false,
-                weight: "800 g",
+                weight: "900",
                 variations: [
                     { id: "white-kilo", name: "1250 g Loaf", description: "", price: "8 JOD", images: [whiteSourdough1, whiteSourdough2, whiteSourdough] },
                 ],
@@ -452,12 +464,12 @@ export const categories: Category[] = [
                 itemDescription: "A hearty sourdough made with stone-ground Italian Primativa flour — rustic, nutty, and full of old-world character.",
                 itemImages: [wholeWheat],
                 quantityOptions: [
-                    { quantity: "1 Loaf", price: "5 JOD" },
+                    { quantity: "1 Loaf", price: "6 JOD" },
                 ],
                 ingredients: "Whole wheat flour, water, salt, sourdough starter",
                 allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
                 seasonal: false,
-                weight: "800 g",
+                weight: "800",
                 variations: [
                     { id: "wheat-kilo", name: "1250 g Loaf", description: "", price: "8 JOD", images: [wholeWheat] },
                 ],
@@ -468,12 +480,12 @@ export const categories: Category[] = [
                 itemDescription: "Dense, earthy rye loaf inspired by traditional Russian recipes — robust flavor with a deep, hearty crumb and a hint of sourness.",
                 itemImages: [rye],
                 quantityOptions: [
-                    { quantity: "1 Loaf", price: "5 JOD" },
+                    { quantity: "1 Loaf", price: "6 JOD" },
                 ],
                 ingredients: "Rye flour, water, salt, sourdough starter",
                 allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
                 seasonal: false,
-                weight: "800 g",
+                weight: "800",
                 variations: [
                     { id: "rye-kilo", name: "1250 g Loaf", description: "", price: "8 JOD", images: [rye] },
                 ],
@@ -484,12 +496,12 @@ export const categories: Category[] = [
                 itemDescription: "Crafted from our unique blend of local, French, and Italian wheat, plus hints of barley for extra depth.",
                 itemImages: [artisan],
                 quantityOptions: [
-                    { quantity: "1 Loaf", price: "5 JOD" },
+                    { quantity: "1 Loaf", price: "6 JOD" },
                 ],
                 ingredients: "Multi-grain flour, water, salt, sourdough starter",
                 allergens: "Made with flour and is prepared in a kitchen that processes nuts, eggs, and dairy products.",
                 seasonal: false,
-                weight: "800 g",
+                weight: "800",
                 variations: [
                     { id: "artisan-kilo", name: "1250 g Loaf", description: "", price: "8 JOD", images: [artisan] },
                 ],
@@ -500,12 +512,12 @@ export const categories: Category[] = [
                 itemDescription: "Our Artisan Loaf loaded with pumpkin seeds, sunflower seeds, flaxseed, nigella, sesame, and oatmeal.",
                 itemImages: [multiSeedSourdough],
                 quantityOptions: [
-                    { quantity: "1 Loaf", price: "7 JOD" },
+                    { quantity: "1 Loaf", price: "8 JOD" },
                 ],
                 ingredients: "Multi-grain flour, seeds, nuts, water, salt, sourdough starter",
                 allergens: "Made with flour, seeds and nuts and is prepared in a kitchen that processes eggs, and dairy products.",
                 seasonal: false,
-                weight: "800 g",
+                weight: "900 g",
                 variations: [
                     { id: "multi-seed-kilo", name: "1250 g Loaf", description: "", price: "8 JOD", images: [multiSeedSourdough] },
                 ],
@@ -516,12 +528,12 @@ export const categories: Category[] = [
                 itemDescription: "A hearty gluten-free loaf made with quinoa, brown rice, millet, and buckwheat flour, enriched with flaxseed and psyllium for natural structure and chew.",
                 itemImages: [GFMultiGrainLoaf],
                 quantityOptions: [
-                    { quantity: "1 Loaf", price: "10 JOD" },
+                    { quantity: "1 Loaf", price: "12 JOD" },
                 ],
                 ingredients: "Quinoa flour, brown rice flour, millet flour, buckwheat flour, flaxseed, psyllium husk, water, salt, yeast",
                 allergens: "Prepared in a kitchen that processes eggs, dairy, and nuts.",
                 seasonal: false,
-                weight: "700 g",
+                weight: "1000",
                 variations: [],
             },
             {
@@ -530,12 +542,12 @@ export const categories: Category[] = [
                 itemDescription: "Soft and light gluten-free bread made mainly with white rice flour and potato starch, balanced with flaxseed and psyllium for a tender crumb.",
                 itemImages: [gfWhiteBread],
                 quantityOptions: [
-                    { quantity: "1 Loaf", price: "8 JOD" },
+                    { quantity: "1 Loaf", price: "9 JOD" },
                 ],
                 ingredients: "White rice flour, potato starch, flaxseed, psyllium husk, water, salt, yeast",
                 allergens: "Prepared in a kitchen that processes eggs, dairy, and nuts.",
                 seasonal: false,
-                weight: "700 g",
+                weight: "1000",
                 variations: [],
             },
         ],
