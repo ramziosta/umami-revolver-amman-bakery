@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import milleCrepeCake from "@/app/assets/creme-brulee-mille-crepe.png";
+import milleCrepeCake from "@/app/assets/Whole Cake Heads-on.jpg";
 import tiramisuCrepe from "@/app/assets/tiramisu-mille-crepe.jpeg";
 import seasonal from "@/app/assets/bucheDeNoel.jpeg";
 
@@ -74,7 +74,7 @@ export const HeroSection = () => {
                 ))}
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-black/5" />
 
                 {/* Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
