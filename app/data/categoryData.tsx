@@ -224,7 +224,7 @@ export const categories: Category[] = [
                 itemDescription: "A moist banana sponge studded with toasted pecans, layered with banana pudding filling and finished with a tangy cream cheese frosting and dulce de leche glaze.",
                 itemImages: [bananaCake,],
                 quantityOptions: [
-                    { quantity: "3 layer rectangular (6×6×12 inch)", price: "55 JOD" },
+                    { quantity: "3 layer rectangular (6×6×12 inch)", price: "65 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, pecans, banana, cream cheese, dulce de leche",
                 allergens: "Gluten, dairy, eggs, nuts",
