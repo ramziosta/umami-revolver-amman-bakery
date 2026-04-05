@@ -252,8 +252,7 @@ export const categories: Category[] = [
                 itemDescription: "Strawberry cake with strawberry mascarpone white chocolate ganache, roasted strawberry filling and fresh strawberries.",
                 itemImages: [strawberryCake, ],
                 quantityOptions: [
-                    { quantity: "2 layer 8 inch", price: "40 JOD" },
-                    { quantity: "3 layer 8 inch", price: "55 JOD" },
+                    { quantity: "3 layer 8 inch", price: "65 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, strawberry, white chocolate, mascarpone",
                 allergens: "Gluten, dairy, eggs",
@@ -267,7 +266,7 @@ export const categories: Category[] = [
                 itemDescription: "A delicate almond sponge layered with chocolate truffle, cookie praline, finished with ganache, topped with cookie crunch and strawberry dots.",
                 itemImages: [bucheCake],
                 quantityOptions: [
-                    { quantity: "½ sheet (30×40 cm) — ~12 slices", price: "45 JOD" },
+                    { quantity: "½ sheet (30×40 cm) — ~12 slices", price: "55 JOD" },
                 ],
                 ingredients: "Eggs, sugar, almond, cocoa, butter, chocolate, heavy cream",
                 allergens: "Gluten, dairy, eggs, nuts",
@@ -281,7 +280,7 @@ export const categories: Category[] = [
                 itemDescription: "Moist olive oil cake with zesty lemon curd, vanilla bean mascarpone frosting, and lemon basil sugar.",
                 itemImages: [seasonal],
                 quantityOptions: [
-                    { quantity: "2 layer 8 inch — serves 10–12", price: "48 JOD" },
+                    { quantity: "3 layer 8 inch — serves 10–12", price: "65 JOD" },
                 ],
                 ingredients: "Flour, sugar, olive oil, eggs, mascarpone, lemon, basil",
                 allergens: "Gluten, dairy, eggs",
@@ -295,7 +294,7 @@ export const categories: Category[] = [
                 itemDescription: "Chocolate Mousse Cake, Raspberry Ganache, Choux Crown",
                 itemImages: [chocolateMousse],
                 quantityOptions: [
-                    { quantity: "2 layer 8 inch — serves 10–12", price: "48 JOD" },
+                    { quantity: "2 layer 8 inch — serves 10–12", price: "65 JOD" },
                 ],
                 ingredients: "Flour, sugar, butter, cream, eggs, chocolate, raspberries",
                 allergens: "Gluten, dairy, eggs",
