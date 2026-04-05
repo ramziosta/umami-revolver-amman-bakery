@@ -35,7 +35,7 @@ import bucheCake from "@/app/assets/bucheDeNoel.jpeg";
 import milleCrepeCake from "@/app/assets/mille-crepe-cake.jpg";
 import tiramisuCrepe from "@/app/assets/tiramisu-mille-crepe.jpeg";
 import matchaCrepe from "@/app/assets/matcha-mille-crepe.jpg";
-import cremeBruleeCrepe from "@/app/assets/cWhole Cake Heads-on.jpg";
+import cremeBruleeCrepe from "@/app/assets/Whole Cake Heads-on.jpg";
 import milkTeaCrepe from "@/app/assets/milk-tea-mille-crepe.png";
 import pistachioCrepe from "@/app/assets/pistachio-mille-crepe.png";
 import raspberryCrepe from "@/app/assets/raspberry-almond-mille-crepe.png";
