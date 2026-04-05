@@ -67,7 +67,7 @@ export const categories: Category[] = [
                 itemImages: [cremeBruleeCrepe],
                 quantityOptions: [
                     { quantity: "9 inch — serves 12–14", price: "55 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "42 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "47 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, cream, butter, eggs, vanilla bean",
                 allergens: "Gluten, dairy, eggs",
@@ -82,7 +82,7 @@ export const categories: Category[] = [
                 itemImages: [tiramisuCrepe],
                 quantityOptions: [
                     { quantity: "9 inch — serves 14–16", price: "58 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "47 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "50 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, coffee",
                 allergens: "Gluten, dairy, eggs",
@@ -97,7 +97,7 @@ export const categories: Category[] = [
                 itemImages: [matchaCrepe],
                 quantityOptions: [
                     { quantity: "9 inch — serves 12–14", price: "58 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "47 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "50 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, cream, butter, eggs, matcha",
                 allergens: "Gluten, dairy, eggs",
@@ -112,7 +112,7 @@ export const categories: Category[] = [
                 itemImages: [milkTeaCrepe],
                 quantityOptions: [
                     { quantity: "9 inch — serves 12–14", price: "58 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "47 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "50 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, Earl Grey tea",
                 allergens: "Gluten, dairy, eggs",
@@ -127,7 +127,7 @@ export const categories: Category[] = [
                 itemImages: [milleCrepeCake],
                 quantityOptions: [
                     { quantity: "9 inch — serves 12–14", price: "60 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "50 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "52 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, chocolate",
                 allergens: "Gluten, dairy, eggs",
@@ -142,7 +142,7 @@ export const categories: Category[] = [
                 itemImages: [pistachioCrepe],
                 quantityOptions: [
                     { quantity: "9 inch — serves 12–14", price: "60 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "50 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "52 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, pistachio, matcha",
                 allergens: "Gluten, dairy, eggs, nuts",
@@ -157,7 +157,7 @@ export const categories: Category[] = [
                 itemImages: [raspberryCrepe],
                 quantityOptions: [
                     { quantity: "9 inch — serves 12–14", price: "60 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "50 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "52 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, white chocolate, raspberry, almond",
                 allergens: "Gluten, dairy, eggs, nuts",
