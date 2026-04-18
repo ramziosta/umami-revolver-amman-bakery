@@ -33,7 +33,7 @@ import confettiCake from "@/app/assets/funfetti1.jpg";
 import bucheCake from "@/app/assets/bucheDeNoel.jpeg";
 
 import milleCrepeCake from "@/app/assets/mille-crepe-cake.jpg";
-import tiramisuCrepe from "@/app/assets/tiramisu-mille-crepe.jpeg";
+import tiramisuCrepe from "@/app/assets/tiramisu-web.jpg";
 import matchaCrepe from "@/app/assets/matcha-mille-crepe.jpg";
 import cremeBruleeCrepe from "@/app/assets/Whole Cake Heads-on.jpg";
 import milkTeaCrepe from "@/app/assets/milk-tea-mille-crepe.png";
