@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import milleCrepeCake from "@/app/assets/Whole Cake Heads-on.jpg";
-import tiramisuCrepe from "@/app/assets/tiramisu-web.jpg";
+import tiramisuCrepe from "@/app/assets/tiramisu.jpg";
 import seasonal from "@/app/assets/bucheDeNoel.jpeg";
 
 export const HeroSection = () => {
