@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import milleCrepeCake from "@/app/assets/Whole Cake Heads-on.jpg";
 import tiramisuCrepe from "@/app/assets/tiramisu.jpg";
-import seasonal from "@/app/assets/bucheDeNoel.jpeg";
+import succes from "@/app/assets/succes.jpg";
 
 export const HeroSection = () => {
 
@@ -27,14 +27,14 @@ export const HeroSection = () => {
             cakeName: "Tiramisu Mille-Crêpe",
             href: "/menu/mille-crepe-cakes/tiramisu-crepe/"
         },
-        // {
-        //     image: seasonal,
-        //     headlineTop: "What The Season Brings.",
-        //     headlineBottom: "We refine.",
-        //     description: "Almond Jaconde. Chocolate Crèmeux. Praline.",
-        //     cakeName: "Buche De Noel",
-        //     href: "/menu/tiered-cakes/buche-de-noel/"
-        // },
+        {
+            image: succes,
+            headlineTop: "Six components. One cake.",
+            headlineBottom: "170 active minutes.",
+            description: "Almond-hazelnut praliné diplomat · Praliné crémeux · Joconde",
+            cakeName: "Succès Praliné",
+            href: "/menu/mille-crepe-cakes/succes/"
+        },
     ];
 
     const [current, setCurrent] = useState(0);

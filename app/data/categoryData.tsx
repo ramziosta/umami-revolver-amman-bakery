@@ -39,7 +39,7 @@ import cremeBruleeCrepe from "@/app/assets/Whole Cake Heads-on.jpg";
 import milkTeaCrepe from "@/app/assets/milk-tea-mille-crepe.png";
 import pistachioCrepe from "@/app/assets/pistachio-mille-crepe.png";
 import raspberryCrepe from "@/app/assets/raspberry-almond-mille-crepe.png";
-
+import succes from "@/app/assets/succes.jpg";
 import seasonal from "@/app/assets/lemon-basil.png";
 
 
@@ -86,6 +86,21 @@ export const categories: Category[] = [
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, coffee",
                 allergens: "Gluten, dairy, eggs",
+                seasonal: false,
+                weight: "9 inch — serves 14–16",
+                variations: [],
+            },
+            {
+                id: "succes-praline-crepe",
+                itemName: "Succès Praliné Mille Crêpe",
+                itemDescription: "Twenty layers of brown butter crêpes filled with almond and hazelnut praliné diplomat cream. A praliné crémeux ribbon is piped over a joconde disc insert, finished with crushed praliné and whole hazelnuts. Set overnight.",
+                itemImages: [succes],
+                quantityOptions: [
+                    { quantity: "9 inch — serves 14–16", price: "63 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "54 JOD" },
+                ],
+                ingredients: "Flour, almond flour, sugar, milk, butter, eggs, hazelnuts, almonds",
+                allergens: "Gluten, dairy, eggs, tree nuts",
                 seasonal: false,
                 weight: "9 inch — serves 14–16",
                 variations: [],
