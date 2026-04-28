@@ -27,14 +27,14 @@ export const HeroSection = () => {
             cakeName: "Tiramisu Mille-Crêpe",
             href: "/menu/mille-crepe-cakes/tiramisu-crepe/"
         },
-        {
-            image: seasonal,
-            headlineTop: "What The Season Brings.",
-            headlineBottom: "We refine.",
-            description: "Almond Jaconde. Chocolate Crèmeux. Praline.",
-            cakeName: "Buche De Noel",
-            href: "/menu/tiered-cakes/buche-de-noel/"
-        },
+        // {
+        //     image: seasonal,
+        //     headlineTop: "What The Season Brings.",
+        //     headlineBottom: "We refine.",
+        //     description: "Almond Jaconde. Chocolate Crèmeux. Praline.",
+        //     cakeName: "Buche De Noel",
+        //     href: "/menu/tiered-cakes/buche-de-noel/"
+        // },
     ];
 
     const [current, setCurrent] = useState(0);

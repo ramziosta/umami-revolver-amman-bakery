@@ -168,6 +168,11 @@ export const categories: Category[] = [
         ],
     },
 
+
+
+];
+
+const extras: Category[] = [
     // ━━ TIERED CAKES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     {
         id: "tiered-cakes",
@@ -551,6 +556,4 @@ export const categories: Category[] = [
             },
         ],
     },
-
-];
-
+]

@@ -19,12 +19,6 @@ const categories: ShowcaseCategory[] = [
         image: milleCrepeCake,
         description: 'Twenty paper-thin crêpe layers, filled with house-made diplomat creams. Each cake assembled to order.',
     },
-    {
-        id: 'tiered-cakes',
-        name: 'Specialty Cakes',
-        image: chocolateMousse,
-        description: 'Refined cakes built on French technique — controlled sweetness, real ingredients, no shortcuts.',
-    },
 ];
 
 const CategoriesShowcase = () => {
