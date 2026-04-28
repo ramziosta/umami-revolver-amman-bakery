@@ -3,11 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import {Card, CardContent} from "@/app/ui/card";
-import {categories} from "@/app/data/categoryData";
+import {extras} from "@/app/data/categoryData";
 import React from "react";
 
 
-const tieredCakes = categories.find(cat => cat.id === "tiered-cakes");
+const tieredCakes = extras.find(cat => cat.id === "tiered-cakes");
 
 if (!tieredCakes) {
     throw new Error("Tiered Cakes category not found!");

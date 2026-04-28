@@ -172,7 +172,7 @@ export const categories: Category[] = [
 
 ];
 
-const extras: Category[] = [
+export const extras: Category[] = [
     // ━━ TIERED CAKES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     {
         id: "tiered-cakes",
