@@ -40,6 +40,7 @@ import milkTeaCrepe from "@/app/assets/milk-tea-mille-crepe.png";
 import pistachioCrepe from "@/app/assets/pistachio-mille-crepe.png";
 import raspberryCrepe from "@/app/assets/raspberry-almond-mille-crepe.png";
 import succes from "@/app/assets/succes.jpg";
+import ajloun from "@/app/assets/OrangeBlossom.jpg";
 import seasonal from "@/app/assets/lemon-basil.png";
 
 
@@ -56,7 +57,7 @@ export const categories: Category[] = [
     {
         id: "mille-crepe-cakes",
         name: "Mille Crêpe Cakes",
-        image: milleCrepeCake,
+        image: ajloun,
         description: "Twenty paper-thin crêpe layers, filled with house-made diplomat creams. Each cake assembled to order.",
         itemCount: 7,
         items: [
@@ -100,6 +101,21 @@ export const categories: Category[] = [
                     { quantity: "8 inch — serves 10–12", price: "54 JOD" },
                 ],
                 ingredients: "Flour, almond flour, sugar, milk, butter, eggs, hazelnuts, almonds",
+                allergens: "Gluten, dairy, eggs, tree nuts",
+                seasonal: false,
+                weight: "9 inch — serves 14–16",
+                variations: [],
+            },
+            {
+                id: "orange-blossom-crepe",
+                itemName: "Orange Blossom Mille Crêpe",
+                itemDescription: "Twenty layers of olive oil crêpes scented with orange blossom water and ground mastic, filled with labneh diplomat cream. Finished with warm Ajloun honey, crushed pistachio, and dried rose petals. Set overnight.",
+                itemImages: [ajloun],
+                quantityOptions: [
+                    { quantity: "9 inch — serves 14–16", price: "58 JOD" },
+                    { quantity: "8 inch — serves 10–12", price: "50 JOD" },
+                ],
+                ingredients: "Flour, olive oil, orange blossom water, mastic, sugar, milk, eggs, labneh, butter, pistachio, honey, rose petals",
                 allergens: "Gluten, dairy, eggs, tree nuts",
                 seasonal: false,
                 weight: "9 inch — serves 14–16",

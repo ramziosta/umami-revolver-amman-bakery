@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {Card, CardContent} from '../ui/card';
 import chocolateMousse from '../assets/chocolate-mousse.jpeg';
-import milleCrepeCake from "@/app/assets/mille-crepe-cake.jpg";
+import milleCrepeCake from "@/app/assets/OrangeBlossom.jpg";
 import Image from 'next/image';
 import {StaticImageData} from 'next/image';
 

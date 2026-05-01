@@ -7,6 +7,7 @@ import Image from "next/image";
 import milleCrepeCake from "@/app/assets/Whole Cake Heads-on.jpg";
 import tiramisuCrepe from "@/app/assets/tiramisu.jpg";
 import succes from "@/app/assets/succes.jpg";
+import ajloun from "@/app/assets/OrangeBlossom.jpg";
 
 export const HeroSection = () => {
 
@@ -34,6 +35,14 @@ export const HeroSection = () => {
             description: "Almond-hazelnut praliné diplomat · Praliné crémeux · Joconde",
             cakeName: "Succès Praliné",
             href: "/menu/mille-crepe-cakes/succes/"
+        },
+        {
+            image: ajloun,
+            headlineTop: "Mazaher. Labneh. Ajloun honey.",
+            headlineBottom: "A Levantine identity.",
+            description: "Orange blossom-Olive oil crêpes · Labneh diplomat · Crushed pistachio · Rose petal",
+            cakeName: "Orange Blossom",
+            href: "/menu/mille-crepe-cakes/orange-blossom/"
         },
     ];
 
