@@ -26,7 +26,7 @@ const Navigation = () => {
                     {/* Navigation — Cinzel structural labels */}
                     <nav className="hidden md:flex items-center space-x-10">
                         <Link
-                            href="/menu"
+                            href="/menu/mille-crepe-cakes/"
                             className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
                             Menu
