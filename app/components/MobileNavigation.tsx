@@ -28,7 +28,7 @@ const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => {
                 
                 <nav className="flex flex-col items-center justify-center space-y-8 flex-1">
                     <Link
-                        href="/menu"
+                        href="/menu/mille-crepe-cakes/"
                         className="text-2xl font-wordmark tracking-tight text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         onClick={onClose}
                     >
