@@ -43,8 +43,15 @@ export default function PreOrderPopup() {
                 </h2>
 
                 <p className="font-body font-light text-[0.82rem] text-umami-dim-grey leading-relaxed mb-8">
-                    Please allow a minimum of 48 hours. Strawberry Lychee and Hibiscus Mille crepe requires 72 hour notice.
-                    Mille crêpe cakes require thoughtful preparation and overnight rest.
+                    All mille-crêpe cakes are made to order and require extensive multi-day preparation.
+
+                    To confirm your order, a 50% non-refundable deposit is required.
+
+                    * Orders require 48–72 hours notice depending on the cake design and production schedule.
+                    * Because ingredients and production begin immediately after confirmation, cancellations or date changes made after booking cannot be fully refunded.
+                    * The remaining balance is due before pickup or delivery.
+
+                    Thank you for understanding the care and preparation involved in each cake.
                 </p>
 
                 <button
