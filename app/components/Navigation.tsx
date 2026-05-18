@@ -29,6 +29,12 @@ const Navigation = () => {
                             href="/menu/mille-crepe-cakes/"
                             className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
+                            Mille Crêpe
+                        </Link>
+                        <Link
+                            href="/menu/"
+                            className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
+                        >
                             Menu
                         </Link>
                         <Link

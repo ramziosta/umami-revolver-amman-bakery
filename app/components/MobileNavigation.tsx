@@ -32,6 +32,13 @@ const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => {
                         className="text-2xl font-wordmark tracking-tight text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         onClick={onClose}
                     >
+                        Mille Crêpe
+                    </Link>
+                    <Link
+                        href="/menu/"
+                        className="text-2xl font-wordmark tracking-tight text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
+                        onClick={onClose}
+                    >
                         Menu
                     </Link>
                     <Link

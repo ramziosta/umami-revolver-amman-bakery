@@ -43,8 +43,8 @@ export default function PreOrderPopup() {
                 </h2>
 
                 <p className="font-body font-light text-[0.82rem] text-umami-dim-grey leading-relaxed mb-8">
-                    Please allow a minimum of 24 hours.
-                    Mille crêpe cakes require overnight rest.
+                    Please allow a minimum of 48 hours. Strawberry Lychee and Hibiscus Mille crepe requires 72 hour notice.
+                    Mille crêpe cakes require thoughtful preparation and overnight rest.
                 </p>
 
                 <button

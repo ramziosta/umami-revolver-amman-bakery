@@ -7,7 +7,7 @@ import {Input} from "../ui/input";
 import {Textarea} from "../ui/textarea";
 import Image from "next/image";
 import {useToast} from "../hooks/use-toast";
-import contactHero from '@/app/assets/contact.jpg'
+import contactHero from '@/app/assets/tools.jpg'
 interface FormErrors {
     name?: string;
     email?: string;

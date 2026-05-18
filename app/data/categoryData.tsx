@@ -27,7 +27,7 @@ import bananaCake from "@/app/assets/dulceAndBanana.png";
 import chocolateMousse from "@/app/assets/chocolate-mousse.jpeg";
 import chocolateCake from "@/app/assets/chocolate-cake.png";
 import strawberryCake from "@/app/assets/strawberryCake.jpg";
-import carrotCake from "@/app/assets/carrotCake.png";
+import carrotCake from "@/app/assets/CarrotCake.jpg";
 import coconutCake from "@/app/assets/coconut-cake.png";
 import confettiCake from "@/app/assets/funfetti1.jpg";
 import bucheCake from "@/app/assets/bucheDeNoel.jpeg";
@@ -42,7 +42,7 @@ import raspberryCrepe from "@/app/assets/raspberry-almond-mille-crepe.png";
 import succes from "@/app/assets/succes.jpg";
 import ajloun from "@/app/assets/OrangeBlossom.jpg";
 import seasonal from "@/app/assets/lemon-basil.png";
-
+import strawberryLychee from "@/app/assets/StrawberryMilleCrepe.jpg"
 
 // ── RE-EXPORT TYPES ────────────────────────────────────────────────────────
 export type { Category, FeaturedCategory };
@@ -58,7 +58,7 @@ export const categories: Category[] = [
         id: "mille-crepe-cakes",
         name: "Mille Crêpe Cakes",
         image: ajloun,
-        description: "Twenty paper-thin crêpe layers, filled with house-made diplomat creams. Each cake assembled to order.",
+        description: "Twenty paper-thin crêpe layers. Each cake assembled to order.",
         itemCount: 7,
         items: [
             {
@@ -119,6 +119,21 @@ export const categories: Category[] = [
                 allergens: "Gluten, dairy, eggs, tree nuts",
                 seasonal: false,
                 weight: "9 inch — serves 14–16",
+                variations: [],
+            },
+            {
+                id: "strawberry-lychee-hibiscus-crepe",
+                itemName: "Strawberry, Lychee & Hibiscus Mille Crêpe",
+                itemDescription: "Twenty layers of strawberry yogurt crêpes, filled with strawberry and lychee diplomat cream and a set hibiscus gel core. Finished with a fresh strawberry compote glaze and freeze-dried strawberry. Set overnight.",
+                itemImages: [strawberryLychee],
+                quantityOptions: [
+                    { quantity: "9 inch — serves 10–12", price: "63 JOD" },
+                    { quantity: "8 inch — serves 8–10", price: "54 JOD" },
+                ],
+                ingredients: "Flour, eggs, milk, yogurt, strawberry, lychee, hibiscus, cream, butter, sugar, vanilla, rose water, lemon",
+                allergens: "Gluten, dairy, eggs",
+                seasonal: false,
+                weight: "9 inch — serves 10–12",
                 variations: [],
             },
             {
@@ -199,75 +214,13 @@ export const categories: Category[] = [
         ],
     },
 
-
-
-];
-
-export const extras: Category[] = [
-    // ━━ TIERED CAKES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     {
         id: "tiered-cakes",
         name: "Signature Cakes",
-        image: tieredCake,
-        description: "Layered, tailored, and unforgettable.",
+        image: carrotCake,
+        description: "Layered, tailored, and uniquely unforgettable.",
         itemCount: 7,
         items: [
-            {
-                id: "white-confetti-cake",
-                itemName: "Celebration Confetti Cake",
-                itemDescription: "Soft, fluffy vanilla bean cake layered with rainbow confetti sprinkles and filled with a light mascarpone whipped cream. Frosted in silky French buttercream.",
-                itemImages: [confettiCake,],
-                quantityOptions: [
-                    { quantity: "3 layer 8 inch", price: "55 JOD" },
-                ],
-                ingredients: "Flour, sugar, milk, butter, eggs, vanilla bean, mascarpone",
-                allergens: "Gluten, dairy, eggs",
-                seasonal: false,
-                weight: "3 layer 8 inch",
-                variations: [],
-            },
-            {
-                id: "chocolate-cake",
-                itemName: "Triple Chocolate Cake",
-                itemDescription: "Rich, moist dark chocolate sponge layered with milk chocolate crèmeux, chocolate crunch feuilletine and French chocolate buttercream.",
-                itemImages: [chocolateCake,],
-                quantityOptions: [
-                    { quantity: "3 layer 8 inch", price: "65 JOD" },
-                ],
-                ingredients: "Flour, sugar, milk, butter, eggs, chocolate",
-                allergens: "Gluten, dairy, eggs",
-                seasonal: false,
-                weight: "3 layer 8 inch",
-                variations: [],
-            },
-            {
-                id: "coconut-cake",
-                itemName: "Coconut Passion Fruit Dream Cake",
-                itemDescription: "Soft coconut cake layered with German buttercream, passion fruit filling and finished with toasted coconut flakes.",
-                itemImages: [coconutCake, ],
-                quantityOptions: [
-                    { quantity: "3 layer 8 inch", price: "60 JOD" },
-                ],
-                ingredients: "Flour, sugar, milk, butter, eggs, coconut, passion fruit",
-                allergens: "Gluten, dairy, eggs",
-                seasonal: false,
-                weight: "3 layer 8 inch",
-                variations: [],
-            },
-            {
-                id: "banana-nut-cake",
-                itemName: "Dulce and Banana",
-                itemDescription: "A moist banana sponge studded with toasted pecans, layered with banana pudding filling and finished with a tangy cream cheese frosting and dulce de leche glaze.",
-                itemImages: [bananaCake,],
-                quantityOptions: [
-                    { quantity: "3 layer rectangular (6×6×12 inch)", price: "65 JOD" },
-                ],
-                ingredients: "Flour, sugar, milk, butter, eggs, pecans, banana, cream cheese, dulce de leche",
-                allergens: "Gluten, dairy, eggs, nuts",
-                seasonal: false,
-                weight: "3 layer rectangular",
-                variations: [],
-            },
             {
                 id: "carrot-pecan-cake",
                 itemName: "Brown Butter Carrot & Pecan Cake",
@@ -282,62 +235,39 @@ export const extras: Category[] = [
                 weight: "3 layer 8 inch",
                 variations: [],
             },
-            {
-                id: "strawberry-cake",
-                itemName: "Roasted Strawberry White Chocolate Ganache Cake",
-                itemDescription: "Strawberry cake with strawberry mascarpone white chocolate ganache, roasted strawberry filling and fresh strawberries.",
-                itemImages: [strawberryCake, ],
+
+
+        ],
+    },
+
+
+];
+
+export const extras: Category[] = [
+    // ━━ TIERED CAKES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    {
+        id: "tiered-cakes",
+        name: "Signature Cakes",
+        image: carrotCake,
+        description: "Layered, tailored, and uniquely unforgettable.",
+        itemCount: 7,
+        items: [
+                   {
+                id: "carrot-pecan-cake",
+                itemName: "Brown Butter Carrot & Pecan Cake",
+                itemDescription: "Three-layer spiced carrot cake made with brown butter, dual-cut carrots, toasted pecans, and a lactic-forward mascarpone–cream cheese frosting. Finished with honey carrot soak, a white chocolate feuilletine crunch, and crisp carrot curls.",
+                itemImages: [carrotCake,],
                 quantityOptions: [
                     { quantity: "3 layer 8 inch", price: "65 JOD" },
                 ],
-                ingredients: "Flour, sugar, milk, butter, eggs, strawberry, white chocolate, mascarpone",
-                allergens: "Gluten, dairy, eggs",
+                ingredients: "Flour, almond, sugar, butter, eggs, buttermilk, carrots, pecans, cream cheese, mascarpone",
+                allergens: "Gluten, dairy, eggs, nuts",
                 seasonal: false,
                 weight: "3 layer 8 inch",
                 variations: [],
             },
-            {
-                id: "buche-de-noel",
-                itemName: "Bûche de Noël",
-                itemDescription: "A delicate almond sponge layered with chocolate truffle, cookie praline, finished with ganache, topped with cookie crunch and strawberry dots.",
-                itemImages: [bucheCake],
-                quantityOptions: [
-                    { quantity: "½ sheet (30×40 cm) — ~12 slices", price: "55 JOD" },
-                ],
-                ingredients: "Eggs, sugar, almond, cocoa, butter, chocolate, heavy cream",
-                allergens: "Gluten, dairy, eggs, nuts",
-                seasonal: true,
-                weight: "½ sheet — ~12 slices",
-                variations: [],
-            },
-            {
-                id: "mikes-lemonade",
-                itemName: "Lemon Mascarpone Olive Oil Cake",
-                itemDescription: "Moist olive oil cake with zesty lemon curd, vanilla bean mascarpone frosting, and lemon basil sugar.",
-                itemImages: [seasonal],
-                quantityOptions: [
-                    { quantity: "3 layer 8 inch — serves 10–12", price: "65 JOD" },
-                ],
-                ingredients: "Flour, sugar, olive oil, eggs, mascarpone, lemon, basil",
-                allergens: "Gluten, dairy, eggs",
-                seasonal: false,
-                weight: "2 layer 8 inch — serves 10–12",
-                variations: [],
-            },
-            {
-                id: "chocolate-mousse",
-                itemName: "King's Crown Cake",
-                itemDescription: "Chocolate Mousse Cake, Raspberry Ganache, Choux Crown",
-                itemImages: [chocolateMousse],
-                quantityOptions: [
-                    { quantity: "2 layer 8 inch — serves 10–12", price: "65 JOD" },
-                ],
-                ingredients: "Flour, sugar, butter, cream, eggs, chocolate, raspberries",
-                allergens: "Gluten, dairy, eggs",
-                seasonal: false,
-                weight: "2 layer 8 inch — serves 10–12",
-                variations: [],
-            },
+
+
         ],
     },
 
@@ -583,6 +513,114 @@ export const extras: Category[] = [
                 allergens: "Prepared in a kitchen that processes eggs, dairy, and nuts.",
                 seasonal: false,
                 weight: "1000",
+                variations: [],
+            },
+        ],
+    },
+    {
+        id: "tiered-cakes",
+        name: "Signature Cakes",
+        image: carrotCake,
+        description: "Layered, tailored, and uniquely unforgettable.",
+        itemCount: 7,
+        items: [
+            {
+                id: "white-confetti-cake",
+                itemName: "Celebration Confetti Cake",
+                itemDescription: "Soft, fluffy vanilla bean cake layered with rainbow confetti sprinkles and filled with a light mascarpone whipped cream. Frosted in silky French buttercream.",
+                itemImages: [confettiCake,],
+                quantityOptions: [
+                    { quantity: "3 layer 8 inch", price: "55 JOD" },
+                ],
+                ingredients: "Flour, sugar, milk, butter, eggs, vanilla bean, mascarpone",
+                allergens: "Gluten, dairy, eggs",
+                seasonal: false,
+                weight: "3 layer 8 inch",
+                variations: [],
+            },
+            {
+                id: "chocolate-cake",
+                itemName: "Triple Chocolate Cake",
+                itemDescription: "Rich, moist dark chocolate sponge layered with milk chocolate crèmeux, chocolate crunch feuilletine and French chocolate buttercream.",
+                itemImages: [chocolateCake,],
+                quantityOptions: [
+                    { quantity: "3 layer 8 inch", price: "65 JOD" },
+                ],
+                ingredients: "Flour, sugar, milk, butter, eggs, chocolate",
+                allergens: "Gluten, dairy, eggs",
+                seasonal: false,
+                weight: "3 layer 8 inch",
+                variations: [],
+            },
+            {
+                id: "coconut-cake",
+                itemName: "Coconut Passion Fruit Dream Cake",
+                itemDescription: "Soft coconut cake layered with German buttercream, passion fruit filling and finished with toasted coconut flakes.",
+                itemImages: [coconutCake, ],
+                quantityOptions: [
+                    { quantity: "3 layer 8 inch", price: "60 JOD" },
+                ],
+                ingredients: "Flour, sugar, milk, butter, eggs, coconut, passion fruit",
+                allergens: "Gluten, dairy, eggs",
+                seasonal: false,
+                weight: "3 layer 8 inch",
+                variations: [],
+            },
+            {
+                id: "banana-nut-cake",
+                itemName: "Dulce and Banana",
+                itemDescription: "A moist banana sponge studded with toasted pecans, layered with banana pudding filling and finished with a tangy cream cheese frosting and dulce de leche glaze.",
+                itemImages: [bananaCake,],
+                quantityOptions: [
+                    { quantity: "3 layer rectangular (6×6×12 inch)", price: "65 JOD" },
+                ],
+                ingredients: "Flour, sugar, milk, butter, eggs, pecans, banana, cream cheese, dulce de leche",
+                allergens: "Gluten, dairy, eggs, nuts",
+                seasonal: false,
+                weight: "3 layer rectangular",
+                variations: [],
+            },
+            {
+                id: "carrot-pecan-cake",
+                itemName: "Brown Butter Carrot & Pecan Cake",
+                itemDescription: "Three-layer spiced carrot cake made with brown butter, dual-cut carrots, toasted pecans, and a lactic-forward mascarpone–cream cheese frosting. Finished with honey carrot soak, a white chocolate feuilletine crunch, and crisp carrot curls.",
+                itemImages: [carrotCake,],
+                quantityOptions: [
+                    { quantity: "3 layer 8 inch", price: "65 JOD" },
+                ],
+                ingredients: "Flour, almond, sugar, butter, eggs, buttermilk, carrots, pecans, cream cheese, mascarpone",
+                allergens: "Gluten, dairy, eggs, nuts",
+                seasonal: false,
+                weight: "3 layer 8 inch",
+                variations: [],
+            },
+
+            {
+                id: "mikes-lemonade",
+                itemName: "Lemon Mascarpone Olive Oil Cake",
+                itemDescription: "Moist olive oil cake with zesty lemon curd, vanilla bean mascarpone frosting, and lemon basil sugar.",
+                itemImages: [seasonal],
+                quantityOptions: [
+                    { quantity: "3 layer 8 inch — serves 10–12", price: "65 JOD" },
+                ],
+                ingredients: "Flour, sugar, olive oil, eggs, mascarpone, lemon, basil",
+                allergens: "Gluten, dairy, eggs",
+                seasonal: false,
+                weight: "2 layer 8 inch — serves 10–12",
+                variations: [],
+            },
+            {
+                id: "chocolate-mousse",
+                itemName: "King's Crown Cake",
+                itemDescription: "Chocolate Mousse Cake, Raspberry Ganache, Choux Crown",
+                itemImages: [chocolateMousse],
+                quantityOptions: [
+                    { quantity: "2 layer 8 inch — serves 10–12", price: "65 JOD" },
+                ],
+                ingredients: "Flour, sugar, butter, cream, eggs, chocolate, raspberries",
+                allergens: "Gluten, dairy, eggs",
+                seasonal: false,
+                weight: "2 layer 8 inch — serves 10–12",
                 variations: [],
             },
         ],
