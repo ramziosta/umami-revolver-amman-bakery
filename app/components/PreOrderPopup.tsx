@@ -121,7 +121,27 @@ export default function PreOrderPopup() {
                         Thank you for understanding the care and preparation involved in each cake.
                     </p>
                 </div>
-                <div className="font-body font-light text-[0.82rem] text-umami-dim-grey leading-relaxed mb-8 space-y-3 text-right" dir="rtl">
+                <p
+                    className="text-[1rem] font-structural tracking-[0.22em] uppercase text-umami-olive-bark mb-5 text-center"
+                    dir="rtl"
+                >
+                    للطلب المسبق فقط
+                </p>
+
+                <h2
+                    className="font-display text-umami-carbon text-2xl md:text-3xl leading-tight mb-4 text-center"
+                    dir="rtl"
+                >
+                    كل كيك يُحضّر<br />
+                    <em className="text-umami-taupe not-italic">
+                        خصيصًا لطلبك.
+                    </em>
+                </h2>
+
+                <div
+                    className="font-body font-light text-[0.82rem] text-umami-dim-grey leading-relaxed mb-8 space-y-3 text-center"
+                    dir="rtl"
+                >
                     <p>
                         جميع كيكات الميل كريب تُحضّر حسب الطلب وتتطلب تحضيرًا دقيقًا يمتد على عدة أيام.
                     </p>
@@ -130,13 +150,15 @@ export default function PreOrderPopup() {
                         لتأكيد الطلب، يتطلب دفع عربون غير قابل للاسترداد بقيمة 50٪ من إجمالي الطلب.
                     </p>
 
-                    <ul className="list-disc pr-5 space-y-2">
+                    <ul className="list-disc pl-5 space-y-2">
                         <li>
                             تتطلب الطلبات إشعارًا مسبقًا من 48 إلى 72 ساعة حسب تصميم الكيك وجدول التحضير.
                         </li>
+
                         <li>
                             نظرًا لبدء تجهيز المكونات والإنتاج مباشرة بعد تأكيد الطلب، لا يمكن استرداد المبلغ بالكامل عند الإلغاء أو تعديل موعد الطلب بعد التأكيد.
                         </li>
+
                         <li>
                             يتم دفع المبلغ المتبقي قبل الاستلام أو التوصيل.
                         </li>
