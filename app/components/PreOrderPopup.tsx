@@ -121,6 +121,12 @@ export default function PreOrderPopup() {
                         Thank you for understanding the care and preparation involved in each cake.
                     </p>
                 </div>
+                <button
+                    onClick={handleClose}
+                    className="font-structural text-[0.55rem] tracking-[0.28em] uppercase px-8 py-3 bg-umami-olive-bark text-umami-linen hover:bg-umami-dark-walnut transition-colors duration-300"
+                >
+                    Understood
+                </button>
                 <p
                     className="text-[1rem] font-structural tracking-[0.22em] uppercase text-umami-olive-bark mb-5 text-center"
                     dir="rtl"
@@ -169,12 +175,7 @@ export default function PreOrderPopup() {
                     </p>
                 </div>
 
-                <button
-                    onClick={handleClose}
-                    className="font-structural text-[0.55rem] tracking-[0.28em] uppercase px-8 py-3 bg-umami-olive-bark text-umami-linen hover:bg-umami-dark-walnut transition-colors duration-300"
-                >
-                    Understood
-                </button>
+
             </div>
         </div>
     );
