@@ -30,7 +30,7 @@ import strawberryCake from "@/app/assets/strawberryCake.jpg";
 import carrotCake from "@/app/assets/CarrotCake.jpg";
 import coconutCake from "@/app/assets/coconut-cake.png";
 import confettiCake from "@/app/assets/funfetti1.jpg";
-import bucheCake from "@/app/assets/bucheDeNoel.jpeg";
+import chocolateNoir from "@/app/assets/ChocolateNoir.jpg";
 
 import milleCrepeCake from "@/app/assets/mille-crepe-cake.jpg";
 import tiramisuCrepe from "@/app/assets/tiramisu.jpg";
@@ -235,6 +235,20 @@ export const categories: Category[] = [
                 weight: "3 layer 8 inch",
                 variations: [],
             },
+            {
+                id: "chocolate-noir",
+                itemName: "Chocolate Noir",
+                itemDescription: "Three layers of dark chocolate olive oil cake with cardamom, filled with whipped miso chocolate ganache and a caramel feuilletine crunch. Finished with a feuilletine crust, cocoa dusting, and fleur de sel.",
+                itemImages: [chocolateNoir],
+                quantityOptions: [
+                    { quantity: "3 layer 8 inch", price: "70 JOD" },
+                ],
+                ingredients: "Flour, cocoa, chocolate, sugar, olive oil, eggs, buttermilk, miso, cream, labneh, feuilletine, cardamom, malt, milk powder",
+                allergens: "Gluten, dairy, eggs, soy",
+                seasonal: false,
+                weight: "3 layer 8 inch",
+                variations: [],
+            },
 
 
         ],
@@ -266,7 +280,20 @@ export const extras: Category[] = [
                 weight: "3 layer 8 inch",
                 variations: [],
             },
-
+            {
+                id: "chocolate-noir",
+                itemName: "Chocolate Noir",
+                itemDescription: "Three layers of dark chocolate olive oil cake with cardamom, filled with whipped miso chocolate ganache and a caramel feuilletine crunch. Finished with a feuilletine crust, cocoa dusting, and fleur de sel.",
+                itemImages: [chocolateNoir],
+                quantityOptions: [
+                    { quantity: "3 layer 8 inch", price: "70 JOD" },
+                ],
+                ingredients: "Flour, cocoa, chocolate, sugar, olive oil, eggs, buttermilk, miso, cream, labneh, feuilletine, cardamom, malt, milk powder",
+                allergens: "Gluten, dairy, eggs, soy",
+                seasonal: false,
+                weight: "3 layer 8 inch",
+                variations: [],
+            },
 
         ],
     },
