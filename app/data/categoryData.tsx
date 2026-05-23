@@ -68,12 +68,12 @@ export const categories: Category[] = [
                 itemImages: [cremeBruleeCrepe],
                 quantityOptions: [
                     { quantity: "9 inch — serves 12–14", price: "55 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "47 JOD" },
+                    { quantity: "8 inch — serves 8-10", price: "47 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, cream, butter, eggs, vanilla bean",
                 allergens: "Gluten, dairy, eggs",
                 seasonal: false,
-                weight: "9 inch — serves 12–14",
+                weight: "",
                 variations: [],
             },
             {
@@ -82,13 +82,13 @@ export const categories: Category[] = [
                 itemDescription: "Classic tiramisu flavors layered with coffee-soaked crêpes and mascarpone cream.",
                 itemImages: [tiramisuCrepe],
                 quantityOptions: [
-                    { quantity: "9 inch — serves 14–16", price: "58 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "50 JOD" },
+                    { quantity: "9 inch — serves 12-14", price: "58 JOD" },
+                    { quantity: "8 inch — serves 8-10", price: "50 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, coffee",
                 allergens: "Gluten, dairy, eggs",
                 seasonal: false,
-                weight: "9 inch — serves 14–16",
+                weight: "",
                 variations: [],
             },
             {
@@ -97,13 +97,13 @@ export const categories: Category[] = [
                 itemDescription: "Twenty layers of brown butter crêpes filled with almond and hazelnut praliné diplomat cream. A praliné crémeux ribbon is piped over a joconde disc insert, finished with crushed praliné and whole hazelnuts. Set overnight.",
                 itemImages: [succes],
                 quantityOptions: [
-                    { quantity: "9 inch — serves 14–16", price: "63 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "54 JOD" },
+                    { quantity: "9 inch — serves 12-14", price: "63 JOD" },
+                    { quantity: "8 inch — serves 8-10", price: "54 JOD" },
                 ],
                 ingredients: "Flour, almond flour, sugar, milk, butter, eggs, hazelnuts, almonds",
                 allergens: "Gluten, dairy, eggs, tree nuts",
                 seasonal: false,
-                weight: "9 inch — serves 14–16",
+                weight: "",
                 variations: [],
             },
             {
@@ -112,13 +112,13 @@ export const categories: Category[] = [
                 itemDescription: "Twenty layers of olive oil crêpes scented with orange blossom water and ground mastic, filled with labneh diplomat cream. Finished with warm Ajloun honey, crushed pistachio, and dried rose petals. Set overnight.",
                 itemImages: [ajloun],
                 quantityOptions: [
-                    { quantity: "9 inch — serves 14–16", price: "58 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "50 JOD" },
+                    { quantity: "9 inch — serves 12-14", price: "58 JOD" },
+                    { quantity: "8 inch — serves 8-10", price: "50 JOD" },
                 ],
                 ingredients: "Flour, olive oil, orange blossom water, mastic, sugar, milk, eggs, labneh, butter, pistachio, honey, rose petals",
                 allergens: "Gluten, dairy, eggs, tree nuts",
                 seasonal: false,
-                weight: "9 inch — serves 14–16",
+                weight: "",
                 variations: [],
             },
             {
@@ -127,13 +127,13 @@ export const categories: Category[] = [
                 itemDescription: "Twenty layers of strawberry yogurt crêpes, filled with strawberry and lychee diplomat cream and a set hibiscus gel core. Finished with a fresh strawberry compote glaze and freeze-dried strawberry. Set overnight.",
                 itemImages: [strawberryLychee],
                 quantityOptions: [
-                    { quantity: "9 inch — serves 10–12", price: "63 JOD" },
+                    { quantity: "9 inch — serves 12-14", price: "63 JOD" },
                     { quantity: "8 inch — serves 8–10", price: "54 JOD" },
                 ],
                 ingredients: "Flour, eggs, milk, yogurt, strawberry, lychee, hibiscus, cream, butter, sugar, vanilla, rose water, lemon",
                 allergens: "Gluten, dairy, eggs",
                 seasonal: false,
-                weight: "9 inch — serves 10–12",
+                weight:"" ,
                 variations: [],
             },
             {
@@ -143,12 +143,12 @@ export const categories: Category[] = [
                 itemImages: [matchaCrepe],
                 quantityOptions: [
                     { quantity: "9 inch — serves 12–14", price: "58 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "50 JOD" },
+                    { quantity: "8 inch — serves 8-10", price: "50 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, cream, butter, eggs, matcha",
                 allergens: "Gluten, dairy, eggs",
                 seasonal: false,
-                weight: "9 inch — serves 12–14",
+                weight: "",
                 variations: [],
             },
             {
@@ -158,44 +158,15 @@ export const categories: Category[] = [
                 itemImages: [milkTeaCrepe],
                 quantityOptions: [
                     { quantity: "9 inch — serves 12–14", price: "58 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "50 JOD" },
+                    { quantity: "8 inch — serves 8-10", price: "50 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, Earl Grey tea",
                 allergens: "Gluten, dairy, eggs",
                 seasonal: false,
-                weight: "9 inch — serves 12–14",
+                weight: "",
                 variations: [],
             },
-            {
-                id: "chocolate-crepe",
-                itemName: "Chocolate Mille Crêpe",
-                itemDescription: "Rich chocolate and smooth vanilla cream layers for a decadent bite.",
-                itemImages: [milleCrepeCake],
-                quantityOptions: [
-                    { quantity: "9 inch — serves 12–14", price: "60 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "52 JOD" },
-                ],
-                ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, chocolate",
-                allergens: "Gluten, dairy, eggs",
-                seasonal: false,
-                weight: "9 inch — serves 12–14",
-                variations: [],
-            },
-            {
-                id: "matcha-pistachio-crepe",
-                itemName: "Matcha Pistachio Mille Crêpe",
-                itemDescription: "A twist on our matcha cake, layered with nutty pistachio cream.",
-                itemImages: [pistachioCrepe],
-                quantityOptions: [
-                    { quantity: "9 inch — serves 12–14", price: "60 JOD" },
-                    { quantity: "8 inch — serves 10–12", price: "52 JOD" },
-                ],
-                ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, pistachio, matcha",
-                allergens: "Gluten, dairy, eggs, nuts",
-                seasonal: true,
-                weight: "9 inch — serves 12–14",
-                variations: [],
-            },
+
             {
                 id: "raspberry-almond-crepe",
                 itemName: "Raspberry Almond & White Chocolate Mille Crêpe",
@@ -227,7 +198,7 @@ export const categories: Category[] = [
                 itemDescription: "Three-layer spiced carrot cake made with brown butter, dual-cut carrots, toasted pecans, and a lactic-forward mascarpone–cream cheese frosting. Finished with honey carrot soak, a white chocolate feuilletine crunch, and crisp carrot curls.",
                 itemImages: [carrotCake,],
                 quantityOptions: [
-                    { quantity: "3 layer 8 inch", price: "65 JOD" },
+                    { quantity: "3 layer 8 inch serves 10-12", price: "65 JOD" },
                 ],
                 ingredients: "Flour, almond, sugar, butter, eggs, buttermilk, carrots, pecans, cream cheese, mascarpone",
                 allergens: "Gluten, dairy, eggs, nuts",
@@ -241,7 +212,7 @@ export const categories: Category[] = [
                 itemDescription: "Three layers of dark chocolate olive oil cake with cardamom, filled with whipped miso chocolate ganache and a caramel feuilletine crunch. Finished with a feuilletine crust, cocoa dusting, and fleur de sel.",
                 itemImages: [chocolateNoir],
                 quantityOptions: [
-                    { quantity: "3 layer 8 inch", price: "70 JOD" },
+                    { quantity: "3 layer 8 inch serves 10-12", price: "70 JOD" },
                 ],
                 ingredients: "Flour, cocoa, chocolate, sugar, olive oil, eggs, buttermilk, miso, cream, labneh, feuilletine, cardamom, malt, milk powder",
                 allergens: "Gluten, dairy, eggs, soy",
@@ -652,4 +623,38 @@ export const extras: Category[] = [
             },
         ],
     },
+
 ]
+
+// {
+//     {
+//         id: "chocolate-crepe",
+//             itemName: "Chocolate Mille Crêpe",
+//         itemDescription: "Rich chocolate and smooth vanilla cream layers for a decadent bite.",
+//         itemImages: [milleCrepeCake],
+//         quantityOptions: [
+//         { quantity: "9 inch — serves 12–14", price: "60 JOD" },
+//         { quantity: "8 inch — serves 10–12", price: "52 JOD" },
+//     ],
+//         ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, chocolate",
+//         allergens: "Gluten, dairy, eggs",
+//         seasonal: false,
+//         weight: "9 inch — serves 12–14",
+//         variations: [],
+//     },
+//     {
+//         id: "matcha-pistachio-crepe",
+//             itemName: "Matcha Pistachio Mille Crêpe",
+//         itemDescription: "A twist on our matcha cake, layered with nutty pistachio cream.",
+//         itemImages: [pistachioCrepe],
+//         quantityOptions: [
+//         { quantity: "9 inch — serves 12–14", price: "60 JOD" },
+//         { quantity: "8 inch — serves 10–12", price: "52 JOD" },
+//     ],
+//         ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, pistachio, matcha",
+//         allergens: "Gluten, dairy, eggs, nuts",
+//         seasonal: true,
+//         weight: "9 inch — serves 12–14",
+//         variations: [],
+//     },
+// }
