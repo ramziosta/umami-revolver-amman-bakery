@@ -198,7 +198,7 @@ export const categories: Category[] = [
                 itemDescription: "Three-layer spiced carrot cake made with brown butter, dual-cut carrots, toasted pecans, and a lactic-forward mascarpone–cream cheese frosting. Finished with honey carrot soak, a white chocolate feuilletine crunch, and crisp carrot curls.",
                 itemImages: [carrotCake,],
                 quantityOptions: [
-                    { quantity: "3 layer 8 inch serves 10-12", price: "65 JOD" },
+                    { quantity: "3 layer 8 inch serves generous 10-12", price: "65 JOD" },
                 ],
                 ingredients: "Flour, almond, sugar, butter, eggs, buttermilk, carrots, pecans, cream cheese, mascarpone",
                 allergens: "Gluten, dairy, eggs, nuts",
@@ -212,7 +212,7 @@ export const categories: Category[] = [
                 itemDescription: "Three layers of dark chocolate olive oil cake with cardamom, filled with whipped miso chocolate ganache and a caramel feuilletine crunch. Finished with a feuilletine crust, cocoa dusting, and fleur de sel.",
                 itemImages: [chocolateNoir],
                 quantityOptions: [
-                    { quantity: "3 layer 8 inch serves 10-12", price: "70 JOD" },
+                    { quantity: "3 layer 8 inch serves generous 10-12", price: "70 JOD" },
                 ],
                 ingredients: "Flour, cocoa, chocolate, sugar, olive oil, eggs, buttermilk, miso, cream, labneh, feuilletine, cardamom, malt, milk powder",
                 allergens: "Gluten, dairy, eggs, soy",
