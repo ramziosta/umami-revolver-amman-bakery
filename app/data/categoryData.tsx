@@ -79,7 +79,7 @@ export const categories: Category[] = [
             {
                 id: "tiramisu-crepe",
                 itemName: "Tiramisu Mille Crêpe",
-                itemDescription: "Classic tiramisu flavors layered with coffee-soaked crêpes and mascarpone cream.",
+                itemDescription: "Twenty chocolate espresso crêpes, espresso-soaked sponge, and sabayon-mascarpone cream. Finished with cocoa.",
                 itemImages: [tiramisuCrepe],
                 quantityOptions: [
                     { quantity: "9 inch — serves 12-14", price: "58 JOD" },
