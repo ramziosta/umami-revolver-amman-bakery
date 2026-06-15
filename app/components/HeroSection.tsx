@@ -8,6 +8,7 @@ import milleCrepeCake from "@/app/assets/Whole Cake Heads-on.jpg";
 import tiramisuCrepe from "@/app/assets/tiramisu.jpg";
 import succes from "@/app/assets/succes.jpg";
 import ajloun from "@/app/assets/OrangeBlossom.jpg";
+import coconutCrepe from "@/app/assets/coconutmille.jpg";
 
 export const HeroSection = () => {
 
@@ -35,6 +36,16 @@ export const HeroSection = () => {
             description: "Almond-hazelnut praliné diplomat · Praliné crémeux · Joconde",
             cakeName: "Succès Praliné",
             href: "/menu/mille-crepe-cakes/succes/"
+        },
+        {
+
+            image: coconutCrepe,
+            headlineTop: "Coconut. Passion Fruit. Mango.",
+            headlineBottom: "What the season brings.",
+            description: "Coconut crêpes · Coconut diplomat · Passion fruit cream · Mango glaze",
+            cakeName: "Coconut & Passion Fruit",
+            href: "/menu/mille-crepe-cakes/coconut-passion-fruit/"
+
         },
         {
             image: ajloun,

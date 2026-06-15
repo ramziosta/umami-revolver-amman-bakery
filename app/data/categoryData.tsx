@@ -43,6 +43,7 @@ import succes from "@/app/assets/succes.jpg";
 import ajloun from "@/app/assets/OrangeBlossom.jpg";
 import seasonal from "@/app/assets/lemon-basil.png";
 import strawberryLychee from "@/app/assets/StrawberryMilleCrepe.jpg"
+import coconutCrepe from "@/app/assets/coconutmille.jpg";
 
 // ── RE-EXPORT TYPES ────────────────────────────────────────────────────────
 export type { Category, FeaturedCategory };
@@ -137,19 +138,20 @@ export const categories: Category[] = [
                 variations: [],
             },
             {
-                id: "matcha-crepe",
-                itemName: "Matcha Mille Crêpe",
-                itemDescription: "Earthy matcha cream layered between delicate green tea crêpes.",
-                itemImages: [matchaCrepe],
+                id: "coconut-crepe",
+                itemName: "Coconut & Passion Fruit Mille Crêpe",
+                itemDescription: "Delicate coconut crêpe layers with coconut diplomat cream, passion fruit accents, and a glossy mango glaze.",
+                itemImages: [coconutCrepe],
                 quantityOptions: [
-                    { quantity: "9 inch — serves 12–14", price: "58 JOD" },
-                    { quantity: "8 inch — serves 8-10", price: "50 JOD" },
+                    { quantity: "9 inch — serves 12–14", price: "63 JOD" },
+                    { quantity: "8 inch — serves 8–10", price: "54 JOD" },
                 ],
-                ingredients: "Flour, sugar, milk, cream, butter, eggs, matcha",
+                ingredients: "Flour, sugar, milk, cream, butter, eggs, coconut, passion fruit, mango",
                 allergens: "Gluten, dairy, eggs",
-                seasonal: false,
+                seasonal: true,
                 weight: "",
                 variations: [],
+
             },
             {
                 id: "milk-tea-crepe",
