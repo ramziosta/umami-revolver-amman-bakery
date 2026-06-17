@@ -5,6 +5,7 @@ import Navigation from "@/app/components/Navigation";
 import { CartProvider } from "@/app/contexts/CartContext";
 import ConditionalNotice from "@/app/components/conditionalNotice";
 import {Metadata} from "next";
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
     title: "Umami Bakery",
@@ -36,6 +37,7 @@ export default function RootLayout({
             {children}
             <Footer/>
         </CartProvider>
+        <Analytics />
         </body>
         </html>
     );
