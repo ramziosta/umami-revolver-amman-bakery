@@ -44,7 +44,7 @@ import ajloun from "@/app/assets/OrangeBlossom.jpg";
 import seasonal from "@/app/assets/lemon-basil.png";
 import strawberryLychee from "@/app/assets/StrawberryMilleCrepe.jpg"
 import coconutCrepe from "@/app/assets/coconutmille.jpg";
-
+import troisCrepe from "@/app/assets/Trois.jpg";
 // ── RE-EXPORT TYPES ────────────────────────────────────────────────────────
 export type { Category, FeaturedCategory };
 export type { QuantityOption, Variation, CategoryItem } from '@/app/types/categoryTypes';
@@ -154,16 +154,16 @@ export const categories: Category[] = [
 
             },
             {
-                id: "milk-tea-crepe",
-                itemName: "Earl Grey Milk Tea Mille Crêpe",
-                itemDescription: "Lightly fragrant and smooth Earl Grey infused milk tea pastry cream layered with delicate crêpes.",
-                itemImages: [milkTeaCrepe],
+                id: "trois-crepe",
+                itemName: "Trois — Chocolate Mille Crêpe",
+                itemDescription: "Three chocolates walked from bitter to soft — dark, toasted milk, caramelized white. A raspberry seam where the dark zone ends. A feuilletine disc that announces itself only when the knife goes through.",
+                itemImages: [troisCrepe],
                 quantityOptions: [
-                    { quantity: "9 inch — serves 12–14", price: "58 JOD" },
-                    { quantity: "8 inch — serves 8-10", price: "50 JOD" },
+                    { quantity: "9 inch — serves 12 -14", price: "63 JOD" },
+                    { quantity: "8 inch — serves 8–10", price: "54 JOD" },
                 ],
-                ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, Earl Grey tea",
-                allergens: "Gluten, dairy, eggs",
+                ingredients: "Flour, sugar, milk, butter, eggs, dark chocolate, milk chocolate, caramelized white chocolate, heavy cream, freeze-dried raspberry, feuilletine, cocoa powder, fleur de sel",
+                allergens: "Gluten, dairy, eggs, soy (caramelized white chocolate — check supplier)",
                 seasonal: false,
                 weight: "",
                 variations: [],
