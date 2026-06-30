@@ -83,8 +83,8 @@ export const categories: Category[] = [
                 itemDescription: "Twenty chocolate espresso crêpes, espresso-soaked sponge, and sabayon-mascarpone cream. Finished with cocoa.",
                 itemImages: [tiramisuCrepe],
                 quantityOptions: [
-                    { quantity: "9 inch — serves 12-14", price: "58 JOD" },
-                    { quantity: "8 inch — serves 8-10", price: "50 JOD" },
+                    { quantity: "9 inch — serves 12-14", price: "63 JOD" },
+                    { quantity: "8 inch — serves 8-10", price: "54 JOD" },
                 ],
                 ingredients: "Flour, sugar, milk, butter, eggs, mascarpone, coffee",
                 allergens: "Gluten, dairy, eggs",
