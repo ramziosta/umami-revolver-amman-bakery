@@ -1,5 +1,9 @@
 import Image from "next/image";
 import why from '@/app/assets/why.png'
+export const metadata = {
+    title: 'Our Story | Umami Amman | Precision Patisserie',
+    description: 'Thirty years in professional kitchens. The Loeb Boathouse, The Hamptons, Milos. One decision — to bring that standard home to Amman, Jordan.',
+}
 const AboutPage = () => {
     return (
         <div className="min-h-screen bg-umami-linen">

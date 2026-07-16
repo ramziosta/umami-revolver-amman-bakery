@@ -1,11 +1,14 @@
-'use client'
+
 import Link from 'next/link';
 import {Card, CardContent} from '../ui/card';
 import Image from "next/image";
 
 import {categories} from "@/app/data/categoryData"
 
-
+export const metadata = {
+    title: 'Menu | Umami Amman | Mille Crêpe Cakes Amman',
+    description: 'Explore the Umami Amman mille crêpe cake menu. Seven flavors made to order in Amman, Jordan. Pre-order required with 48-72 hours notice.',
+}
 const MenuPage = () => {
     return (
         <div className="min-h-screen bg-umami-linen">
@@ -19,7 +22,7 @@ const MenuPage = () => {
 
                         {/* Headline */}
                         <h1 className="font-display text-umami-carbon text-5xl md:text-6xl lg:text-[5.5rem] leading-[0.95] mb-10">
-                            What We Bake
+                            What We Make
                         </h1>
 
                         {/* Divider */}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import {Card, CardContent} from '../ui/card';
 import chocolateMousse from '../assets/chocolate-mousse.jpeg';
 import milleCrepeCake from "@/app/assets/OrangeBlossom.jpg";
+import carrotCake from "@/app/assets/CarrotCake.jpg";
 import Image from 'next/image';
 import {StaticImageData} from 'next/image';
 
@@ -18,6 +19,12 @@ const categories: ShowcaseCategory[] = [
         name: 'Mille Crêpe Cakes',
         image: milleCrepeCake,
         description: 'Twenty paper-thin crêpe layers, filled with house-made diplomat creams. Each cake assembled to order.',
+    },
+    {
+        id: 'tiered-cakes',
+        name: 'Signature Cakes',
+        image: carrotCake,
+        description: 'Layered, tailored, and uniquely unforgettable.',
     },
 ];
 
@@ -38,6 +45,10 @@ const CategoriesShowcase = () => {
                     </p>
                     <p className="font-body font-light text-[0.85rem] leading-[1.85] text-umami-dim-grey max-w-lg">
                         Every item earns its place. No redundancy in flavors. Controlled sweetness. Intentional textures.
+                    </p>
+                    <br />
+                    <p className="font-body font-light text-[0.85rem] leading-[1.85] text-umami-dim-grey max-w-lg">
+                        Umami Amman is a precision patisserie operating in Amman, Jordan. Our mille crêpe cakes are made to order — assembled layer by layer, rested overnight, ready for collection or delivery across Amman. Pre-order required with 48-hour minimum notice.
                     </p>
                 </div>
 
