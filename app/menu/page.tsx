@@ -5,9 +5,12 @@ import Image from "next/image";
 
 import {categories} from "@/app/data/categoryData"
 
-export const metadata = {
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
     title: 'Menu | Umami Amman | Mille Crêpe Cakes Amman',
-    description: 'Explore the Umami Amman mille crêpe cake menu. Seven flavors made to order in Amman, Jordan. Pre-order required with 48-72 hours notice.',
+    description: 'Explore the Umami Amman menu. Mille crêpe cakes, signature cakes, and pastries made to order in Amman, Jordan. Pre-order required with 48–72 hours notice.',
+    alternates: { canonical: 'https://umamiamman.com/menu' },
 }
 const MenuPage = () => {
     return (
@@ -31,7 +34,7 @@ const MenuPage = () => {
                         {/* Body copy */}
                         <div className="font-body font-light text-[0.85rem] leading-[1.85] text-umami-dim-grey max-w-sm space-y-0">
                             <p>Every item is made to order.</p>
-                            <p className="mb-5">24 hours&rsquo; notice required.</p>
+                            <p className="mb-5">48–72 hours&rsquo; notice required.</p>
                         </div>
                     </div>
                 </div>

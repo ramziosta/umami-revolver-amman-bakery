@@ -1,8 +1,11 @@
 import Image from "next/image";
 import why from '@/app/assets/why.png'
-export const metadata = {
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
     title: 'Our Story | Umami Amman | Precision Patisserie',
-    description: 'Thirty years in professional kitchens. The Loeb Boathouse, The Hamptons, Milos. One decision — to bring that standard home to Amman, Jordan.',
+    description: 'Thirty years in professional kitchens — The Loeb Boathouse, The Hamptons, Milos, Detroit. One decision: to bring that standard home to Amman, Jordan.',
+    alternates: { canonical: 'https://umamiamman.com/about' },
 }
 const AboutPage = () => {
     return (
