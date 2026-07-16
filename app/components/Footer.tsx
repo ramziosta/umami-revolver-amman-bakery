@@ -50,7 +50,7 @@ const Footer = () => {
                             </div>
                         </Link>
                         <p className="font-body font-light text-[0.78rem] leading-[1.8] text-umami-taupe max-w-xs">
-                            Artisan Viennoiserie & Pâtisserie
+                            Mille Crêpe Patisserie · Amman, Jordan
                         </p>
                     </div>
 

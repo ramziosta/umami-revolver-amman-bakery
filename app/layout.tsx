@@ -6,9 +6,9 @@ import { CartProvider } from "@/app/contexts/CartContext";
 import ConditionalNotice from "@/app/components/conditionalNotice";
 import {Metadata} from "next";
 import { Analytics } from '@vercel/analytics/next';
-export const metadata: Metadata = {
-    title: "Umami Bakery",
-    // ... your other metadata
+    export const metadata = {
+        title: 'Umami Amman | Mille Crêpe Cake Amman | Precision Patisserie Jordan',
+        description: 'Precision patisserie in Amman, Jordan. Handmade mille crêpe cakes made to order. French technique, Japanese precision. Pre-order for collection or delivery in Amman.',
 };
 
 export default function RootLayout({
