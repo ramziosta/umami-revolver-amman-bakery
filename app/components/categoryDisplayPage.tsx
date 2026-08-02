@@ -55,7 +55,7 @@ export default function CategoryDisplayPage({ category }: { category: any }) {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
                     {category.items.map((item: any, index: any) => (
-                        <Link key={`${item.id}-${index}`} href={`/menu/${category.id}/${item.id}`}>
+                        <Link key={`${item.id}-${index}`} href={`/menu/${category.id}/${item.id}`} className="block">
                             <Card className="group cursor-pointer overflow-hidden border-0 shadow-none bg-transparent">
                                 <div className="relative h-72 md:h-80 overflow-hidden">
                                     <Image
@@ -65,20 +65,30 @@ export default function CategoryDisplayPage({ category }: { category: any }) {
                                         height={600}
                                         className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                                    <div className="absolute bottom-5 left-5 right-5">
-                                        <h3 className="font-display text-white text-xl md:text-2xl mb-1">
-                                            {item.itemName}
-                                        </h3>
-                                        {item.seasonal && (
-                                            <span className="inline-block mt-2 px-3 py-1 font-structural text-[0.45rem] tracking-[0.2em] uppercase border border-white/40 text-white/80">
-                                                Seasonal
-                                            </span>
-                                        )}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent" />
+
+                                    {/* Bottom row: title/badge on left, CTA on right — all live on the image */}
+                                    <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4">
+                                        <div className="flex-1 min-w-0">
+                                            <h3 className="font-display text-white text-xl md:text-2xl mb-1">
+                                                {item.itemName}
+                                            </h3>
+                                            {item.seasonal && (
+                                                <span className="inline-block mt-2 px-3 py-1 font-structural text-[0.55rem] tracking-[0.2em] uppercase border border-white/40 text-white/80">
+                            Seasonal
+                        </span>
+                                            )}
+                                        </div>
+
+                                        {/* View Details — mirrors the Seasonal badge language but reads as an action */}
+                                        <span className="shrink-0 inline-flex items-center gap-2 font-structural text-[0.6rem] md:text-[0.65rem] tracking-[0.2em] uppercase text-white border-b border-white/70 pb-1 group-hover:text-umami-gold group-hover:border-umami-gold transition-colors duration-500">
+                    View Details
+                    <span className="text-sm group-hover:translate-x-0.5 transition-transform duration-500">→</span>
+                </span>
                                     </div>
                                 </div>
 
-                                <CardContent className="px-1 pt-4 pb-2 bg-transparent">
+                                <CardContent className="px-1 pt-4 pb-3 bg-transparent">
                                     <p className="font-body font-light text-[0.82rem] leading-[1.8] text-umami-dim-grey line-clamp-2">
                                         {item.itemDescription}
                                     </p>
