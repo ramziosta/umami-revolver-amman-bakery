@@ -88,7 +88,7 @@ const MenuPage = () => {
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                                         <div className="absolute bottom-5 left-5 right-5">
                                             <p className="text-[0.45rem] font-structural tracking-[0.3em] uppercase text-white/60 mb-1.5">
-                                                {category.itemCount} items
+                                                {category.items.length} items
                                             </p>
                                             <h3 className="font-display text-white text-xl md:text-2xl">
                                                 {category.name}

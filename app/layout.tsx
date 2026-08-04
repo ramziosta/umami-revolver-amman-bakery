@@ -2,7 +2,6 @@ import Script from "next/script";
 import "./globals.css";
 import Footer from "@/app/components/Footer";
 import Navigation from "@/app/components/Navigation";
-import { CartProvider } from "@/app/contexts/CartContext";
 import ConditionalNotice from "@/app/components/conditionalNotice";
 import {Metadata} from "next";
 import { Analytics } from '@vercel/analytics/next';
@@ -60,12 +59,11 @@ export default function RootLayout({
       gtag('config', 'G-D19HSLMGNB');
     `}
         </Script>
-        <CartProvider>
-            <Navigation/>
-            <Analytics />
-            {children}
-            <Footer/>
-        </CartProvider>
+        <ConditionalNotice />
+        <Navigation/>
+        <Analytics />
+        {children}
+        <Footer/>
         </body>
         </html>
     );

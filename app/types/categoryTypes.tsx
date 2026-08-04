@@ -40,7 +40,6 @@ export interface Category {
     name: string;
     image: StaticImageData | string;
     description: string;
-    itemCount: number;
     items: CategoryItem[];
 }
 
@@ -52,5 +51,4 @@ export interface FeaturedCategory {
     name: string;
     image: StaticImageData | string;
     description: string;
-    itemCount: number;
 }
