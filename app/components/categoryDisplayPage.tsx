@@ -1,9 +1,13 @@
 import Image from "next/image";
-import Link from "next/link";
 import {Card, CardContent} from "@/app/ui/card";
+import {getTranslations} from 'next-intl/server';
+import {Link} from '@/i18n/navigation';
+import type {Category} from "@/app/data/categoryData";
 
+export default async function CategoryDisplayPage({ category, locale }: { category: Category; locale: 'en' | 'ar' }) {
+    const t = await getTranslations({ locale, namespace: 'category' });
+    const tc = await getTranslations({ locale, namespace: 'common' });
 
-export default function CategoryDisplayPage({ category }: { category: any }) {
     return (
         <div className="min-h-screen bg-umami-linen">
 
@@ -12,7 +16,7 @@ export default function CategoryDisplayPage({ category }: { category: any }) {
                 <div className="absolute inset-0">
                     <Image
                         src={category.image}
-                        alt={category.name}
+                        alt={category.name[locale]}
                         fill
                         sizes="100vw"
                         className="object-cover"
@@ -26,17 +30,17 @@ export default function CategoryDisplayPage({ category }: { category: any }) {
                         className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6"
                         style={{ color: '#C9A96E' }}
                     >
-                        Menu
+                        {t('menuBreadcrumb')}
                     </p>
 
                     {/* Category Name */}
                     <h1 className="font-display text-white text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] leading-[0.95] mb-6">
-                        {category.name}
+                        {category.name[locale]}
                     </h1>
 
                     {/* Description */}
                     <p className="font-body font-light text-sm md:text-base text-umami-alabaster/80 max-w-lg leading-relaxed">
-                        {category.description}
+                        {category.description[locale]}
                     </p>
                 </div>
             </section>
@@ -47,20 +51,20 @@ export default function CategoryDisplayPage({ category }: { category: any }) {
                 {/* Breadcrumb */}
                 <nav className="mb-12 flex items-center gap-2 font-body font-light text-[0.72rem] text-umami-dim-grey">
                     <Link href="/menu" className="hover:text-umami-olive-bark transition-colors duration-300">
-                        Menu
+                        {t('menuBreadcrumb')}
                     </Link>
                     <span className="text-umami-alabaster">/</span>
-                    <span className="text-umami-taupe">{category.name}</span>
+                    <span className="text-umami-taupe">{category.name[locale]}</span>
                 </nav>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
-                    {category.items.map((item: any, index: any) => (
+                    {category.items.map((item, index) => (
                         <Link key={`${item.id}-${index}`} href={`/menu/${category.id}/${item.id}`} className="block">
                             <Card className="group cursor-pointer overflow-hidden border-0 shadow-none bg-transparent">
                                 <div className="relative h-72 md:h-80 overflow-hidden">
                                     <Image
                                         src={item.itemImages[0]}
-                                        alt={item.itemName}
+                                        alt={item.itemName[locale]}
                                         width={800}
                                         height={600}
                                         className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
@@ -68,29 +72,29 @@ export default function CategoryDisplayPage({ category }: { category: any }) {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent" />
 
                                     {/* Bottom row: title/badge on left, CTA on right — all live on the image */}
-                                    <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4">
+                                    <div className="absolute bottom-5 start-5 end-5 flex items-end justify-between gap-4">
                                         <div className="flex-1 min-w-0">
                                             <h3 className="font-display text-white text-xl md:text-2xl mb-1">
-                                                {item.itemName}
+                                                {item.itemName[locale]}
                                             </h3>
                                             {item.seasonal && (
                                                 <span className="inline-block mt-2 px-3 py-1 font-structural text-[0.55rem] tracking-[0.2em] uppercase border border-white/40 text-white/80">
-                            Seasonal
+                            {tc('seasonal')}
                         </span>
                                             )}
                                         </div>
 
                                         {/* View Details — mirrors the Seasonal badge language but reads as an action */}
                                         <span className="shrink-0 inline-flex items-center gap-2 font-structural text-[0.6rem] md:text-[0.65rem] tracking-[0.2em] uppercase text-white border-b border-white/70 pb-1 group-hover:text-umami-gold group-hover:border-umami-gold transition-colors duration-500">
-                    View Details
-                    <span className="text-sm group-hover:translate-x-0.5 transition-transform duration-500">→</span>
+                    {tc('viewDetails')}
+                    <span className="text-sm rtl:rotate-180 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform duration-500">→</span>
                 </span>
                                     </div>
                                 </div>
 
                                 <CardContent className="px-1 pt-4 pb-3 bg-transparent">
                                     <p className="font-body font-light text-[0.82rem] leading-[1.8] text-umami-dim-grey line-clamp-2">
-                                        {item.itemDescription}
+                                        {item.itemDescription[locale]}
                                     </p>
                                 </CardContent>
                             </Card>

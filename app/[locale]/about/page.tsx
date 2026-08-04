@@ -1,24 +1,38 @@
 import Image from "next/image";
 import why from '@/app/assets/why.png'
+import {getTranslations} from 'next-intl/server';
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-    title: 'Our Story | Umami Amman | Precision Patisserie',
-    description: 'Thirty years in professional kitchens — The Loeb Boathouse, The Hamptons, Milos, Detroit. One decision: to bring that standard home to Amman, Jordan.',
-    alternates: { canonical: 'https://umamiamman.com/about' },
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'about' });
+    return {
+        title: t('metaTitle'),
+        description: t('metaDescription'),
+        alternates: { canonical: `https://umamiamman.com/${locale}/about` },
+    };
 }
-const AboutPage = () => {
+
+export default async function AboutPage({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'about' });
+
     return (
         <div className="min-h-screen bg-umami-linen">
 
             {/* ── HERO — "Thirty years. One decision." ── */}
             <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
-                {/* Background image — replace src with your flour-dusting hand photo */}
                 <div className="absolute inset-0">
-
-                      <Image src={why} alt="Chef at work" fill className="object-cover" priority />
-                    {/* If using image, add this overlay on top: */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
+                    <Image src={why} alt={t('eyebrow')} fill className="object-cover" priority />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent rtl:bg-gradient-to-l" />
                 </div>
 
                 <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-12 lg:px-16 max-w-4xl">
@@ -27,24 +41,23 @@ const AboutPage = () => {
                         className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-8"
                         style={{ color: '#C9A96E' }}
                     >
-                        Our Story
+                        {t('eyebrow')}
                     </p>
 
                     {/* Headline */}
                     <h1 className="font-display text-umami-linen text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] mb-2">
-                        Thirty years.
+                        {t('heroTitle')}
                     </h1>
                     <p
                         className="font-display italic text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] mb-10"
                         style={{ color: '#C9A96E' }}
                     >
-                        One decision.
+                        {t('heroTitleItalic')}
                     </p>
 
                     {/* Sub-copy */}
                     <p className="font-body font-light text-sm md:text-base text-umami-alabaster/80 max-w-md leading-relaxed">
-                        After thirty years away, a chef returns to Amman — bringing
-                        a lifetime of craft home.
+                        {t('heroSub')}
                     </p>
                 </div>
             </section>
@@ -62,18 +75,18 @@ const AboutPage = () => {
                                 className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-8"
                                 style={{ color: '#C9A96E' }}
                             >
-                                The Chef
+                                {t('chefEyebrow')}
                             </p>
 
                             {/* Display Heading */}
                             <h2 className="font-display text-umami-carbon text-3xl md:text-4xl lg:text-[2.8rem] leading-[1.1] mb-4">
-                                Trained in some of the world&rsquo;s most demanding kitchens. Rooted
+                                {t('chefHeading')}
                             </h2>
                             <p
                                 className="font-display italic text-3xl md:text-4xl lg:text-[2.8rem] leading-[1.1] mb-10"
                                 style={{ color: '#C9A96E' }}
                             >
-                                in Amman.
+                                {t('chefHeadingItalic')}
                             </p>
 
                             {/* Divider */}
@@ -84,8 +97,7 @@ const AboutPage = () => {
 
                             {/* Pull Quote */}
                             <p className="font-display italic text-umami-dim-grey text-lg md:text-xl leading-relaxed max-w-sm">
-                                After thirty years abroad, there
-                                was only one place left to cook.
+                                {t('chefQuote')}
                             </p>
                         </div>
 
@@ -99,16 +111,13 @@ const AboutPage = () => {
                                     className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6"
                                     style={{ color: '#C9A96E' }}
                                 >
-                                    New York
+                                    {t('newYorkEyebrow')}
                                 </p>
                                 <p className="font-display text-umami-carbon text-lg md:text-xl leading-[1.6] mb-4">
-                                    The Loeb Boathouse. The Hamptons. Milos. Before that, Detroit — cooking
-                                    on live television and preparing meals for celebrities and visiting dignitaries,
-                                    including Sir Paul McCartney.
+                                    {t('newYorkLead')}
                                 </p>
                                 <p className="font-body font-light text-[0.82rem] leading-[1.85] text-umami-dim-grey">
-                                    Thirty years spent learning what excellent food actually requires: the sourcing, the technique, the
-                                    discipline, and the integrity to never cut a corner when the guest will taste the difference.
+                                    {t('newYorkBody')}
                                 </p>
                             </div>
 
@@ -118,16 +127,13 @@ const AboutPage = () => {
                                     className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6"
                                     style={{ color: '#C9A96E' }}
                                 >
-                                    The Return
+                                    {t('returnEyebrow')}
                                 </p>
                                 <p className="font-display text-umami-carbon text-lg md:text-xl leading-[1.6] mb-4">
-                                    Returning to Amman was never about leaving something behind. It was
-                                    about bringing three decades of experience home — and putting it on the
-                                    table here.
+                                    {t('returnLead')}
                                 </p>
                                 <p className="font-body font-light text-[0.82rem] leading-[1.85] text-umami-dim-grey">
-                                    Amman&rsquo;s food scene has grown tremendously in recent years. Umami exists to contribute to that
-                                    growth — with craft, care, and standards that respect both the ingredient and the guest.
+                                    {t('returnBody')}
                                 </p>
                             </div>
 
@@ -137,38 +143,36 @@ const AboutPage = () => {
                                     className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6"
                                     style={{ color: '#C9A96E' }}
                                 >
-                                    The Standard
+                                    {t('standardEyebrow')}
                                 </p>
 
                                 <div className="mb-6">
                                     <p className="font-display text-umami-carbon text-lg md:text-xl leading-[1.6]">
-                                        Real flavors.
+                                        {t('standardLine1')}
                                     </p>
                                     <p className="font-display text-umami-carbon text-lg md:text-xl leading-[1.6]">
-                                        Real technique.
+                                        {t('standardLine2')}
                                     </p>
                                 </div>
 
                                 <div className="mb-6">
                                     <p className="font-display text-umami-carbon text-lg md:text-xl leading-[1.6]">
-                                        No shortcuts.
+                                        {t('standardLine3')}
                                     </p>
                                     <p className="font-display text-umami-carbon text-lg md:text-xl leading-[1.6]">
-                                        No unnecessary substitutions.
+                                        {t('standardLine4')}
                                     </p>
                                     <p className="font-display text-umami-carbon text-lg md:text-xl leading-[1.6]">
-                                        No compromises that the guest can taste.
+                                        {t('standardLine5')}
                                     </p>
                                 </div>
 
                                 <p className="font-body font-light text-[0.82rem] leading-[1.85] text-umami-dim-grey">
-                                    Every plate is built the way it should be — thoughtfully, carefully, and
-                                    honestly.
+                                    {t('standardBody1')}
                                 </p>
 
                                 <p className="font-body font-light text-[0.82rem] leading-[1.85] text-umami-dim-grey mb-2">
-                                    Great food is not complicated.
-                                    It simply requires doing things the right way.
+                                    {t('standardBody2')}
                                 </p>
 
                                 {/* Closing Mark */}
@@ -176,7 +180,7 @@ const AboutPage = () => {
                                     className="text-[1rem] font-structural tracking-[0.4em] uppercase"
                                     style={{ color: '#C9A96E' }}
                                 >
-                                    That is Umami.
+                                    {t('closingMark')}
                                 </p>
                             </div>
 
@@ -188,5 +192,3 @@ const AboutPage = () => {
         </div>
     );
 };
-
-export default AboutPage;

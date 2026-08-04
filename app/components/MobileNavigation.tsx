@@ -1,8 +1,8 @@
 "use client";
-import { useState } from 'react';
-import Link from "next/link";
 import { X } from 'lucide-react';
 import { Button } from '../ui/button';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 interface MobileNavigationProps {
     isOpen: boolean;
@@ -10,6 +10,7 @@ interface MobileNavigationProps {
 }
 
 const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => {
+    const t = useTranslations('nav');
     if (!isOpen) return null;
 
     return (
@@ -25,42 +26,42 @@ const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => {
                         <X className="h-6 w-6 text-umami-carbon" strokeWidth={1.2} />
                     </Button>
                 </div>
-                
+
                 <nav className="flex flex-col items-center justify-center space-y-8 flex-1">
                     <Link
-                        href="/menu/mille-crepe-cakes/"
+                        href="/menu/mille-crepe-cakes"
                         className="text-2xl font-wordmark tracking-tight text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         onClick={onClose}
                     >
-                        Mille Crêpe
+                        {t('milleCrepe')}
                     </Link>
                     <Link
-                        href="/menu/"
+                        href="/menu"
                         className="text-2xl font-wordmark tracking-tight text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         onClick={onClose}
                     >
-                        Menu
+                        {t('menu')}
                     </Link>
                     <Link
                         href="/about"
                         className="text-2xl font-wordmark tracking-tight text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         onClick={onClose}
                     >
-                        Our Story
+                        {t('ourStory')}
                     </Link>
                     <Link
                         href="/contact"
                         className="text-2xl font-wordmark tracking-tight text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         onClick={onClose}
                     >
-                        Contact
+                        {t('contact')}
                     </Link>
                     <Link
                         href="/location"
                         className="text-2xl font-wordmark tracking-tight text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         onClick={onClose}
                     >
-                        Visit
+                        {t('visit')}
                     </Link>
                 </nav>
             </div>

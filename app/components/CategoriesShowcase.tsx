@@ -1,54 +1,34 @@
-import Link from "next/link";
 import {Card, CardContent} from '../ui/card';
-import chocolateMousse from '../assets/chocolate-mousse.jpeg';
-import milleCrepeCake from "@/app/assets/OrangeBlossom.jpg";
-import carrotCake from "@/app/assets/CarrotCake.jpg";
 import Image from 'next/image';
-import {StaticImageData} from 'next/image';
-
-type ShowcaseCategory = {
-    id: string;
-    name: string;
-    image: StaticImageData | string;
-    description: string;
-};
-
-const categories: ShowcaseCategory[] = [
-    {
-        id: 'mille-crepe-cakes',
-        name: 'Mille Crêpe Cakes',
-        image: milleCrepeCake,
-        description: 'Twenty paper-thin crêpe layers, filled with house-made diplomat creams. Each cake assembled to order.',
-    },
-    {
-        id: 'tiered-cakes',
-        name: 'Signature Cakes',
-        image: carrotCake,
-        description: 'Layered, tailored, and uniquely unforgettable.',
-    },
-];
+import {useTranslations, useLocale} from 'next-intl';
+import {Link} from '@/i18n/navigation';
+import {categories} from '@/app/data/categoryData';
 
 const CategoriesShowcase = () => {
+    const t = useTranslations('home.showcase');
+    const tc = useTranslations('common');
+    const locale = useLocale() as 'en' | 'ar';
+
     return (
         <section className="py-24 md:py-32 bg-umami-linen">
             <div className="container mx-auto px-6 md:px-12 lg:px-16">
                 {/* Section Header */}
                 <div className="mb-16 max-w-2xl">
                     <p className="umami-label mb-6">
-                        What We Make
+                        {t('eyebrow')}
                     </p>
                     <h2 className="font-display text-umami-carbon text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-4">
-                        A small menu,
+                        {t('headline')}
                     </h2>
                     <p className="font-display italic text-3xl md:text-5xl lg:text-6xl leading-[1.05] text-umami-olive-bark mb-8">
-                        built with care.
+                        {t('headlineItalic')}
                     </p>
                     <p className="font-body font-light text-[0.85rem] leading-[1.85] text-umami-dim-grey max-w-lg">
-                        Every item earns its place. No redundancy in flavors. Controlled sweetness. Intentional textures.
+                        {t('body1')}
                     </p>
                     <br />
                     <p className="font-body font-light text-[0.85rem] leading-[1.85] text-umami-dim-grey max-w-lg">
-                        Umami Amman is a precision patisserie operating in Amman, Jordan. Our mille crêpe cakes are made to order — assembled layer by layer, rested overnight, ready for collection or delivery across Amman. Pre-order required with 48-hour minimum notice.
+                        {t('body2')}
                     </p>
                 </div>
 
@@ -63,23 +43,23 @@ const CategoriesShowcase = () => {
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                         priority
                                         src={category.image}
-                                        alt={category.name}
+                                        alt={category.name[locale]}
                                         className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                                    <div className="absolute bottom-6 left-6 right-6">
+                                    <div className="absolute bottom-6 start-6 end-6">
                                         <p className="text-[0.5rem] font-structural tracking-[0.35em] uppercase text-white/70 mb-2">
-                                            Explore
+                                            {tc('explore')}
                                         </p>
                                         <h3 className="font-display text-white text-2xl md:text-3xl">
-                                            {category.name}
+                                            {category.name[locale]}
                                         </h3>
                                     </div>
                                 </div>
 
                                 <CardContent className="px-0 pt-5 pb-2 bg-transparent">
                                     <p className="font-body font-light text-[0.82rem] leading-[1.8] text-umami-dim-grey">
-                                        {category.description}
+                                        {category.description[locale]}
                                     </p>
                                 </CardContent>
                             </Card>

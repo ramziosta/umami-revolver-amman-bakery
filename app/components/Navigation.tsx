@@ -1,11 +1,17 @@
 'use client'
-import Link from "next/link";
 import MobileNavigation from './MobileNavigation';
 import {useState} from 'react';
 import {Menu} from "lucide-react";
+import {useTranslations, useLocale} from 'next-intl';
+import {Link, usePathname} from '@/i18n/navigation';
 import {Button} from '../ui/button';
+
 const Navigation = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const t = useTranslations('nav');
+    const locale = useLocale();
+    const pathname = usePathname();
+    const otherLocale = locale === 'ar' ? 'en' : 'ar';
 
     return (
         <div className="bg-umami-linen">
@@ -24,48 +30,64 @@ const Navigation = () => {
                     </Link>
 
                     {/* Navigation — Cinzel structural labels */}
-                    <nav className="hidden md:flex items-center space-x-10">
+                    <nav className="hidden md:flex items-center gap-10">
                         <Link
-                            href="/menu/mille-crepe-cakes/"
+                            href="/menu/mille-crepe-cakes"
                             className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
-                            Mille Crêpe
+                            {t('milleCrepe')}
                         </Link>
                         <Link
-                            href="/menu/"
+                            href="/menu"
                             className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
-                            Menu
+                            {t('menu')}
                         </Link>
                         <Link
                             href="/about"
                             className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
-                            Our Story
+                            {t('ourStory')}
                         </Link>
                         <Link
                             href="/contact"
                             className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
-                            Contact
+                            {t('contact')}
                         </Link>
                         <Link
                             href="/location"
                             className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
-                            Visit
+                            {t('visit')}
+                        </Link>
+                        <Link
+                            href={pathname}
+                            locale={otherLocale}
+                            className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-olive-bark hover:text-umami-carbon transition-colors duration-300"
+                        >
+                            {t('languageSwitch')}
                         </Link>
                     </nav>
 
                     {/* Mobile Menu */}
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        className="md:hidden hover:bg-transparent"
-                        onClick={() => setIsMobileMenuOpen(true)}
-                    >
-                        <Menu className="h-5 w-5 text-umami-carbon" strokeWidth={1.2} />
-                    </Button>
+                    <div className="flex items-center gap-3 md:hidden">
+                        <Link
+                            href={pathname}
+                            locale={otherLocale}
+                            className="text-[0.6rem] font-structural tracking-[0.2em] uppercase text-umami-olive-bark"
+                        >
+                            {t('languageSwitch')}
+                        </Link>
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            className="hover:bg-transparent"
+                            onClick={() => setIsMobileMenuOpen(true)}
+                        >
+                            <Menu className="h-5 w-5 text-umami-carbon" strokeWidth={1.2} />
+                        </Button>
+                    </div>
                 </div>
             </div>
 

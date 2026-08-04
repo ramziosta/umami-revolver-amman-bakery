@@ -1,0 +1,368 @@
+{
+  "meta": {
+    "siteTitle": "Umami Amman | Mille Crêpe Cake Amman | Precision Patisserie Jordan",
+    "siteDescription": "Precision patisserie in Amman, Jordan. Handmade mille crêpe cakes made to order. French technique, Japanese precision. Pre-order for collection or delivery in Amman.",
+    "ogImageAlt": "Umami Amman — Mille Crêpe Cakes made to order in Amman, Jordan"
+  },
+  "nav": {
+    "milleCrepe": "Mille Crêpe",
+    "menu": "Menu",
+    "ourStory": "Our Story",
+    "contact": "Contact",
+    "visit": "Visit",
+    "languageSwitch": "العربية"
+  },
+  "notice": {
+    "text": "To serve you best, we craft every order with care — please allow at least 24 hours' notice. Prices don't include delivery."
+  },
+  "common": {
+    "exploreMenu": "Explore the Menu",
+    "placeAnOrder": "Place an Order",
+    "explore": "Explore",
+    "seasonal": "Seasonal",
+    "viewDetails": "View Details",
+    "itemsCount": "{count} items",
+    "readyHeadline": "Ready to Taste It",
+    "readyBody": "Everything here is made with intention. Come experience what the standard should be."
+  },
+  "footer": {
+    "tagline": "Mille Crêpe Patisserie · Amman, Jordan",
+    "navigate": "Navigate",
+    "connect": "Connect",
+    "policy": "Policy",
+    "copyright": "© {year} Umami Amman. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "home": {
+    "eyebrow": "Amman, Jordan · Made to Order",
+    "scroll": "Scroll",
+    "slides": {
+      "cremeBrulee": {
+        "headlineTop": "Twenty layers.",
+        "headlineBottom": "One moment.",
+        "description": "Mille crêpe cake. French technique, Japanese precision.",
+        "cakeName": "Crème Brûlée Mille-Crêpe"
+      },
+      "tiramisu": {
+        "headlineTop": "Bitter first.",
+        "headlineBottom": "Then sublime.",
+        "description": "Espresso. Sabayon-Mascarpone. Cocoa.",
+        "cakeName": "Tiramisu Mille-Crêpe"
+      },
+      "succes": {
+        "headlineTop": "Six components. One cake.",
+        "headlineBottom": "170 active minutes.",
+        "description": "Almond-hazelnut praliné diplomat · Praliné crémeux · Joconde",
+        "cakeName": "Succès Praliné"
+      },
+      "coconut": {
+        "headlineTop": "Coconut. Passion Fruit. Mango.",
+        "headlineBottom": "What the season brings.",
+        "description": "Coconut crêpes · Coconut diplomat · Passion fruit cream · Mango glaze",
+        "cakeName": "Coconut & Passion Fruit"
+      },
+      "orangeBlossom": {
+        "headlineTop": "Mazaher. Labneh. Ajloun honey.",
+        "headlineBottom": "A Levantine identity.",
+        "description": "Orange blossom-Olive oil crêpes · Labneh diplomat · Crushed pistachio · Rose petal",
+        "cakeName": "Orange Blossom"
+      }
+    },
+    "showcase": {
+      "eyebrow": "What We Make",
+      "headline": "A small menu,",
+      "headlineItalic": "built with care.",
+      "body1": "Every item earns its place. No redundancy in flavors. Controlled sweetness. Intentional textures.",
+      "body2": "Umami Amman is a precision patisserie operating in Amman, Jordan. Our mille crêpe cakes are made to order — assembled layer by layer, rested overnight, ready for collection or delivery across Amman. Pre-order required with 48-hour minimum notice."
+    },
+    "philosophy": {
+      "eyebrow": "Philosophy",
+      "headline": "Flavor is not accidental.",
+      "headlineItalic": "It is built.",
+      "balanceTitle": "Balance",
+      "balanceBody": "Sweetness balanced with acidity. Richness lifted with freshness. Nothing here is sweet for its own sake — every recipe is calibrated to the point where you finish and immediately want another bite.",
+      "techniqueTitle": "Technique",
+      "techniqueBody": "Classical French pastry as the foundation. Laminated doughs, diplomat creams, and precisely tempered chocolate. The technique is never hidden and never showy. You taste it in the result.",
+      "intentionTitle": "Intention",
+      "intentionBody": "Every item on the menu earns its place. Nothing is added out of habit. Nothing exists because it is easy. Familiar flavors — rebuilt from the ground up."
+    }
+  },
+  "menuPage": {
+    "title": "What We Make",
+    "body1": "Every item is made to order.",
+    "body2": "48–72 hours' notice required.",
+    "panelLine1": "Seasonally driven.",
+    "panelLine2": "Built on French technique.",
+    "panelLine3": "Shaped with Japanese precision.",
+    "panelLine4": "From Amman."
+  },
+  "category": {
+    "menuBreadcrumb": "Menu"
+  },
+  "item": {
+    "optionsAndPricing": "Options & Pricing",
+    "ingredients": "Ingredients",
+    "allergens": "Allergens",
+    "weightEach": "Weight (each)"
+  },
+  "preorder": {
+    "eyebrow": "Pre-Order Only",
+    "headline": "Every cake is made",
+    "headlineItalic": "to your order.",
+    "body1": "All mille-crêpe cakes are made to order and require extensive multi-day preparation.",
+    "body2": "To confirm your order, a 50% non-refundable deposit is required.",
+    "bullet1": "Orders require 48–72 hours notice depending on the cake design and production schedule.",
+    "bullet2": "Because ingredients and production begin immediately after confirmation, cancellations or date changes made after booking cannot be fully refunded.",
+    "bullet3": "The remaining balance is due before pickup or delivery.",
+    "body3": "Thank you for understanding the care and preparation involved in each cake.",
+    "understood": "Understood"
+  },
+  "about": {
+    "metaTitle": "Our Story | Umami Amman | Precision Patisserie",
+    "metaDescription": "Thirty years in professional kitchens — The Loeb Boathouse, The Hamptons, Milos, Detroit. One decision: to bring that standard home to Amman, Jordan.",
+    "eyebrow": "Our Story",
+    "heroTitle": "Thirty years.",
+    "heroTitleItalic": "One decision.",
+    "heroSub": "After thirty years away, a chef returns to Amman — bringing a lifetime of craft home.",
+    "chefEyebrow": "The Chef",
+    "chefHeading": "Trained in some of the world's most demanding kitchens. Rooted",
+    "chefHeadingItalic": "in Amman.",
+    "chefQuote": "After thirty years abroad, there was only one place left to cook.",
+    "newYorkEyebrow": "New York",
+    "newYorkLead": "The Loeb Boathouse. The Hamptons. Milos. Before that, Detroit — cooking on live television and preparing meals for celebrities and visiting dignitaries, including Sir Paul McCartney.",
+    "newYorkBody": "Thirty years spent learning what excellent food actually requires: the sourcing, the technique, the discipline, and the integrity to never cut a corner when the guest will taste the difference.",
+    "returnEyebrow": "The Return",
+    "returnLead": "Returning to Amman was never about leaving something behind. It was about bringing three decades of experience home — and putting it on the table here.",
+    "returnBody": "Amman's food scene has grown tremendously in recent years. Umami exists to contribute to that growth — with craft, care, and standards that respect both the ingredient and the guest.",
+    "standardEyebrow": "The Standard",
+    "standardLine1": "Real flavors.",
+    "standardLine2": "Real technique.",
+    "standardLine3": "No shortcuts.",
+    "standardLine4": "No unnecessary substitutions.",
+    "standardLine5": "No compromises that the guest can taste.",
+    "standardBody1": "Every plate is built the way it should be — thoughtfully, carefully, and honestly.",
+    "standardBody2": "Great food is not complicated. It simply requires doing things the right way.",
+    "closingMark": "That is Umami."
+  },
+  "location": {
+    "comingSoonTitle": "Our location is coming soon! Sign up to get notified.",
+    "emailPlaceholder": "Your email address",
+    "notifyMe": "Notify Me",
+    "privacyNote": "We respect your inbox. No spam, just updates."
+  },
+  "policy": {
+    "metaTitle": "Policies | Umami Amman",
+    "eyebrow": "Policies",
+    "heroTitle": "Clear standards.",
+    "heroTitleItalic": "Thoughtfully applied.",
+    "heroSub": "Every order, every interaction, and every product follows the same principle — clarity, fairness, and respect for the guest.",
+    "intro": "Umami Amman operates as a made-to-order kitchen. The following policies define how orders are placed, processed, and fulfilled, and how customer data and food safety are handled in accordance with Jordanian regulations.",
+    "orderPolicy": {
+      "title": "Order Policy",
+      "p1": "Orders are made to order with a minimum notice of 24 hours.",
+      "p2": "Orders are confirmed only after acknowledgment and payment.",
+      "p3": "Messaging via WhatsApp or contact form does not constitute confirmation.",
+      "cancellationsTitle": "Cancellations",
+      "cancel1": "48+ hours: Full refund or store credit",
+      "cancel2": "24–48 hours: Store credit only",
+      "cancel3": "Under 24 hours: No refund or credit",
+      "modificationsTitle": "Modifications",
+      "modifications": "Changes are accepted up to 24 hours before the scheduled time.",
+      "qualityTitle": "Quality Claims",
+      "quality": "Must be submitted within 24 hours with photo evidence."
+    },
+    "privacyPolicy": {
+      "title": "Privacy & Data",
+      "p1": "We collect only the data necessary to process orders: name, phone number, order details, and delivery information.",
+      "p2": "Communication via WhatsApp is subject to Meta's privacy policies.",
+      "p3": "Analytics data such as IP address and browsing behavior may be collected to improve the website.",
+      "p4": "All data is used solely for order fulfillment and service improvement.",
+      "p5": "You may request access, correction, or deletion of your data at any time."
+    },
+    "allergenPolicy": {
+      "title": "Allergen & Food Safety",
+      "p1": "Our kitchen handles dairy, eggs, wheat, tree nuts, soy, and sesame.",
+      "p2": "We cannot guarantee the absence of cross-contamination.",
+      "p3": "Customers with allergies must contact us before ordering.",
+      "p4": "Products are perishable and must be refrigerated immediately upon receipt.",
+      "p5": "Umami Amman is not responsible for improper handling after pickup or delivery."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "p1": "All products are made to order and subject to availability.",
+      "p2": "All content, images, and branding remain the property of Umami Amman.",
+      "p3": "Liability is limited to the value of the order.",
+      "p4": "All terms are governed under the laws of Jordan."
+    },
+    "delivery": {
+      "title": "Delivery & Pickup",
+      "p1": "Delivery is available within Amman based on location and schedule.",
+      "p2": "Customers must be available to receive and refrigerate products immediately.",
+      "p3": "Pickup details and timing are confirmed after order approval.",
+      "handoverTitle": "Handover Requirement",
+      "handover1": "A recipient must be present at the time of delivery.",
+      "handover2": "If no one is available, the driver will call and wait up to 5 minutes.",
+      "handover3": "If unanswered, the order is returned. No refunds or exceptions apply."
+    },
+    "closing": {
+      "p1": "These policies exist to ensure clarity, consistency, and the highest standard of product quality.",
+      "p2": "Every detail matters.",
+      "mark": "That is Umami."
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Quick answers before you reach out — most questions are answered here.",
+    "sections": {
+      "ordering": {
+        "title": "Ordering",
+        "items": [
+          {
+            "q": "How do I place an order?",
+            "a": "Browse the menu and message us via WhatsApp or the contact form with your order details, preferred date, and delivery location. Orders are confirmed after availability is reviewed and payment is received."
+          },
+          {
+            "q": "How far in advance should I order?",
+            "a": "All orders require a minimum of 24 hours' notice. Custom or larger orders may require additional time."
+          },
+          {
+            "q": "Do you take custom orders?",
+            "a": "Yes. We offer custom cakes and specialty items for select requests. Please contact us at least 48 hours in advance."
+          }
+        ]
+      },
+      "delivery": {
+        "title": "Delivery",
+        "items": [
+          {
+            "q": "What are your delivery options?",
+            "a": "We deliver within Amman. Orders over 60 JOD qualify for complimentary delivery; otherwise, a 5 JOD fee applies. Availability outside Amman must be confirmed in advance."
+          },
+          {
+            "q": "What happens at delivery?",
+            "a": "A recipient must be present to receive the order. Our driver will call and wait up to 5 minutes. If no one is available, the order will be returned with no refund or credit, as all products are perishable and require immediate refrigeration."
+          },
+          {
+            "q": "What happens if I miss my delivery?",
+            "a": "If delivery is missed, the order is returned after a 5-minute wait. No refunds or credits are issued. Re-delivery or same-day pickup is not guaranteed and is handled at our discretion."
+          },
+          {
+            "q": "Do you offer pickup?",
+            "a": "At this time, we operate as a delivery-only kitchen. Pickup options may be introduced in the future."
+          }
+        ]
+      },
+      "productCare": {
+        "title": "Product & Care",
+        "items": [
+          {
+            "q": "How should I store my order?",
+            "a": "All products must be refrigerated immediately upon receipt. For best quality, consume within 48 hours. Remove from the fridge 10–15 minutes before serving."
+          },
+          {
+            "q": "Do you have gluten-free options?",
+            "a": "We offer select gluten-free items. However, our kitchen handles wheat and other allergens, so we cannot guarantee the absence of cross-contamination."
+          },
+          {
+            "q": "What allergens are present in your kitchen?",
+            "a": "Our kitchen handles dairy, eggs, wheat, tree nuts, soy, and sesame. Customers with allergies should contact us before ordering."
+          }
+        ]
+      }
+    },
+    "howToOrder": {
+      "title": "How to Order",
+      "subtitle": "A step-by-step guide to ensure your pre-order experience is smooth and precise.",
+      "steps": [
+        {
+          "q": "Step 1 — Browse the Menu",
+          "a": "Explore our full selection of cakes, pastries, and specialty items online. Take note of sizes, flavors, and available custom options."
+        },
+        {
+          "q": "Step 2 — Choose Your Item",
+          "a": "Decide on the item(s) you want to order, including quantity, flavor variations, and any personalization or custom requests."
+        },
+        {
+          "q": "Step 3 — Contact Us",
+          "a": "Message us via WhatsApp or the contact form. For WhatsApp, we recommend using this pre-filled template:\n\n\"Hi, I'd like to order [item name] for [date]. Pickup/Delivery to [location].\""
+        },
+        {
+          "q": "Step 4 — Confirm Availability & Payment",
+          "a": "We will confirm your order availability within 2–4 hours during business hours. Custom or large orders may require additional review. Payment instructions will be sent, including deposit requirements (50% non-refundable for large/custom orders; full payment for standard cakes)."
+        },
+        {
+          "q": "Step 5 — Delivery & Pickup",
+          "a": "Delivery is available within Amman. A recipient must be present to receive the order. Our driver will call and wait up to 5 minutes. If no one is available, the order will be returned, with no refund or credit, as products are perishable and require immediate refrigeration. Pickup may be available upon request."
+        },
+        {
+          "q": "Step 6 — Cake Care",
+          "a": "Refrigerate immediately upon receipt. Remove 10–15 minutes before serving for optimal taste. Mille crêpe cakes are delicate and should never be left out in hot conditions."
+        }
+      ]
+    },
+    "supportNote": "Questions? Message us directly — we typically respond within a few hours."
+  },
+  "contact": {
+    "metaTitle": "Contact | Umami Amman",
+    "eyebrow": "Get in Touch",
+    "heroTitle": "Order.",
+    "heroTitleItalic": "Ask. Connect.",
+    "heroSub": "Pre-orders, custom cakes, questions about the menu — we respond to everything.",
+    "info": {
+      "whatsappLabel": "WhatsApp",
+      "whatsappNote": "Fastest way to reach us — orders, questions, custom requests",
+      "emailLabel": "Email",
+      "emailNote": "We respond within 4 hours",
+      "instagramLabel": "Instagram",
+      "instagramNote": "DM us for orders and enquiries"
+    },
+    "form": {
+      "eyebrow": "Send a Message",
+      "heading": "Tell us what",
+      "headingItalic": "you have in mind.",
+      "responseNote": "We respond within 4 hours.",
+      "successAlert": "Thank you — your message has been sent. We will be in touch soon.",
+      "errorAlert": "Something went wrong. Please try again or reach us directly on WhatsApp.",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Your name",
+      "emailAddress": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "phoneNumber": "Phone Number",
+      "phonePlaceholder": "+962 7 9089 4715",
+      "subject": "Subject",
+      "subjectSelect": "Select a subject",
+      "subjectGeneral": "General Inquiry",
+      "subjectCustomOrder": "Custom Order",
+      "subjectWholeCake": "Whole Cake Pre-Order",
+      "subjectEvent": "Event / Private Dining",
+      "subjectFeedback": "Feedback",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your order, event, or question. The more detail, the better.",
+      "messageMinChars": "Minimum 10 characters",
+      "sending": "Sending…",
+      "sendMessage": "Send Message →",
+      "sentSuccessfully": "Message sent successfully.",
+      "consentNote": "By submitting this form you agree to our privacy policy and terms of service.",
+      "errors": {
+        "nameRequired": "Full name is required",
+        "nameTooShort": "Name must be at least 2 characters",
+        "emailRequired": "Email address is required",
+        "emailInvalid": "Please enter a valid email address",
+        "phoneRequired": "Phone number is required",
+        "phoneInvalid": "Please enter a valid phone number",
+        "subjectRequired": "Please select a subject",
+        "messageRequired": "Message is required",
+        "messageTooShort": "Message must be at least 10 characters"
+      },
+      "toast": {
+        "fixErrorsTitle": "Please fix the errors",
+        "fixErrorsDescription": "Check the form fields and try again.",
+        "successTitle": "Message sent successfully",
+        "successDescription": "We'll respond within 4 hours.",
+        "failTitle": "Failed to send message",
+        "failDescription": "Please try again or contact us directly."
+      }
+    }
+  }
+}

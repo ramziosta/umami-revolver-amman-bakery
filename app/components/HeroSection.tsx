@@ -1,8 +1,9 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import { useTranslations, useLocale } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 import milleCrepeCake from "@/app/assets/Whole Cake Heads-on.jpg";
 import tiramisuCrepe from "@/app/assets/tiramisu.jpg";
@@ -11,51 +12,37 @@ import ajloun from "@/app/assets/OrangeBlossom.jpg";
 import coconutCrepe from "@/app/assets/coconutmille.jpg";
 
 export const HeroSection = () => {
+    const t = useTranslations('home');
+    const tc = useTranslations('common');
+    const locale = useLocale();
 
     const slides = [
         {
             image: milleCrepeCake,
-            headlineTop: "Twenty layers.",
-            headlineBottom: "One moment.",
-            description: "Mille crêpe cake. French technique, Japanese precision.",
-            cakeName: "Crème Brûlée Mille-Crêpe",
-            href: "/menu/mille-crepe-cakes/creme-brulee-crepe/"
+            key: "cremeBrulee",
+            href: "/menu/mille-crepe-cakes/creme-brulee-crepe",
         },
         {
             image: tiramisuCrepe,
-            headlineTop: "Bitter first.",
-            headlineBottom: "Then sublime.",
-            description: "Espresso. Sabayon-Mascarpone. Cocoa.",
-            cakeName: "Tiramisu Mille-Crêpe",
-            href: "/menu/mille-crepe-cakes/tiramisu-crepe/"
+            key: "tiramisu",
+            href: "/menu/mille-crepe-cakes/tiramisu-crepe",
         },
         {
             image: succes,
-            headlineTop: "Six components. One cake.",
-            headlineBottom: "170 active minutes.",
-            description: "Almond-hazelnut praliné diplomat · Praliné crémeux · Joconde",
-            cakeName: "Succès Praliné",
-            href: "/menu/mille-crepe-cakes/succes/"
+            key: "succes",
+            href: "/menu/mille-crepe-cakes/succes-praline-crepe",
         },
         {
-
             image: coconutCrepe,
-            headlineTop: "Coconut. Passion Fruit. Mango.",
-            headlineBottom: "What the season brings.",
-            description: "Coconut crêpes · Coconut diplomat · Passion fruit cream · Mango glaze",
-            cakeName: "Coconut & Passion Fruit",
-            href: "/menu/mille-crepe-cakes/coconut-passion-fruit/"
-
+            key: "coconut",
+            href: "/menu/mille-crepe-cakes/coconut-crepe",
         },
         {
             image: ajloun,
-            headlineTop: "Mazaher. Labneh. Ajloun honey.",
-            headlineBottom: "A Levantine identity.",
-            description: "Orange blossom-Olive oil crêpes · Labneh diplomat · Crushed pistachio · Rose petal",
-            cakeName: "Orange Blossom",
-            href: "/menu/mille-crepe-cakes/orange-blossom/"
+            key: "orangeBlossom",
+            href: "/menu/mille-crepe-cakes/orange-blossom-crepe",
         },
-    ];
+    ] as const;
 
     const [current, setCurrent] = useState(0);
 
@@ -75,16 +62,19 @@ export const HeroSection = () => {
         return () => clearInterval(interval);
     }, [current]);
 
+    const slide = slides[current];
+    const cakeName = t(`slides.${slide.key}.cakeName`);
+
     return (
         <section className="relative w-full h-[85vh] lg:h-screen flex items-end overflow-hidden">
 
             {/* ── BACKGROUND CAROUSEL ── */}
             <div className="absolute inset-0">
-                {slides.map((slide, index) => (
+                {slides.map((s, index) => (
                     <Image
                         key={index}
-                        src={slide.image}
-                        alt={slide.cakeName}
+                        src={s.image}
+                        alt={t(`slides.${s.key}.cakeName`)}
                         fill
                         priority={index === 0}
                         className={`object-cover transition-opacity duration-1000 ${
@@ -103,16 +93,16 @@ export const HeroSection = () => {
             {/* ── NAVIGATION ── */}
             <button
                 onClick={prevSlide}
-                className="absolute left-6 md:left-10 bottom-10 z-20 text-white/70 hover:text-white text-sm tracking-widest"
+                className="absolute start-6 md:start-10 bottom-10 z-20 text-white/70 hover:text-white text-sm tracking-widest"
             >
-                ←
+                {locale === 'ar' ? '→' : '←'}
             </button>
 
             <button
                 onClick={nextSlide}
-                className="absolute right-6 md:right-10 bottom-10 z-20 text-white/70 hover:text-white text-sm tracking-widest"
+                className="absolute end-6 md:end-10 bottom-10 z-20 text-white/70 hover:text-white text-sm tracking-widest"
             >
-                →
+                {locale === 'ar' ? '←' : '→'}
             </button>
 
             {/* ── CONTENT ── */}
@@ -120,12 +110,12 @@ export const HeroSection = () => {
 
                 {/* Eyebrow */}
                 <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase text-umami-alabaster/80 mb-6">
-                    Amman, Jordan · Made to Order
+                    {t('eyebrow')}
                 </p>
 
                 {/* Headline Top */}
                 <h1 className="font-display text-white text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] leading-[0.95] mb-2">
-                    {slides[current].headlineTop}
+                    {t(`slides.${slide.key}.headlineTop`)}
                 </h1>
 
                 {/* Headline Bottom */}
@@ -133,7 +123,7 @@ export const HeroSection = () => {
                     className="font-display italic text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] leading-[0.95] mb-8"
                     style={{ color: '#C9A96E' }}
                 >
-                    {slides[current].headlineBottom}
+                    {t(`slides.${slide.key}.headlineBottom`)}
                 </p>
 
                 {/* Divider */}
@@ -144,35 +134,35 @@ export const HeroSection = () => {
 
                 {/* Description */}
                 <p className="font-body font-light text-umami-alabaster/90 text-sm md:text-base max-w-md leading-relaxed mb-6">
-                    {slides[current].description}
+                    {t(`slides.${slide.key}.description`)}
                 </p>
 
                 {/* Cake Name (subtle editorial label) */}
                 <p className="font-structural text-[0.55rem] tracking-[0.35em] uppercase text-umami-alabaster/60 mb-10">
-                    {slides[current].cakeName}
+                    {cakeName}
                 </p>
 
                 {/* CTA */}
                 <div className="flex flex-wrap gap-4">
                     <Link
-                        href={slides[current].href}
+                        href={slide.href}
                         className="inline-flex items-center gap-2 font-structural text-[0.55rem] tracking-[0.28em] uppercase px-8 py-3.5 transition-all duration-300"
                         style={{ backgroundColor: '#C9A96E', color: '#F0ECE4' }}
                     >
-                        Explore →
+                        {tc('explore')} {locale === 'ar' ? '←' : '→'}
                     </Link>
 
                     <Link
                         href="/contact"
                         className="inline-flex items-center gap-2 font-structural text-[0.55rem] tracking-[0.28em] uppercase px-8 py-3.5 border border-white/60 text-white/90 hover:bg-white/10 transition-all duration-300"
                     >
-                        Place an Order
+                        {tc('placeAnOrder')}
                     </Link>
                 </div>
 
                 {/* Scroll hint */}
-                <p className="hidden lg:block absolute bottom-24 right-16 text-[0.5rem] font-structural tracking-[0.35em] uppercase text-umami-alabaster/50">
-                    Scroll
+                <p className="hidden lg:block absolute bottom-24 end-16 text-[0.5rem] font-structural tracking-[0.35em] uppercase text-umami-alabaster/50">
+                    {t('scroll')}
                 </p>
             </div>
         </section>

@@ -1,8 +1,10 @@
 import Image from "next/image";
 import comingSoon from "@/app/assets/coming-soon.png";
-import {ArrowDown} from "lucide-react";
+import {getTranslations} from 'next-intl/server';
 
-export default function ComingSoon() {
+export default async function ComingSoon() {
+    const t = await getTranslations('location');
+
     return (
         <div>
             <section className="relative lg:h-screen md:h-screen flex items-center justify-center overflow-hidden">
@@ -10,7 +12,7 @@ export default function ComingSoon() {
                 <div className="absolute inset-0">
                     <Image
                         src={comingSoon}
-                        alt="Artisan Pound Cake"
+                        alt="Umami Amman"
                         fill
                         className="object-cover"
                         priority
@@ -29,12 +31,12 @@ export default function ComingSoon() {
                     <br />
 
                     <p className="max-w-2xl mx-auto text-umami-linen text-umami-nube text-lg md:text-xl xl:text-3xl tracking-[0.05em] leading-relaxed">
-                        Our location is coming soon! Sign up to get notified.
+                        {t('comingSoonTitle')}
                     </p>
 
                     <div className=" flex flex-col items-center my-10 px-4" >
                         <form
-                            action="http://eepurl.com/jj1OUc" // 👈 replace this
+                            action="http://eepurl.com/jj1OUc"
                             method="POST"
                             target="_blank"
                             className="w-full max-w-md flex flex-col md:flex-row gap-2"
@@ -43,19 +45,19 @@ export default function ComingSoon() {
                                 type="email"
                                 name="EMAIL"
                                 required
-                                placeholder="Your email address"
+                                placeholder={t('emailPlaceholder')}
                                 className="flex-1 px-4 py-2 rounded-md border font-ppneuemontreal border-gray-300 focus:outline-none focus:ring-2 focus:ring-black"
                             />
                             <button
                                 type="submit"
                                 className="bg-umami-gold text-white px-6 py-2 font-ppneuemontreal rounded-md hover:bg-umami-gold/70 transition"
                             >
-                                Notify Me
+                                {t('notifyMe')}
                             </button>
                         </form>
 
                         <p className="text-sm text-umami-linen mt-4">
-                            We respect your inbox. No spam, just updates.
+                            {t('privacyNote')}
                         </p>
                     </div>
                 </div>

@@ -3,11 +3,11 @@ import React, {useEffect, useRef, useState} from "react";
 import {AlertCircle, Check, Loader2} from "lucide-react";
 import {useSearchParams} from "next/navigation";
 import emailjs from "@emailjs/browser";
-import {Input} from "../ui/input";
-import {Textarea} from "../ui/textarea";
 import Image from "next/image";
 import {useToast} from "../hooks/use-toast";
+import {useTranslations, useLocale} from "next-intl";
 import contactHero from '@/app/assets/tools.jpg'
+
 interface FormErrors {
     name?: string;
     email?: string;
@@ -26,7 +26,6 @@ interface FormFieldProps {
     type?: string;
     children?: React.ReactNode;
     error?: string;
-    icon?: React.ReactNode;
 }
 
 interface SubjectSelectProps {
@@ -49,7 +48,6 @@ interface ContactFormProps {
     onSubmit: (e: React.FormEvent) => void;
     onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
     errors: FormErrors;
-    onFieldFocus: (field: string) => void;
 }
 
 // Form validation utilities
@@ -63,35 +61,47 @@ const validatePhone = (phone: string): boolean => {
     return phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''));
 };
 
-const validateForm = (formData: ContactFormData): FormErrors => {
+type ValidationMessages = {
+    nameRequired: string;
+    nameTooShort: string;
+    emailRequired: string;
+    emailInvalid: string;
+    phoneRequired: string;
+    phoneInvalid: string;
+    subjectRequired: string;
+    messageRequired: string;
+    messageTooShort: string;
+};
+
+const validateForm = (formData: ContactFormData, m: ValidationMessages): FormErrors => {
     const errors: FormErrors = {};
 
     if (!formData.name.trim()) {
-        errors.name = 'Full name is required';
+        errors.name = m.nameRequired;
     } else if (formData.name.trim().length < 2) {
-        errors.name = 'Name must be at least 2 characters';
+        errors.name = m.nameTooShort;
     }
 
     if (!formData.email.trim()) {
-        errors.email = 'Email address is required';
+        errors.email = m.emailRequired;
     } else if (!validateEmail(formData.email)) {
-        errors.email = 'Please enter a valid email address';
+        errors.email = m.emailInvalid;
     }
 
     if (!formData.phone.trim()) {
-        errors.phone = 'Phone number is required';
+        errors.phone = m.phoneRequired;
     } else if (!validatePhone(formData.phone)) {
-        errors.phone = 'Please enter a valid phone number';
+        errors.phone = m.phoneInvalid;
     }
 
     if (!formData.subject) {
-        errors.subject = 'Please select a subject';
+        errors.subject = m.subjectRequired;
     }
 
     if (!formData.message.trim()) {
-        errors.message = 'Message is required';
+        errors.message = m.messageRequired;
     } else if (formData.message.trim().length < 10) {
-        errors.message = 'Message must be at least 10 characters';
+        errors.message = m.messageTooShort;
     }
 
     return errors;
@@ -131,7 +141,6 @@ const useContactForm = (initialType: string = '', initialPlan: string = '') => {
     });
     const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
     const [errors, setErrors] = useState<FormErrors>({});
-    const [touchedFields, setTouchedFields] = useState<Set<string>>(new Set());
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const {name, value} = e.target;
@@ -141,25 +150,19 @@ const useContactForm = (initialType: string = '', initialPlan: string = '') => {
         }
     };
 
-    const handleFieldFocus = (field: string) => {
-        setTouchedFields(prev => new Set(prev).add(field));
-    };
-
-    const validateAndSubmit = () => {
-        const formErrors = validateForm(formData);
+    const validateAndSubmit = (m: ValidationMessages) => {
+        const formErrors = validateForm(formData, m);
         setErrors(formErrors);
-        setTouchedFields(new Set(Object.keys(formData)));
         return Object.keys(formErrors).length === 0;
     };
 
     const resetForm = () => {
         setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
         setErrors({});
-        setTouchedFields(new Set());
         setStatus('idle');
     };
 
-    return { formData, status, setStatus, handleChange, resetForm, errors, touchedFields, handleFieldFocus, validateAndSubmit };
+    return { formData, status, setStatus, handleChange, resetForm, errors, validateAndSubmit };
 };
 
 // Form Field Component
@@ -214,112 +217,120 @@ const FormField: React.FC<FormFieldProps> = ({ label, id, value, onChange, place
     </div>
 );
 
-const SubjectSelect: React.FC<SubjectSelectProps> = ({value, onChange, error}) => (
-    <select
-        id="subject"
-        name="subject"
-        value={value}
-        onChange={onChange}
-        style={{
-            fontFamily: '"DM Sans", sans-serif',
-            fontWeight: 300,
-            fontSize: '.85rem',
-            padding: '.65rem .85rem',
-            background: '#EDE8E0',
-            border: `1px solid ${error ? '#a33' : '#E8E0D5'}`,
-            color: value ? '#1A1A18' : '#8C8278',
-            outline: 'none',
-            width: '100%',
-            transition: 'border-color .3s',
-        }}
-    >
-        <option value="">Select a subject</option>
-        <option value="general">General Inquiry</option>
-        <option value="custom-order">Custom Order</option>
-        <option value="whole-cake">Whole Cake Pre-Order</option>
-        <option value="event">Event / Private Dining</option>
-        <option value="feedback">Feedback</option>
-    </select>
-);
+const SubjectSelect: React.FC<SubjectSelectProps> = ({value, onChange, error}) => {
+    const t = useTranslations('contact.form');
+    return (
+        <select
+            id="subject"
+            name="subject"
+            value={value}
+            onChange={onChange}
+            style={{
+                fontFamily: '"DM Sans", sans-serif',
+                fontWeight: 300,
+                fontSize: '.85rem',
+                padding: '.65rem .85rem',
+                background: '#EDE8E0',
+                border: `1px solid ${error ? '#a33' : '#E8E0D5'}`,
+                color: value ? '#1A1A18' : '#8C8278',
+                outline: 'none',
+                width: '100%',
+                transition: 'border-color .3s',
+            }}
+        >
+            <option value="">{t('subjectSelect')}</option>
+            <option value="general">{t('subjectGeneral')}</option>
+            <option value="custom-order">{t('subjectCustomOrder')}</option>
+            <option value="whole-cake">{t('subjectWholeCake')}</option>
+            <option value="event">{t('subjectEvent')}</option>
+            <option value="feedback">{t('subjectFeedback')}</option>
+        </select>
+    );
+};
 
 // Contact Info Component
-const ContactInfo: React.FC = () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: '#E8E0D5' }}>
-        {/* WhatsApp */}
-        <a
-            href="https://wa.me/962790894715"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-                display: 'flex', flexDirection: 'column', gap: '.5rem',
-                background: '#F2EEE8', padding: '2rem 2.5rem',
-                textDecoration: 'none', transition: 'background .3s',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.background = '#EDE8E0')}
-            onMouseLeave={e => (e.currentTarget.style.background = '#F2EEE8')}
-        >
-            <span style={{ fontFamily: '"Cinzel", serif', fontSize: '.52rem', letterSpacing: '.32em', textTransform: 'uppercase', color: '#C9A96E' }}>
-                WhatsApp
-            </span>
-            <span style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 300, fontSize: '1.15rem', color: '#1A1A18' }}>
-                +962 7 9089 4715
-            </span>
-            <span style={{ fontFamily: '"DM Sans", sans-serif', fontWeight: 300, fontSize: '.75rem', color: '#8C8278' }}>
-                Fastest way to reach us — orders, questions, custom requests
-            </span>
-        </a>
+const ContactInfo: React.FC = () => {
+    const t = useTranslations('contact.info');
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', background: '#E8E0D5' }}>
+            {/* WhatsApp */}
+            <a
+                href="https://wa.me/962790894715"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                    display: 'flex', flexDirection: 'column', gap: '.5rem',
+                    background: '#F2EEE8', padding: '2rem 2.5rem',
+                    textDecoration: 'none', transition: 'background .3s',
+                }}
+                onMouseEnter={e => (e.currentTarget.style.background = '#EDE8E0')}
+                onMouseLeave={e => (e.currentTarget.style.background = '#F2EEE8')}
+            >
+                <span style={{ fontFamily: '"Cinzel", serif', fontSize: '.52rem', letterSpacing: '.32em', textTransform: 'uppercase', color: '#C9A96E' }}>
+                    {t('whatsappLabel')}
+                </span>
+                <span style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 300, fontSize: '1.15rem', color: '#1A1A18' }} dir="ltr">
+                    +962 7 9089 4715
+                </span>
+                <span style={{ fontFamily: '"DM Sans", sans-serif', fontWeight: 300, fontSize: '.75rem', color: '#8C8278' }}>
+                    {t('whatsappNote')}
+                </span>
+            </a>
 
-        {/* Email */}
-        <a
-            href="mailto:contact@umamiamman.com"
-            style={{
-                display: 'flex', flexDirection: 'column', gap: '.5rem',
-                background: '#F2EEE8', padding: '2rem 2.5rem',
-                textDecoration: 'none', transition: 'background .3s',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.background = '#EDE8E0')}
-            onMouseLeave={e => (e.currentTarget.style.background = '#F2EEE8')}
-        >
-            <span style={{ fontFamily: '"Cinzel", serif', fontSize: '.52rem', letterSpacing: '.32em', textTransform: 'uppercase', color: '#C9A96E' }}>
-                Email
-            </span>
-            <span style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 300, fontSize: '1.15rem', color: '#1A1A18' }}>
-                contact@umamiamman.com
-            </span>
-            <span style={{ fontFamily: '"DM Sans", sans-serif', fontWeight: 300, fontSize: '.75rem', color: '#8C8278' }}>
-                We respond within 4 hours
-            </span>
-        </a>
+            {/* Email */}
+            <a
+                href="mailto:contact@umamiamman.com"
+                style={{
+                    display: 'flex', flexDirection: 'column', gap: '.5rem',
+                    background: '#F2EEE8', padding: '2rem 2.5rem',
+                    textDecoration: 'none', transition: 'background .3s',
+                }}
+                onMouseEnter={e => (e.currentTarget.style.background = '#EDE8E0')}
+                onMouseLeave={e => (e.currentTarget.style.background = '#F2EEE8')}
+            >
+                <span style={{ fontFamily: '"Cinzel", serif', fontSize: '.52rem', letterSpacing: '.32em', textTransform: 'uppercase', color: '#C9A96E' }}>
+                    {t('emailLabel')}
+                </span>
+                <span style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 300, fontSize: '1.15rem', color: '#1A1A18' }} dir="ltr">
+                    contact@umamiamman.com
+                </span>
+                <span style={{ fontFamily: '"DM Sans", sans-serif', fontWeight: 300, fontSize: '.75rem', color: '#8C8278' }}>
+                    {t('emailNote')}
+                </span>
+            </a>
 
-        {/* Instagram */}
-        <a
-            href="https://instagram.com/umamiamman"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-                display: 'flex', flexDirection: 'column', gap: '.5rem',
-                background: '#F2EEE8', padding: '2rem 2.5rem',
-                textDecoration: 'none', transition: 'background .3s',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.background = '#EDE8E0')}
-            onMouseLeave={e => (e.currentTarget.style.background = '#F2EEE8')}
-        >
-            <span style={{ fontFamily: '"Cinzel", serif', fontSize: '.52rem', letterSpacing: '.32em', textTransform: 'uppercase', color: '#C9A96E' }}>
-                Instagram
-            </span>
-            <span style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 300, fontSize: '1.15rem', color: '#1A1A18' }}>
-                @umamiamman
-            </span>
-            <span style={{ fontFamily: '"DM Sans", sans-serif', fontWeight: 300, fontSize: '.75rem', color: '#8C8278' }}>
-                DM us for orders and enquiries
-            </span>
-        </a>
-    </div>
-);
+            {/* Instagram */}
+            <a
+                href="https://instagram.com/umamiamman"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                    display: 'flex', flexDirection: 'column', gap: '.5rem',
+                    background: '#F2EEE8', padding: '2rem 2.5rem',
+                    textDecoration: 'none', transition: 'background .3s',
+                }}
+                onMouseEnter={e => (e.currentTarget.style.background = '#EDE8E0')}
+                onMouseLeave={e => (e.currentTarget.style.background = '#F2EEE8')}
+            >
+                <span style={{ fontFamily: '"Cinzel", serif', fontSize: '.52rem', letterSpacing: '.32em', textTransform: 'uppercase', color: '#C9A96E' }}>
+                    {t('instagramLabel')}
+                </span>
+                <span style={{ fontFamily: '"Cormorant Garamond", serif', fontWeight: 300, fontSize: '1.15rem', color: '#1A1A18' }} dir="ltr">
+                    @umamiamman
+                </span>
+                <span style={{ fontFamily: '"DM Sans", sans-serif', fontWeight: 300, fontSize: '.75rem', color: '#8C8278' }}>
+                    {t('instagramNote')}
+                </span>
+            </a>
+        </div>
+    );
+};
 
 // Contact Form Component
-const ContactForm: React.FC<ContactFormProps> = ({ formData, status, onSubmit, onChange, errors, onFieldFocus }) => {
+const ContactForm: React.FC<ContactFormProps> = ({ formData, status, onSubmit, onChange, errors }) => {
     const formRef = useRef<HTMLFormElement>(null);
+    const t = useTranslations('contact.form');
+    const locale = useLocale();
 
     return (
         <div
@@ -332,21 +343,21 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, status, onSubmit, o
                     fontFamily: '"Cinzel", serif', fontSize: '.58rem', letterSpacing: '.38em',
                     textTransform: 'uppercase', color: '#C9A96E', display: 'block', marginBottom: '1rem',
                 }}>
-                    Send a Message
+                    {t('eyebrow')}
                 </span>
                 <h2 style={{
                     fontFamily: '"Cormorant Garamond", serif', fontWeight: 300,
                     fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', lineHeight: 1.1,
                     color: '#1A1A18', margin: '0 0 .75rem',
                 }}>
-                    Tell us what<br />
-                    <em style={{ fontStyle: 'italic', color: '#8C8278' }}>you have in mind.</em>
+                    {t('heading')}<br />
+                    <em style={{ fontStyle: 'italic', color: '#8C8278' }}>{t('headingItalic')}</em>
                 </h2>
                 <p style={{
                     fontFamily: '"DM Sans", sans-serif', fontWeight: 300,
                     fontSize: '.82rem', color: '#8C8278', margin: 0,
                 }}>
-                    We respond within 4 hours.
+                    {t('responseNote')}
                 </p>
             </div>
 
@@ -362,7 +373,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, status, onSubmit, o
                         fontFamily: '"DM Sans", sans-serif', fontWeight: 300,
                         fontSize: '.82rem', color: '#4C4746', margin: 0,
                     }}>
-                        Thank you — your message has been sent. We will be in touch soon.
+                        {t('successAlert')}
                     </p>
                 </div>
             )}
@@ -379,7 +390,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, status, onSubmit, o
                         fontFamily: '"DM Sans", sans-serif', fontWeight: 300,
                         fontSize: '.82rem', color: '#4C4746', margin: 0,
                     }}>
-                        Something went wrong. Please try again or reach us directly on WhatsApp.
+                        {t('errorAlert')}
                     </p>
                 </div>
             )}
@@ -388,24 +399,24 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, status, onSubmit, o
             <form ref={formRef} onSubmit={onSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 {/* Name + Email row */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }} className="umami-form-row">
-                    <FormField label="Full Name" id="name" value={formData.name} onChange={onChange} placeholder="Your name" required error={errors.name} />
-                    <FormField label="Email Address" id="email" type="email" value={formData.email} onChange={onChange} placeholder="your@email.com" required error={errors.email} />
+                    <FormField label={t('fullName')} id="name" value={formData.name} onChange={onChange} placeholder={t('fullNamePlaceholder')} required error={errors.name} />
+                    <FormField label={t('emailAddress')} id="email" type="email" value={formData.email} onChange={onChange} placeholder={t('emailPlaceholder')} required error={errors.email} />
                 </div>
 
-                <FormField label="Phone Number" id="phone" value={formData.phone} onChange={onChange} placeholder="+962 7 9089 4715" required error={errors.phone} />
+                <FormField label={t('phoneNumber')} id="phone" value={formData.phone} onChange={onChange} placeholder={t('phonePlaceholder')} required error={errors.phone} />
 
-                <FormField label="Subject" id="subject" value={formData.subject} onChange={onChange} error={errors.subject}>
+                <FormField label={t('subject')} id="subject" value={formData.subject} onChange={onChange} error={errors.subject}>
                     <SubjectSelect value={formData.subject} onChange={onChange} error={errors.subject} />
                 </FormField>
 
-                <FormField label="Message" id="message" value={formData.message} onChange={onChange} error={errors.message}>
+                <FormField label={t('message')} id="message" value={formData.message} onChange={onChange} error={errors.message}>
                     <textarea
                         id="message"
                         name="message"
                         value={formData.message}
                         onChange={onChange}
                         rows={5}
-                        placeholder="Tell us about your order, event, or question. The more detail, the better."
+                        placeholder={t('messagePlaceholder')}
                         style={{
                             fontFamily: '"DM Sans", sans-serif', fontWeight: 300, fontSize: '.85rem',
                             padding: '.65rem .85rem', background: '#EDE8E0',
@@ -420,8 +431,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, status, onSubmit, o
                         fontFamily: '"DM Sans", sans-serif', fontWeight: 300,
                         fontSize: '.72rem', color: '#8C8278', marginTop: '.4rem',
                     }}>
-                        <span>Minimum 10 characters</span>
-                        <span>{formData.message.length} / 500</span>
+                        <span>{t('messageMinChars')}</span>
+                        <span dir="ltr">{formData.message.length} / 500</span>
                     </div>
                 </FormField>
 
@@ -444,10 +455,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, status, onSubmit, o
                     {status === 'sending' ? (
                         <>
                             <Loader2 style={{ width: 14, height: 14, animation: 'spin 1s linear infinite' }} />
-                            Sending…
+                            {t('sending')}
                         </>
                     ) : (
-                        'Send Message →'
+                        t('sendMessage')
                     )}
                 </button>
 
@@ -456,7 +467,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, status, onSubmit, o
                         fontFamily: '"DM Sans", sans-serif', fontWeight: 300,
                         fontSize: '.78rem', color: '#C9A96E', textAlign: 'center', margin: 0,
                     }}>
-                        Message sent successfully.
+                        {t('sentSuccessfully')}
                     </p>
                 )}
 
@@ -464,7 +475,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, status, onSubmit, o
                     fontFamily: '"DM Sans", sans-serif', fontWeight: 300,
                     fontSize: '.7rem', color: '#8C8278', textAlign: 'center', margin: 0,
                 }}>
-                    By submitting this form you agree to our privacy policy and terms of service.
+                    {t('consentNote')}
                 </p>
             </form>
 
@@ -481,13 +492,16 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, status, onSubmit, o
 const ContactClient: React.FC = () => {
     const searchParams = useSearchParams();
     const {toast} = useToast();
+    const t = useTranslations('contact');
+    const tErrors = useTranslations('contact.form.errors');
+    const tToast = useTranslations('contact.form.toast');
 
     const initialType = searchParams.get("type") || "";
     const initialPlan = searchParams.get("plan") || "";
 
     const {
         formData, status, setStatus, handleChange,
-        resetForm, errors, handleFieldFocus, validateAndSubmit
+        resetForm, errors, validateAndSubmit
     } = useContactForm(initialType, initialPlan);
 
     useEffect(() => {
@@ -510,10 +524,22 @@ const ContactClient: React.FC = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (!validateAndSubmit()) {
+        const validationMessages: ValidationMessages = {
+            nameRequired: tErrors('nameRequired'),
+            nameTooShort: tErrors('nameTooShort'),
+            emailRequired: tErrors('emailRequired'),
+            emailInvalid: tErrors('emailInvalid'),
+            phoneRequired: tErrors('phoneRequired'),
+            phoneInvalid: tErrors('phoneInvalid'),
+            subjectRequired: tErrors('subjectRequired'),
+            messageRequired: tErrors('messageRequired'),
+            messageTooShort: tErrors('messageTooShort'),
+        };
+
+        if (!validateAndSubmit(validationMessages)) {
             toast({
-                title: "Please fix the errors",
-                description: "Check the form fields and try again.",
+                title: tToast('fixErrorsTitle'),
+                description: tToast('fixErrorsDescription'),
                 variant: "destructive",
             });
             return;
@@ -537,8 +563,8 @@ const ContactClient: React.FC = () => {
             if (result.status === 200) {
                 setStatus("success");
                 toast({
-                    title: "Message sent successfully",
-                    description: "We'll respond within 4 hours.",
+                    title: tToast('successTitle'),
+                    description: tToast('successDescription'),
                 });
                 setTimeout(resetForm, 3000);
             } else {
@@ -548,8 +574,8 @@ const ContactClient: React.FC = () => {
             console.error('EmailJS error:', error);
             setStatus("error");
             toast({
-                title: "Failed to send message",
-                description: error.message || "Please try again or contact us directly.",
+                title: tToast('failTitle'),
+                description: error.message || tToast('failDescription'),
                 variant: "destructive",
             });
         }
@@ -559,11 +585,8 @@ const ContactClient: React.FC = () => {
         <div className="min-h-screen bg-umami-linen">
             {/* Contact Hero — background image with text overlay */}
             <section className="relative h-[70vh] md:h-[80vh] overflow-hidden flex items-end">
-                {/* Background image — replace src with your baking/flour overhead photo */}
                 <div className="absolute inset-0">
-
-                    <Image src={contactHero} alt="Baking preparation" fill className="object-cover" priority />
-
+                    <Image src={contactHero} alt={t('eyebrow')} fill className="object-cover" priority />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
                 </div>
 
@@ -573,24 +596,23 @@ const ContactClient: React.FC = () => {
                         className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-8"
                         style={{ color: '#C9A96E' }}
                     >
-                        Get in Touch
+                        {t('eyebrow')}
                     </p>
 
                     {/* Headline */}
                     <h1 className="font-display text-umami-linen text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] mb-2">
-                        Order.
+                        {t('heroTitle')}
                     </h1>
                     <p
                         className="font-display italic text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] mb-10"
                         style={{ color: '#C9A96E' }}
                     >
-                        Ask. Connect.
+                        {t('heroTitleItalic')}
                     </p>
 
                     {/* Sub-copy */}
                     <p className="font-body font-light text-sm md:text-base text-umami-alabaster/80 max-w-md leading-relaxed">
-                        Pre-orders, custom cakes, questions about the menu
-                        — we respond to everything.
+                        {t('heroSub')}
                     </p>
                 </div>
             </section>
@@ -609,7 +631,6 @@ const ContactClient: React.FC = () => {
                                 onSubmit={handleSubmit}
                                 onChange={handleChange}
                                 errors={errors}
-                                onFieldFocus={handleFieldFocus}
                             />
                         </div>
                     </div>

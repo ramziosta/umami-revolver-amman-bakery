@@ -1,13 +1,25 @@
-import Image, {StaticImageData} from "next/image";
-import Link from "next/link";
-import { QuantityOption } from "@/app/data/categoryData";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import type { Category, CategoryItem, QuantityOption } from "@/app/data/categoryData";
 
 export default function ItemPageDisplay({
                                             item,
                                             category,
+                                            locale,
                                             selectedImage,
                                             setSelectedImage
-                                        }: any) {
+                                        }: {
+    item: CategoryItem;
+    category: Category;
+    locale: 'en' | 'ar';
+    selectedImage: any;
+    setSelectedImage: (image: any) => void;
+}) {
+    const t = useTranslations('item');
+    const tc = useTranslations('common');
+    const tCategory = useTranslations('category');
+
     return (
         <div className="min-h-screen bg-umami-linen">
 
@@ -15,7 +27,7 @@ export default function ItemPageDisplay({
             <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
                 <Image
                     src={item.itemImages[0]}
-                    alt={item.itemName}
+                    alt={item.itemName[locale]}
                     fill
                     sizes="100vw"
                     className="object-cover"
@@ -28,19 +40,19 @@ export default function ItemPageDisplay({
                         className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6"
                         style={{ color: '#C9A96E' }}
                     >
-                        {category.name}
+                        {category.name[locale]}
                     </p>
 
                     {/* Item Name */}
                     <h1 className="font-display text-white text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] leading-[0.95]">
-                        {item.itemName}
+                        {item.itemName[locale]}
                     </h1>
 
                     {item.seasonal && (
                         <span
                             className="inline-block mt-5 px-4 py-1.5 font-structural text-[0.48rem] tracking-[0.25em] uppercase border border-white/40 text-white/80 self-start"
                         >
-                            Seasonal
+                            {tc('seasonal')}
                         </span>
                     )}
                 </div>
@@ -55,22 +67,22 @@ export default function ItemPageDisplay({
                     {/* Breadcrumb */}
                     <nav className="mb-12 flex items-center gap-2 font-body font-light text-[0.72rem] text-umami-dim-grey">
                         <Link href="/menu" className="hover:text-umami-olive-bark transition-colors duration-300">
-                            Menu
+                            {tCategory('menuBreadcrumb')}
                         </Link>
                         <span className="text-umami-alabaster">/</span>
                         <Link
                             href={`/menu/${category.id}`}
                             className="hover:text-umami-olive-bark transition-colors duration-300"
                         >
-                            {category.name}
+                            {category.name[locale]}
                         </Link>
                         <span className="text-umami-alabaster">/</span>
-                        <span className="text-umami-taupe">{item.itemName}</span>
+                        <span className="text-umami-taupe">{item.itemName[locale]}</span>
                     </nav>
 
                     {/* Item Heading */}
                     <h2 className="font-display text-umami-carbon text-3xl md:text-4xl lg:text-[2.8rem] leading-[1.1] mb-8">
-                        {item.itemName}
+                        {item.itemName[locale]}
                     </h2>
 
                     {/* Divider */}
@@ -78,7 +90,7 @@ export default function ItemPageDisplay({
 
                     {/* Description */}
                     <p className="font-body font-light text-[0.85rem] leading-[1.85] text-umami-dim-grey max-w-lg mb-12">
-                        {item.itemDescription}
+                        {item.itemDescription[locale]}
                     </p>
 
                     {/* ── Options & Pricing ── */}
@@ -87,10 +99,10 @@ export default function ItemPageDisplay({
                             className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6"
                             style={{ color: '#C9A96E' }}
                         >
-                            Options &amp; Pricing
+                            {t('optionsAndPricing')}
                         </p>
                         <div className="space-y-0 border-t border-umami-alabaster">
-                            {item.quantityOptions.map((option: QuantityOption, index: any) => {
+                            {item.quantityOptions.map((option: QuantityOption, index: number) => {
                                 if (!option) return null;
                                 return (
                                     <div
@@ -98,7 +110,7 @@ export default function ItemPageDisplay({
                                         className="flex justify-between items-center py-4 border-b border-umami-alabaster hover:bg-umami-alabaster/20 transition-colors duration-300 px-1"
                                     >
                                         <span className="font-body font-light text-[0.85rem] text-umami-carbon">
-                                            {option.quantity}
+                                            {option.quantity[locale]}
                                         </span>
                                         <span className="font-display text-lg text-umami-carbon">
                                             {option.price}
@@ -118,7 +130,7 @@ export default function ItemPageDisplay({
                         onMouseEnter={(e) => { (e.target as HTMLElement).style.backgroundColor = '#b8944f' }}
                         onMouseLeave={(e) => { (e.target as HTMLElement).style.backgroundColor = '#C9A96E' }}
                     >
-                        Place an Order &rarr;
+                        {tc('placeAnOrder')} {locale === 'ar' ? '←' : '→'}
                     </Link>
                 </div>
 
@@ -131,7 +143,7 @@ export default function ItemPageDisplay({
                     <div className="relative h-64 md:h-80 overflow-hidden mb-12">
                         <Image
                             src={item.itemImages[0]}
-                            alt={item.itemName}
+                            alt={item.itemName[locale]}
                             fill
                             sizes="(max-width: 1024px) 100vw, 42vw"
                             className="object-cover"
@@ -142,10 +154,10 @@ export default function ItemPageDisplay({
                     <div className="space-y-8">
                         <div>
                             <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase text-umami-linen/50 mb-4">
-                                Ingredients
+                                {t('ingredients')}
                             </p>
                             <p className="font-body font-light text-[0.82rem] text-umami-linen/80 leading-[1.85]">
-                                {item.ingredients}
+                                {item.ingredients[locale]}
                             </p>
                         </div>
 
@@ -153,23 +165,26 @@ export default function ItemPageDisplay({
 
                         <div>
                             <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase text-umami-linen/50 mb-4">
-                                Allergens
+                                {t('allergens')}
                             </p>
                             <p className="font-body font-light text-[0.82rem] text-umami-linen/80 leading-[1.85]">
-                                {item.allergens}
+                                {item.allergens[locale]}
                             </p>
                         </div>
 
-                        <div className="w-full h-[1px] bg-umami-linen/15" />
-
-                        <div>
-                            <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase text-umami-linen/50 mb-4">
-                                Weight <span className="normal-case">(each)</span>
-                            </p>
-                            <p className="font-body font-light text-[0.82rem] text-umami-linen/80">
-                                {item.weight} g
-                            </p>
-                        </div>
+                        {item.weight[locale] && (
+                            <>
+                                <div className="w-full h-[1px] bg-umami-linen/15" />
+                                <div>
+                                    <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase text-umami-linen/50 mb-4">
+                                        {t('weightEach')}
+                                    </p>
+                                    <p className="font-body font-light text-[0.82rem] text-umami-linen/80">
+                                        {item.weight[locale]}
+                                    </p>
+                                </div>
+                            </>
+                        )}
                     </div>
                 </div>
 

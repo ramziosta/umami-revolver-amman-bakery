@@ -1,6 +1,3 @@
-// app/menu/mille-crepe-cakes/[itemId]/page.tsx
-'use client';
-
 'use client'
 import { categories } from '@/app/data/categoryData'
 import { notFound } from 'next/navigation'
@@ -9,11 +6,12 @@ import {use, useState} from "react";
 
 interface ItemPageProps {
     params: Promise<{
+        locale: 'en' | 'ar';
         itemId: string;
     }>;
 }
 export default function ItemPage({ params }: ItemPageProps) {
-    const { itemId } = use(params);
+    const { locale, itemId } = use(params);
 
     const category = categories.find((cat) => cat.id === 'mille-crepe-cakes')
     if (!category) {
@@ -30,6 +28,7 @@ export default function ItemPage({ params }: ItemPageProps) {
         <ItemPageDisplay
             item={item}
             category={category}
+            locale={locale}
             selectedImage={selectedImage}
             setSelectedImage={setSelectedImage}
         />

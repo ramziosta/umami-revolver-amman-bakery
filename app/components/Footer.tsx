@@ -1,20 +1,21 @@
-"use client";
 import Image from "next/image";
-import Link from "next/link";
 import whatsapp from "../assets/whatsapp.png";
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 const Footer = () => {
+    const t = useTranslations();
+
     return (
         <footer className="bg-umami-carbon">
             {/* CTA Section */}
             <div className="border-b border-umami-dim-grey/20 py-20 md:py-24">
                 <div className="container mx-auto px-6 md:px-12 lg:px-16 text-center">
                     <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-8" style={{ color: '#C9A96E' }}>
-                        Ready to Taste It
+                        {t('common.readyHeadline')}
                     </p>
                     <p className="font-display italic text-umami-linen/80 text-2xl md:text-3xl lg:text-4xl max-w-2xl mx-auto leading-snug mb-10">
-                        Everything here is made with intention.<br />
-                        Come experience what the standard should be.
+                        {t('common.readyBody')}
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link
@@ -22,13 +23,13 @@ const Footer = () => {
                             className="inline-flex items-center font-structural text-[0.55rem] tracking-[0.28em] uppercase px-8 py-3.5 transition-all duration-300"
                             style={{ backgroundColor: '#C9A96E', color: '#F0ECE4' }}
                         >
-                            Explore the Menu &rarr;
+                            {t('common.exploreMenu')} &rarr;
                         </Link>
                         <Link
                             href="/contact"
                             className="inline-flex items-center font-structural text-[0.55rem] tracking-[0.28em] uppercase px-8 py-3.5 border border-umami-linen/30 text-umami-linen/80 hover:bg-umami-linen/5 transition-all duration-300"
                         >
-                            Place an Order
+                            {t('common.placeAnOrder')}
                         </Link>
                     </div>
                 </div>
@@ -50,39 +51,39 @@ const Footer = () => {
                             </div>
                         </Link>
                         <p className="font-body font-light text-[0.78rem] leading-[1.8] text-umami-taupe max-w-xs">
-                            Mille Crêpe Patisserie · Amman, Jordan
+                            {t('footer.tagline')}
                         </p>
                     </div>
 
                     {/* Links */}
                     <div>
                         <p className="text-[0.52rem] font-structural tracking-[0.35em] uppercase text-umami-dim-grey mb-6">
-                            Navigate
+                            {t('footer.navigate')}
                         </p>
                         <nav className="flex flex-col space-y-3">
                             <Link
                                 href="/menu"
                                 className="font-body font-light text-[0.82rem] text-umami-taupe hover:text-umami-linen transition-colors duration-300"
                             >
-                                Menu
+                                {t('nav.menu')}
                             </Link>
                             <Link
                                 href="/about"
                                 className="font-body font-light text-[0.82rem] text-umami-taupe hover:text-umami-linen transition-colors duration-300"
                             >
-                                Our Story
+                                {t('nav.ourStory')}
                             </Link>
                             <Link
                                 href="/contact"
                                 className="font-body font-light text-[0.82rem] text-umami-taupe hover:text-umami-linen transition-colors duration-300"
                             >
-                                Contact
+                                {t('nav.contact')}
                             </Link>
                             <Link
                                 href="/policy"
                                 className="font-body font-light text-[0.82rem] text-umami-taupe hover:text-umami-linen transition-colors duration-300"
                             >
-                                Policy
+                                {t('footer.policy')}
                             </Link>
                         </nav>
                     </div>
@@ -90,7 +91,7 @@ const Footer = () => {
                     {/* Connect */}
                     <div>
                         <p className="text-[0.52rem] font-structural tracking-[0.35em] uppercase text-umami-dim-grey mb-6">
-                            Connect
+                            {t('footer.connect')}
                         </p>
                         <nav className="flex flex-col space-y-3">
                             <a
@@ -99,7 +100,7 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 className="font-body font-light text-[0.82rem] text-umami-taupe hover:text-umami-linen transition-colors duration-300"
                             >
-                                Instagram
+                                {t('contact.info.instagramLabel')}
                             </a>
                             <a
                                 href="https://wa.me/962790894715"
@@ -107,7 +108,7 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 className="font-body font-light text-[0.82rem] text-umami-taupe hover:text-umami-linen transition-colors duration-300"
                             >
-                                WhatsApp
+                                {t('contact.info.whatsappLabel')}
                             </a>
                             <a
                                 href="mailto:contact@umamiamman.com"
@@ -122,20 +123,20 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="border-t border-umami-dim-grey/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="font-body font-light text-[0.72rem] text-umami-dim-grey">
-                        © {new Date().getFullYear()} Umami Amman. All rights reserved.
+                        {t('footer.copyright', { year: new Date().getFullYear() })}
                     </p>
                     <div className="flex space-x-6">
                         <Link
-                            href="/privacy"
+                            href="/policy"
                             className="font-body font-light text-[0.72rem] text-umami-dim-grey hover:text-umami-taupe transition-colors duration-300"
                         >
-                            Privacy
+                            {t('footer.privacy')}
                         </Link>
                         <Link
-                            href="/terms"
+                            href="/policy"
                             className="font-body font-light text-[0.72rem] text-umami-dim-grey hover:text-umami-taupe transition-colors duration-300"
                         >
-                            Terms
+                            {t('footer.terms')}
                         </Link>
                     </div>
                 </div>
@@ -146,7 +147,7 @@ const Footer = () => {
                 href="https://wa.me/962790894715"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#1da851] p-3 rounded-full shadow-lg z-50 transition-colors duration-300"
+                className="fixed bottom-6 end-6 bg-[#25D366] hover:bg-[#1da851] p-3 rounded-full shadow-lg z-50 transition-colors duration-300"
             >
                 <Image src={whatsapp} alt="WhatsApp" className="h-10 w-10" />
             </a>
