@@ -1,10 +1,10 @@
 /* ── Umami Amman — Rebranded Design System ── */
 
-/* Google Fonts: Cormorant Garamond, Cinzel, DM Sans */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cinzel:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap');
+/* Google Fonts: Playfair Display, Work Sans */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Work+Sans:wght@300;400;500;600&display=swap');
 /* Lovan for logo only — loaded via CDN */
 @import url('https://fonts.cdnfonts.com/css/lovan');
-/* Arabic fonts — Amiri (display, echoes the Cormorant Garamond serif), Cairo (structural labels, echoes Cinzel), Noto Sans Arabic (body, echoes DM Sans) */
+/* Arabic fonts — Amiri (display, echoes the Playfair Display serif), Cairo (structural labels, echoes Work Sans), Noto Sans Arabic (body) */
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500&display=swap');
 
 @tailwind base;
@@ -57,7 +57,7 @@
   }
 
   body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 300;
     color: var(--umami-carbon-text);
     background-color: var(--umami-linen);
@@ -66,13 +66,13 @@
   }
 
   h1, h2, h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 300;
     line-height: 1.1;
   }
 
   h4, h5, h6 {
-    font-family: 'Cinzel', serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -109,7 +109,7 @@
 @layer utilities {
   /* ── Umami Structural Label ── */
   .umami-label {
-    font-family: 'Cinzel', serif;
+    font-family: 'Work Sans', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.13em;
     text-transform: uppercase;
@@ -118,14 +118,14 @@
 
   /* ── Umami Display Heading ── */
   .umami-display {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 300;
     line-height: 1.05;
   }
 
   /* ── Umami Italic Accent (gold italic text) ── */
   .umami-italic-accent {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 300;
     color: var(--umami-olive-bark);
@@ -133,7 +133,7 @@
 
   /* ── Umami Body ── */
   .umami-body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 300;
     font-size: 1rem;
     line-height: 1.85;
@@ -148,7 +148,7 @@
 
   /* ── Button Styles ── */
   .umami-btn-primary {
-    font-family: 'Cinzel', serif;
+    font-family: 'Work Sans', sans-serif;
     font-size: 0.875rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -165,7 +165,7 @@
   }
 
   .umami-btn-outline {
-    font-family: 'Cinzel', serif;
+    font-family: 'Work Sans', sans-serif;
     font-size: 0.875rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;

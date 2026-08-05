@@ -20,9 +20,9 @@ const config: Config = {
         extend: {
             fontFamily: {
                 wordmark:   ['Lovan', 'serif'],
-                display:    ['"Cormorant Garamond"', 'serif'],
-                structural: ['Cinzel', 'serif'],
-                body:       ['"DM Sans"', 'sans-serif'],
+                display:    ['"Playfair Display"', 'serif'],
+                structural: ['"Work Sans"', 'sans-serif'],
+                body:       ['"Work Sans"', 'sans-serif'],
             },
             colors: {
                 background: '#F0ECE4',
