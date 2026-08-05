@@ -109,7 +109,7 @@ export const HeroSection = () => {
             <div className="relative z-10 w-full px-6 md:px-12 lg:px-16 pb-16 md:pb-20 lg:pb-24">
 
                 {/* Eyebrow */}
-                <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase text-umami-alabaster/80 mb-6">
+                <p className="text-[0.75rem] font-structural tracking-[0.15em] uppercase text-umami-alabaster/80 mb-6">
                     {t('eyebrow')}
                 </p>
 
@@ -138,7 +138,7 @@ export const HeroSection = () => {
                 </p>
 
                 {/* Cake Name (subtle editorial label) */}
-                <p className="font-structural text-[0.55rem] tracking-[0.35em] uppercase text-umami-alabaster/60 mb-10">
+                <p className="font-structural text-[0.875rem] tracking-[0.13em] uppercase text-umami-alabaster/60 mb-10">
                     {cakeName}
                 </p>
 
@@ -146,7 +146,7 @@ export const HeroSection = () => {
                 <div className="flex flex-wrap gap-4">
                     <Link
                         href={slide.href}
-                        className="inline-flex items-center gap-2 font-structural text-[0.55rem] tracking-[0.28em] uppercase px-8 py-3.5 transition-all duration-300"
+                        className="inline-flex items-center gap-2 font-structural text-[0.875rem] tracking-[0.1em] uppercase px-8 py-3.5 transition-all duration-300"
                         style={{ backgroundColor: '#C9A96E', color: '#F0ECE4' }}
                     >
                         {tc('explore')} {locale === 'ar' ? '←' : '→'}
@@ -154,14 +154,14 @@ export const HeroSection = () => {
 
                     <Link
                         href="/contact"
-                        className="inline-flex items-center gap-2 font-structural text-[0.55rem] tracking-[0.28em] uppercase px-8 py-3.5 border border-white/60 text-white/90 hover:bg-white/10 transition-all duration-300"
+                        className="inline-flex items-center gap-2 font-structural text-[0.875rem] tracking-[0.1em] uppercase px-8 py-3.5 border border-white/60 text-white/90 hover:bg-white/10 transition-all duration-300"
                     >
                         {tc('placeAnOrder')}
                     </Link>
                 </div>
 
                 {/* Scroll hint */}
-                <p className="hidden lg:block absolute bottom-24 end-16 text-[0.5rem] font-structural tracking-[0.35em] uppercase text-umami-alabaster/50">
+                <p className="hidden lg:block absolute bottom-24 end-16 text-[0.75rem] font-structural tracking-[0.13em] uppercase text-umami-alabaster/50">
                     {t('scroll')}
                 </p>
             </div>

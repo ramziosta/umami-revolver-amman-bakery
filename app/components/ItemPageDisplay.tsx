@@ -37,7 +37,7 @@ export default function ItemPageDisplay({
                 <div className="relative h-full flex flex-col justify-end px-6 md:px-12 lg:px-16 pb-14 md:pb-20 z-10">
                     {/* Eyebrow */}
                     <p
-                        className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6"
+                        className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-6"
                         style={{ color: '#C9A96E' }}
                     >
                         {category.name[locale]}
@@ -50,7 +50,7 @@ export default function ItemPageDisplay({
 
                     {item.seasonal && (
                         <span
-                            className="inline-block mt-5 px-4 py-1.5 font-structural text-[0.48rem] tracking-[0.25em] uppercase border border-white/40 text-white/80 self-start"
+                            className="inline-block mt-5 px-4 py-1.5 font-structural text-[0.75rem] tracking-[0.08em] uppercase border border-white/40 text-white/80 self-start"
                         >
                             {tc('seasonal')}
                         </span>
@@ -65,7 +65,7 @@ export default function ItemPageDisplay({
                 <div className="bg-umami-linen px-6 md:px-12 lg:px-16 py-16 md:py-20">
 
                     {/* Breadcrumb */}
-                    <nav className="mb-12 flex items-center gap-2 font-body font-light text-[0.72rem] text-umami-dim-grey">
+                    <nav className="mb-12 flex items-center gap-2 font-body font-light text-[0.8125rem] text-umami-dim-grey">
                         <Link href="/menu" className="hover:text-umami-olive-bark transition-colors duration-300">
                             {tCategory('menuBreadcrumb')}
                         </Link>
@@ -89,14 +89,14 @@ export default function ItemPageDisplay({
                     <div className="w-10 h-[1.5px] mb-8" style={{ backgroundColor: '#624203' }} />
 
                     {/* Description */}
-                    <p className="font-body font-light text-[0.85rem] leading-[1.85] text-umami-dim-grey max-w-lg mb-12">
+                    <p className="font-body font-light text-[1rem] leading-[1.85] text-umami-dim-grey max-w-lg mb-12">
                         {item.itemDescription[locale]}
                     </p>
 
                     {/* ── Options & Pricing ── */}
                     <div className="mb-12">
                         <p
-                            className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6"
+                            className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-6"
                             style={{ color: '#C9A96E' }}
                         >
                             {t('optionsAndPricing')}
@@ -109,7 +109,7 @@ export default function ItemPageDisplay({
                                         key={index}
                                         className="flex justify-between items-center py-4 border-b border-umami-alabaster hover:bg-umami-alabaster/20 transition-colors duration-300 px-1"
                                     >
-                                        <span className="font-body font-light text-[0.85rem] text-umami-carbon">
+                                        <span className="font-body font-light text-[1rem] text-umami-carbon">
                                             {option.quantity[locale]}
                                         </span>
                                         <span className="font-display text-lg text-umami-carbon">
@@ -125,7 +125,7 @@ export default function ItemPageDisplay({
                     {/* Order CTA */}
                     <Link
                         href="/contact"
-                        className="inline-flex items-center gap-2 font-structural text-[0.55rem] tracking-[0.28em] uppercase px-10 py-4 transition-all duration-300"
+                        className="inline-flex items-center gap-2 font-structural text-[0.875rem] tracking-[0.1em] uppercase px-10 py-4 transition-all duration-300"
                         style={{ backgroundColor: '#C9A96E', color: '#F0ECE4' }}
                         onMouseEnter={(e) => { (e.target as HTMLElement).style.backgroundColor = '#b8944f' }}
                         onMouseLeave={(e) => { (e.target as HTMLElement).style.backgroundColor = '#C9A96E' }}
@@ -153,10 +153,10 @@ export default function ItemPageDisplay({
                     {/* Specifications */}
                     <div className="space-y-8">
                         <div>
-                            <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase text-umami-linen/50 mb-4">
+                            <p className="text-[0.75rem] font-structural tracking-[0.15em] uppercase text-umami-linen/50 mb-4">
                                 {t('ingredients')}
                             </p>
-                            <p className="font-body font-light text-[0.82rem] text-umami-linen/80 leading-[1.85]">
+                            <p className="font-body font-light text-[0.9375rem] text-umami-linen/80 leading-[1.85]">
                                 {item.ingredients[locale]}
                             </p>
                         </div>
@@ -164,10 +164,10 @@ export default function ItemPageDisplay({
                         <div className="w-full h-[1px] bg-umami-linen/15" />
 
                         <div>
-                            <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase text-umami-linen/50 mb-4">
+                            <p className="text-[0.75rem] font-structural tracking-[0.15em] uppercase text-umami-linen/50 mb-4">
                                 {t('allergens')}
                             </p>
-                            <p className="font-body font-light text-[0.82rem] text-umami-linen/80 leading-[1.85]">
+                            <p className="font-body font-light text-[0.9375rem] text-umami-linen/80 leading-[1.85]">
                                 {item.allergens[locale]}
                             </p>
                         </div>
@@ -176,10 +176,10 @@ export default function ItemPageDisplay({
                             <>
                                 <div className="w-full h-[1px] bg-umami-linen/15" />
                                 <div>
-                                    <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase text-umami-linen/50 mb-4">
+                                    <p className="text-[0.75rem] font-structural tracking-[0.15em] uppercase text-umami-linen/50 mb-4">
                                         {t('weightEach')}
                                     </p>
-                                    <p className="font-body font-light text-[0.82rem] text-umami-linen/80">
+                                    <p className="font-body font-light text-[0.9375rem] text-umami-linen/80">
                                         {item.weight[locale]}
                                     </p>
                                 </div>

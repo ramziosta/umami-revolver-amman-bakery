@@ -26,7 +26,7 @@ export default async function ComingSoon() {
                     <h1 className="font-wordmark text-umami-gold text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-tight leading-[0.95] mb-2">
                         Umami
                     </h1>
-                    <p className="text-umami-linen text-[1.5rem] font-structural tracking-[0.35em] uppercase">Amman</p>
+                    <p className="text-umami-linen text-[1.5rem] font-structural tracking-[0.13em] uppercase">Amman</p>
                     <br />
                     <br />
 

@@ -593,7 +593,7 @@ const ContactClient: React.FC = () => {
                 <div className="relative z-10 w-full px-6 md:px-12 lg:px-16 pb-16 md:pb-20 max-w-4xl">
                     {/* Eyebrow */}
                     <p
-                        className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-8"
+                        className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-8"
                         style={{ color: '#C9A96E' }}
                     >
                         {t('eyebrow')}

@@ -24,7 +24,7 @@ export default function PreOrderPopup() {
                     &times;
                 </button>
 
-                <p className="text-[0.52rem] font-structural tracking-[0.35em] uppercase text-umami-olive-bark mb-5">
+                <p className="text-[0.75rem] font-structural tracking-[0.13em] uppercase text-umami-olive-bark mb-5">
                     {t('eyebrow')}
                 </p>
 
@@ -33,7 +33,7 @@ export default function PreOrderPopup() {
                     <em className="text-umami-taupe">{t('headlineItalic')}</em>
                 </h2>
 
-                <div className="font-body font-light text-[0.82rem] text-umami-dim-grey leading-relaxed mb-8 space-y-3 text-start">
+                <div className="font-body font-light text-[0.9375rem] text-umami-dim-grey leading-relaxed mb-8 space-y-3 text-start">
                     <p>{t('body1')}</p>
                     <p>{t('body2')}</p>
                     <ul className="list-disc ps-5 space-y-2">
@@ -46,7 +46,7 @@ export default function PreOrderPopup() {
 
                 <button
                     onClick={handleClose}
-                    className="font-structural text-[0.55rem] tracking-[0.28em] uppercase px-8 py-3 bg-umami-olive-bark text-umami-linen hover:bg-umami-dark-walnut transition-colors duration-300"
+                    className="font-structural text-[0.875rem] tracking-[0.1em] uppercase px-8 py-3 bg-umami-olive-bark text-umami-linen hover:bg-umami-dark-walnut transition-colors duration-300"
                 >
                     {t('understood')}
                 </button>

@@ -38,7 +38,7 @@ export default async function AboutPage({
                 <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-12 lg:px-16 max-w-4xl">
                     {/* Eyebrow */}
                     <p
-                        className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-8"
+                        className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-8"
                         style={{ color: '#C9A96E' }}
                     >
                         {t('eyebrow')}
@@ -72,7 +72,7 @@ export default async function AboutPage({
                         <div>
                             {/* Section Label */}
                             <p
-                                className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-8"
+                                className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-8"
                                 style={{ color: '#C9A96E' }}
                             >
                                 {t('chefEyebrow')}
@@ -108,7 +108,7 @@ export default async function AboutPage({
                             {/* ── NEW YORK ── */}
                             <div className="py-10 border-t border-umami-alabaster">
                                 <p
-                                    className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6"
+                                    className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-6"
                                     style={{ color: '#C9A96E' }}
                                 >
                                     {t('newYorkEyebrow')}
@@ -116,7 +116,7 @@ export default async function AboutPage({
                                 <p className="font-display text-umami-carbon text-lg md:text-xl leading-[1.6] mb-4">
                                     {t('newYorkLead')}
                                 </p>
-                                <p className="font-body font-light text-[0.82rem] leading-[1.85] text-umami-dim-grey">
+                                <p className="font-body font-light text-[0.9375rem] leading-[1.85] text-umami-dim-grey">
                                     {t('newYorkBody')}
                                 </p>
                             </div>
@@ -124,7 +124,7 @@ export default async function AboutPage({
                             {/* ── THE RETURN ── */}
                             <div className="py-10 border-t border-umami-alabaster">
                                 <p
-                                    className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6"
+                                    className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-6"
                                     style={{ color: '#C9A96E' }}
                                 >
                                     {t('returnEyebrow')}
@@ -132,7 +132,7 @@ export default async function AboutPage({
                                 <p className="font-display text-umami-carbon text-lg md:text-xl leading-[1.6] mb-4">
                                     {t('returnLead')}
                                 </p>
-                                <p className="font-body font-light text-[0.82rem] leading-[1.85] text-umami-dim-grey">
+                                <p className="font-body font-light text-[0.9375rem] leading-[1.85] text-umami-dim-grey">
                                     {t('returnBody')}
                                 </p>
                             </div>
@@ -140,7 +140,7 @@ export default async function AboutPage({
                             {/* ── THE STANDARD ── */}
                             <div className="py-10 border-t border-umami-alabaster">
                                 <p
-                                    className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6"
+                                    className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-6"
                                     style={{ color: '#C9A96E' }}
                                 >
                                     {t('standardEyebrow')}
@@ -167,17 +167,17 @@ export default async function AboutPage({
                                     </p>
                                 </div>
 
-                                <p className="font-body font-light text-[0.82rem] leading-[1.85] text-umami-dim-grey">
+                                <p className="font-body font-light text-[0.9375rem] leading-[1.85] text-umami-dim-grey">
                                     {t('standardBody1')}
                                 </p>
 
-                                <p className="font-body font-light text-[0.82rem] leading-[1.85] text-umami-dim-grey mb-2">
+                                <p className="font-body font-light text-[0.9375rem] leading-[1.85] text-umami-dim-grey mb-2">
                                     {t('standardBody2')}
                                 </p>
 
                                 {/* Closing Mark */}
                                 <p
-                                    className="text-[1rem] font-structural tracking-[0.4em] uppercase"
+                                    className="text-[1rem] font-structural tracking-[0.15em] uppercase"
                                     style={{ color: '#C9A96E' }}
                                 >
                                     {t('closingMark')}

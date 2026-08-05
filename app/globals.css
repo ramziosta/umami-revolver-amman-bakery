@@ -74,7 +74,7 @@
   h4, h5, h6 {
     font-family: 'Cinzel', serif;
     font-weight: 400;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 
@@ -110,8 +110,8 @@
   /* ── Umami Structural Label ── */
   .umami-label {
     font-family: 'Cinzel', serif;
-    font-size: 0.58rem;
-    letter-spacing: 0.35em;
+    font-size: 0.75rem;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
     color: var(--umami-olive-bark);
   }
@@ -135,7 +135,7 @@
   .umami-body {
     font-family: 'DM Sans', sans-serif;
     font-weight: 300;
-    font-size: 0.85rem;
+    font-size: 1rem;
     line-height: 1.85;
     color: var(--umami-dim-grey);
   }
@@ -149,8 +149,8 @@
   /* ── Button Styles ── */
   .umami-btn-primary {
     font-family: 'Cinzel', serif;
-    font-size: 0.57rem;
-    letter-spacing: 0.28em;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     background: var(--umami-olive-bark);
     color: var(--umami-linen);
@@ -166,8 +166,8 @@
 
   .umami-btn-outline {
     font-family: 'Cinzel', serif;
-    font-size: 0.57rem;
-    letter-spacing: 0.28em;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     background: transparent;
     color: var(--umami-carbon);

@@ -23,11 +23,11 @@ const CategoriesShowcase = () => {
                     <p className="font-display italic text-3xl md:text-5xl lg:text-6xl leading-[1.05] text-umami-olive-bark mb-8">
                         {t('headlineItalic')}
                     </p>
-                    <p className="font-body font-light text-[0.85rem] leading-[1.85] text-umami-dim-grey max-w-lg">
+                    <p className="font-body font-light text-[1rem] leading-[1.85] text-umami-dim-grey max-w-lg">
                         {t('body1')}
                     </p>
                     <br />
-                    <p className="font-body font-light text-[0.85rem] leading-[1.85] text-umami-dim-grey max-w-lg">
+                    <p className="font-body font-light text-[1rem] leading-[1.85] text-umami-dim-grey max-w-lg">
                         {t('body2')}
                     </p>
                 </div>
@@ -48,7 +48,7 @@ const CategoriesShowcase = () => {
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                                     <div className="absolute bottom-6 start-6 end-6">
-                                        <p className="text-[0.5rem] font-structural tracking-[0.35em] uppercase text-white/70 mb-2">
+                                        <p className="text-[0.75rem] font-structural tracking-[0.13em] uppercase text-white/70 mb-2">
                                             {tc('explore')}
                                         </p>
                                         <h3 className="font-display text-white text-2xl md:text-3xl">
@@ -58,7 +58,7 @@ const CategoriesShowcase = () => {
                                 </div>
 
                                 <CardContent className="px-0 pt-5 pb-2 bg-transparent">
-                                    <p className="font-body font-light text-[0.82rem] leading-[1.8] text-umami-dim-grey">
+                                    <p className="font-body font-light text-[0.9375rem] leading-[1.8] text-umami-dim-grey">
                                         {category.description[locale]}
                                     </p>
                                 </CardContent>

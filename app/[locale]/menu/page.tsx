@@ -52,7 +52,7 @@ export default async function MenuPage({
                         <div className="w-10 h-[1.5px] mb-8" style={{ backgroundColor: '#624203' }} />
 
                         {/* Body copy */}
-                        <div className="font-body font-light text-[0.85rem] leading-[1.85] text-umami-dim-grey max-w-sm space-y-0">
+                        <div className="font-body font-light text-[1rem] leading-[1.85] text-umami-dim-grey max-w-sm space-y-0">
                             <p>{t('body1')}</p>
                             <p className="mb-5">{t('body2')}</p>
                         </div>
@@ -87,7 +87,7 @@ export default async function MenuPage({
 
                     {/* Section label */}
                     <p
-                        className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-12"
+                        className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-12"
                         style={{ color: '#C9A96E' }}
                     >
                         {tc('explore')}
@@ -107,7 +107,7 @@ export default async function MenuPage({
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                                         <div className="absolute bottom-5 start-5 end-5">
-                                            <p className="text-[0.45rem] font-structural tracking-[0.3em] uppercase text-white/60 mb-1.5">
+                                            <p className="text-[0.7rem] font-structural tracking-[0.12em] uppercase text-white/60 mb-1.5">
                                                 {tc('itemsCount', { count: category.items.length })}
                                             </p>
                                             <h3 className="font-display text-white text-xl md:text-2xl">
@@ -117,7 +117,7 @@ export default async function MenuPage({
                                     </div>
 
                                     <CardContent className="px-1 pt-4 pb-2 bg-transparent">
-                                        <p className="font-body font-light text-[0.82rem] leading-[1.8] text-umami-dim-grey line-clamp-3">
+                                        <p className="font-body font-light text-[0.9375rem] leading-[1.8] text-umami-dim-grey line-clamp-3">
                                             {category.description[locale]}
                                         </p>
                                     </CardContent>

@@ -36,7 +36,7 @@ export default function FAQ() {
                 {sections.map((section, sIndex) => (
                     <div key={section.key} className="mb-10">
                         <p
-                            className="text-[0.6rem] font-structural tracking-[0.35em] uppercase mb-4"
+                            className="text-[0.875rem] font-structural tracking-[0.13em] uppercase mb-4"
                             style={{ color: '#C9A96E' }}
                         >
                             {section.title}

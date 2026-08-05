@@ -23,7 +23,7 @@ const Navigation = () => {
                             <h1 className="text-3xl lg:text-4xl font-wordmark tracking-tight text-umami-gold group-hover:text-umami-dim-grey transition-colors duration-300">
                                 Umami
                             </h1>
-                            <span className="text-[0.6rem] font-structural tracking-[0.35em] uppercase text-umami-dim-grey group-hover:text-umami-taupe transition-colors duration-300">
+                            <span className="text-[0.875rem] font-structural tracking-[0.13em] uppercase text-umami-dim-grey group-hover:text-umami-taupe transition-colors duration-300">
                                 Amman
                             </span>
                         </div>
@@ -33,38 +33,38 @@ const Navigation = () => {
                     <nav className="hidden md:flex items-center gap-10">
                         <Link
                             href="/menu/mille-crepe-cakes"
-                            className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
+                            className="text-[0.9375rem] font-structural tracking-[0.1em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
                             {t('milleCrepe')}
                         </Link>
                         <Link
                             href="/menu"
-                            className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
+                            className="text-[0.9375rem] font-structural tracking-[0.1em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
                             {t('menu')}
                         </Link>
                         <Link
                             href="/about"
-                            className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
+                            className="text-[0.9375rem] font-structural tracking-[0.1em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
                             {t('ourStory')}
                         </Link>
                         <Link
                             href="/contact"
-                            className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
+                            className="text-[0.9375rem] font-structural tracking-[0.1em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
                             {t('contact')}
                         </Link>
                         <Link
                             href="/location"
-                            className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
+                            className="text-[0.9375rem] font-structural tracking-[0.1em] uppercase text-umami-carbon hover:text-umami-olive-bark transition-colors duration-300"
                         >
                             {t('visit')}
                         </Link>
                         <Link
                             href={pathname}
                             locale={otherLocale}
-                            className="text-[0.62rem] font-structural tracking-[0.28em] uppercase text-umami-olive-bark hover:text-umami-carbon transition-colors duration-300"
+                            className="text-[0.9375rem] font-structural tracking-[0.1em] uppercase text-umami-olive-bark hover:text-umami-carbon transition-colors duration-300"
                         >
                             {t('languageSwitch')}
                         </Link>
@@ -75,7 +75,7 @@ const Navigation = () => {
                         <Link
                             href={pathname}
                             locale={otherLocale}
-                            className="text-[0.6rem] font-structural tracking-[0.2em] uppercase text-umami-olive-bark"
+                            className="text-[0.875rem] font-structural tracking-[0.06em] uppercase text-umami-olive-bark"
                         >
                             {t('languageSwitch')}
                         </Link>

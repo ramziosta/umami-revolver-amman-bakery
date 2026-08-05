@@ -35,7 +35,7 @@ export default async function PolicyPage({
                 </div>
 
                 <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-12 lg:px-16 max-w-4xl">
-                    <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-8" style={{ color: '#C9A96E' }}>
+                    <p className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-8" style={{ color: '#C9A96E' }}>
                         {t('eyebrow')}
                     </p>
 
@@ -67,7 +67,7 @@ export default async function PolicyPage({
 
                     {/* ── ORDER POLICY ── */}
                     <div>
-                        <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6" style={{ color: '#C9A96E' }}>
+                        <p className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-6" style={{ color: '#C9A96E' }}>
                             {t('orderPolicy.title')}
                         </p>
 
@@ -98,7 +98,7 @@ export default async function PolicyPage({
 
                     {/* ── PRIVACY POLICY ── */}
                     <div>
-                        <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6" style={{ color: '#C9A96E' }}>
+                        <p className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-6" style={{ color: '#C9A96E' }}>
                             {t('privacyPolicy.title')}
                         </p>
 
@@ -114,7 +114,7 @@ export default async function PolicyPage({
 
                     {/* ── ALLERGEN POLICY ── */}
                     <div>
-                        <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6" style={{ color: '#C9A96E' }}>
+                        <p className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-6" style={{ color: '#C9A96E' }}>
                             {t('allergenPolicy.title')}
                         </p>
 
@@ -130,7 +130,7 @@ export default async function PolicyPage({
 
                     {/* ── TERMS ── */}
                     <div>
-                        <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6" style={{ color: '#C9A96E' }}>
+                        <p className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-6" style={{ color: '#C9A96E' }}>
                             {t('terms.title')}
                         </p>
 
@@ -145,7 +145,7 @@ export default async function PolicyPage({
 
                     {/* ── DELIVERY ── */}
                     <div>
-                        <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6" style={{ color: '#C9A96E' }}>
+                        <p className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-6" style={{ color: '#C9A96E' }}>
                             {t('delivery.title')}
                         </p>
 
@@ -155,7 +155,7 @@ export default async function PolicyPage({
                             <p>{t('delivery.p3')}</p>
                         </div>
                         <br />
-                        <p className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6" style={{ color: '#C9A96E' }}>{t('delivery.handoverTitle')}</p>
+                        <p className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-6" style={{ color: '#C9A96E' }}>{t('delivery.handoverTitle')}</p>
                         <div className="space-y-4 font-body text-sm text-umami-dim-grey leading-[1.9]">
                             <p>{t('delivery.handover1')}</p>
                             <p>{t('delivery.handover2')}</p>
@@ -176,7 +176,7 @@ export default async function PolicyPage({
                             {t('closing.p2')}
                         </p>
 
-                        <p className="text-[0.8rem] font-structural tracking-[0.4em] uppercase mt-4" style={{ color: '#C9A96E' }}>
+                        <p className="text-[0.875rem] font-structural tracking-[0.15em] uppercase mt-4" style={{ color: '#C9A96E' }}>
                             {t('closing.mark')}
                         </p>
                     </div>

@@ -27,7 +27,7 @@ export default async function CategoryDisplayPage({ category, locale }: { catego
                 <div className="relative h-full flex flex-col justify-end px-6 md:px-12 lg:px-16 pb-14 md:pb-20 z-10">
                     {/* Eyebrow */}
                     <p
-                        className="text-[0.52rem] font-structural tracking-[0.4em] uppercase mb-6"
+                        className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-6"
                         style={{ color: '#C9A96E' }}
                     >
                         {t('menuBreadcrumb')}
@@ -49,7 +49,7 @@ export default async function CategoryDisplayPage({ category, locale }: { catego
             <section className="px-6 md:px-12 lg:px-16 py-16 md:py-20">
 
                 {/* Breadcrumb */}
-                <nav className="mb-12 flex items-center gap-2 font-body font-light text-[0.72rem] text-umami-dim-grey">
+                <nav className="mb-12 flex items-center gap-2 font-body font-light text-[0.8125rem] text-umami-dim-grey">
                     <Link href="/menu" className="hover:text-umami-olive-bark transition-colors duration-300">
                         {t('menuBreadcrumb')}
                     </Link>
@@ -78,14 +78,14 @@ export default async function CategoryDisplayPage({ category, locale }: { catego
                                                 {item.itemName[locale]}
                                             </h3>
                                             {item.seasonal && (
-                                                <span className="inline-block mt-2 px-3 py-1 font-structural text-[0.55rem] tracking-[0.2em] uppercase border border-white/40 text-white/80">
+                                                <span className="inline-block mt-2 px-3 py-1 font-structural text-[0.875rem] tracking-[0.06em] uppercase border border-white/40 text-white/80">
                             {tc('seasonal')}
                         </span>
                                             )}
                                         </div>
 
                                         {/* View Details — mirrors the Seasonal badge language but reads as an action */}
-                                        <span className="shrink-0 inline-flex items-center gap-2 font-structural text-[0.6rem] md:text-[0.65rem] tracking-[0.2em] uppercase text-white border-b border-white/70 pb-1 group-hover:text-umami-gold group-hover:border-umami-gold transition-colors duration-500">
+                                        <span className="shrink-0 inline-flex items-center gap-2 font-structural text-[0.875rem] md:text-[0.875rem] tracking-[0.06em] uppercase text-white border-b border-white/70 pb-1 group-hover:text-umami-gold group-hover:border-umami-gold transition-colors duration-500">
                     {tc('viewDetails')}
                     <span className="text-sm rtl:rotate-180 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform duration-500">→</span>
                 </span>
@@ -93,7 +93,7 @@ export default async function CategoryDisplayPage({ category, locale }: { catego
                                 </div>
 
                                 <CardContent className="px-1 pt-4 pb-3 bg-transparent">
-                                    <p className="font-body font-light text-[0.82rem] leading-[1.8] text-umami-dim-grey line-clamp-2">
+                                    <p className="font-body font-light text-[0.9375rem] leading-[1.8] text-umami-dim-grey line-clamp-2">
                                         {item.itemDescription[locale]}
                                     </p>
                                 </CardContent>
