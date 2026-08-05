@@ -14,7 +14,6 @@ import carrotCake from "@/app/assets/CarrotCake.jpg";
 import chocolateNoir from "@/app/assets/ChocolateNoir.jpg";
 import bananaCake from "@/app/assets/dulceAndBanana.png";
 import chocolateMousse from "@/app/assets/chocolate-mousse.jpeg";
-import chocolateCake from "@/app/assets/chocolate-cake.png";
 import coconutCake from "@/app/assets/coconut-cake.png";
 import confettiCake from "@/app/assets/funfetti1.jpg";
 
@@ -272,23 +271,6 @@ export const categories: Category[] = [
                         images: [confettiCake],
                     },
                 ],
-            },
-            {
-                id: "chocolate-cake",
-                itemName: t("Triple Chocolate Cake", "كيك الشوكولاتة الثلاثية"),
-                itemDescription: t(
-                    "Rich, moist dark chocolate sponge layered with milk chocolate crèmeux, chocolate crunch feuilletine and French chocolate buttercream.",
-                    "إسفنجية شوكولاتة داكنة غنية ورطبة، مطبّقة بكريمو شوكولاتة الحليب، وطبقة مقرمشة من فوييتين الشوكولاتة، وكريمة زبدة الشوكولاتة الفرنسية."
-                ),
-                itemImages: [chocolateCake],
-                quantityOptions: [
-                    { quantity: t("3 layer 8 inch", "3 طبقات، 8 إنش"), price: "65 JOD" },
-                ],
-                ingredients: t("Flour, sugar, milk, butter, eggs, chocolate", "طحين، سكر، حليب، زبدة، بيض، شوكولاتة"),
-                allergens: t("Gluten, dairy, eggs", "غلوتين، ألبان، بيض"),
-                seasonal: false,
-                weight: t("3 layer 8 inch", "3 طبقات، 8 إنش"),
-                variations: [],
             },
             {
                 id: "coconut-cake",
