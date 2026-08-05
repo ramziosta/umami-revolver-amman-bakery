@@ -246,11 +246,11 @@ export const categories: Category[] = [
                 variations: [],
             },
             {
-                id: "white-confetti-cake",
-                itemName: t("Celebration Confetti Cake", "كيك الاحتفال بالكونفيتي"),
+                id: "white-velvet-cake",
+                itemName: t("White Velvet Cake", "كيك المخمل الأبيض"),
                 itemDescription: t(
-                    "Soft, fluffy vanilla bean cake layered with rainbow confetti sprinkles and filled with a light mascarpone whipped cream. Frosted in silky French buttercream.",
-                    "كيك فانيليا طري وهش، مطبّق برشات كونفيتي ملونة ومحشو بكريمة ماسكاربوني مخفوقة خفيفة. مغطى بكريمة زبدة فرنسية حريرية."
+                    "Soft, fluffy vanilla bean cake with a tender velvet crumb, filled with a light mascarpone whipped cream and frosted in silky French buttercream. Available with rainbow confetti sprinkles for celebrations.",
+                    "كيك فانيليا طري وهش بقوام مخملي ناعم، محشو بكريمة ماسكاربوني مخفوقة خفيفة ومغطى بكريمة زبدة فرنسية حريرية. متوفر برشات كونفيتي ملونة للاحتفالات."
                 ),
                 itemImages: [confettiCake],
                 quantityOptions: [
@@ -260,7 +260,18 @@ export const categories: Category[] = [
                 allergens: t("Gluten, dairy, eggs", "غلوتين، ألبان، بيض"),
                 seasonal: false,
                 weight: t("3 layer 8 inch", "3 طبقات، 8 إنش"),
-                variations: [],
+                variations: [
+                    {
+                        id: "confetti-celebration",
+                        name: t("Confetti — For Celebrations", "كونفيتي — للاحتفالات"),
+                        description: t(
+                            "Rainbow confetti sprinkles baked into the batter for a festive touch.",
+                            "رشات كونفيتي ملونة مخبوزة داخل العجين للمسة احتفالية."
+                        ),
+                        price: "",
+                        images: [confettiCake],
+                    },
+                ],
             },
             {
                 id: "chocolate-cake",
@@ -288,7 +299,7 @@ export const categories: Category[] = [
                 ),
                 itemImages: [coconutCake],
                 quantityOptions: [
-                    { quantity: t("3 layer 8 inch", "3 طبقات، 8 إنش"), price: "60 JOD" },
+                    { quantity: t("3 layer 8 inch", "3 طبقات، 8 إنش"), price: "65 JOD" },
                 ],
                 ingredients: t("Flour, sugar, milk, butter, eggs, coconut, passion fruit", "طحين، سكر، حليب، زبدة، بيض، جوز الهند، فاكهة الباشن"),
                 allergens: t("Gluten, dairy, eggs", "غلوتين، ألبان، بيض"),
@@ -336,7 +347,7 @@ export const categories: Category[] = [
                 itemDescription: t("Chocolate Mousse Cake, Raspberry Ganache, Choux Crown", "كيك موس الشوكولاتة، غاناش التوت، تاج الشو"),
                 itemImages: [chocolateMousse],
                 quantityOptions: [
-                    { quantity: t("2 layer 8 inch — serves 10–12", "طبقتان، 8 إنش — يكفي 10 إلى 12 شخصًا"), price: "65 JOD" },
+                    { quantity: t("2 layer 8 inch — serves 10–12", "طبقتان، 8 إنش — يكفي 10 إلى 12 شخصًا"), price: "70 JOD" },
                 ],
                 ingredients: t("Flour, sugar, butter, cream, eggs, chocolate, raspberries", "طحين، سكر، زبدة، كريمة، بيض، شوكولاتة، توت"),
                 allergens: t("Gluten, dairy, eggs", "غلوتين، ألبان، بيض"),

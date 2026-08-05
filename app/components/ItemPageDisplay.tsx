@@ -121,6 +121,32 @@ export default function ItemPageDisplay({
                         </div>
                     </div>
 
+                    {/* ── Variations ── */}
+                    {item.variations.length > 0 && (
+                        <div className="mb-12">
+                            <p
+                                className="text-[0.75rem] font-structural tracking-[0.15em] uppercase mb-6"
+                                style={{ color: '#C9A96E' }}
+                            >
+                                {t('variations')}
+                            </p>
+                            <div className="space-y-4">
+                                {item.variations.map((variation) => (
+                                    <div key={variation.id}>
+                                        <p className="font-display text-umami-carbon text-lg">
+                                            {variation.name[locale]}
+                                        </p>
+                                        {variation.description[locale] && (
+                                            <p className="font-body font-light text-[0.9375rem] text-umami-dim-grey leading-[1.7]">
+                                                {variation.description[locale]}
+                                            </p>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
 
                     {/* Order CTA */}
                     <Link
