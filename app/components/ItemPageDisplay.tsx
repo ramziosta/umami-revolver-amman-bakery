@@ -26,7 +26,7 @@ export default function ItemPageDisplay({
             {/* ── HERO — Full-bleed image, bottom-left text ── */}
             <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
                 <Image
-                    src={item.itemImages[0]}
+                    src={selectedImage}
                     alt={item.itemName[locale]}
                     fill
                     sizes="100vw"
@@ -57,6 +57,33 @@ export default function ItemPageDisplay({
                     )}
                 </div>
             </section>
+
+            {/* ── THUMBNAILS — only shown when there's more than one photo ── */}
+            {item.itemImages.length > 1 && (
+                <div className="bg-umami-linen px-6 md:px-12 lg:px-16 py-6 flex gap-3 overflow-x-auto">
+                    {item.itemImages.map((image, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setSelectedImage(image)}
+                            className="relative shrink-0 w-20 h-20 md:w-24 md:h-24 overflow-hidden transition-opacity duration-300"
+                            style={{
+                                outline: image === selectedImage ? '2px solid #C9A96E' : '2px solid transparent',
+                                outlineOffset: '2px',
+                                opacity: image === selectedImage ? 1 : 0.6,
+                            }}
+                            aria-label={`${item.itemName[locale]} ${index + 1}`}
+                        >
+                            <Image
+                                src={image}
+                                alt={`${item.itemName[locale]} ${index + 1}`}
+                                fill
+                                sizes="96px"
+                                className="object-cover"
+                            />
+                        </button>
+                    ))}
+                </div>
+            )}
 
             {/* ── DETAILS — Split layout ── */}
             <section className="grid grid-cols-1 lg:grid-cols-[58%_42%] min-h-[50vh]">
@@ -168,7 +195,7 @@ export default function ItemPageDisplay({
                     {/* Secondary Image */}
                     <div className="relative h-64 md:h-80 overflow-hidden mb-12">
                         <Image
-                            src={item.itemImages[0]}
+                            src={selectedImage}
                             alt={item.itemName[locale]}
                             fill
                             sizes="(max-width: 1024px) 100vw, 42vw"
