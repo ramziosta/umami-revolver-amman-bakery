@@ -197,3 +197,20 @@
 html[dir="rtl"] [class*="tracking-"] {
   letter-spacing: 0 !important;
 }
+
+/* Arabic script reads smaller than Latin at matching pixel sizes (shorter
+ * apparent x-height, connected letterforms) — bump the small/label/body sizes
+ * up a step for Arabic. Display headline sizes (2rem+) are left alone; they're
+ * already large enough. Unlayered so it beats the Tailwind text-[...] utility. */
+html[dir="rtl"] [class*="text-[0.7rem]"]    { font-size: 0.85rem !important; }
+html[dir="rtl"] [class*="text-[0.75rem]"]   { font-size: 0.9rem !important; }
+html[dir="rtl"] [class*="text-[0.8125rem]"] { font-size: 0.9375rem !important; }
+html[dir="rtl"] [class*="text-[0.875rem]"]  { font-size: 1rem !important; }
+html[dir="rtl"] [class*="text-[0.9375rem]"] { font-size: 1.0625rem !important; }
+html[dir="rtl"] [class*="text-[1rem]"]      { font-size: 1.125rem !important; }
+
+html[dir="rtl"] .umami-label,
+html[dir="rtl"] .umami-btn-primary,
+html[dir="rtl"] .umami-btn-outline {
+  font-size: 0.9rem !important;
+}
