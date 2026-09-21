@@ -16,6 +16,7 @@ import bananaCake from "@/app/assets/dulceAndBanana.png";
 import chocolateMousse from "@/app/assets/chocolate-mousse.jpeg";
 import coconutCake from "@/app/assets/coconut-cake.png";
 import confettiCake from "@/app/assets/funfetti1.jpg";
+import appleTarteTatinCrepe from "@/app/assets/AppleTarteTatin.jpg";
 
 // ── RE-EXPORT TYPES ────────────────────────────────────────────────────────
 export type { Category, FeaturedCategory, LocalizedText };
@@ -178,7 +179,30 @@ export const categories: Category[] = [
                 weight: t("", ""),
                 variations: [],
             },
-
+            {
+                id: "apple-tarte-tatin-crepe",
+                itemName: t(
+                    "Apple Tarte Tatin Mille Crêpe",
+                    "ميل كريب تارت تاتان بالتفاح"
+                ),
+                itemDescription: t(
+                    "Twenty brown-butter crêpes layered with tarte-tatin apple diplomat cream, with three layers enriched with finely diced apples sautéed in cider caramel. Finished with a central tarte-tatin apple cap glazed with cider caramel and framed by a three-spice streusel ring.",
+                    "عشرون طبقة من كريب الزبدة المحمّرة تتخللها كريمة دبلومات بتفاح تارت تاتان، منها ثلاث طبقات غنية بمكعبات التفاح الصغيرة المشوّحة بكراميل السايدر. تُزيّن بطبقة دائرية من تفاح تارت تاتان في الوسط، ملمّعة بكراميل السايدر ومحاطة بحلقة من فتات الستروزل بثلاثة أنواع من البهار."
+                ),
+                itemImages: [appleTarteTatinCrepe],
+                quantityOptions: [
+                    { quantity: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"), price: "63 JOD" },
+                    { quantity: t("8 inch — serves 10–12", "8 إنش — يكفي 10 إلى 12 شخصًا"), price: "54 JOD" },
+                ],
+                ingredients: t(
+                    "Flour, sugar, milk, butter, eggs, cream, apples, cider, spices",
+                    "طحين، سكر، حليب، زبدة، بيض، كريمة، تفاح، سايدر، بهار"
+                ),
+                allergens: t("Gluten, dairy, eggs", "غلوتين، ألبان، بيض"),
+                seasonal: false,
+                weight: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"),
+                variations: [],
+            },
             {
                 id: "raspberry-almond-crepe",
                 itemName: t("Raspberry Almond & White Chocolate Mille Crêpe", "ميل كريب التوت واللوز والشوكولاتة البيضاء"),
@@ -188,8 +212,8 @@ export const categories: Category[] = [
                 ),
                 itemImages: [raspberryCrepe],
                 quantityOptions: [
-                    { quantity: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"), price: "60 JOD" },
-                    { quantity: t("8 inch — serves 10–12", "8 إنش — يكفي 10 إلى 12 شخصًا"), price: "52 JOD" },
+                    { quantity: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"), price: "63 JOD" },
+                    { quantity: t("8 inch — serves 10–12", "8 إنش — يكفي 10 إلى 12 شخصًا"), price: "54 JOD" },
                 ],
                 ingredients: t("Flour, sugar, milk, butter, eggs, mascarpone, white chocolate, raspberry, almond", "طحين، سكر، حليب، زبدة، بيض، ماسكاربوني، شوكولاتة بيضاء، توت، لوز"),
                 allergens: t("Gluten, dairy, eggs, nuts", "غلوتين، ألبان، بيض، مكسرات"),
