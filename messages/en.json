@@ -62,6 +62,12 @@
         "description": "Coconut crêpes · Coconut diplomat · Passion fruit cream · Mango glaze",
         "cakeName": "Coconut & Passion Fruit"
       },
+      "tarteTatin": {
+        "headlineTop": "Tarte Tatin. Reimagined",
+        "headlineBottom": "What the season brings.",
+        "description": "Brown butter crêpes · Apple Tarte Tatin diplomat · Cider Caramel Glaze · Spiced Streusel",
+        "cakeName": "Apple Tarte Tatin"
+      },
       "orangeBlossom": {
         "headlineTop": "Mazaher. Labneh. Ajloun honey.",
         "headlineBottom": "A Levantine identity.",

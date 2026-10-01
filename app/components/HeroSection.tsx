@@ -9,7 +9,7 @@ import milleCrepeCake from "@/app/assets/Whole Cake Heads-on.jpg";
 import tiramisuCrepe from "@/app/assets/tiramisu.jpg";
 import succes from "@/app/assets/succes.jpg";
 import ajloun from "@/app/assets/OrangeBlossom.jpg";
-import coconutCrepe from "@/app/assets/coconutmille.jpg";
+import tartTatin from "@/app/assets/AppleTarteTatin.jpg";
 
 export const HeroSection = () => {
     const t = useTranslations('home');
@@ -33,9 +33,9 @@ export const HeroSection = () => {
             href: "/menu/mille-crepe-cakes/succes-praline-crepe",
         },
         {
-            image: coconutCrepe,
-            key: "coconut",
-            href: "/menu/mille-crepe-cakes/coconut-crepe",
+            image: tartTatin,
+            key: "tarteTatin",
+            href: "/menu/mille-crepe-cakes/apple-tarte-tatin-crepe",
         },
         {
             image: ajloun,

@@ -9,7 +9,7 @@ import seasonal from "@/app/assets/lemon-basil.png";
 import strawberryLychee from "@/app/assets/StrawberryMilleCrepe.jpg"
 import coconutCrepe from "@/app/assets/coconutmille.jpg";
 import troisCrepe from "@/app/assets/Trois.jpg";
-
+import aswad from "@/app/assets/Aswad.jpg";
 import carrotCake from "@/app/assets/CarrotCake.jpg";
 import chocolateNoir from "@/app/assets/ChocolateNoir.jpg";
 import bananaCake from "@/app/assets/dulceAndBanana.png";
@@ -54,6 +54,31 @@ export const categories: Category[] = [
                 ],
                 ingredients: t("Flour, sugar, milk, cream, butter, eggs, vanilla bean", "طحين، سكر، حليب، كريمة، زبدة، بيض، حبة فانيليا"),
                 allergens: t("Gluten, dairy, eggs", "غلوتين، ألبان، بيض"),
+                seasonal: false,
+                weight: t("", ""),
+                variations: [],
+            },
+            {
+                id: "aswad-crepe",
+                itemName: t("Aswad — Dark Chocolate Mille Crêpe", "أسود — ميل كريب بالشوكولاتة الداكنة"),
+                itemDescription: t(
+                    "Twenty layers of dark chocolate crêpe bound by Belcolade three-chocolate diplomat cream — 62% cocoa, built on a hidden malted dairy signature. Hand-finished chocolate cap, gold-brushed curls.",
+                    "عشرون طبقة من كريب الشوكولاتة الداكنة مع كريمة دبلومات بثلاث شوكولاتات من بلكولاد — ٦٢٪ كاكاو، مبنية على نكهة الحليب المملّح الخفية. غطاء شوكولاتة مصنوع يدويًا مع لفائف مطليّة بالذهب."
+                ),
+                itemImages: [aswad],
+                quantityOptions: [
+                    { quantity: t("9 inch — serves 10–12", "9 إنش — يكفي 10 إلى 12 شخصًا"), price: "63 JOD" },
+                    { quantity: t("8 inch — serves 6–8", "8 إنش — يكفي 6 إلى 8 أشخاص"), price: "54 JOD" },
+                    { quantity: t("Le Petit — serves 4–6", "لو بوتي — يكفي 4 إلى 6 أشخاص"), price: "46 JOD" },
+                ],
+                ingredients: t(
+                    "Flour, sugar, milk, butter, eggs, Belcolade dark chocolate (Noir D600 60%), Belcolade milk chocolate (Selection Lait P370 38%), Belcolade dark chocolate (Amber E740 74%), heavy cream, cocoa powder, toasted skim-milk powder, non-diastatic barley malt, fleur de sel",
+                    "طحين، سكر، حليب، زبدة، بيض، شوكولاتة داكنة بلكولاد (نوار D600 ٦٠٪)، شوكولاتة حليب بلكولاد (سيليكشن ليه P370 ٣٨٪)، شوكولاتة داكنة بلكولاد (أمبر E740 ٧٤٪)، كريمة ثقيلة، مسحوق كاكاو، مسحوق حليب خالي الدسم محمّص، شعير غير مُنبت، ملح فلور دو سيل"
+                ),
+                allergens: t(
+                    "Gluten, dairy, eggs, soy (chocolate — check supplier), barley (gluten)",
+                    "غلوتين، ألبان، بيض، صويا (الشوكولاتة — يُرجى التأكد من المورد)، شعير (غلوتين)"
+                ),
                 seasonal: false,
                 weight: t("", ""),
                 variations: [],
@@ -157,7 +182,7 @@ export const categories: Category[] = [
             },
             {
                 id: "trois-crepe",
-                itemName: t("Trois — Chocolate Mille Crêpe", "تروا — ميل كريب الشوكولاتة"),
+                itemName: t("Trois — Three Chocolate Mille Crêpe", "تروا — ميل كريب ٣ شوكولاتة"),
                 itemDescription: t(
                     "Three chocolates walked from bitter to soft — dark, toasted milk, caramelized white. A raspberry seam where the dark zone ends. A feuilletine disc that announces itself only when the knife goes through.",
                     "ثلاث شوكولاتات تنتقل من المرارة إلى النعومة — داكنة، حليب محمّص، وبيضاء مكرملة. خط من التوت حيث تنتهي منطقة الشوكولاتة الداكنة. قرص فوييتين مقرمش لا يُكتشف إلا عند قطع الكيكة."
@@ -199,7 +224,7 @@ export const categories: Category[] = [
                     "طحين، سكر، حليب، زبدة، بيض، كريمة، تفاح، سايدر، بهار"
                 ),
                 allergens: t("Gluten, dairy, eggs", "غلوتين، ألبان، بيض"),
-                seasonal: false,
+                seasonal: true,
                 weight: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"),
                 variations: [],
             },
