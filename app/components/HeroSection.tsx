@@ -62,108 +62,122 @@ export const HeroSection = () => {
         return () => clearInterval(interval);
     }, [current]);
 
-    const slide = slides[current];
-    const cakeName = t(`slides.${slide.key}.cakeName`);
-
     return (
-        <section className="relative w-full h-[85vh] lg:h-screen flex items-end overflow-hidden">
+        <section className="grid grid-cols-1 lg:grid-cols-[58%_42%] lg:min-h-[max(600px,calc(100vh-7.5rem))] bg-umami-linen">
 
-            {/* ── BACKGROUND CAROUSEL ── */}
-            <div className="absolute inset-0">
+            {/* ── IMAGE — the cake, unobstructed ── */}
+            <div className="relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto overflow-hidden">
                 {slides.map((s, index) => (
                     <Image
                         key={index}
                         src={s.image}
                         alt={t(`slides.${s.key}.cakeName`)}
                         fill
+                        sizes="(min-width: 1024px) 58vw, 100vw"
                         priority={index === 0}
                         className={`object-cover transition-opacity duration-1000 ${
-                            index === current ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
+                            index === current ? 'opacity-100' : 'opacity-0'
                         }`}
                     />
                 ))}
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black/5" />
+                {/* Prev / Next */}
+                <button
+                    onClick={prevSlide}
+                    aria-label="Previous"
+                    className="absolute start-4 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-11 h-11 rounded-full bg-black/35 hover:bg-black/55 text-white transition-colors duration-300"
+                >
+                    {locale === 'ar' ? '→' : '←'}
+                </button>
+                <button
+                    onClick={nextSlide}
+                    aria-label="Next"
+                    className="absolute end-4 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-11 h-11 rounded-full bg-black/35 hover:bg-black/55 text-white transition-colors duration-300"
+                >
+                    {locale === 'ar' ? '←' : '→'}
+                </button>
 
-                {/* Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
+                {/* Slide dots */}
+                <div className="absolute bottom-4 inset-x-0 z-20 flex justify-center gap-2">
+                    {slides.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setCurrent(index)}
+                            aria-label={`${index + 1} / ${slides.length}`}
+                            className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
+                                index === current ? 'bg-white' : 'bg-white/50 hover:bg-white/75'
+                            }`}
+                        />
+                    ))}
+                </div>
             </div>
 
-            {/* ── NAVIGATION ── */}
-            <button
-                onClick={prevSlide}
-                className="absolute start-6 md:start-10 bottom-10 z-20 text-white/70 hover:text-white text-sm tracking-widest"
-            >
-                {locale === 'ar' ? '→' : '←'}
-            </button>
+            {/* ── TEXT PANEL ── all slides share one grid cell so the panel height never jumps */}
+            <div className="grid content-center px-6 py-12 md:px-12 lg:px-12 xl:px-14 lg:py-16 bg-umami-taupe/15">
+                {slides.map((s, index) => {
+                    const active = index === current;
+                    const Heading = active ? 'h1' : 'div';
+                    return (
+                        <div
+                            key={s.key}
+                            aria-hidden={!active}
+                            className={`col-start-1 row-start-1 transition-[opacity,visibility] duration-500 ${
+                                active ? 'opacity-100 visible' : 'opacity-0 invisible'
+                            }`}
+                        >
+                            {/* Eyebrow */}
+                            <p className="text-[0.75rem] font-structural tracking-[0.15em] uppercase text-umami-dim-grey mb-6">
+                                {t('eyebrow')}
+                            </p>
 
-            <button
-                onClick={nextSlide}
-                className="absolute end-6 md:end-10 bottom-10 z-20 text-white/70 hover:text-white text-sm tracking-widest"
-            >
-                {locale === 'ar' ? '←' : '→'}
-            </button>
+                            {/* Headline Top */}
+                            <Heading className="font-display text-umami-carbon text-4xl md:text-5xl leading-[1.05] mb-2">
+                                {t(`slides.${s.key}.headlineTop`)}
+                            </Heading>
 
-            {/* ── CONTENT ── */}
-            <div className="relative z-10 w-full px-6 md:px-12 lg:px-16 pb-16 md:pb-20 lg:pb-24">
+                            {/* Headline Bottom */}
+                            <p className="font-display italic text-umami-olive-bark text-3xl md:text-4xl leading-[1.1] mb-8">
+                                {t(`slides.${s.key}.headlineBottom`)}
+                            </p>
 
-                {/* Eyebrow */}
-                <p className="text-[0.75rem] font-structural tracking-[0.15em] uppercase text-umami-alabaster/80 mb-6">
-                    {t('eyebrow')}
-                </p>
+                            {/* Divider */}
+                            <div
+                                className="w-10 h-[1.5px] mb-6"
+                                style={{ backgroundColor: '#C9A96E' }}
+                            />
 
-                {/* Headline Top */}
-                <h1 className="font-display text-white text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] leading-[0.95] mb-2">
-                    {t(`slides.${slide.key}.headlineTop`)}
-                </h1>
+                            {/* Description */}
+                            <p className="font-body font-light text-umami-dim-grey text-base md:text-lg max-w-md leading-relaxed mb-5">
+                                {t(`slides.${s.key}.description`)}
+                            </p>
 
-                {/* Headline Bottom */}
-                <p
-                    className="font-display italic text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] leading-[0.95] mb-8"
-                    style={{ color: '#C9A96E' }}
-                >
-                    {t(`slides.${slide.key}.headlineBottom`)}
-                </p>
+                            {/* Cake Name (subtle editorial label) */}
+                            <p className="font-structural text-[0.875rem] tracking-[0.13em] uppercase text-umami-taupe mb-10">
+                                {t(`slides.${s.key}.cakeName`)}
+                            </p>
 
-                {/* Divider */}
-                <div
-                    className="w-10 h-[1.5px] mb-6"
-                    style={{ backgroundColor: '#C9A96E' }}
-                />
+                            {/* CTA */}
+                            <div className="flex flex-wrap gap-4">
+                                <Link
+                                    href={s.href}
+                                    tabIndex={active ? 0 : -1}
+                                    className="inline-flex items-center gap-2 font-structural text-[0.875rem] tracking-[0.1em] uppercase px-8 py-3.5 transition-all duration-300 hover:opacity-90"
+                                    style={{ backgroundColor: '#C9A96E', color: '#F0ECE4' }}
+                                >
+                                    {tc('explore')} {locale === 'ar' ? '←' : '→'}
+                                </Link>
 
-                {/* Description */}
-                <p className="font-body font-light text-umami-alabaster/90 text-sm md:text-base max-w-md leading-relaxed mb-6">
-                    {t(`slides.${slide.key}.description`)}
-                </p>
-
-                {/* Cake Name (subtle editorial label) */}
-                <p className="font-structural text-[0.875rem] tracking-[0.13em] uppercase text-umami-alabaster/60 mb-10">
-                    {cakeName}
-                </p>
-
-                {/* CTA */}
-                <div className="flex flex-wrap gap-4">
-                    <Link
-                        href={slide.href}
-                        className="inline-flex items-center gap-2 font-structural text-[0.875rem] tracking-[0.1em] uppercase px-8 py-3.5 transition-all duration-300"
-                        style={{ backgroundColor: '#C9A96E', color: '#F0ECE4' }}
-                    >
-                        {tc('explore')} {locale === 'ar' ? '←' : '→'}
-                    </Link>
-
-                    <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-2 font-structural text-[0.875rem] tracking-[0.1em] uppercase px-8 py-3.5 border border-white/60 text-white/90 hover:bg-white/10 transition-all duration-300"
-                    >
-                        {tc('placeAnOrder')}
-                    </Link>
-                </div>
-
-                {/* Scroll hint */}
-                <p className="hidden lg:block absolute bottom-24 end-16 text-[0.75rem] font-structural tracking-[0.13em] uppercase text-umami-alabaster/50">
-                    {t('scroll')}
-                </p>
+                                <Link
+                                    href="/contact"
+                                    tabIndex={active ? 0 : -1}
+                                    className="inline-flex items-center gap-2 font-structural text-[0.875rem] tracking-[0.1em] uppercase px-8 py-3.5 border border-umami-carbon/60 text-umami-carbon hover:bg-umami-carbon/5 transition-all duration-300"
+                                >
+                                    {tc('placeAnOrder')}
+                                </Link>
+                            </div>
+                        </div>
+                    );
+                })}
             </div>
         </section>
     );
