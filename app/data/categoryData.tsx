@@ -17,6 +17,7 @@ import chocolateMousse from "@/app/assets/chocolate-mousse.jpeg";
 import coconutCake from "@/app/assets/coconut-cake.png";
 import confettiCake from "@/app/assets/funfetti1.jpg";
 import appleTarteTatinCrepe from "@/app/assets/AppleTarteTatin.jpg";
+import caramelPumpkinCrepe from "@/app/assets/PumpkinCaramel.jpg";
 
 // ── RE-EXPORT TYPES ────────────────────────────────────────────────────────
 export type { Category, FeaturedCategory, LocalizedText };
@@ -224,6 +225,27 @@ export const categories: Category[] = [
                     "طحين، سكر، حليب، زبدة، بيض، كريمة، تفاح، سايدر، بهار"
                 ),
                 allergens: t("Gluten, dairy, eggs", "غلوتين، ألبان، بيض"),
+                seasonal: true,
+                weight: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"),
+                variations: [],
+            },
+            {
+                id: "caramel-pumpkin-crepe",
+                itemName: t("Caramel Pumpkin Mille Crêpe", "ميل كريب الكراميل والقرع"),
+                itemDescription: t(
+                    "Delicate layers of crêpes filled with a cream of pumpkin and dark caramel, with a concentrated band of pumpkin caramel at its heart. Crowned with mascarpone, a ribbon of praline caramel, and sablé pecans.",
+                    "طبقات كريب رقيقة محشوة بكريمة القرع والكراميل الداكن، وفي قلبها طبقة مركّزة من القرع والكراميل. متوّجة بالماسكاربوني، وشريط من كراميل البرالين، وحبّات البيكان المكرملة."
+                ),
+                itemImages: [caramelPumpkinCrepe],
+                quantityOptions: [
+                    { quantity: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"), price: "63 JOD" },
+                    { quantity: t("8 inch — serves 10–12", "8 إنش — يكفي 10 إلى 12 شخصًا"), price: "54 JOD" },
+                ],
+                ingredients: t(
+                    "Flour, sugar, milk, cream, butter, eggs, pumpkin, caramel, white chocolate, condensed milk, mascarpone, labneh, pecans, gelatin",
+                    "طحين، سكر، حليب، قشطة، زبدة، بيض، قرع، كراميل، شوكولاتة بيضاء، حليب مكثّف، ماسكاربوني، لبنة، بيكان، جيلاتين"
+                ),
+                allergens: t("Gluten, dairy, eggs, nuts", "غلوتين، ألبان، بيض، مكسرات"),
                 seasonal: true,
                 weight: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"),
                 variations: [],
