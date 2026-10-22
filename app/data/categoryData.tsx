@@ -18,6 +18,7 @@ import coconutCake from "@/app/assets/coconut-cake.png";
 import confettiCake from "@/app/assets/funfetti1.jpg";
 import appleTarteTatinCrepe from "@/app/assets/AppleTarteTatin.jpg";
 import caramelPumpkinCrepe from "@/app/assets/PumpkinCaramel.jpg";
+import { sizeOptions } from "@/app/data/sizes";
 
 // ── RE-EXPORT TYPES ────────────────────────────────────────────────────────
 export type { Category, FeaturedCategory, LocalizedText };
@@ -49,10 +50,7 @@ export const categories: Category[] = [
                     "طبقات كريمة فانيليا حريرية مع طبقة علوية مقرمشة محروقة بالكراميل."
                 ),
                 itemImages: [cremeBruleeCrepe],
-                quantityOptions: [
-                    { quantity: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"), price: "55 JOD" },
-                    { quantity: t("8 inch — serves 8-10", "8 إنش — يكفي 8 إلى 10 أشخاص"), price: "47 JOD" },
-                ],
+                quantityOptions: sizeOptions({ large: 55, medium: 47, le_petit: 40 }),
                 ingredients: t("Flour, sugar, milk, cream, butter, eggs, vanilla bean", "طحين، سكر، حليب، كريمة، زبدة، بيض، حبة فانيليا"),
                 allergens: t("Gluten, dairy, eggs", "غلوتين، ألبان، بيض"),
                 seasonal: false,
@@ -67,11 +65,7 @@ export const categories: Category[] = [
                     "عشرون طبقة من كريب الشوكولاتة الداكنة مع كريمة دبلومات بثلاث شوكولاتات من بلكولاد — ٦٢٪ كاكاو، مبنية على نكهة الحليب المملّح الخفية. غطاء شوكولاتة مصنوع يدويًا مع لفائف مطليّة بالذهب."
                 ),
                 itemImages: [aswad],
-                quantityOptions: [
-                    { quantity: t("9 inch — serves 10–12", "9 إنش — يكفي 10 إلى 12 شخصًا"), price: "63 JOD" },
-                    { quantity: t("8 inch — serves 6–8", "8 إنش — يكفي 6 إلى 8 أشخاص"), price: "54 JOD" },
-                    { quantity: t("Le Petit — serves 4–6", "لو بوتي — يكفي 4 إلى 6 أشخاص"), price: "46 JOD" },
-                ],
+                quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t(
                     "Flour, sugar, milk, butter, eggs, Belcolade dark chocolate (Noir D600 60%), Belcolade milk chocolate (Selection Lait P370 38%), Belcolade dark chocolate (Amber E740 74%), heavy cream, cocoa powder, toasted skim-milk powder, non-diastatic barley malt, fleur de sel",
                     "طحين، سكر، حليب، زبدة، بيض، شوكولاتة داكنة بلكولاد (نوار D600 ٦٠٪)، شوكولاتة حليب بلكولاد (سيليكشن ليه P370 ٣٨٪)، شوكولاتة داكنة بلكولاد (أمبر E740 ٧٤٪)، كريمة ثقيلة، مسحوق كاكاو، مسحوق حليب خالي الدسم محمّص، شعير غير مُنبت، ملح فلور دو سيل"
@@ -92,10 +86,7 @@ export const categories: Category[] = [
                     "عشرون طبقة كريب بالشوكولاتة والإسبريسو، مع إسفنجية منقوعة بالإسبريسو وكريمة سابايون-ماسكاربوني. تُنهى بالكاكاو."
                 ),
                 itemImages: [tiramisuCrepe],
-                quantityOptions: [
-                    { quantity: t("9 inch — serves 12-14", "9 إنش — يكفي 12 إلى 14 شخصًا"), price: "63 JOD" },
-                    { quantity: t("8 inch — serves 8-10", "8 إنش — يكفي 8 إلى 10 أشخاص"), price: "54 JOD" },
-                ],
+                quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t("Flour, sugar, milk, butter, eggs, mascarpone, coffee", "طحين، سكر، حليب، زبدة، بيض، ماسكاربوني، قهوة"),
                 allergens: t("Gluten, dairy, eggs", "غلوتين، ألبان، بيض"),
                 seasonal: false,
@@ -110,10 +101,7 @@ export const categories: Category[] = [
                     "عشرون طبقة كريب بالزبدة المحمّرة، محشوة بكريمة دبلومات البرالينيه باللوز والبندق. تُضاف طبقة كريمو برالينيه فوق قرص جوكوندا، وتُنهى بالبرالينيه المطحون وحبات بندق كاملة. تُترك لترتاح ليلة كاملة."
                 ),
                 itemImages: [succes],
-                quantityOptions: [
-                    { quantity: t("9 inch — serves 12-14", "9 إنش — يكفي 12 إلى 14 شخصًا"), price: "63 JOD" },
-                    { quantity: t("8 inch — serves 8-10", "8 إنش — يكفي 8 إلى 10 أشخاص"), price: "54 JOD" },
-                ],
+                quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t("Flour, almond flour, sugar, milk, butter, eggs, hazelnuts, almonds", "طحين، طحين لوز، سكر، حليب، زبدة، بيض، بندق، لوز"),
                 allergens: t("Gluten, dairy, eggs, tree nuts", "غلوتين، ألبان، بيض، مكسرات"),
                 seasonal: false,
@@ -128,10 +116,7 @@ export const categories: Category[] = [
                     "عشرون طبقة كريب بزيت الزيتون معطرة بماء الزهر والمستكة المطحونة، محشوة بكريمة دبلومات اللبنة. تُنهى بعسل عجلون الدافئ، والفستق المطحون، وبتلات الورد المجففة. تُترك لترتاح ليلة كاملة."
                 ),
                 itemImages: [ajloun],
-                quantityOptions: [
-                    { quantity: t("9 inch — serves 12-14", "9 إنش — يكفي 12 إلى 14 شخصًا"), price: "58 JOD" },
-                    { quantity: t("8 inch — serves 8-10", "8 إنش — يكفي 8 إلى 10 أشخاص"), price: "50 JOD" },
-                ],
+                quantityOptions: sizeOptions({ large: 58, medium: 50, le_petit: 43 }),
                 ingredients: t(
                     "Flour, olive oil, orange blossom water, mastic, sugar, milk, eggs, labneh, butter, pistachio, honey, rose petals",
                     "طحين، زيت زيتون، ماء زهر، مستكة، سكر، حليب، بيض، لبنة، زبدة، فستق، عسل، بتلات ورد"
@@ -149,10 +134,7 @@ export const categories: Category[] = [
                     "عشرون طبقة كريب بزبادي الفراولة، محشوة بكريمة دبلومات الفراولة والليتشي وقلب هلامي من الكركديه. تُنهى بتغليف كومبوت الفراولة الطازجة وفراولة مجففة بالتجميد. تُترك لترتاح ليلة كاملة."
                 ),
                 itemImages: [strawberryLychee],
-                quantityOptions: [
-                    { quantity: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"), price: "63 JOD" },
-                    { quantity: t("8 inch — serves 8–10", "8 إنش — يكفي 8 إلى 10 أشخاص"), price: "54 JOD" },
-                ],
+                quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t(
                     "Flour, eggs, milk, yogurt, strawberry, lychee, hibiscus, cream, butter, sugar, vanilla, rose water, lemon",
                     "طحين، بيض، حليب، زبادي، فراولة، ليتشي، كركديه، كريمة، زبدة، سكر، فانيليا، ماء ورد، ليمون"
@@ -170,10 +152,7 @@ export const categories: Category[] = [
                     "طبقات كريب جوز الهند الرقيقة مع كريمة دبلومات جوز الهند، لمسات فاكهة الباشن، وتغليف لامع من المانجو."
                 ),
                 itemImages: [coconutCrepe],
-                quantityOptions: [
-                    { quantity: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"), price: "63 JOD" },
-                    { quantity: t("8 inch — serves 8–10", "8 إنش — يكفي 8 إلى 10 أشخاص"), price: "54 JOD" },
-                ],
+                quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t("Flour, sugar, milk, cream, butter, eggs, coconut, passion fruit, mango", "طحين، سكر، حليب، كريمة، زبدة، بيض، جوز الهند، فاكهة الباشن، مانجو"),
                 allergens: t("Gluten, dairy, eggs", "غلوتين، ألبان، بيض"),
                 seasonal: true,
@@ -189,10 +168,7 @@ export const categories: Category[] = [
                     "ثلاث شوكولاتات تنتقل من المرارة إلى النعومة — داكنة، حليب محمّص، وبيضاء مكرملة. خط من التوت حيث تنتهي منطقة الشوكولاتة الداكنة. قرص فوييتين مقرمش لا يُكتشف إلا عند قطع الكيكة."
                 ),
                 itemImages: [troisCrepe],
-                quantityOptions: [
-                    { quantity: t("9 inch — serves 12 -14", "9 إنش — يكفي 12 إلى 14 شخصًا"), price: "63 JOD" },
-                    { quantity: t("8 inch — serves 8–10", "8 إنش — يكفي 8 إلى 10 أشخاص"), price: "54 JOD" },
-                ],
+                quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t(
                     "Flour, sugar, milk, butter, eggs, dark chocolate, milk chocolate, caramelized white chocolate, heavy cream, freeze-dried raspberry, feuilletine, cocoa powder, fleur de sel",
                     "طحين، سكر، حليب، زبدة، بيض، شوكولاتة داكنة، شوكولاتة حليب، شوكولاتة بيضاء مكرملة، كريمة ثقيلة، توت مجفف بالتجميد، فوييتين، مسحوق كاكاو، ملح فلور دو سيل"
@@ -216,17 +192,14 @@ export const categories: Category[] = [
                     "عشرون طبقة من كريب الزبدة المحمّرة تتخللها كريمة دبلومات بتفاح تارت تاتان، منها ثلاث طبقات غنية بمكعبات التفاح الصغيرة المشوّحة بكراميل السايدر. تُزيّن بطبقة دائرية من تفاح تارت تاتان في الوسط، ملمّعة بكراميل السايدر ومحاطة بحلقة من فتات الستروزل بثلاثة أنواع من البهار."
                 ),
                 itemImages: [appleTarteTatinCrepe],
-                quantityOptions: [
-                    { quantity: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"), price: "63 JOD" },
-                    { quantity: t("8 inch — serves 10–12", "8 إنش — يكفي 10 إلى 12 شخصًا"), price: "54 JOD" },
-                ],
+                quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t(
                     "Flour, sugar, milk, butter, eggs, cream, apples, cider, spices",
                     "طحين، سكر، حليب، زبدة، بيض، كريمة، تفاح، سايدر، بهار"
                 ),
                 allergens: t("Gluten, dairy, eggs", "غلوتين، ألبان، بيض"),
                 seasonal: true,
-                weight: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"),
+                weight: t("", ""),
                 variations: [],
             },
             {
@@ -237,17 +210,14 @@ export const categories: Category[] = [
                     "طبقات كريب رقيقة محشوة بكريمة القرع والكراميل الداكن، وفي قلبها طبقة مركّزة من القرع والكراميل. متوّجة بالماسكاربوني، وشريط من كراميل البرالين، وحبّات البيكان المكرملة."
                 ),
                 itemImages: [caramelPumpkinCrepe],
-                quantityOptions: [
-                    { quantity: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"), price: "63 JOD" },
-                    { quantity: t("8 inch — serves 10–12", "8 إنش — يكفي 10 إلى 12 شخصًا"), price: "54 JOD" },
-                ],
+                quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t(
                     "Flour, sugar, milk, cream, butter, eggs, pumpkin, caramel, white chocolate, condensed milk, mascarpone, labneh, pecans, gelatin",
                     "طحين، سكر، حليب، قشطة، زبدة، بيض، قرع، كراميل، شوكولاتة بيضاء، حليب مكثّف، ماسكاربوني، لبنة، بيكان، جيلاتين"
                 ),
                 allergens: t("Gluten, dairy, eggs, nuts", "غلوتين، ألبان، بيض، مكسرات"),
                 seasonal: true,
-                weight: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"),
+                weight: t("", ""),
                 variations: [],
             },
             {
@@ -258,14 +228,11 @@ export const categories: Category[] = [
                     "طبقات كريب رقيقة محشوة بكريمة اللوز، وكومبوت التوت المنعش، وغاناش الشوكولاتة البيضاء الغنية."
                 ),
                 itemImages: [raspberryCrepe],
-                quantityOptions: [
-                    { quantity: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"), price: "63 JOD" },
-                    { quantity: t("8 inch — serves 10–12", "8 إنش — يكفي 10 إلى 12 شخصًا"), price: "54 JOD" },
-                ],
+                quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t("Flour, sugar, milk, butter, eggs, mascarpone, white chocolate, raspberry, almond", "طحين، سكر، حليب، زبدة، بيض، ماسكاربوني، شوكولاتة بيضاء، توت، لوز"),
                 allergens: t("Gluten, dairy, eggs, nuts", "غلوتين، ألبان، بيض، مكسرات"),
                 seasonal: false,
-                weight: t("9 inch — serves 12–14", "9 إنش — يكفي 12 إلى 14 شخصًا"),
+                weight: t("", ""),
                 variations: [],
             },
         ],
