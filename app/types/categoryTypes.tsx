@@ -12,10 +12,19 @@ export interface LocalizedText {
 // ── Shared Item Types ──────────────────────────────────────────────────────
 
 export interface QuantityOption {
-    /** e.g. "1 Loaf", "9 inch — serves 12–14", "4" */
+    /** e.g. "Large (serves 14–16)", "1 Loaf", "4" */
     quantity: LocalizedText;
     /** Always a string with currency: "5 JOD", "60 JOD", etc. */
     price: string;
+}
+
+/** One photo of an item. List as many as you like in an item's `images`. */
+export interface ItemImage {
+    src: StaticImageData | string;
+    /** Describes the photo for screen readers; defaults to the item name if omitted. */
+    alt?: LocalizedText;
+    /** The photo shown first, on menu cards and when the item page opens. Defaults to the first image. */
+    isPrimary?: boolean;
 }
 
 export interface Variation {
@@ -30,7 +39,7 @@ export interface CategoryItem {
     id: string;
     itemName: LocalizedText;
     itemDescription: LocalizedText;
-    itemImages: (StaticImageData | string)[];
+    images: ItemImage[];
     quantityOptions: QuantityOption[];
     ingredients: LocalizedText;
     allergens: LocalizedText;

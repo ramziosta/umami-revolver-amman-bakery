@@ -22,7 +22,7 @@ import { sizeOptions } from "@/app/data/sizes";
 
 // ── RE-EXPORT TYPES ────────────────────────────────────────────────────────
 export type { Category, FeaturedCategory, LocalizedText };
-export type { QuantityOption, Variation, CategoryItem } from '@/app/types/categoryTypes';
+export type { QuantityOption, Variation, CategoryItem, ItemImage } from '@/app/types/categoryTypes';
 
 /** Shorthand for building a bilingual string. */
 const t = (en: string, ar: string): LocalizedText => ({ en, ar });
@@ -49,7 +49,7 @@ export const categories: Category[] = [
                     "Silky vanilla custard layers with a crisp brûléed top.",
                     "طبقات كريمة فانيليا حريرية مع طبقة علوية مقرمشة محروقة بالكراميل."
                 ),
-                itemImages: [cremeBruleeCrepe],
+                images: [{ src: cremeBruleeCrepe, isPrimary: true }],
                 quantityOptions: sizeOptions({ large: 55, medium: 47, le_petit: 40 }),
                 ingredients: t("Flour, sugar, milk, cream, butter, eggs, vanilla bean", "طحين، سكر، حليب، كريمة، زبدة، بيض، حبة فانيليا"),
                 allergens: t("Gluten, dairy, eggs", "غلوتين، ألبان، بيض"),
@@ -64,7 +64,7 @@ export const categories: Category[] = [
                     "Twenty layers of dark chocolate crêpe bound by Belcolade three-chocolate diplomat cream — 62% cocoa, built on a hidden malted dairy signature. Hand-finished chocolate cap, gold-brushed curls.",
                     "عشرون طبقة من كريب الشوكولاتة الداكنة مع كريمة دبلومات بثلاث شوكولاتات من بلكولاد — ٦٢٪ كاكاو، مبنية على نكهة الحليب المملّح الخفية. غطاء شوكولاتة مصنوع يدويًا مع لفائف مطليّة بالذهب."
                 ),
-                itemImages: [aswad],
+                images: [{ src: aswad, isPrimary: true }],
                 quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t(
                     "Flour, sugar, milk, butter, eggs, Belcolade dark chocolate (Noir D600 60%), Belcolade milk chocolate (Selection Lait P370 38%), Belcolade dark chocolate (Amber E740 74%), heavy cream, cocoa powder, toasted skim-milk powder, non-diastatic barley malt, fleur de sel",
@@ -85,7 +85,7 @@ export const categories: Category[] = [
                     "Twenty chocolate espresso crêpes, espresso-soaked sponge, and sabayon-mascarpone cream. Finished with cocoa.",
                     "عشرون طبقة كريب بالشوكولاتة والإسبريسو، مع إسفنجية منقوعة بالإسبريسو وكريمة سابايون-ماسكاربوني. تُنهى بالكاكاو."
                 ),
-                itemImages: [tiramisuCrepe],
+                images: [{ src: tiramisuCrepe, isPrimary: true }],
                 quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t("Flour, sugar, milk, butter, eggs, mascarpone, coffee", "طحين، سكر، حليب، زبدة، بيض، ماسكاربوني، قهوة"),
                 allergens: t("Gluten, dairy, eggs", "غلوتين، ألبان، بيض"),
@@ -100,7 +100,7 @@ export const categories: Category[] = [
                     "Twenty layers of brown butter crêpes filled with almond and hazelnut praliné diplomat cream. A praliné crémeux ribbon is piped over a joconde disc insert, finished with crushed praliné and whole hazelnuts. Set overnight.",
                     "عشرون طبقة كريب بالزبدة المحمّرة، محشوة بكريمة دبلومات البرالينيه باللوز والبندق. تُضاف طبقة كريمو برالينيه فوق قرص جوكوندا، وتُنهى بالبرالينيه المطحون وحبات بندق كاملة. تُترك لترتاح ليلة كاملة."
                 ),
-                itemImages: [succes],
+                images: [{ src: succes, isPrimary: true }],
                 quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t("Flour, almond flour, sugar, milk, butter, eggs, hazelnuts, almonds", "طحين، طحين لوز، سكر، حليب، زبدة، بيض، بندق، لوز"),
                 allergens: t("Gluten, dairy, eggs, tree nuts", "غلوتين، ألبان، بيض، مكسرات"),
@@ -115,7 +115,7 @@ export const categories: Category[] = [
                     "Twenty layers of olive oil crêpes scented with orange blossom water and ground mastic, filled with labneh diplomat cream. Finished with warm Ajloun honey, crushed pistachio, and dried rose petals. Set overnight.",
                     "عشرون طبقة كريب بزيت الزيتون معطرة بماء الزهر والمستكة المطحونة، محشوة بكريمة دبلومات اللبنة. تُنهى بعسل عجلون الدافئ، والفستق المطحون، وبتلات الورد المجففة. تُترك لترتاح ليلة كاملة."
                 ),
-                itemImages: [ajloun],
+                images: [{ src: ajloun, isPrimary: true }],
                 quantityOptions: sizeOptions({ large: 58, medium: 50, le_petit: 43 }),
                 ingredients: t(
                     "Flour, olive oil, orange blossom water, mastic, sugar, milk, eggs, labneh, butter, pistachio, honey, rose petals",
@@ -133,7 +133,7 @@ export const categories: Category[] = [
                     "Twenty layers of strawberry yogurt crêpes, filled with strawberry and lychee diplomat cream and a set hibiscus gel core. Finished with a fresh strawberry compote glaze and freeze-dried strawberry. Set overnight.",
                     "عشرون طبقة كريب بزبادي الفراولة، محشوة بكريمة دبلومات الفراولة والليتشي وقلب هلامي من الكركديه. تُنهى بتغليف كومبوت الفراولة الطازجة وفراولة مجففة بالتجميد. تُترك لترتاح ليلة كاملة."
                 ),
-                itemImages: [strawberryLychee],
+                images: [{ src: strawberryLychee, isPrimary: true }],
                 quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t(
                     "Flour, eggs, milk, yogurt, strawberry, lychee, hibiscus, cream, butter, sugar, vanilla, rose water, lemon",
@@ -151,7 +151,7 @@ export const categories: Category[] = [
                     "Delicate coconut crêpe layers with coconut diplomat cream, passion fruit accents, and a glossy mango glaze.",
                     "طبقات كريب جوز الهند الرقيقة مع كريمة دبلومات جوز الهند، لمسات فاكهة الباشن، وتغليف لامع من المانجو."
                 ),
-                itemImages: [coconutCrepe],
+                images: [{ src: coconutCrepe, isPrimary: true }],
                 quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t("Flour, sugar, milk, cream, butter, eggs, coconut, passion fruit, mango", "طحين، سكر، حليب، كريمة، زبدة، بيض، جوز الهند، فاكهة الباشن، مانجو"),
                 allergens: t("Gluten, dairy, eggs", "غلوتين، ألبان، بيض"),
@@ -167,7 +167,7 @@ export const categories: Category[] = [
                     "Three chocolates walked from bitter to soft — dark, toasted milk, caramelized white. A raspberry seam where the dark zone ends. A feuilletine disc that announces itself only when the knife goes through.",
                     "ثلاث شوكولاتات تنتقل من المرارة إلى النعومة — داكنة، حليب محمّص، وبيضاء مكرملة. خط من التوت حيث تنتهي منطقة الشوكولاتة الداكنة. قرص فوييتين مقرمش لا يُكتشف إلا عند قطع الكيكة."
                 ),
-                itemImages: [troisCrepe],
+                images: [{ src: troisCrepe, isPrimary: true }],
                 quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t(
                     "Flour, sugar, milk, butter, eggs, dark chocolate, milk chocolate, caramelized white chocolate, heavy cream, freeze-dried raspberry, feuilletine, cocoa powder, fleur de sel",
@@ -191,7 +191,7 @@ export const categories: Category[] = [
                     "Twenty brown-butter crêpes layered with tarte-tatin apple diplomat cream, with three layers enriched with finely diced apples sautéed in cider caramel. Finished with a central tarte-tatin apple cap glazed with cider caramel and framed by a three-spice streusel ring.",
                     "عشرون طبقة من كريب الزبدة المحمّرة تتخللها كريمة دبلومات بتفاح تارت تاتان، منها ثلاث طبقات غنية بمكعبات التفاح الصغيرة المشوّحة بكراميل السايدر. تُزيّن بطبقة دائرية من تفاح تارت تاتان في الوسط، ملمّعة بكراميل السايدر ومحاطة بحلقة من فتات الستروزل بثلاثة أنواع من البهار."
                 ),
-                itemImages: [appleTarteTatinCrepe],
+                images: [{ src: appleTarteTatinCrepe, isPrimary: true }],
                 quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t(
                     "Flour, sugar, milk, butter, eggs, cream, apples, cider, spices",
@@ -209,7 +209,7 @@ export const categories: Category[] = [
                     "Delicate layers of crêpes filled with a cream of pumpkin and dark caramel, with a concentrated band of pumpkin caramel at its heart. Crowned with mascarpone, a ribbon of praline caramel, and sablé pecans.",
                     "طبقات كريب رقيقة محشوة بكريمة القرع والكراميل الداكن، وفي قلبها طبقة مركّزة من القرع والكراميل. متوّجة بالماسكاربوني، وشريط من كراميل البرالين، وحبّات البيكان المكرملة."
                 ),
-                itemImages: [caramelPumpkinCrepe],
+                images: [{ src: caramelPumpkinCrepe, isPrimary: true }],
                 quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t(
                     "Flour, sugar, milk, cream, butter, eggs, pumpkin, caramel, white chocolate, condensed milk, mascarpone, labneh, pecans, gelatin",
@@ -227,7 +227,7 @@ export const categories: Category[] = [
                     "Delicate layers of crêpes filled with almond cream, tangy raspberry compote, and a luscious white chocolate ganache.",
                     "طبقات كريب رقيقة محشوة بكريمة اللوز، وكومبوت التوت المنعش، وغاناش الشوكولاتة البيضاء الغنية."
                 ),
-                itemImages: [raspberryCrepe],
+                images: [{ src: raspberryCrepe, isPrimary: true }],
                 quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t("Flour, sugar, milk, butter, eggs, mascarpone, white chocolate, raspberry, almond", "طحين، سكر، حليب، زبدة، بيض، ماسكاربوني، شوكولاتة بيضاء، توت، لوز"),
                 allergens: t("Gluten, dairy, eggs, nuts", "غلوتين، ألبان، بيض، مكسرات"),
@@ -252,7 +252,7 @@ export const categories: Category[] = [
                     "Three-layer spiced carrot cake made with brown butter, dual-cut carrots, toasted pecans, and a lactic-forward mascarpone–cream cheese frosting. Finished with honey carrot soak, a white chocolate feuilletine crunch, and crisp carrot curls.",
                     "كيك جزر متبّل من ثلاث طبقات، مُحضّر بالزبدة المحمّرة، وجزر مقطّع بطريقتين، وبيكان محمّص، مع كريمة تغطية من الماسكاربوني وجبنة الكريمة ذات النكهة اللبنية. يُنهى بنقيع الجزر بالعسل، وطبقة مقرمشة من فوييتين الشوكولاتة البيضاء، وشرائح جزر مقرمشة."
                 ),
-                itemImages: [carrotCake],
+                images: [{ src: carrotCake, isPrimary: true }],
                 quantityOptions: [
                     { quantity: t("3 layer 8 inch serves generous 10-12", "3 طبقات، 8 إنش — يكفي 10 إلى 12 شخصًا بسخاء"), price: "65 JOD" },
                 ],
@@ -269,7 +269,7 @@ export const categories: Category[] = [
                     "Three layers of dark chocolate olive oil cake with cardamom, filled with whipped miso chocolate ganache and a caramel feuilletine crunch. Finished with a feuilletine crust, cocoa dusting, and fleur de sel.",
                     "ثلاث طبقات من كيك الشوكولاتة الداكنة بزيت الزيتون والهيل، محشوة بغاناش الشوكولاتة والميسو المخفوق وطبقة مقرمشة من الكراميل والفوييتين. تُنهى بقشرة فوييتين، ورشة كاكاو، وملح فلور دو سيل."
                 ),
-                itemImages: [chocolateNoir],
+                images: [{ src: chocolateNoir, isPrimary: true }],
                 quantityOptions: [
                     { quantity: t("3 layer 8 inch serves generous 10-12", "3 طبقات، 8 إنش — يكفي 10 إلى 12 شخصًا بسخاء"), price: "70 JOD" },
                 ],
@@ -289,7 +289,7 @@ export const categories: Category[] = [
                     "Soft, fluffy vanilla bean cake with a tender velvet crumb, filled with a light mascarpone whipped cream and frosted in silky French buttercream. Available with rainbow confetti sprinkles for celebrations.",
                     "كيك فانيليا طري وهش بقوام مخملي ناعم، محشو بكريمة ماسكاربوني مخفوقة خفيفة ومغطى بكريمة زبدة فرنسية حريرية. متوفر برشات كونفيتي ملونة للاحتفالات."
                 ),
-                itemImages: [confettiCake],
+                images: [{ src: confettiCake, isPrimary: true }],
                 quantityOptions: [
                     { quantity: t("3 layer 8 inch", "3 طبقات، 8 إنش"), price: "55 JOD" },
                 ],
@@ -317,7 +317,7 @@ export const categories: Category[] = [
                     "Soft coconut cake layered with German buttercream, passion fruit filling and finished with toasted coconut flakes.",
                     "كيك جوز الهند الطري، مطبّق بكريمة الزبدة الألمانية، وحشوة فاكهة الباشن، ويُنهى برقائق جوز الهند المحمّصة."
                 ),
-                itemImages: [coconutCake],
+                images: [{ src: coconutCake, isPrimary: true }],
                 quantityOptions: [
                     { quantity: t("3 layer 8 inch", "3 طبقات، 8 إنش"), price: "65 JOD" },
                 ],
@@ -334,7 +334,7 @@ export const categories: Category[] = [
                     "A moist banana sponge studded with toasted pecans, layered with banana pudding filling and finished with a tangy cream cheese frosting and dulce de leche glaze.",
                     "إسفنجية موز رطبة مرصّعة بالبيكان المحمّص، مطبّقة بحشوة بودينغ الموز، وتُنهى بكريمة تغطية جبنة الكريمة المنعشة وتغليف الدولسي دي ليتشي."
                 ),
-                itemImages: [bananaCake],
+                images: [{ src: bananaCake, isPrimary: true }],
                 quantityOptions: [
                     { quantity: t("3 layer rectangular (6×6×12 inch)", "3 طبقات، مستطيلة (6×6×12 إنش)"), price: "65 JOD" },
                 ],
@@ -351,7 +351,7 @@ export const categories: Category[] = [
                     "Moist olive oil cake with zesty lemon curd, vanilla bean mascarpone frosting, and lemon basil sugar.",
                     "كيك زيت زيتون رطب مع كريمة الليمون المنعشة، وكريمة تغطية ماسكاربوني بحبة الفانيليا، وسكر الليمون والريحان."
                 ),
-                itemImages: [seasonal],
+                images: [{ src: seasonal, isPrimary: true }],
                 quantityOptions: [
                     { quantity: t("3 layer 8 inch — serves 10–12", "3 طبقات، 8 إنش — يكفي 10 إلى 12 شخصًا"), price: "65 JOD" },
                 ],
@@ -365,7 +365,7 @@ export const categories: Category[] = [
                 id: "chocolate-mousse",
                 itemName: t("King's Crown Cake", "كيك تاج الملك"),
                 itemDescription: t("Chocolate Mousse Cake, Raspberry Ganache, Choux Crown", "كيك موس الشوكولاتة، غاناش التوت، تاج الشو"),
-                itemImages: [chocolateMousse],
+                images: [{ src: chocolateMousse, isPrimary: true }],
                 quantityOptions: [
                     { quantity: t("2 layer 8 inch — serves 10–12", "طبقتان، 8 إنش — يكفي 10 إلى 12 شخصًا"), price: "70 JOD" },
                 ],

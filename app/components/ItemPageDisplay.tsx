@@ -16,6 +16,7 @@ export default function ItemPageDisplay({
     selectedImage: any;
     setSelectedImage: (image: any) => void;
 }) {
+    const photos = item.images.map((image) => image.src);
     const t = useTranslations('item');
     const tc = useTranslations('common');
     const tCategory = useTranslations('category');
@@ -59,9 +60,9 @@ export default function ItemPageDisplay({
             </section>
 
             {/* ── THUMBNAILS — only shown when there's more than one photo ── */}
-            {item.itemImages.length > 1 && (
+            {photos.length > 1 && (
                 <div className="bg-umami-linen px-6 md:px-12 lg:px-16 py-6 flex gap-3 overflow-x-auto">
-                    {item.itemImages.map((image, index) => (
+                    {photos.map((image, index) => (
                         <button
                             key={index}
                             onClick={() => setSelectedImage(image)}

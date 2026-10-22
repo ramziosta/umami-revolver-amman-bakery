@@ -3,6 +3,7 @@ import {Card, CardContent} from "@/app/ui/card";
 import {getTranslations} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import type {Category} from "@/app/data/categoryData";
+import {primaryImage, primaryImageIndex, imageAlt} from "@/app/lib/itemImages";
 
 export default async function CategoryDisplayPage({ category, locale }: { category: Category; locale: 'en' | 'ar' }) {
     const t = await getTranslations({ locale, namespace: 'category' });
@@ -63,8 +64,8 @@ export default async function CategoryDisplayPage({ category, locale }: { catego
                             <Card className="group cursor-pointer overflow-hidden border-0 shadow-none bg-transparent">
                                 <div className="relative h-72 md:h-80 overflow-hidden">
                                     <Image
-                                        src={item.itemImages[0]}
-                                        alt={item.itemName[locale]}
+                                        src={primaryImage(item).src}
+                                        alt={imageAlt(primaryImage(item), item.itemName[locale], primaryImageIndex(item.images), item.images.length, locale)}
                                         width={800}
                                         height={600}
                                         className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"

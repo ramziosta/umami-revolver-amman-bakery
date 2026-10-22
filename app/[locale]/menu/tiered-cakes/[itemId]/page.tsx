@@ -2,6 +2,7 @@
 import { categories } from '@/app/data/categoryData'
 import { notFound } from 'next/navigation'
 import ItemPageDisplay from '@/app/components/ItemPageDisplay'
+import { primaryImage } from '@/app/lib/itemImages'
 import {use, useState} from "react";
 
 interface ItemPageProps {
@@ -22,7 +23,7 @@ export default function ItemPage({ params }: ItemPageProps) {
     if (!item) {
         notFound()
     }
-    const [selectedImage, setSelectedImage] = useState(item.itemImages[0]);
+    const [selectedImage, setSelectedImage] = useState(primaryImage(item).src);
 
     return (
         <ItemPageDisplay
