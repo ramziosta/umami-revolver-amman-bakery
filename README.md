@@ -30,7 +30,7 @@ Each Mille Crêpe cake just lists three prices (JOD):
 quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
 ```
 
-The size names and serving counts (Large 14–16, Medium 10–12, Le Petit 6–8) live once in `app/data/sizes.ts`, and rows always display Large → Medium → Le Petit.
+The size names and serving counts (Le Petit 6–8, Medium 10–12, Large 14–16) live once in `app/data/sizes.ts`, and rows always display Le Petit → Medium → Large. To change the order, reorder the list there.
 Signature Cakes keep a single hand-written size/price in `quantityOptions`.
 
 ---
