@@ -1,3 +1,40 @@
+# Umami Amman
+
+## Editing the menu
+
+All menu content lives in `app/data/categoryData.tsx` (English and Arabic side by side).
+
+### Adding photos to a cake
+
+1. Drop the image file into `app/assets/`.
+2. In `app/data/categoryData.tsx`, import it at the top, then list it in that cake's `images`:
+
+```tsx
+images: [
+    { src: creamBruleeHeadOn, isPrimary: true, alt: t("Whole cake, head-on", "الكيكة كاملة من الأمام") },
+    { src: creamBruleeSlice,  alt: t("A slice, from above", "شريحة من الأعلى") },
+    { src: creamBruleeDetail },
+],
+```
+
+- `isPrimary: true` marks the cover photo (menu cards, and the photo shown first). If none is marked, the first one is used.
+- `alt` is optional; without it the photo is described by the cake's name.
+- With two or more photos, a row of clickable thumbnails appears under the main photo. Arrow keys, Home and End also work.
+- Order in the list = order of the thumbnails.
+
+### Changing Mille Crêpe prices or sizes
+
+Each Mille Crêpe cake just lists three prices (JOD):
+
+```tsx
+quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
+```
+
+The size names and serving counts (Large 14–16, Medium 10–12, Le Petit 6–8) live once in `app/data/sizes.ts`, and rows always display Large → Medium → Le Petit.
+Signature Cakes keep a single hand-written size/price in `quantityOptions`.
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
