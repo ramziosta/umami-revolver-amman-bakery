@@ -18,6 +18,7 @@ import coconutCake from "@/app/assets/coconut-cake.png";
 import confettiCake from "@/app/assets/funfetti1.jpg";
 import appleTarteTatinCrepe from "@/app/assets/AppleTarteTatin.jpg";
 import caramelPumpkinCrepe from "@/app/assets/PumpkinCaramel.jpg";
+import rummanCrepe from "@/app/assets/Saffron.jpg"
 import { sizeOptions } from "@/app/data/sizes";
 
 // ── RE-EXPORT TYPES ────────────────────────────────────────────────────────
@@ -216,6 +217,24 @@ export const categories: Category[] = [
                     "طحين، سكر، حليب، قشطة، زبدة، بيض، قرع، كراميل، شوكولاتة بيضاء، حليب مكثّف، ماسكاربوني، لبنة، بيكان، جيلاتين"
                 ),
                 allergens: t("Gluten, dairy, eggs, nuts", "غلوتين، ألبان، بيض، مكسرات"),
+                seasonal: true,
+                weight: t("", ""),
+                variations: [],
+            },
+            {
+                id: "rumman-crepe",
+                itemName: t("Rumman — Saffron, Rose & Pomegranate Mille Crêpe", "رمّان — ميل كريب الزعفران والورد والرمّان"),
+                itemDescription: t(
+                    "Pomegranate cream beneath saffron and rose, a ruby pomegranate heart, crowned with sugared walnuts and barberries.",
+                    "كريمة الرمّان تحت كريمة الزعفران والورد، وقلبٌ ياقوتي من الرمّان، تتوّجها حبّات جوز مُسكّرة وزرشك."
+                ),
+                images: [{ src: rummanCrepe, isPrimary: true }],
+                quantityOptions: sizeOptions({ large: 68, medium: 58, le_petit: 50 }),
+                ingredients: t(
+                    "Flour, cornstarch, sugar, milk, milk powder, cream, butter, eggs, saffron, rose water, pomegranate juice, lemon, gelatin, pectin, walnuts, barberries, rose petals, cocoa butter",
+                    "طحين، نشا الذرة، سكر، حليب، حليب بودرة، كريمة، زبدة، بيض، زعفران، ماء ورد، عصير رمّان، ليمون، جيلاتين، بكتين، جوز، زرشك، بتلات ورد، زبدة كاكاو"
+                ),
+                allergens: t("Gluten, dairy, eggs, tree nuts (walnuts)", "غلوتين، ألبان، بيض، مكسرات (جوز)"),
                 seasonal: true,
                 weight: t("", ""),
                 variations: [],
