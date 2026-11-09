@@ -229,7 +229,7 @@ export const categories: Category[] = [
                     "كريمة الرمّان تحت كريمة الزعفران والورد، وقلبٌ ياقوتي من الرمّان، تتوّجها حبّات جوز مُسكّرة وزرشك."
                 ),
                 images: [{ src: rummanCrepe, isPrimary: true }],
-                quantityOptions: sizeOptions({ large: 68, medium: 58, le_petit: 50 }),
+                quantityOptions: sizeOptions({ large: 63, medium: 54, le_petit: 47 }),
                 ingredients: t(
                     "Flour, cornstarch, sugar, milk, milk powder, cream, butter, eggs, saffron, rose water, pomegranate juice, lemon, gelatin, pectin, walnuts, barberries, rose petals, cocoa butter",
                     "طحين، نشا الذرة، سكر، حليب، حليب بودرة، كريمة، زبدة، بيض، زعفران، ماء ورد، عصير رمّان، ليمون، جيلاتين، بكتين، جوز، زرشك، بتلات ورد، زبدة كاكاو"
