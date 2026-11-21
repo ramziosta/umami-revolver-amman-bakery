@@ -111,7 +111,7 @@ export const categories: Category[] = [
             },
             {
                 id: "orange-blossom-crepe",
-                itemName: t("Ajloun: Orange Blossom Mille Crêpe", "عجلون: ميل كريب زهر البرتقال"),
+                itemName: t("Ajloun: Orange Blossom & Pistachio Mille Crêpe", "عجلون: ميل كريب مزهر وفستق حلبي"),
                 itemDescription: t(
                     "Twenty layers of olive oil crêpes scented with orange blossom water and ground mastic, filled with labneh diplomat cream. Finished with warm Ajloun honey, crushed pistachio, and dried rose petals. Set overnight.",
                     "عشرون طبقة كريب بزيت الزيتون معطرة بماء الزهر والمستكة المطحونة، محشوة بكريمة دبلومات اللبنة. تُنهى بعسل عجلون الدافئ، والفستق المطحون، وبتلات الورد المجففة. تُترك لترتاح ليلة كاملة."
