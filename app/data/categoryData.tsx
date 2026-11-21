@@ -45,7 +45,7 @@ export const categories: Category[] = [
         items: [
             {
                 id: "creme-brulee-crepe",
-                itemName: t("Madagascar Vanilla Bean & Burnt Sugar Mille Crêpe", "فانيليا من مدغشقر وسكر مكرمل"),
+                itemName: t("Madagascar Vanilla Bean & Burnt Sugar Mille Crêpe", "فانيليا مدغشقر وسكر مكرمل"),
                 itemDescription: t(
                     "Silky vanilla custard layers with a crisp brûléed top.",
                     "طبقات كريمة فانيليا حريرية مع طبقة علوية مقرمشة محروقة بالكراميل."
