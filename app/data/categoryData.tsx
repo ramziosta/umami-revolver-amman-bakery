@@ -45,7 +45,7 @@ export const categories: Category[] = [
         items: [
             {
                 id: "creme-brulee-crepe",
-                itemName: t("Madagascar Vanilla Bean & Burnt Sugar", "فانيليا من مدغشقر وسكر مكرمل"),
+                itemName: t("Madagascar Vanilla Bean & Burnt Sugar Mille Crêpe", "فانيليا من مدغشقر وسكر مكرمل"),
                 itemDescription: t(
                     "Silky vanilla custard layers with a crisp brûléed top.",
                     "طبقات كريمة فانيليا حريرية مع طبقة علوية مقرمشة محروقة بالكراميل."
@@ -111,7 +111,7 @@ export const categories: Category[] = [
             },
             {
                 id: "orange-blossom-crepe",
-                itemName: t("Orange Blossom Mille Crêpe", "ميل كريب زهر البرتقال"),
+                itemName: t("Ajloun: Orange Blossom Mille Crêpe", "عجلون: ميل كريب زهر البرتقال"),
                 itemDescription: t(
                     "Twenty layers of olive oil crêpes scented with orange blossom water and ground mastic, filled with labneh diplomat cream. Finished with warm Ajloun honey, crushed pistachio, and dried rose petals. Set overnight.",
                     "عشرون طبقة كريب بزيت الزيتون معطرة بماء الزهر والمستكة المطحونة، محشوة بكريمة دبلومات اللبنة. تُنهى بعسل عجلون الدافئ، والفستق المطحون، وبتلات الورد المجففة. تُترك لترتاح ليلة كاملة."
@@ -147,7 +147,7 @@ export const categories: Category[] = [
             },
             {
                 id: "coconut-crepe",
-                itemName: t("Coconut & Passion Fruit Mille Crêpe", "ميل كريب جوز الهند وفاكهة الباشن"),
+                itemName: t("Coconut, Passion Fruit & Mango Mille Crêpe", "ميل كريب جوز الهند, فاكهة الباشن(مس فلورا) والمانجو"),
                 itemDescription: t(
                     "Delicate coconut crêpe layers with coconut diplomat cream, passion fruit accents, and a glossy mango glaze.",
                     "طبقات كريب جوز الهند الرقيقة مع كريمة دبلومات جوز الهند، لمسات فاكهة الباشن، وتغليف لامع من المانجو."
